@@ -1,0 +1,27 @@
+name: AI-trend-env
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - bokeh
+  - captum
+  - datashader
+  - git
+  - ipywidgets
+  - jupyterlab
+  - jupyterlab-git
+  - jupyterlab-nvdashboard
+  - jupyterlab-lsp
+  - matplotlib
+  - numba
+  - numpy
+  - pandas
+  - pip
+  - pip:
+    - -r requirements.txt
+  - python=3.7
+  - scikit-learn
+  - scipy
+

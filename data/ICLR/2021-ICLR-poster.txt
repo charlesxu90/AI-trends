@@ -1,0 +1,2772 @@
+Net-DNF: Effective Deep Modeling of Tabular Data 
+Liran Katzir, Gal Elidan, Ran El-Yaniv
+01 Oct 2020 (modified: 24 Mar 2021) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Predicting Inductive Biases of Pre-Trained Models 
+Charles Lovering, Rohan Jha, Tal Linzen, Ellie Pavlick
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Optimism in Reinforcement Learning with Generalized Linear Function Approximation 
+Yining Wang, Ruosong Wang, Simon Shaolei Du, Akshay Krishnamurthy
+28 Sept 2020 (modified: 18 Feb 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+SCoRe: Pre-Training for Context Representation in Conversational Semantic Parsing 
+Tao Yu, Rui Zhang, Alex Polozov, Christopher Meek, Ahmed Hassan Awadallah
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+A teacher-student framework to distill future trajectories 
+Alexander Neitz, Giambattista Parascandolo, Bernhard Schölkopf
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Certify or Predict: Boosting Certified Robustness with Compositional Architectures 
+Mark Niklas Mueller, Mislav Balunovic, Martin Vechev
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+On the Transfer of Disentangled Representations in Realistic Settings 
+Andrea Dittadi, Frederik Träuble, Francesco Locatello, Manuel Wuthrich, Vaibhav Agrawal, Ole Winther, Stefan Bauer, Bernhard Schölkopf
+28 Sept 2020 (modified: 05 Apr 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Robust Reinforcement Learning on State Observations with Learned Optimal Adversary 
+Huan Zhang, Hongge Chen, Duane S Boning, Cho-Jui Hsieh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Learning from others' mistakes: Avoiding dataset biases without modeling them 
+Victor Sanh, Thomas Wolf, Yonatan Belinkov, Alexander M Rush
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Fast and Complete: Enabling Complete Neural Network Verification with Rapid and Massively Parallel Incomplete Verifiers 
+Kaidi Xu, Huan Zhang, Shiqi Wang, Yihan Wang, Suman Jana, Xue Lin, Cho-Jui Hsieh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Self-supervised Adversarial Robustness for the Low-label, High-data Regime 
+Sven Gowal, Po-Sen Huang, Aaron van den Oord, Timothy Mann, Pushmeet Kohli
+28 Sept 2020 (modified: 15 Mar 2021) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Modeling the Second Player in Distributionally Robust Optimization 
+Paul Michel, Tatsunori Hashimoto, Graham Neubig
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Neural Jump Ordinary Differential Equations: Consistent Continuous-Time Prediction and Filtering 
+Calypso Herrera, Florian Krach, Josef Teichmann
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Gradient Origin Networks 
+Sam Bond-Taylor, Chris G. Willcocks
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Efficient Generalized Spherical CNNs 
+Oliver Cobb, Christopher G. R. Wallis, Augustine N. Mavor-Parker, Augustin Marignier, Matthew A. Price, Mayeul d'Avezac, Jason McEwen
+28 Sept 2020 (modified: 08 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+DEBERTA: DECODING-ENHANCED BERT WITH DISENTANGLED ATTENTION 
+Pengcheng He, Xiaodong Liu, Jianfeng Gao, Weizhu Chen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Optimizing Memory Placement using Evolutionary Graph Reinforcement Learning 
+Shauharda Khadka, Estelle Aflalo, Mattias Mardar, Avrech Ben-David, Santiago Miret, Shie Mannor, Tamir Hazan, Hanlin Tang, Somdeb Majumdar
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+On the geometry of generalization and memorization in deep neural networks 
+Cory Stephenson, suchismita padhy, Abhinav Ganesh, Yue Hui, Hanlin Tang, SueYeon Chung
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Continual learning in recurrent neural networks 
+Benjamin Ehret, Christian Henning, Maria Cervera, Alexander Meulemans, Johannes Von Oswald, Benjamin F Grewe
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Witches' Brew: Industrial Scale Data Poisoning via Gradient Matching 
+Jonas Geiping, Liam H Fowl, W. Ronny Huang, Wojciech Czaja, Gavin Taylor, Michael Moeller, Tom Goldstein
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Overfitting for Fun and Profit: Instance-Adaptive Data Compression 
+Ties van Rozendaal, Iris AM Huijben, Taco Cohen
+28 Sept 2020 (modified: 25 Jan 2021) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+A Block Minifloat Representation for Training Deep Neural Networks 
+Sean Fox, Seyedramin Rasoulinezhad, Julian Faraone, david boland, Philip Leong
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Representation Learning via Invariant Causal Mechanisms 
+Jovana Mitrovic, Brian McWilliams, Jacob C Walker, Lars Holger Buesing, Charles Blundell
+28 Sept 2020 (modified: 22 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Sparse encoding for more-interpretable feature-selecting representations in probabilistic matrix factorization 
+Joshua C Chang, Patrick Fletcher, Jungmin Han, Ted L Chang, Shashaank Vattikuti, Bart Desmet, Ayah Zirikly, Carson C Chow
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Mapping the Timescale Organization of Neural Language Models 
+Hsiang-Yun Sherry Chien, Jinhan Zhang, Christopher Honey
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Neural networks with late-phase weights 
+Johannes Von Oswald, Seijin Kobayashi, Joao Sacramento, Alexander Meulemans, Christian Henning, Benjamin F Grewe
+28 Sept 2020 (modified: 12 Apr 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Uncertainty-aware Active Learning for Optimal Bayesian Classifier 
+Guang Zhao, Edward Dougherty, Byung-Jun Yoon, Francis Alexander, Xiaoning Qian
+28 Sept 2020 (modified: 15 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+ResNet After All: Neural ODEs and Their Numerical Solution 
+Katharina Ott, Prateek Katiyar, Philipp Hennig, Michael Tiemann
+28 Sept 2020 (modified: 15 Mar 2021) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Generalized Variational Continual Learning 
+Noel Loo, Siddharth Swaroop, Richard E Turner
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+Mind the Gap when Conditioning Amortised Inference in Sequential Latent-Variable Models 
+Justin Bayer, Maximilian Soelch, Atanas Mirchev, Baris Kayalibay, Patrick van der Smagt
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+CausalWorld: A Robotic Manipulation Benchmark for Causal Structure and Transfer Learning 
+Ossama Ahmed, Frederik Träuble, Anirudh Goyal, Alexander Neitz, Manuel Wuthrich, Yoshua Bengio, Bernhard Schölkopf, Stefan Bauer
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Transformer protein language models are unsupervised structure learners 
+Roshan Rao, Joshua Meier, Tom Sercu, Sergey Ovchinnikov, Alexander Rives
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Neural ODE Processes 
+Alexander Norcliffe, Cristian Bodnar, Ben Day, Jacob Moss, Pietro Liò
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+The role of Disentanglement in Generalisation 
+Milton Llera Montero, Casimir JH Ludwig, Rui Ponte Costa, Gaurav Malhotra, Jeffrey Bowers
+28 Sept 2020 (modified: 17 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Learning to live with Dale's principle: ANNs with separate excitatory and inhibitory units 
+Jonathan Cornford, Damjan Kalajdzievski, Marco Leite, Amélie Lamarquette, Dimitri Michael Kullmann, Blake Aaron Richards
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+SALD: Sign Agnostic Learning with Derivatives 
+Matan Atzmon, Yaron Lipman
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Ringing ReLUs: Harmonic Distortion Analysis of Nonlinear Feedforward Networks 
+Christian H.X. Ali Mehmeti-Göpel, David Hartmann, Michael Wand
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+CoCon: A Self-Supervised Approach for Controlled Text Generation 
+Alvin Chan, Yew-Soon Ong, Bill Pung, Aston Zhang, Jie Fu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Bidirectional Variational Inference for Non-Autoregressive Text-to-Speech 
+Yoonhyung Lee, Joongbo Shin, Kyomin Jung
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Learning continuous-time PDEs from sparse data with graph neural networks 
+Valerii Iakovlev, Markus Heinonen, Harri Lähdesmäki
+28 Sept 2020 (modified: 29 Jan 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+NAS-Bench-ASR: Reproducible Neural Architecture Search for Speech Recognition 
+Abhinav Mehrotra, Alberto Gil C. P. Ramos, Sourav Bhattacharya, Łukasz Dudziak, Ravichander Vipperla, Thomas Chau, Mohamed S Abdelfattah, Samin Ishtiaq, Nicholas Donald Lane
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Collective Robustness Certificates: Exploiting Interdependence in Graph Neural Networks 
+Jan Schuchardt, Aleksandar Bojchevski, Johannes Gasteiger, Stephan Günnemann
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Adversarially Guided Actor-Critic 
+Yannis Flet-Berliac, Johan Ferret, Olivier Pietquin, Philippe Preux, Matthieu Geist
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Training independent subnetworks for robust prediction 
+Marton Havasi, Rodolphe Jenatton, Stanislav Fort, Jeremiah Zhe Liu, Jasper Snoek, Balaji Lakshminarayanan, Andrew Mingbo Dai, Dustin Tran
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Grounding Language to Autonomously-Acquired Skills via Goal Generation 
+Ahmed Akakzia, Cédric Colas, Pierre-Yves Oudeyer, Mohamed CHETOUANI, Olivier Sigaud
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Hopfield Networks is All You Need 
+Hubert Ramsauer, Bernhard Schäfl, Johannes Lehner, Philipp Seidl, Michael Widrich, Lukas Gruber, Markus Holzleitner, Thomas Adler, David Kreil, Michael K Kopp, Günter Klambauer, Johannes Brandstetter, Sepp Hochreiter
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Differentiable Trust Region Layers for Deep Reinforcement Learning 
+Fabian Otto, Philipp Becker, Vien Anh Ngo, Hanna Carolin Maria Ziesche, Gerhard Neumann
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Temporally-Extended ε-Greedy Exploration 
+Will Dabney, Georg Ostrovski, Andre Barreto
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Learning Associative Inference Using Fast Weight Memory 
+Imanol Schlag, Tsendsuren Munkhdalai, Jürgen Schmidhuber
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Multiscale Score Matching for Out-of-Distribution Detection 
+Ahsan Mahmood, Junier Oliva, Martin Andreas Styner
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Learning to Sample with Local and Global Contexts in Experience Replay Buffer 
+Youngmin Oh, Kimin Lee, Jinwoo Shin, Eunho Yang, Sung Ju Hwang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Parameter-Based Value Functions 
+Francesco Faccio, Louis Kirsch, Jürgen Schmidhuber
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+New Bounds For Distributed Mean Estimation and Variance Reduction 
+Peter Davies, Vijaykrishna Gurunanthan, Niusha Moshrefi, Saleh Ashkboos, Dan Alistarh
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Learning to Set Waypoints for Audio-Visual Navigation 
+Changan Chen, Sagnik Majumder, Ziad Al-Halah, Ruohan Gao, Santhosh Kumar Ramakrishnan, Kristen Grauman
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Disambiguating Symbolic Expressions in Informal Documents 
+Dennis Müller, Cezary Kaliszyk
+28 Sept 2020 (modified: 25 Jan 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Colorization Transformer 
+Manoj Kumar, Dirk Weissenborn, Nal Kalchbrenner
+28 Sept 2020 (modified: 05 Apr 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Theoretical bounds on estimation error for meta-learning 
+James Lucas, Mengye Ren, Irene Raissa KAMENI KAMENI, Toniann Pitassi, Richard Zemel
+28 Sept 2020 (modified: 27 Mar 2021) ICLR 2021 Poster Readers:  Everyone 43 Replies
+Show details
+Variational Information Bottleneck for Effective Low-Resource Fine-Tuning 
+Rabeeh Karimi mahabadi, Yonatan Belinkov, James Henderson
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+TropEx: An Algorithm for Extracting Linear Terms in Deep Neural Networks 
+Martin Trimmel, Henning Petzka, Cristian Sminchisescu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Seq2Tens: An Efficient Representation of Sequences by Low-Rank Tensor Projections 
+Csaba Toth, Patric Bonnier, Harald Oberhauser
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Representation learning for improved interpretability and classification accuracy of clinical factors from EEG 
+Garrett Honke, Irina Higgins, Nina Thigpen, Vladimir Miskovic, Katie Link, Sunny Duan, Pramod Gupta, Julia Klawohn, Greg Hajcak
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Language-Agnostic Representation Learning of Source Code from Structure and Context 
+Daniel Zügner, Tobias Kirschstein, Michele Catasta, Jure Leskovec, Stephan Günnemann
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Generalized Multimodal ELBO 
+Thomas M. Sutter, Imant Daunhawer, Julia E Vogt
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+Model-based micro-data reinforcement learning: what are the crucial model properties and which model to choose? 
+Balázs Kégl, Gabriel Hurtado, Albert Thomas
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Set Prediction without Imposing Structure as Conditional Density Estimation 
+David W Zhang, Gertjan J. Burghouts, Cees G. M. Snoek
+28 Sept 2020 (modified: 11 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Learning Value Functions in Deep Policy Gradients using Residual Variance 
+Yannis Flet-Berliac, reda ouhamma, odalric-ambrym maillard, Philippe Preux
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+IDF++: Analyzing and Improving Integer Discrete Flows for Lossless Compression 
+Rianne van den Berg, Alexey A. Gritsenko, Mostafa Dehghani, Casper Kaae Sønderby, Tim Salimans
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Fully Unsupervised Diversity Denoising with Convolutional Variational Autoencoders 
+Mangal Prakash, Alexander Krull, Florian Jug
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Is Attention Better Than Matrix Decomposition? 
+Zhengyang Geng, Meng-Hao Guo, Hongxu Chen, Xia Li, Ke Wei, Zhouchen Lin
+28 Sept 2020 (modified: 10 Mar 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Improving Transformation Invariance in Contrastive Representation Learning 
+Adam Foster, Rattana Pukdee, Tom Rainforth
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+On the Origin of Implicit Regularization in Stochastic Gradient Descent 
+Samuel L Smith, Benoit Dherin, David Barrett, Soham De
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Transient Non-stationarity and Generalisation in Deep Reinforcement Learning 
+Maximilian Igl, Gregory Farquhar, Jelena Luketina, Wendelin Boehmer, Shimon Whiteson
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Lossless Compression of Structured Convolutional Models via Lifting 
+Gustav Sourek, Filip Zelezny, Ondrej Kuzelka
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Analyzing the Expressive Power of Graph Neural Networks in a Spectral Perspective 
+Muhammet Balcilar, Guillaume Renton, Pierre Héroux, Benoit Gaüzère, Sébastien Adam, Paul Honeine
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+A unifying view on implicit bias in training linear neural networks 
+Chulhee Yun, Shankar Krishnan, Hossein Mobahi
+28 Sept 2020 (modified: 24 Mar 2021) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Balancing Constraints and Rewards with Meta-Gradient D4PG 
+Dan A. Calian, Daniel J Mankowitz, Tom Zahavy, Zhongwen Xu, Junhyuk Oh, Nir Levine, Timothy Mann
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Robust Curriculum Learning: from clean label detection to noisy label self-correction 
+Tianyi Zhou, Shengjie Wang, Jeff Bilmes
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Clairvoyance: A Pipeline Toolkit for Medical Time Series 
+Daniel Jarrett, Jinsung Yoon, Ioana Bica, Zhaozhi Qian, Ari Ercole, Mihaela van der Schaar
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 26 Replies
+Show details
+Plan-Based Relaxed Reward Shaping for Goal-Directed Tasks 
+Ingmar Schubert, Ozgur S Oguz, Marc Toussaint
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Improving VAEs' Robustness to Adversarial Attack 
+Matthew JF Willetts, Alexander Camuto, Tom Rainforth, S Roberts, Christopher C Holmes
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Differentiable Segmentation of Sequences 
+Erik Scharwächter, Jonathan Lennartz, Emmanuel Müller
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+GraPPa: Grammar-Augmented Pre-Training for Table Semantic Parsing 
+Tao Yu, Chien-Sheng Wu, Xi Victoria Lin, bailin wang, Yi Chern Tan, Xinyi Yang, Dragomir Radev, richard socher, Caiming Xiong
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Sliced Kernelized Stein Discrepancy 
+Wenbo Gong, Yingzhen Li, José Miguel Hernández-Lobato
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Variational Intrinsic Control Revisited 
+Taehwan Kwon
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 24 Replies
+Show details
+HyperDynamics: Meta-Learning Object and Agent Dynamics with Hypernetworks 
+Zhou Xian, Shamit Lal, Hsiao-Yu Tung, Emmanouil Antonios Platanios, Katerina Fragkiadaki
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Towards Resolving the Implicit Bias of Gradient Descent for Matrix Factorization: Greedy Low-Rank Learning 
+Zhiyuan Li, Yuping Luo, Kaifeng Lyu
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Private Post-GAN Boosting 
+Marcel Neunhoeffer, Steven Wu, Cynthia Dwork
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Characterizing signal propagation to close the performance gap in unnormalized ResNets 
+Andrew Brock, Soham De, Samuel L Smith
+28 Sept 2020 (modified: 17 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Prototypical Contrastive Learning of Unsupervised Representations 
+Junnan Li, Pan Zhou, Caiming Xiong, Steven Hoi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Hyperbolic Neural Networks++ 
+Ryohei Shimizu, YUSUKE Mukuta, Tatsuya Harada
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Lipschitz Recurrent Neural Networks 
+N. Benjamin Erichson, Omri Azencot, Alejandro Queiruga, Liam Hodgkinson, Michael W. Mahoney
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+A statistical theory of cold posteriors in deep neural networks 
+Laurence Aitchison
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Boost then Convolve: Gradient Boosting Meets Graph Neural Networks 
+Sergei Ivanov, Liudmila Prokhorenkova
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Genetic Soft Updates for Policy Evolution in Deep Reinforcement Learning 
+Enrico Marchesini, Davide Corsi, Alessandro Farinelli
+28 Sept 2020 (modified: 15 Feb 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Spatially Structured Recurrent Modules 
+Nasim Rahaman, Anirudh Goyal, Muhammad Waleed Gondal, Manuel Wuthrich, Stefan Bauer, Yash Sharma, Yoshua Bengio, Bernhard Schölkopf
+28 Sept 2020 (modified: 11 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+On the Stability of Fine-tuning BERT: Misconceptions, Explanations, and Strong Baselines 
+Marius Mosbach, Maksym Andriushchenko, Dietrich Klakow
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+End-to-End Egospheric Spatial Memory 
+Daniel James Lenton, Stephen James, Ronald Clark, Andrew Davison
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+LEAF: A Learnable Frontend for Audio Classification 
+Neil Zeghidour, Olivier Teboul, Félix de Chaumont Quitry, Marco Tagliasacchi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Simple Augmentation Goes a Long Way: ADRL for DNN Quantization 
+Lin Ning, Guoyang Chen, Weifeng Zhang, Xipeng Shen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+The inductive bias of ReLU networks on orthogonally separable data 
+Mary Phuong, Christoph H Lampert
+28 Sept 2020 (modified: 03 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Monte-Carlo Planning and Learning with Language Action Value Estimates 
+Youngsoo Jang, Seokin Seo, Jongmin Lee, Kee-Eung Kim
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Learning Energy-Based Models by Diffusion Recovery Likelihood 
+Ruiqi Gao, Yang Song, Ben Poole, Ying Nian Wu, Diederik P Kingma
+28 Sept 2020 (modified: 25 Mar 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Capturing Label Characteristics in VAEs 
+Tom Joy, Sebastian Schmon, Philip Torr, Siddharth N, Tom Rainforth
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Linear Mode Connectivity in Multitask and Continual Learning 
+Seyed Iman Mirzadeh, Mehrdad Farajtabar, Dilan Gorur, Razvan Pascanu, Hassan Ghasemzadeh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Computational Separation Between Convolutional and Fully-Connected Networks 
+eran malach, Shai Shalev-Shwartz
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Rethinking Embedding Coupling in Pre-trained Language Models 
+Hyung Won Chung, Thibault Fevry, Henry Tsai, Melvin Johnson, Sebastian Ruder
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Physics-aware, probabilistic model order reduction with guaranteed stability 
+Sebastian Kaltenbach, Phaedon Stelios Koutsourelakis
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Disentangling 3D Prototypical Networks for Few-Shot Concept Learning 
+Mihir Prabhudesai, Shamit Lal, Darshan Patil, Hsiao-Yu Tung, Adam W Harley, Katerina Fragkiadaki
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+LiftPool: Bidirectional ConvNet Pooling 
+Jiaojiao Zhao, Cees G. M. Snoek
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Latent Convergent Cross Mapping 
+Edward De Brouwer, Adam Arany, Jaak Simm, Yves Moreau
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+You Only Need Adversarial Supervision for Semantic Image Synthesis 
+Edgar Schönfeld, Vadim Sushko, Dan Zhang, Juergen Gall, Bernt Schiele, Anna Khoreva
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+A Diffusion Theory For Deep Learning Dynamics: Stochastic Gradient Descent Exponentially Favors Flat Minima 
+Zeke Xie, Issei Sato, Masashi Sugiyama
+28 Sept 2020 (modified: 20 Apr 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Robust Learning of Fixed-Structure Bayesian Networks in Nearly-Linear Time 
+Yu Cheng, Honghao Lin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Activation-level uncertainty in deep neural networks 
+Pablo Morales-Alvarez, Daniel Hernández-Lobato, Rafael Molina, José Miguel Hernández-Lobato
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+SkipW: Resource Adaptable RNN with Strict Upper Computational Limit 
+Tsiry Mayet, Anne Lambert, Pascal Leguyadec, Francoise Le Bolzer, François Schnitzler
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Wasserstein-2 Generative Networks 
+Alexander Korotin, Vage Egiazarian, Arip Asadulaev, Alexander Safin, Evgeny Burnaev
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Group Equivariant Stand-Alone Self-Attention For Vision 
+David W. Romero, Jean-Baptiste Cordonnier
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Continuous Wasserstein-2 Barycenter Estimation without Minimax Optimization 
+Alexander Korotin, Lingxiao Li, Justin Solomon, Evgeny Burnaev
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+RNNLogic: Learning Logic Rules for Reasoning on Knowledge Graphs 
+Meng Qu, Junkun Chen, Louis-Pascal Xhonneux, Yoshua Bengio, Jian Tang
+28 Sept 2020 (modified: 20 Mar 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Selective Classification Can Magnify Disparities Across Groups 
+Erik Jones, Shiori Sagawa, Pang Wei Koh, Ananya Kumar, Percy Liang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+FedMix: Approximation of Mixup under Mean Augmented Federated Learning 
+Tehrim Yoon, Sumin Shin, Sung Ju Hwang, Eunho Yang
+28 Sept 2020 (modified: 10 Mar 2021) ICLR 2021 Poster Readers:  Everyone 24 Replies
+Show details
+In-N-Out: Pre-Training and Self-Training using Auxiliary Information for Out-of-Distribution Robustness 
+Sang Michael Xie, Ananya Kumar, Robbie Jones, Fereshte Khani, Tengyu Ma, Percy Liang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Sample-Efficient Automated Deep Reinforcement Learning 
+Jörg K.H. Franke, Gregor Koehler, André Biedenkapp, Frank Hutter
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+A Temporal Kernel Approach for Deep Learning with Continuous-time Information 
+Da Xu, Chuanwei Ruan, Evren Korpeoglu, Sushant Kumar, Kannan Achan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Convex Regularization behind Neural Reconstruction 
+Arda Sahiner, Morteza Mardani, Batu Ozturkler, Mert Pilanci, John M. Pauly
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Vector-output ReLU Neural Network Problems are Copositive Programs: Convex Analysis of Two Layer Networks and Polynomial-time Algorithms 
+Arda Sahiner, Tolga Ergen, John M. Pauly, Mert Pilanci
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Learning Better Structured Representations Using Low-rank Adaptive Label Smoothing 
+Asish Ghoshal, Xilun Chen, Sonal Gupta, Luke Zettlemoyer, Yashar Mehdad
+28 Sept 2020 (modified: 02 Mar 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Training GANs with Stronger Augmentations via Contrastive Discriminator 
+Jongheon Jeong, Jinwoo Shin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Private Image Reconstruction from System Side Channels Using Generative Models 
+Yuanyuan Yuan, Shuai Wang, Junping Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Learning to Make Decisions via Submodular Regularization 
+Ayya Alieva, Aiden Aceves, Jialin Song, Stephen Mayo, Yisong Yue, Yuxin Chen
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+The Recurrent Neural Tangent Kernel 
+Sina Alemohammad, Zichao Wang, Randall Balestriero, Richard Baraniuk
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Evaluation of Similarity-based Explanations 
+Kazuaki Hanawa, Sho Yokoi, Satoshi Hara, Kentaro Inui
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Adaptive Procedural Task Generation for Hard-Exploration Problems 
+Kuan Fang, Yuke Zhu, Silvio Savarese, L. Fei-Fei
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+Linear Last-iterate Convergence in Constrained Saddle-point Optimization 
+Chen-Yu Wei, Chung-Wei Lee, Mengxiao Zhang, Haipeng Luo
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+On Graph Neural Networks versus Graph-Augmented MLPs 
+Lei Chen, Zhengdao Chen, Joan Bruna
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Solving Compositional Reinforcement Learning Problems via Task Reduction 
+Yunfei Li, Yilin Wu, Huazhe Xu, Xiaolong Wang, Yi Wu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Conditional Generative Modeling via Learning the Latent Space 
+Sameera Ramasinghe, Kanchana Nisal Ranasinghe, Salman Khan, Nick Barnes, Stephen Gould
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+DialoGraph: Incorporating Interpretable Strategy-Graph Networks into Negotiation Dialogues 
+Rishabh Joshi, Vidhisha Balachandran, Shikhar Vashishth, Alan Black, Yulia Tsvetkov
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+WaNet - Imperceptible Warping-based Backdoor Attack 
+Tuan Anh Nguyen, Anh Tuan Tran
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Nonseparable Symplectic Neural Networks 
+Shiying Xiong, Yunjin Tong, Xingzhe He, Shuqi Yang, Cheng Yang, Bo Zhu
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Discovering Diverse Multi-Agent Strategic Behavior via Reward Randomization 
+Zhenggang Tang, Chao Yu, Boyuan Chen, Huazhe Xu, Xiaolong Wang, Fei Fang, Simon Shaolei Du, Yu Wang, Yi Wu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Multi-timescale Representation Learning in LSTM Language Models 
+Shivangi Mahto, Vy Ai Vo, Javier S. Turek, Alexander Huth
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Explaining the Efficacy of Counterfactually Augmented Data 
+Divyansh Kaushik, Amrith Setlur, Eduard H Hovy, Zachary Chase Lipton
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Revisiting Locally Supervised Learning: an Alternative to End-to-end Training 
+Yulin Wang, Zanlin Ni, Shiji Song, Le Yang, Gao Huang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+How Much Over-parameterization Is Sufficient to Learn Deep ReLU Networks? 
+Zixiang Chen, Yuan Cao, Difan Zou, Quanquan Gu
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Blending MPC & Value Function Approximation for Efficient Reinforcement Learning 
+Mohak Bhardwaj, Sanjiban Choudhury, Byron Boots
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Probabilistic Numeric Convolutional Neural Networks 
+Marc Anton Finzi, Roberto Bondesan, Max Welling
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+HeteroFL: Computation and Communication Efficient Federated Learning for Heterogeneous Clients 
+Enmao Diao, Jie Ding, Vahid Tarokh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 24 Replies
+Show details
+Semantic Re-tuning with Contrastive Tension 
+Fredrik Carlsson, Amaru Cuba Gyllensten, Evangelia Gogoulou, Erik Ylipää Hellqvist, Magnus Sahlgren
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Dataset Meta-Learning from Kernel Ridge-Regression 
+Timothy Nguyen, Zhourong Chen, Jaehoon Lee
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+AUXILIARY TASK UPDATE DECOMPOSITION: THE GOOD, THE BAD AND THE NEUTRAL 
+Lucio M. Dery, Yann Dauphin, David Grangier
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Fast And Slow Learning Of Recurrent Independent Mechanisms 
+Kanika Madan, Nan Rosemary Ke, Anirudh Goyal, Bernhard Schölkopf, Yoshua Bengio
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Auction Learning as a Two-Player Game 
+Jad Rahme, Samy Jelassi, S. Matthew Weinberg
+28 Sept 2020 (modified: 15 Mar 2021) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+A PAC-Bayesian Approach to Generalization Bounds for Graph Neural Networks 
+Renjie Liao, Raquel Urtasun, Richard Zemel
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Contextual Transformation Networks for Online Continual Learning 
+Quang Pham, Chenghao Liu, Doyen Sahoo, Steven HOI
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Adaptive and Generative Zero-Shot Learning 
+Yu-Ying Chou, Hsuan-Tien Lin, Tyng-Luh Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Online Adversarial Purification based on Self-supervised Learning 
+Changhao Shi, Chester Holtz, Gal Mishne
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+FairFil: Contrastive Neural Debiasing Method for Pretrained Text Encoders 
+Pengyu Cheng, Weituo Hao, Siyang Yuan, Shijing Si, Lawrence Carin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Reset-Free Lifelong Learning with Skill-Space Planning 
+Kevin Lu, Aditya Grover, Pieter Abbeel, Igor Mordatch
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Efficient Empowerment Estimation for Unsupervised Stabilization 
+Ruihan Zhao, Kevin Lu, Pieter Abbeel, Stas Tiomkin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+MixKD: Towards Efficient Distillation of Large-scale Language Models 
+Kevin J Liang, Weituo Hao, Dinghan Shen, Yufan Zhou, Weizhu Chen, Changyou Chen, Lawrence Carin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+CaPC Learning: Confidential and Private Collaborative Learning 
+Christopher A. Choquette-Choo, Natalie Dullerud, Adam Dziedzic, Yunxiang Zhang, Somesh Jha, Nicolas Papernot, Xiao Wang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Multiplicative Filter Networks 
+Rizal Fathony, Anit Kumar Sahu, Devin Willmott, J Zico Kolter
+28 Sept 2020 (modified: 20 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Planning from Pixels using Inverse Dynamics Models 
+Keiran Paster, Sheila A. McIlraith, Jimmy Ba
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Semi-supervised Keypoint Localization 
+Olga Moskvyak, Frederic Maire, Feras Dayoub, Mahsa Baktashmotlagh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Emergent Road Rules In Multi-Agent Driving Environments 
+Avik Pal, Jonah Philion, Yuan-Hong Liao, Sanja Fidler
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+SSD: A Unified Framework for Self-Supervised Outlier Detection 
+Vikash Sehwag, Mung Chiang, Prateek Mittal
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+ECONOMIC HYPERPARAMETER OPTIMIZATION WITH BLENDED SEARCH STRATEGY 
+Chi Wang, Qingyun Wu, Silu Huang, Amin Saied
+28 Sept 2020 (modified: 02 Apr 2021) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Inductive Representation Learning in Temporal Networks via Causal Anonymous Walks 
+Yanbang Wang, Yen-Yu Chang, Yunyu Liu, Jure Leskovec, Pan Li
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Robust Overfitting may be mitigated by properly learned smoothening 
+Tianlong Chen, Zhenyu Zhang, Sijia Liu, Shiyu Chang, Zhangyang Wang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Local Search Algorithms for Rank-Constrained Convex Optimization 
+Kyriakos Axiotis, Maxim Sviridenko
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Learning Task Decomposition with Ordered Memory Policy Network 
+Yuchen Lu, Yikang Shen, Siyuan Zhou, Aaron Courville, Joshua B. Tenenbaum, Chuang Gan
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 26 Replies
+Show details
+Property Controllable Variational Autoencoder via Invertible Mutual Dependence 
+Xiaojie Guo, Yuanqi Du, Liang Zhao
+28 Sept 2020 (modified: 05 Apr 2022) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Grounding Physical Concepts of Objects and Events Through Dynamic Visual Reasoning 
+Zhenfang Chen, Jiayuan Mao, Jiajun Wu, Kwan-Yee Kenneth Wong, Joshua B. Tenenbaum, Chuang Gan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+gradSim: Differentiable simulation for system identification and visuomotor control 
+J. Krishna Murthy, Miles Macklin, Florian Golemo, Vikram Voleti, Linda Petrini, Martin Weiss, Breandan Considine, Jérôme Parent-Lévesque, Kevin Xie, Kenny Erleben, Liam Paull, Florian Shkurti, Derek Nowrouzezahrai, Sanja Fidler
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Generative Scene Graph Networks 
+Fei Deng, Zhuo Zhi, Donghun Lee, Sungjin Ahn
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Decentralized Attribution of Generative Models 
+Changhoon Kim, Yi Ren, Yezhou Yang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Individually Fair Rankings 
+Amanda Bower, Hamid Eftekhari, Mikhail Yurochkin, Yuekai Sun
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Adaptive Federated Optimization 
+Sashank J. Reddi, Zachary Charles, Manzil Zaheer, Zachary Garrett, Keith Rush, Jakub Konečný, Sanjiv Kumar, Hugh Brendan McMahan
+28 Sept 2020 (modified: 26 Mar 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+GANs Can Play Lottery Tickets Too 
+Xuxi Chen, Zhenyu Zhang, Yongduo Sui, Tianlong Chen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Improving Relational Regularized Autoencoders with Spherical Sliced Fused Gromov Wasserstein 
+Khai Nguyen, Son Nguyen, Nhat Ho, Tung Pham, Hung Bui
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Learning Reasoning Paths over Semantic Graphs for Video-grounded Dialogues 
+Hung Le, Nancy F. Chen, Steven Hoi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Extreme Memorization via Scale of Initialization 
+Harsh Mehta, Ashok Cutkosky, Behnam Neyshabur
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Teaching with Commentaries 
+Aniruddh Raghu, Maithra Raghu, Simon Kornblith, David Duvenaud, Geoffrey Hinton
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+In Defense of Pseudo-Labeling: An Uncertainty-Aware Pseudo-label Selection Framework for Semi-Supervised Learning 
+Mamshad Nayeem Rizve, Kevin Duarte, Yogesh S Rawat, Mubarak Shah
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Into the Wild with AudioScope: Unsupervised Audio-Visual Separation of On-Screen Sounds 
+Efthymios Tzinis, Scott Wisdom, Aren Jansen, Shawn Hershey, Tal Remez, Dan Ellis, John R. Hershey
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Cut out the annotator, keep the cutout: better segmentation with weak supervision 
+Sarah Hooper, Michael Wornow, Ying Hang Seah, Peter Kellman, Hui Xue, Frederic Sala, Curtis Langlotz, Christopher Re
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+CoDA: Contrast-enhanced and Diversity-promoting Data Augmentation for Natural Language Understanding 
+Yanru Qu, Dinghan Shen, Yelong Shen, Sandra Sajeev, Weizhu Chen, Jiawei Han
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Deep Learning meets Projective Clustering 
+Alaa Maalouf, Harry Lang, Daniela Rus, Dan Feldman
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Learning to Deceive Knowledge Graph Augmented Models via Targeted Perturbation 
+Mrigank Raman, Aaron Chan, Siddhant Agarwal, PeiFeng Wang, Hansen Wang, Sungchul Kim, Ryan Rossi, Handong Zhao, Nedim Lipka, Xiang Ren
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Knowledge Distillation as Semiparametric Inference 
+Tri Dao, Govinda M Kamath, Vasilis Syrgkanis, Lester Mackey
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Meta-Learning with Neural Tangent Kernels 
+Yufan Zhou, Zhenyi Wang, Jiayi Xian, Changyou Chen, Jinhui Xu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Vulnerability-Aware Poisoning Mechanism for Online RL with Unknown Dynamics 
+Yanchao Sun, Da Huo, Furong Huang
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 25 Replies
+Show details
+Understanding and Improving Lexical Choice in Non-Autoregressive Translation 
+Liang Ding, Longyue Wang, Xuebo Liu, Derek F. Wong, Dacheng Tao, Zhaopeng Tu
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Layer-adaptive Sparsity for the Magnitude-based Pruning 
+Jaeho Lee, Sejun Park, Sangwoo Mo, Sungsoo Ahn, Jinwoo Shin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Understanding and Improving Encoder Layer Fusion in Sequence-to-Sequence Learning 
+Xuebo Liu, Longyue Wang, Derek F. Wong, Liang Ding, Lidia S. Chao, Zhaopeng Tu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+SaliencyMix: A Saliency Guided Data Augmentation Strategy for Better Regularization 
+A F M Shahab Uddin, Mst. Sirazam Monira, Wheemyung Shin, TaeChoong Chung, Sung-Ho Bae
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Are wider nets better given the same number of parameters? 
+Anna Golubeva, Guy Gur-Ari, Behnam Neyshabur
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Discovering Non-monotonic Autoregressive Orderings with Variational Inference 
+Xuanlin Li, Brandon Trabucco, Dong Huk Park, Michael Luo, Sheng Shen, Trevor Darrell, Yang Gao
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+CompOFA – Compound Once-For-All Networks for Faster Multi-Platform Deployment 
+Manas Sahni, Shreya Varshini, Alind Khare, Alexey Tumanov
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Representing Partial Programs with Blended Abstract Semantics 
+Maxwell Nye, Yewen Pu, Matthew Bowers, Jacob Andreas, Joshua B. Tenenbaum, Armando Solar-Lezama
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+PolarNet: Learning to Optimize Polar Keypoints for Keypoint Based Object Detection 
+Wu Xiongwei, Doyen Sahoo, Steven HOI
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Neural Architecture Search on ImageNet in Four GPU Hours: A Theoretically Inspired Perspective 
+Wuyang Chen, Xinyu Gong, Zhangyang Wang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Unsupervised Representation Learning for Time Series with Temporal Neighborhood Coding 
+Sana Tonekaboni, Danny Eytan, Anna Goldenberg
+28 Sept 2020 (modified: 07 Mar 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Do Wide and Deep Networks Learn the Same Things? Uncovering How Neural Network Representations Vary with Width and Depth 
+Thao Nguyen, Maithra Raghu, Simon Kornblith
+28 Sept 2020 (modified: 24 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Supervised Contrastive Learning for Pre-trained Language Model Fine-tuning 
+Beliz Gunel, Jingfei Du, Alexis Conneau, Veselin Stoyanov
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Early Stopping in Deep Networks: Double Descent and How to Eliminate it 
+Reinhard Heckel, Fatih Furkan Yilmaz
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Contrastive Syn-to-Real Generalization 
+Wuyang Chen, Zhiding Yu, Shalini De Mello, Sifei Liu, Jose M. Alvarez, Zhangyang Wang, Anima Anandkumar
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Benchmarks for Deep Off-Policy Evaluation 
+Justin Fu, Mohammad Norouzi, Ofir Nachum, George Tucker, ziyu wang, Alexander Novikov, Mengjiao Yang, Michael R Zhang, Yutian Chen, Aviral Kumar, Cosmin Paduraru, Sergey Levine, Thomas Paine
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Pre-training Text-to-Text Transformers for Concept-centric Common Sense 
+Wangchunshu Zhou, Dong-Ho Lee, Ravi Kiran Selvam, Seyeon Lee, Xiang Ren
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Combining Label Propagation and Simple Models out-performs Graph Neural Networks 
+Qian Huang, Horace He, Abhay Singh, Ser-Nam Lim, Austin Benson
+28 Sept 2020 (modified: 23 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Learning Long-term Visual Dynamics with Region Proposal Interaction Networks 
+Haozhi Qi, Xiaolong Wang, Deepak Pathak, Yi Ma, Jitendra Malik
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Chaos of Learning Beyond Zero-sum and Coordination via Game Decompositions 
+Yun Kuen Cheung, Yixin Tao
+28 Sept 2020 (modified: 15 Mar 2021) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Control-Aware Representations for Model-based Reinforcement Learning 
+Brandon Cui, Yinlam Chow, Mohammad Ghavamzadeh
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Provably robust classification of adversarial examples with detection 
+Fatemeh Sheikholeslami, Ali Lotfi, J Zico Kolter
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Return-Based Contrastive Representation Learning for Reinforcement Learning 
+Guoqing Liu, Chuheng Zhang, Li Zhao, Tao Qin, Jinhua Zhu, Li Jian, Nenghai Yu, Tie-Yan Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Adversarially-Trained Deep Nets Transfer Better: Illustration on Image Classification 
+Francisco Utrera, Evan Kravitz, N. Benjamin Erichson, Rajiv Khanna, Michael W. Mahoney
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Learning Structural Edits via Incremental Tree Transformations 
+Ziyu Yao, Frank F. Xu, Pengcheng Yin, Huan Sun, Graham Neubig
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 31 Replies
+Show details
+Cross-Attentional Audio-Visual Fusion for Weakly-Supervised Action Localization 
+Jun-Tae Lee, Mihir Jain, Hyoungwoo Park, Sungrack Yun
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Improved Estimation of Concentration Under -Norm Distance Metrics Using Half Spaces 
+Jack Prescott, Xiao Zhang, David Evans
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Beyond Categorical Label Representations for Image Classification 
+Boyuan Chen, Yu Li, Sunand Raghupathi, Hod Lipson
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Fantastic Four: Differentiable and Efficient Bounds on Singular Values of Convolution Layers 
+Sahil Singla, Soheil Feizi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Accelerating Convergence of Replica Exchange Stochastic Gradient MCMC via Variance Reduction 
+Wei Deng, Qi Feng, Georgios P. Karagiannis, Guang Lin, Faming Liang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+IsarStep: a Benchmark for High-level Mathematical Reasoning 
+Wenda Li, Lei Yu, Yuhuai Wu, Lawrence C. Paulson
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Factorizing Declarative and Procedural Knowledge in Structured, Dynamical Environments 
+Anirudh Goyal, Alex Lamb, Phanideep Gampa, Philippe Beaudoin, Charles Blundell, Sergey Levine, Yoshua Bengio, Michael Curtis Mozer
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Provable Rich Observation Reinforcement Learning with Combinatorial Latent States 
+Dipendra Misra, Qinghua Liu, Chi Jin, John Langford
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+LowKey: Leveraging Adversarial Attacks to Protect Social Media Users from Facial Recognition 
+Valeriia Cherepanova, Micah Goldblum, Harrison Foley, Shiyuan Duan, John P Dickerson, Gavin Taylor, Tom Goldstein
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Neural Networks for Learning Counterfactual G-Invariances from Single Environments 
+S Chandra Mouli, Bruno Ribeiro
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 25 Replies
+Show details
+Simple Spectral Graph Convolution 
+Hao Zhu, Piotr Koniusz
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+Anatomy of Catastrophic Forgetting: Hidden Representations and Task Semantics 
+Vinay Venkatesh Ramasesh, Ethan Dyer, Maithra Raghu
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+On Fast Adversarial Robustness Adaptation in Model-Agnostic Meta-Learning 
+Ren Wang, Kaidi Xu, Sijia Liu, Pin-Yu Chen, Tsui-Wei Weng, Chuang Gan, Meng Wang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+The geometry of integration in text classification RNNs 
+Kyle Aitken, Vinay Venkatesh Ramasesh, Ankush Garg, Yuan Cao, David Sussillo, Niru Maheswaranathan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Towards Robust Neural Networks via Close-loop Control 
+Zhuotong Chen, Qianxiao Li, Zheng Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Projected Latent Markov Chain Monte Carlo: Conditional Sampling of Normalizing Flows 
+Chris Cannella, Mohammadreza Soltani, Vahid Tarokh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Understanding the failure modes of out-of-distribution generalization 
+Vaishnavh Nagarajan, Anders Andreassen, Behnam Neyshabur
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Usable Information and Evolution of Optimal Representations During Training 
+Michael Kleinman, Alessandro Achille, Daksh Idnani, Jonathan Kao
+28 Sept 2020 (modified: 11 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Adaptive Extra-Gradient Methods for Min-Max Optimization and Games 
+Kimon Antonakopoulos, Veronica Belmega, Panayotis Mertikopoulos
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Shapley explainability on the data manifold 
+Christopher Frye, Damien de Mijolla, Tom Begley, Laurence Cowton, Megan Stanley, Ilya Feige
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Reinforcement Learning with Random Delays 
+Yann Bouteiller, Simon Ramstedt, Giovanni Beltrame, Christopher Pal, Jonathan Binas
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+Shape or Texture: Understanding Discriminative Features in CNNs 
+Md Amirul Islam, Matthew Kowal, Patrick Esser, Sen Jia, Björn Ommer, Konstantinos G. Derpanis, Neil Bruce
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+NOVAS: Non-convex Optimization via Adaptive Stochastic Search for End-to-end Learning and Control 
+Ioannis Exarchos, Marcus Aloysius Pereira, Ziyi Wang, Evangelos Theodorou
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Negative Data Augmentation 
+Abhishek Sinha, Kumar Ayush, Jiaming Song, Burak Uzkent, Hongxia Jin, Stefano Ermon
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Molecule Optimization by Explainable Evolution 
+Binghong Chen, Tianzhe Wang, Chengtao Li, Hanjun Dai, Le Song
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Estimating Lipschitz constants of monotone deep equilibrium models 
+Chirag Pabbaraju, Ezra Winston, J Zico Kolter
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Implicit Gradient Regularization 
+David Barrett, Benoit Dherin
+28 Sept 2020 (modified: 11 Mar 2021) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Faster Binary Embeddings for Preserving Euclidean Distances 
+Jinjie Zhang, Rayan Saab
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+Scalable Transfer Learning with Expert Models 
+Joan Puigcerver, Carlos Riquelme Ruiz, Basil Mustafa, Cedric Renggli, André Susano Pinto, Sylvain Gelly, Daniel Keysers, Neil Houlsby
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Signatory: differentiable computations of the signature and logsignature transforms, on both CPU and GPU 
+Patrick Kidger, Terry Lyons
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Distance-Based Regularisation of Deep Networks for Fine-Tuning 
+Henry Gouk, Timothy Hospedales, massimiliano pontil
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Decoupling Global and Local Representations via Invertible Generative Flows 
+Xuezhe Ma, Xiang Kong, Shanghang Zhang, Eduard H Hovy
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Understanding Over-parameterization in Generative Adversarial Networks 
+Yogesh Balaji, Mohammadmahdi Sajedi, Neha Mukund Kalibhat, Mucong Ding, Dominik Stöger, Mahdi Soltanolkotabi, Soheil Feizi
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Filtered Inner Product Projection for Crosslingual Embedding Alignment 
+Vin Sachidananda, Ziyi Yang, Chenguang Zhu
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Deep Partition Aggregation: Provable Defenses against General Poisoning Attacks 
+Alexander Levine, Soheil Feizi
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+HalentNet: Multimodal Trajectory Forecasting with Hallucinative Intents 
+Deyao Zhu, Mohamed Zahran, Li Erran Li, Mohamed Elhoseiny
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+INT: An Inequality Benchmark for Evaluating Generalization in Theorem Proving 
+Yuhuai Wu, Albert Jiang, Jimmy Ba, Roger Baker Grosse
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Bayesian Few-Shot Classification with One-vs-Each Pólya-Gamma Augmented Gaussian Processes 
+Jake Snell, Richard Zemel
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+A Hypergradient Approach to Robust Regression without Correspondence 
+Yujia Xie, Yixiu Mao, Simiao Zuo, Hongteng Xu, Xiaojing Ye, Tuo Zhao, Hongyuan Zha
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+C-Learning: Horizon-Aware Cumulative Accessibility Estimation 
+Panteha Naderian, Gabriel Loaiza-Ganem, Harry J. Braviner, Anthony L. Caterini, Jesse C. Cresswell, Tong Li, Animesh Garg
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+MIROSTAT: A NEURAL TEXT DECODING ALGORITHM THAT DIRECTLY CONTROLS PERPLEXITY 
+Sourya Basu, Govardana Sachitanandam Ramachandran, Nitish Shirish Keskar, Lav R. Varshney
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Global optimality of softmax policy gradient with single hidden layer neural networks in the mean-field regime 
+Andrea Agazzi, Jianfeng Lu
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+The Deep Bootstrap Framework: Good Online Learners are Good Offline Generalizers 
+Preetum Nakkiran, Behnam Neyshabur, Hanie Sedghi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+A Better Alternative to Error Feedback for Communication-Efficient Distributed Learning 
+Samuel Horváth, Peter Richtarik
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+DrNAS: Dirichlet Neural Architecture Search 
+Xiangning Chen, Ruochen Wang, Minhao Cheng, Xiaocheng Tang, Cho-Jui Hsieh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Offline Model-Based Optimization via Normalized Maximum Likelihood Estimation 
+Justin Fu, Sergey Levine
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Viewmaker Networks: Learning Views for Unsupervised Representation Learning 
+Alex Tamkin, Mike Wu, Noah Goodman
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Robust Pruning at Initialization 
+Soufiane Hayou, Jean-Francois Ton, Arnaud Doucet, Yee Whye Teh
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Single-Photon Image Classification 
+Thomas Fischbacher, Luciano Sbaiz
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Can a Fruit Fly Learn Word Embeddings? 
+Yuchen Liang, Chaitanya Ryali, Benjamin Hoover, Leopold Grinberg, Saket Navlakha, Mohammed J Zaki, Dmitry Krotov
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+A Wigner-Eckart Theorem for Group Equivariant Convolution Kernels 
+Leon Lang, Maurice Weiler
+28 Sept 2020 (modified: 25 Jan 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Non-asymptotic Confidence Intervals of Off-policy Evaluation: Primal and Dual Bounds 
+Yihao Feng, Ziyang Tang, na zhang, qiang liu
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Model Patching: Closing the Subgroup Performance Gap with Data Augmentation 
+Karan Goel, Albert Gu, Yixuan Li, Christopher Re
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+SOLAR: Sparse Orthogonal Learned and Random Embeddings 
+Tharun Medini, Beidi Chen, Anshumali Shrivastava
+28 Sept 2020 (modified: 25 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Neural representation and generation for RNA secondary structures 
+Zichao Yan, William L. Hamilton, Mathieu Blanchette
+28 Sept 2020 (modified: 04 Feb 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+A Mathematical Exploration of Why Language Models Help Solve Downstream Tasks 
+Nikunj Saunshi, Sadhika Malladi, Sanjeev Arora
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Noise or Signal: The Role of Image Backgrounds in Object Recognition 
+Kai Yuanqing Xiao, Logan Engstrom, Andrew Ilyas, Aleksander Madry
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Does enhanced shape bias improve neural network robustness to common corruptions? 
+Chaithanya Kumar Mummadi, Ranjitha Subramaniam, Robin Hutmacher, Julien Vitay, Volker Fischer, Jan Hendrik Metzen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Long Live the Lottery: The Existence of Winning Tickets in Lifelong Learning 
+Tianlong Chen, Zhenyu Zhang, Sijia Liu, Shiyu Chang, Zhangyang Wang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Exploring the Uncertainty Properties of Neural Networks’ Implicit Priors in the Infinite-Width Limit 
+Ben Adlam, Jaehoon Lee, Lechao Xiao, Jeffrey Pennington, Jasper Snoek
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Hierarchical Autoregressive Modeling for Neural Video Compression 
+Ruihan Yang, Yibo Yang, Joseph Marino, Stephan Mandt
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+DeLighT: Deep and Light-weight Transformer 
+Sachin Mehta, Marjan Ghazvininejad, Srinivasan Iyer, Luke Zettlemoyer, Hannaneh Hajishirzi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 36 Replies
+Show details
+Learning A Minimax Optimizer: A Pilot Study 
+Jiayi Shen, Xiaohan Chen, Howard Heaton, Tianlong Chen, Jialin Liu, Wotao Yin, Zhangyang Wang
+28 Sept 2020 (modified: 14 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Fuzzy Tiling Activations: A Simple Approach to Learning Sparse Representations Online 
+Yangchen Pan, Kirby Banman, Martha White
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+FedBE: Making Bayesian Model Ensemble Applicable to Federated Learning 
+Hong-You Chen, Wei-Lun Chao
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Are Neural Nets Modular? Inspecting Functional Modularity Through Differentiable Weight Masks 
+Róbert Csordás, Sjoerd van Steenkiste, Jürgen Schmidhuber
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Calibration tests beyond classification 
+David Widmann, Fredrik Lindsten, Dave Zachariah
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Meta Back-Translation 
+Hieu Pham, Xinyi Wang, Yiming Yang, Graham Neubig
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Attentional Constellation Nets for Few-Shot Learning 
+Weijian Xu, yifan xu, Huaijin Wang, Zhuowen Tu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Uncertainty Estimation in Autoregressive Structured Prediction 
+Andrey Malinin, Mark Gales
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Measuring Massive Multitask Language Understanding 
+Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, Jacob Steinhardt
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+No MCMC for me: Amortized sampling for fast and stable training of energy-based models 
+Will Sussman Grathwohl, Jacob Jin Kelly, Milad Hashemi, Mohammad Norouzi, Kevin Swersky, David Duvenaud
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 35 Replies
+Show details
+Aligning AI With Shared Human Values 
+Dan Hendrycks, Collin Burns, Steven Basart, Andrew Critch, Jerry Li, Dawn Song, Jacob Steinhardt
+28 Sept 2020 (modified: 05 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Class Normalization for (Continual)? Generalized Zero-Shot Learning 
+Ivan Skorokhodov, Mohamed Elhoseiny
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 26 Replies
+Show details
+Learning explanations that are hard to vary 
+Giambattista Parascandolo, Alexander Neitz, ANTONIO ORVIETO, Luigi Gresele, Bernhard Schölkopf
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Degree-Quant: Quantization-Aware Training for Graph Neural Networks 
+Shyam Anil Tailor, Javier Fernandez-Marques, Nicholas Donald Lane
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Byzantine-Resilient Non-Convex Stochastic Gradient Descent 
+Zeyuan Allen-Zhu, Faeze Ebrahimianghazani, Jerry Li, Dan Alistarh
+28 Sept 2020 (modified: 02 Apr 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Teaching Temporal Logics to Neural Networks 
+Christopher Hahn, Frederik Schmitt, Jens U. Kreber, Markus Norman Rabe, Bernd Finkbeiner
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Bypassing the Ambient Dimension: Private SGD with Gradient Subspace Identification 
+Yingxue Zhou, Steven Wu, Arindam Banerjee
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Generative Time-series Modeling with Fourier Flows 
+Ahmed Alaa, Alex James Chan, Mihaela van der Schaar
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Overparameterisation and worst-case generalisation: friend or foe? 
+Aditya Krishna Menon, Ankit Singh Rawat, Sanjiv Kumar
+28 Sept 2020 (modified: 22 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Improving Zero-Shot Voice Style Transfer via Disentangled Representation Learning 
+Siyang Yuan, Pengyu Cheng, Ruiyi Zhang, Weituo Hao, Zhe Gan, Lawrence Carin
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Meta-learning with negative learning rates 
+Alberto Bernacchia
+28 Sept 2020 (modified: 26 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Learning to Recombine and Resample Data For Compositional Generalization 
+Ekin Akyürek, Afra Feyza Akyürek, Jacob Andreas
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Fooling a Complete Neural Network Verifier 
+Dániel Zombori, Balázs Bánhelyi, Tibor Csendes, István Megyeri, Márk Jelasity
+28 Sept 2020 (modified: 02 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+UMEC: Unified model and embedding compression for efficient recommendation systems 
+Jiayi Shen, Haotao Wang, Shupeng Gui, Jianchao Tan, Zhangyang Wang, Ji Liu
+28 Sept 2020 (modified: 02 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Evaluations and Methods for Explanation through Robustness Analysis 
+Cheng-Yu Hsieh, Chih-Kuan Yeh, Xuanqing Liu, Pradeep Kumar Ravikumar, Seungyeon Kim, Sanjiv Kumar, Cho-Jui Hsieh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Learning and Evaluating Representations for Deep One-Class Classification 
+Kihyuk Sohn, Chun-Liang Li, Jinsung Yoon, Minho Jin, Tomas Pfister
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Conditional Negative Sampling for Contrastive Learning of Visual Representations 
+Mike Wu, Milan Mosse, Chengxu Zhuang, Daniel Yamins, Noah Goodman
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Communication in Multi-Agent Reinforcement Learning: Intention Sharing 
+Woojun Kim, Jongeui Park, Youngchul Sung
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Neural Thompson Sampling 
+Weitong ZHANG, Dongruo Zhou, Lihong Li, Quanquan Gu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Optimal Regularization can Mitigate Double Descent 
+Preetum Nakkiran, Prayaag Venkat, Sham M. Kakade, Tengyu Ma
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Separation and Concentration in Deep Networks 
+John Zarka, Florentin Guth, Stéphane Mallat
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Group Equivariant Generative Adversarial Networks 
+Neel Dey, Antong Chen, Soheil Ghafurian
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+InfoBERT: Improving Robustness of Language Models from An Information Theoretic Perspective 
+Boxin Wang, Shuohang Wang, Yu Cheng, Zhe Gan, Ruoxi Jia, Bo Li, Jingjing Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Using latent space regression to analyze and leverage compositionality in GANs 
+Lucy Chai, Jonas Wulff, Phillip Isola
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Go with the flow: Adaptive control for Neural ODEs 
+Mathieu Chalvidal, Matthew Ricci, Rufin VanRullen, Thomas Serre
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+A Learning Theoretic Perspective on Local Explainability 
+Jeffrey Li, Vaishnavh Nagarajan, Gregory Plumb, Ameet Talwalkar
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+CopulaGNN: Towards Integrating Representational and Correlational Roles of Graphs in Graph Neural Networks 
+Jiaqi Ma, Bo Chang, Xuefei Zhang, Qiaozhu Mei
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Gradient Descent on Neural Networks Typically Occurs at the Edge of Stability 
+Jeremy Cohen, Simran Kaur, Yuanzhi Li, J Zico Kolter, Ameet Talwalkar
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 33 Replies
+Show details
+AutoLRS: Automatic Learning-Rate Schedule by Bayesian Optimization on the Fly 
+Yuchen Jin, Tianyi Zhou, Liangyu Zhao, Yibo Zhu, Chuanxiong Guo, Marco Canini, Arvind Krishnamurthy
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Autoregressive Dynamics Models for Offline Policy Evaluation and Optimization 
+Michael R Zhang, Thomas Paine, Ofir Nachum, Cosmin Paduraru, George Tucker, ziyu wang, Mohammad Norouzi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+On the role of planning in model-based deep reinforcement learning 
+Jessica B Hamrick, Abram L. Friesen, Feryal Behbahani, Arthur Guez, Fabio Viola, Sims Witherspoon, Thomas Anthony, Lars Holger Buesing, Petar Veličković, Theophane Weber
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Zero-Cost Proxies for Lightweight NAS 
+Mohamed S Abdelfattah, Abhinav Mehrotra, Łukasz Dudziak, Nicholas Donald Lane
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Personalized Federated Learning with First Order Model Optimization 
+Michael Zhang, Karan Sapra, Sanja Fidler, Serena Yeung, Jose M. Alvarez
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Deconstructing the Regularization of BatchNorm 
+Yann Dauphin, Ekin Dogus Cubuk
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+No Cost Likelihood Manipulation at Test Time for Making Better Mistakes in Deep Networks 
+Shyamgopal Karthik, Ameya Prabhu, Puneet K. Dokania, Vineet Gandhi
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Intrinsic-Extrinsic Convolution and Pooling for Learning on 3D Protein Structures 
+Pedro Hermosilla, Marco Schäfer, Matej Lang, Gloria Fackelmann, Pere-Pau Vázquez, Barbora Kozlikova, Michael Krone, Tobias Ritschel, Timo Ropinski
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Generative Language-Grounded Policy in Vision-and-Language Navigation with Bayes' Rule 
+Shuhei Kurita, Kyunghyun Cho
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Learning a Latent Search Space for Routing Problems using Variational Autoencoders 
+André Hottung, Bhanu Bhandari, Kevin Tierney
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Mastering Atari with Discrete World Models 
+Danijar Hafner, Timothy P Lillicrap, Mohammad Norouzi, Jimmy Ba
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Spatial Dependency Networks: Neural Layers for Improved Generative Image Modeling 
+Đorđe Miladinović, Aleksandar Stanić, Stefan Bauer, Jürgen Schmidhuber, Joachim M. Buhmann
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Efficient Transformers in Reinforcement Learning using Actor-Learner Distillation 
+Emilio Parisotto, Russ Salakhutdinov
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+IOT: Instance-wise Layer Reordering for Transformer Structures 
+Jinhua Zhu, Lijun Wu, Yingce Xia, Shufang Xie, Tao Qin, Wengang Zhou, Houqiang Li, Tie-Yan Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Federated Learning via Posterior Averaging: A New Perspective and Practical Algorithms 
+Maruan Al-Shedivat, Jennifer Gillenwater, Eric Xing, Afshin Rostamizadeh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Extracting Strong Policies for Robotics Tasks from Zero-Order Trajectory Optimizers 
+Cristina Pinneri, Shambhuraj Sawant, Sebastian Blaes, Georg Martius
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+BREEDS: Benchmarks for Subpopulation Shift 
+Shibani Santurkar, Dimitris Tsipras, Aleksander Madry
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+On the Impossibility of Global Convergence in Multi-Loss Optimization 
+Alistair Letcher
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Efficient Wasserstein Natural Gradients for Reinforcement Learning 
+Ted Moskovitz, Michael Arbel, Ferenc Huszar, Arthur Gretton
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Multi-Level Local SGD: Distributed SGD for Heterogeneous Hierarchical Networks 
+Timothy Castiglia, Anirban Das, Stacy Patterson
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Kanerva++: Extending the Kanerva Machine With Differentiable, Locally Block Allocated Latent Memory 
+Jason Ramapuram, Yan Wu, Alexandros Kalousis
+28 Sept 2020 (modified: 25 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+EVALUATION OF NEURAL ARCHITECTURES TRAINED WITH SQUARE LOSS VS CROSS-ENTROPY IN CLASSIFICATION TASKS 
+Like Hui, Mikhail Belkin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Self-supervised Learning from a Multi-view Perspective 
+Yao-Hung Hubert Tsai, Yue Wu, Ruslan Salakhutdinov, Louis-Philippe Morency
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Interpretable Neural Architecture Search via Bayesian Optimisation with Weisfeiler-Lehman Kernels 
+Binxin Ru, Xingchen Wan, Xiaowen Dong, Michael Osborne
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+CT-Net: Channel Tensorization Network for Video Classification 
+Kunchang Li, Xianhang Li, Yali Wang, Jun Wang, Yu Qiao
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Intraclass clustering: an implicit learning ability that regularizes DNNs 
+Simon Carbonnelle, Christophe De Vleeschouwer
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Learning Robust State Abstractions for Hidden-Parameter Block MDPs 
+Amy Zhang, Shagun Sodhani, Khimya Khetarpal, Joelle Pineau
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Isometric Transformation Invariant and Equivariant Graph Convolutional Networks 
+Masanobu Horie, Naoki Morita, Toshiaki Hishinuma, Yu Ihara, Naoto Mitsume
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Learning Safe Multi-agent Control with Decentralized Neural Barrier Certificates 
+Zengyi Qin, Kaiqing Zhang, Yuxiao Chen, Jingkai Chen, Chuchu Fan
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 29 Replies
+Show details
+ChipNet: Budget-Aware Pruning with Heaviside Continuous Approximations 
+Rishabh Tiwari, Udbhav Bamba, Arnav Chavan, Deepak Gupta
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+AdaSpeech: Adaptive Text to Speech for Custom Voice 
+Mingjian Chen, Xu Tan, Bohan Li, Yanqing Liu, Tao Qin, sheng zhao, Tie-Yan Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Estimating and Evaluating Regression Predictive Uncertainty in Deep Object Detectors 
+Ali Harakeh, Steven L. Waslander
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Domain-Robust Visual Imitation Learning with Mutual Information Constraints 
+Edoardo Cetin, Oya Celiktutan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Clustering-friendly Representation Learning via Instance Discrimination and Feature Decorrelation 
+Yaling Tao, Kentaro Takagi, Kouta Nakata
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Progressive Skeletonization: Trimming more fat from a network at initialization 
+Pau de Jorge, Amartya Sanyal, Harkirat Behl, Philip Torr, Grégory Rogez, Puneet K. Dokania
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+On the Curse of Memory in Recurrent Neural Networks: Approximation and Optimization Analysis 
+Zhong Li, Jiequn Han, Weinan E, Qianxiao Li
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Do not Let Privacy Overbill Utility: Gradient Embedding Perturbation for Private Learning 
+Da Yu, Huishuai Zhang, Wei Chen, Tie-Yan Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+More or Less: When and How to Build Convolutional Neural Network Ensembles 
+Abdul Wasay, Stratos Idreos
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Revisiting Hierarchical Approach for Persistent Long-Term Video Prediction 
+Wonkwang Lee, Whie Jung, Han Zhang, Ting Chen, Jing Yu Koh, Thomas Huang, Hyungsuk Yoon, Honglak Lee, Seunghoon Hong
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Symmetry-Aware Actor-Critic for 3D Molecular Design 
+Gregor N. C. Simm, Robert Pinsler, Gábor Csányi, José Miguel Hernández-Lobato
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Learnable Embedding sizes for Recommender Systems 
+Siyi Liu, Chen Gao, Yihong Chen, Depeng Jin, Yong Li
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Learning Neural Generative Dynamics for Molecular Conformation Generation 
+Minkai Xu, Shitong Luo, Yoshua Bengio, Jian Peng, Jian Tang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Learning the Pareto Front with Hypernetworks 
+Aviv Navon, Aviv Shamsian, Ethan Fetaya, Gal Chechik
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Ask Your Humans: Using Human Instructions to Improve Generalization in Reinforcement Learning 
+Valerie Chen, Abhinav Gupta, Kenneth Marino
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Taming GANs with Lookahead-Minmax 
+Tatjana Chavdarova, Matteo Pagliardini, Sebastian U Stich, François Fleuret, Martin Jaggi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Uncertainty in Gradient Boosting via Ensembles 
+Andrey Malinin, Liudmila Prokhorenkova, Aleksei Ustimenko
+28 Sept 2020 (modified: 24 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Adversarial score matching and improved sampling for image generation 
+Alexia Jolicoeur-Martineau, Rémi Piché-Taillefer, Ioannis Mitliagkas, Remi Tachet des Combes
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+FastSpeech 2: Fast and High-Quality End-to-End Text to Speech 
+Yi Ren, Chenxu Hu, Xu Tan, Tao Qin, Sheng Zhao, Zhou Zhao, Tie-Yan Liu
+28 Sept 2020 (modified: 30 Mar 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Interpretable Models for Granger Causality Using Self-explaining Neural Networks 
+Ričards Marcinkevičs, Julia E Vogt
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Learning Deep Features in Instrumental Variable Regression 
+Liyuan Xu, Yutian Chen, Siddarth Srinivasan, Nando de Freitas, Arnaud Doucet, Arthur Gretton
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Statistical inference for individual fairness 
+Subha Maity, Songkai Xue, Mikhail Yurochkin, Yuekai Sun
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Randomized Ensembled Double Q-Learning: Learning Fast Without a Model 
+Xinyue Chen, Che Wang, Zijian Zhou, Keith W. Ross
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Lifelong Learning of Compositional Structures 
+Jorge A Mendez, ERIC EATON
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+QPLEX: Duplex Dueling Multi-Agent Q-Learning 
+Jianhao Wang, Zhizhou Ren, Terry Liu, Yang Yu, Chongjie Zhang
+28 Sept 2020 (modified: 17 Mar 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Meta-Learning of Structured Task Distributions in Humans and Machines 
+Sreejan Kumar, Ishita Dasgupta, Jonathan Cohen, Nathaniel Daw, Thomas Griffiths
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+PC2WF: 3D Wireframe Reconstruction from Raw Point Clouds 
+Yujia Liu, Stefano D'Aronco, Konrad Schindler, Jan Dirk Wegner
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Neural Attention Distillation: Erasing Backdoor Triggers from Deep Neural Networks 
+Yige Li, Xixiang Lyu, Nodens Koren, Lingjuan Lyu, Bo Li, Xingjun Ma
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+HyperGrid Transformers: Towards A Single Model for Multiple Tasks 
+Yi Tay, Zhe Zhao, Dara Bahri, Donald Metzler, Da-Cheng Juan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Long Range Arena : A Benchmark for Efficient Transformers 
+Yi Tay, Mostafa Dehghani, Samira Abnar, Yikang Shen, Dara Bahri, Philip Pham, Jinfeng Rao, Liu Yang, Sebastian Ruder, Donald Metzler
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Acting in Delayed Environments with Non-Stationary Markov Policies 
+Esther Derman, Gal Dalal, Shie Mannor
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Neurally Augmented ALISTA 
+Freya Behrens, Jonathan Sauder, Peter Jung
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Relating by Contrasting: A Data-efficient Framework for Multimodal Generative Models 
+Yuge Shi, Brooks Paige, Philip Torr, Siddharth N
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Categorical Normalizing Flows via Continuous Transformations 
+Phillip Lippe, Efstratios Gavves
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Prototypical Representation Learning for Relation Extraction 
+Ning Ding, Xiaobin Wang, Yao Fu, Guangwei Xu, Rui Wang, Pengjun Xie, Ying Shen, Fei Huang, Hai-Tao Zheng, Rui Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Generalized Energy Based Models 
+Michael Arbel, Liang Zhou, Arthur Gretton
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Predicting Classification Accuracy When Adding New Unobserved Classes 
+Yuli Slavutsky, Yuval Benjamini
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+In Search of Lost Domain Generalization 
+Ishaan Gulrajani, David Lopez-Paz
+28 Sept 2020 (modified: 15 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Estimating informativeness of samples with Smooth Unique Information 
+Hrayr Harutyunyan, Alessandro Achille, Giovanni Paolini, Orchid Majumder, Avinash Ravichandran, Rahul Bhotika, Stefano Soatto
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Identifying Physical Law of Hamiltonian Systems via Meta-Learning 
+Seungjun Lee, Haesang Yang, Woojae Seong
+28 Sept 2020 (modified: 15 Jun 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Adapting to Reward Progressivity via Spectral Reinforcement Learning 
+Michael Dann, John Thangarajah
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Understanding the effects of data parallelism and sparsity on neural network training 
+Namhoon Lee, Thalaiyasingam Ajanthan, Philip Torr, Martin Jaggi
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Primal Wasserstein Imitation Learning 
+Robert Dadashi, Leonard Hussenot, Matthieu Geist, Olivier Pietquin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Prediction and generalisation over directed actions by grid cells 
+Changmin Yu, Timothy Behrens, Neil Burgess
+28 Sept 2020 (modified: 12 Mar 2021) ICLR 2021 Poster Readers:  Everyone 6 Replies
+Show details
+Drop-Bottleneck: Learning Discrete Compressed Representation for Noise-Robust Exploration 
+Jaekyeom Kim, Minjung Kim, Dongyeon Woo, Gunhee Kim
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+BOIL: Towards Representation Change for Few-shot Learning 
+Jaehoon Oh, Hyungjun Yoo, ChangHwan Kim, Se-Young Yun
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+MultiModalQA: complex question answering over text, tables and images 
+Alon Talmor, Ori Yoran, Amnon Catav, Dan Lahav, Yizhong Wang, Akari Asai, Gabriel Ilharco, Hannaneh Hajishirzi, Jonathan Berant
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Neural gradients are near-lognormal: improved quantized and sparse training 
+Brian Chmiel, Liad Ben-Uri, Moran Shkolnik, Elad Hoffer, Ron Banner, Daniel Soudry
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Group Equivariant Conditional Neural Processes 
+Makoto Kawano, Wataru Kumagai, Akiyoshi Sannai, Yusuke Iwasawa, Yutaka Matsuo
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Deployment-Efficient Reinforcement Learning via Model-Based Offline Optimization 
+Tatsuya Matsushima, Hiroki Furuta, Yutaka Matsuo, Ofir Nachum, Shixiang Gu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Efficient Conformal Prediction via Cascaded Inference with Expanded Admission 
+Adam Fisch, Tal Schuster, Tommi S. Jaakkola, Regina Barzilay
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Reducing the Computational Cost of Deep Generative Models with Binary Neural Networks 
+Thomas Bird, Friso Kingma, David Barber
+28 Sept 2020 (modified: 15 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Large-width functional asymptotics for deep Gaussian neural networks 
+Daniele Bracale, Stefano Favaro, Sandra Fortini, Stefano Peluchetti
+28 Sept 2020 (modified: 20 Feb 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+MetaNorm: Learning to Normalize Few-Shot Batches Across Domains 
+Yingjun Du, Xiantong Zhen, Ling Shao, Cees G. M. Snoek
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Representation Balancing Offline Model-based Reinforcement Learning 
+Byung-Jun Lee, Jongmin Lee, Kee-Eung Kim
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Local Convergence Analysis of Gradient Descent Ascent with Finite Timescale Separation 
+Tanner Fiez, Lillian J Ratliff
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 57 Replies
+Show details
+The Importance of Pessimism in Fixed-Dataset Policy Optimization 
+Jacob Buckman, Carles Gelada, Marc G Bellemare
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Uncertainty Estimation and Calibration with Finite-State Probabilistic RNNs 
+Cheng Wang, Carolin Lawrence, Mathias Niepert
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Empirical or Invariant Risk Minimization? A Sample Complexity Perspective 
+Kartik Ahuja, Jun Wang, Amit Dhurandhar, Karthikeyan Shanmugam, Kush R. Varshney
+28 Sept 2020 (modified: 05 Mar 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval 
+Lee Xiong, Chenyan Xiong, Ye Li, Kwok-Fung Tang, Jialin Liu, Paul N. Bennett, Junaid Ahmed, Arnold Overwijk
+28 Sept 2020 (modified: 13 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+FairBatch: Batch Selection for Model Fairness 
+Yuji Roh, Kangwook Lee, Steven Euijong Whang, Changho Suh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+An Unsupervised Deep Learning Approach for Real-World Image Denoising 
+Dihan Zheng, Sia Huat Tan, Xiaowen Zhang, Zuoqiang Shi, Kaisheng Ma, Chenglong Bao
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+When Optimizing -Divergence is Robust with Label Noise 
+Jiaheng Wei, Yang Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Meta-learning Symmetries by Reparameterization 
+Allan Zhou, Tom Knowles, Chelsea Finn
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+A Geometric Analysis of Deep Generative Image Models and Its Applications 
+Binxu Wang, Carlos R Ponce
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+What Makes Instance Discrimination Good for Transfer Learning? 
+Nanxuan Zhao, Zhirong Wu, Rynson W. H. Lau, Stephen Lin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Answering Complex Open-Domain Questions with Multi-Hop Dense Retrieval 
+Wenhan Xiong, Xiang Li, Srini Iyer, Jingfei Du, Patrick Lewis, William Yang Wang, Yashar Mehdad, Scott Yih, Sebastian Riedel, Douwe Kiela, Barlas Oguz
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+On Dyadic Fairness: Exploring and Mitigating Bias in Graph Connections 
+Peizhao Li, Yifei Wang, Han Zhao, Pengyu Hong, Hongfu Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Spatio-Temporal Graph Scattering Transform 
+Chao Pan, Siheng Chen, Antonio Ortega
+28 Sept 2020 (modified: 09 Feb 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+MODALS: Modality-agnostic Automated Data Augmentation in the Latent Space 
+Tsz-Him Cheung, Dit-Yan Yeung
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+ALFWorld: Aligning Text and Embodied Environments for Interactive Learning 
+Mohit Shridhar, Xingdi Yuan, Marc-Alexandre Cote, Yonatan Bisk, Adam Trischler, Matthew Hausknecht
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Latent Skill Planning for Exploration and Transfer 
+Kevin Xie, Homanga Bharadhwaj, Danijar Hafner, Animesh Garg, Florian Shkurti
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Evaluating the Disentanglement of Deep Generative Models through Manifold Topology 
+Sharon Zhou, Eric Zelikman, Fred Lu, Andrew Y. Ng, Gunnar E. Carlsson, Stefano Ermon
+28 Sept 2020 (modified: 05 Apr 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Combining Ensembles and Data Augmentation Can Harm Your Calibration 
+Yeming Wen, Ghassen Jerfel, Rafael Muller, Michael W Dusenberry, Jasper Snoek, Balaji Lakshminarayanan, Dustin Tran
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+CoCo: Controllable Counterfactuals for Evaluating Dialogue State Trackers 
+SHIYANG LI, Semih Yavuz, Kazuma Hashimoto, Jia Li, Tong Niu, Nazneen Rajani, Xifeng Yan, Yingbo Zhou, Caiming Xiong
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+AdaGCN: Adaboosting Graph Convolutional Networks into Deep Models 
+Ke Sun, Zhanxing Zhu, Zhouchen Lin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Learning What To Do by Simulating the Past 
+David Lindner, Rohin Shah, Pieter Abbeel, Anca Dragan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+CcGAN: Continuous Conditional Generative Adversarial Networks for Image Generation 
+Xin Ding, Yongwei Wang, Zuheng Xu, William J Welch, Z. Jane Wang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+ANOCE: Analysis of Causal Effects with Multiple Mediators via Constrained Structural Learning 
+Hengrui Cai, Rui Song, Wenbin Lu
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+Direction Matters: On the Implicit Bias of Stochastic Gradient Descent with Moderate Learning Rate 
+Jingfeng Wu, Difan Zou, Vladimir Braverman, Quanquan Gu
+28 Sept 2020 (modified: 27 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Robust early-learning: Hindering the memorization of noisy labels 
+Xiaobo Xia, Tongliang Liu, Bo Han, Chen Gong, Nannan Wang, Zongyuan Ge, Yi Chang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+A Design Space Study for LISTA and Beyond 
+Tianjian Meng, Xiaohan Chen, Yifan Jiang, Zhangyang Wang
+28 Sept 2020 (modified: 11 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+PAC Confidence Predictions for Deep Neural Network Classifiers 
+Sangdon Park, Shuo Li, Insup Lee, Osbert Bastani
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+X2T: Training an X-to-Text Typing Interface with Online Learning from User Feedback 
+Jensen Gao, Siddharth Reddy, Glen Berseth, Nicholas Hardy, Nikhilesh Natraj, Karunesh Ganguly, Anca Dragan, Sergey Levine
+28 Sept 2020 (modified: 07 Apr 2021) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Discrete Graph Structure Learning for Forecasting Multiple Time Series 
+Chao Shang, Jie Chen, Jinbo Bi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Task-Agnostic Morphology Evolution 
+Donald Joseph Hejna III, Pieter Abbeel, Lerrel Pinto
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Deep Equals Shallow for ReLU Networks in Kernel Regimes 
+Alberto Bietti, Francis Bach
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Loss Function Discovery for Object Detection via Convergence-Simulation Driven Search 
+Peidong Liu, Gengwei Zhang, Bochao Wang, Hang Xu, Xiaodan Liang, Yong Jiang, Zhenguo Li
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+Effective Distributed Learning with Random Features: Improved Bounds and Algorithms 
+Yong Liu, Jiankun Liu, Shuqiang Wang
+28 Sept 2020 (modified: 20 Feb 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+On InstaHide, Phase Retrieval, and Sparse Matrix Factorization 
+Sitan Chen, Xiaoxiao Li, Zhao Song, Danyang Zhuo
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Anchor & Transform: Learning Sparse Embeddings for Large Vocabularies 
+Paul Pu Liang, Manzil Zaheer, Yuan Wang, Amr Ahmed
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Achieving Linear Speedup with Partial Worker Participation in Non-IID Federated Learning 
+Haibo Yang, Minghong Fang, Jia Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Deep Neural Tangent Kernel and Laplace Kernel Have the Same RKHS 
+Lin Chen, Sheng Xu
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Fast convergence of stochastic subgradient method under interpolation 
+Huang Fang, Zhenan Fan, Michael Friedlander
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Generating Adversarial Computer Programs using Optimized Obfuscations 
+Shashank Srikant, Sijia Liu, Tamara Mitrovska, Shiyu Chang, Quanfu Fan, Gaoyuan Zhang, Una-May O'Reilly
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+C-Learning: Learning to Achieve Goals via Recursive Classification 
+Benjamin Eysenbach, Ruslan Salakhutdinov, Sergey Levine
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Off-Dynamics Reinforcement Learning: Training for Transfer with Domain Classifiers 
+Benjamin Eysenbach, Shreyas Chaudhari, Swapnil Asawa, Sergey Levine, Ruslan Salakhutdinov
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Multi-resolution modeling of a discrete stochastic process identifies causes of cancer 
+Adam Uri Yaari, Maxwell Sherman, Oliver Clarke Priebe, Po-Ru Loh, Boris Katz, Andrei Barbu, Bonnie Berger
+28 Sept 2020 (modified: 21 Apr 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+On the Critical Role of Conventions in Adaptive Human-AI Collaboration 
+Andy Shih, Arjun Sawhney, Jovana Kondic, Stefano Ermon, Dorsa Sadigh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+WaveGrad: Estimating Gradients for Waveform Generation 
+Nanxin Chen, Yu Zhang, Heiga Zen, Ron J Weiss, Mohammad Norouzi, William Chan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+A Critique of Self-Expressive Deep Subspace Clustering 
+Benjamin David Haeffele, Chong You, Rene Vidal
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Explaining by Imitating: Understanding Decisions by Interpretable Policy Learning 
+Alihan Hüyük, Daniel Jarrett, Cem Tekin, Mihaela van der Schaar
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+For self-supervised learning, Rationality implies generalization, provably 
+Yamini Bansal, Gal Kaplun, Boaz Barak
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Directed Acyclic Graph Neural Networks 
+Veronika Thost, Jie Chen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+My Body is a Cage: the Role of Morphology in Graph-Based Incompatible Control 
+Vitaly Kurin, Maximilian Igl, Tim Rocktäschel, Wendelin Boehmer, Shimon Whiteson
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Incremental few-shot learning via vector quantization in deep embedded space 
+Kuilin Chen, Chi-Guhn Lee
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Revisiting Few-sample BERT Fine-tuning 
+Tianyi Zhang, Felix Wu, Arzoo Katiyar, Kilian Q Weinberger, Yoav Artzi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Linear Convergent Decentralized Optimization with Compression 
+Xiaorui Liu, Yao Li, Rongrong Wang, Jiliang Tang, Ming Yan
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Learning from Demonstration with Weakly Supervised Disentanglement 
+Yordan Hristov, Subramanian Ramamoorthy
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Incorporating Symmetry into Deep Dynamics Models for Improved Generalization 
+Rui Wang, Robin Walters, Rose Yu
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+The Risks of Invariant Risk Minimization 
+Elan Rosenfeld, Pradeep Kumar Ravikumar, Andrej Risteski
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Scaling Symbolic Methods using Gradients for Neural Model Explanation 
+Subham Sekhar Sahoo, Subhashini Venugopalan, Li Li, Rishabh Singh, Patrick Riley
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Contextual Dropout: An Efficient Sample-Dependent Dropout Module 
+XINJIE FAN, Shujian Zhang, Korawat Tanwisuth, Xiaoning Qian, Mingyuan Zhou
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+Contrastive Learning with Hard Negative Samples 
+Joshua David Robinson, Ching-Yao Chuang, Suvrit Sra, Stefanie Jegelka
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Debiasing Concept-based Explanations with Causal Analysis 
+Mohammad Taha Bahadori, David Heckerman
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Risk-Averse Offline Reinforcement Learning 
+Núria Armengol Urpí, Sebastian Curi, Andreas Krause
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Parameter Efficient Multimodal Transformers for Video Representation Learning 
+Sangho Lee, Youngjae Yu, Gunhee Kim, Thomas Breuel, Jan Kautz, Yale Song
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Tradeoffs in Data Augmentation: An Empirical Study 
+Raphael Gontijo-Lopes, Sylvia Smullin, Ekin Dogus Cubuk, Ethan Dyer
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Concept Learners for Few-Shot Learning 
+Kaidi Cao, Maria Brbic, Jure Leskovec
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Neural Mechanics: Symmetry and Broken Conservation Laws in Deep Learning Dynamics 
+Daniel Kunin, Javier Sagastuy-Brena, Surya Ganguli, Daniel LK Yamins, Hidenori Tanaka
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Fair Mixup: Fairness via Interpolation 
+Ching-Yao Chuang, Youssef Mroueh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Heating up decision boundaries: isocapacitory saturation, adversarial scenarios and generalization bounds 
+Bogdan Georgiev, Lukas Franken, Mayukh Mukherjee
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Influence Functions in Deep Learning Are Fragile 
+Samyadeep Basu, Phil Pope, Soheil Feizi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Few-Shot Learning via Learning the Representation, Provably 
+Simon Shaolei Du, Wei Hu, Sham M. Kakade, Jason D. Lee, Qi Lei
+28 Sept 2020 (modified: 30 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Self-Supervised Learning of Compressed Video Representations 
+Youngjae Yu, Sangho Lee, Gunhee Kim, Yale Song
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Flowtron: an Autoregressive Flow-based Generative Network for Text-to-Speech Synthesis 
+Rafael Valle, Kevin J. Shih, Ryan Prenger, Bryan Catanzaro
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+R-GAP: Recursive Gradient Attack on Privacy 
+Junyi Zhu, Matthew B. Blaschko
+28 Sept 2020 (modified: 16 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Why resampling outperforms reweighting for correcting sampling bias with stochastic gradients 
+Jing An, Lexing Ying, Yuhua Zhu
+28 Sept 2020 (modified: 11 Mar 2021) ICLR 2021 Poster Readers:  Everyone 27 Replies
+Show details
+Learning with Instance-Dependent Label Noise: A Sample Sieve Approach 
+Hao Cheng, Zhaowei Zhu, Xingyu Li, Yifei Gong, Xing Sun, Yang Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Unsupervised Audiovisual Synthesis via Exemplar Autoencoders 
+Kangle Deng, Aayush Bansal, Deva Ramanan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Single-Timescale Actor-Critic Provably Finds Globally Optimal Policy 
+Zuyue Fu, Zhuoran Yang, Zhaoran Wang
+28 Sept 2020 (modified: 08 Feb 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Wandering within a world: Online contextualized few-shot learning 
+Mengye Ren, Michael Louis Iuzzolino, Michael Curtis Mozer, Richard Zemel
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Neural Delay Differential Equations 
+Qunxi Zhu, Yao Guo, Wei Lin
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Dance Revolution: Long-Term Dance Generation with Music via Curriculum Learning 
+Ruozi Huang, Huang Hu, Wei Wu, Kei Sawada, Mi Zhang, Daxin Jiang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Learning Parametrised Graph Shift Operators 
+George Dasoulas, Johannes F. Lutzeyer, Michalis Vazirgiannis
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+DOP: Off-Policy Multi-Agent Decomposed Policy Gradients 
+Yihan Wang, Beining Han, Tonghan Wang, Heng Dong, Chongjie Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Unsupervised Discovery of 3D Physical Objects from Video 
+Yilun Du, Kevin A. Smith, Tomer Ullman, Joshua B. Tenenbaum, Jiajun Wu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Exploring Balanced Feature Spaces for Representation Learning 
+Bingyi Kang, Yu Li, Sa Xie, Zehuan Yuan, Jiashi Feng
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Auxiliary Learning by Implicit Differentiation 
+Aviv Navon, Idan Achituve, Haggai Maron, Gal Chechik, Ethan Fetaya
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+On the Bottleneck of Graph Neural Networks and its Practical Implications 
+Uri Alon, Eran Yahav
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+The Role of Momentum Parameters in the Optimal Convergence of Adaptive Polyak's Heavy-ball Methods 
+Wei Tao, Sheng Long, Gaowei Wu, Qing Tao
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Entropic gradient descent algorithms and wide flat minima 
+Fabrizio Pittorino, Carlo Lucibello, Christoph Feinauer, Gabriele Perugini, Carlo Baldassi, Elizaveta Demyanenko, Riccardo Zecchina
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+SEDONA: Search for Decoupled Neural Networks toward Greedy Block-wise Learning 
+Myeongjang Pyeon, Jihwan Moon, Taeyoung Hahn, Gunhee Kim
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+not-MIWAE: Deep Generative Modelling with Missing not at Random Data 
+Niels Bruun Ipsen, Pierre-Alexandre Mattei, Jes Frellsen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Reweighting Augmented Samples by Minimizing the Maximal Expected Loss 
+Mingyang Yi, Lu Hou, Lifeng Shang, Xin Jiang, Qun Liu, Zhi-Ming Ma
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Learning to Represent Action Values as a Hypergraph on the Action Vertices 
+Arash Tavakoli, Mehdi Fatemi, Petar Kormushev
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Shapley Explanation Networks 
+Rui Wang, Xiaoqian Wang, David I. Inouye
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+NBDT: Neural-Backed Decision Tree 
+Alvin Wan, Lisa Dunlap, Daniel Ho, Jihan Yin, Scott Lee, Suzanne Petryk, Sarah Adel Bargal, Joseph E. Gonzalez
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Denoising Diffusion Implicit Models 
+Jiaming Song, Chenlin Meng, Stefano Ermon
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding 
+Dmitry Lepikhin, HyoukJoong Lee, Yuanzhong Xu, Dehao Chen, Orhan Firat, Yanping Huang, Maxim Krikun, Noam Shazeer, Zhifeng Chen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+What Should Not Be Contrastive in Contrastive Learning 
+Tete Xiao, Xiaolong Wang, Alexei A Efros, Trevor Darrell
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+On Data-Augmentation and Consistency-Based Semi-Supervised Learning 
+Atin Ghosh, Alexandre H. Thiery
+28 Sept 2020 (modified: 25 Jan 2021) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Diverse Video Generation using a Gaussian Process Trigger 
+Gaurav Shrivastava, Abhinav Shrivastava
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Monotonic Kronecker-Factored Lattice 
+William Taylor Bakst, Nobuyuki Morioka, Erez Louidor
+28 Sept 2020 (modified: 25 Jan 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Auto Seg-Loss: Searching Metric Surrogates for Semantic Segmentation 
+Hao Li, Chenxin Tao, Xizhou Zhu, Xiaogang Wang, Gao Huang, Jifeng Dai
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Combining Physics and Machine Learning for Network Flow Estimation 
+Arlei Lopes da Silva, Furkan Kocayusufoglu, Saber Jafarpour, Francesco Bullo, Ananthram Swami, Ambuj Singh
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+NeMo: Neural Mesh Models of Contrastive Features for Robust 3D Pose Estimation 
+Angtian Wang, Adam Kortylewski, Alan Yuille
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+How to Find Your Friendly Neighborhood: Graph Attention Design with Self-Supervision 
+Dongkwan Kim, Alice Oh
+28 Sept 2020 (modified: 12 Apr 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+MiCE: Mixture of Contrastive Experts for Unsupervised Image Clustering 
+Tsung Wei Tsai, Chongxuan Li, Jun Zhu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Anytime Sampling for Autoregressive Models via Ordered Autoencoding 
+Yilun Xu, Yang Song, Sahaj Garg, Linyuan Gong, Rui Shu, Aditya Grover, Stefano Ermon
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Initialization and Regularization of Factorized Neural Layers 
+Mikhail Khodak, Neil A. Tenenholtz, Lester Mackey, Nicolo Fusi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+CO2: Consistent Contrast for Unsupervised Visual Representation Learning 
+Chen Wei, Huiyu Wang, Wei Shen, Alan Yuille
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+DC3: A learning method for optimization with hard constraints 
+Priya L. Donti, David Rolnick, J Zico Kolter
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Enforcing robust control guarantees within neural network policies 
+Priya L. Donti, Melrose Roderick, Mahyar Fazlyab, J Zico Kolter
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Robust and Generalizable Visual Representation Learning via Random Convolutions 
+Zhenlin Xu, Deyi Liu, Junlin Yang, Colin Raffel, Marc Niethammer
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+WrapNet: Neural Net Inference with Ultra-Low-Precision Arithmetic 
+Renkun Ni, Hong-min Chu, Oscar Castaneda, Ping-yeh Chiang, Christoph Studer, Tom Goldstein
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Rank the Episodes: A Simple Approach for Exploration in Procedurally-Generated Environments 
+Daochen Zha, Wenye Ma, Lei Yuan, Xia Hu, Ji Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Stochastic Security: Adversarial Defense Using Long-Run Dynamics of Energy-Based Models 
+Mitch Hill, Jonathan Craig Mitchell, Song-Chun Zhu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Nearest Neighbor Machine Translation 
+Urvashi Khandelwal, Angela Fan, Dan Jurafsky, Luke Zettlemoyer, Mike Lewis
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Learning Hyperbolic Representations of Topological Features 
+Panagiotis Kyriakis, Iordanis Fostiropoulos, Paul Bogdan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Selectivity considered harmful: evaluating the causal impact of class selectivity in DNNs 
+Matthew L Leavitt, Ari S. Morcos
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Integrating Categorical Semantics into Unsupervised Domain Translation 
+Samuel Lavoie-Marchildon, Faruk Ahmed, Aaron Courville
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Zero-shot Synthesis with Group-Supervised Learning 
+Yunhao Ge, Sami Abu-El-Haija, Gan Xin, Laurent Itti
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+VA-RED: Video Adaptive Redundancy Reduction 
+Bowen Pan, Rameswar Panda, Camilo Luciano Fosco, Chung-Ching Lin, Alex J Andonian, Yue Meng, Kate Saenko, Aude Oliva, Rogerio Feris
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+BERTology Meets Biology: Interpreting Attention in Protein Language Models 
+Jesse Vig, Ali Madani, Lav R. Varshney, Caiming Xiong, richard socher, Nazneen Rajani
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Trajectory Prediction using Equivariant Continuous Convolution 
+Robin Walters, Jinxi Li, Rose Yu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Unsupervised Meta-Learning through Latent-Space Interpolation in Generative Models 
+Siavash Khodadadeh, Sharare Zehtabian, Saeed Vahidian, Weijia Wang, Bill Lin, Ladislau Boloni
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Heteroskedastic and Imbalanced Deep Learning with Adaptive Regularization 
+Kaidi Cao, Yining Chen, Junwei Lu, Nikos Arechiga, Adrien Gaidon, Tengyu Ma
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Implicit Under-Parameterization Inhibits Data-Efficient Deep Reinforcement Learning 
+Aviral Kumar, Rishabh Agarwal, Dibya Ghosh, Sergey Levine
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Bowtie Networks: Generative Modeling for Joint Few-Shot Recognition and Novel-View Synthesis 
+Zhipeng Bao, Yu-Xiong Wang, Martial Hebert
+28 Sept 2020 (modified: 22 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Saliency is a Possible Red Herring When Diagnosing Poor Generalization 
+Joseph D Viviano, Becks Simpson, Francis Dutil, Yoshua Bengio, Joseph Paul Cohen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+What Can You Learn From Your Muscles? Learning Visual Representation from Human Interactions 
+Kiana Ehsani, Daniel Gordon, Thomas Hai Dang Nguyen, Roozbeh Mottaghi, Ali Farhadi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Conservative Safety Critics for Exploration 
+Homanga Bharadhwaj, Aviral Kumar, Nicholas Rhinehart, Sergey Levine, Florian Shkurti, Animesh Garg
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Multi-Time Attention Networks for Irregularly Sampled Time Series 
+Satya Narayan Shukla, Benjamin Marlin
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Graph Traversal with Tensor Functionals: A Meta-Algorithm for Scalable Learning 
+Elan Sopher Markowitz, Keshav Balasubramanian, Mehrnoosh Mirtaheri, Sami Abu-El-Haija, Bryan Perozzi, Greg Ver Steeg, Aram Galstyan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+What they do when in doubt: a study of inductive biases in seq2seq learners 
+Eugene Kharitonov, Rahma Chaabouni
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Tomographic Auto-Encoder: Unsupervised Bayesian Recovery of Corrupted Data 
+Francesco Tonolini, Pablo Garcia Moreno, Andreas Damianou, Roderick Murray-Smith
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+OPAL: Offline Primitive Discovery for Accelerating Offline Reinforcement Learning 
+Anurag Ajay, Aviral Kumar, Pulkit Agrawal, Sergey Levine, Ofir Nachum
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Knowledge distillation via softmax regression representation learning 
+Jing Yang, Brais Martinez, Adrian Bulat, Georgios Tzimiropoulos
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Large Associative Memory Problem in Neurobiology and Machine Learning 
+Dmitry Krotov, John J. Hopfield
+28 Sept 2020 (modified: 03 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Remembering for the Right Reasons: Explanations Reduce Catastrophic Forgetting 
+Sayna Ebrahimi, Suzanne Petryk, Akash Gokul, William Gan, Joseph E. Gonzalez, Marcus Rohrbach, trevor darrell
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Deep Networks and the Multiple Manifold Problem 
+Sam Buchanan, Dar Gilboa, John Wright
+28 Sept 2020 (modified: 09 Apr 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Interpreting Knowledge Graph Relation Representation from Word Embeddings 
+Carl Allen, Ivana Balazevic, Timothy Hospedales
+28 Sept 2020 (modified: 22 Mar 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Learning perturbation sets for robust machine learning 
+Eric Wong, J Zico Kolter
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+A Trainable Optimal Transport Embedding for Feature Aggregation and its Relationship to Attention 
+Grégoire Mialon, Dexiong Chen, Alexandre d'Aspremont, Julien Mairal
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+RODE: Learning Roles to Decompose Multi-Agent Tasks 
+Tonghan Wang, Tarun Gupta, Anuj Mahajan, Bei Peng, Shimon Whiteson, Chongjie Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Scalable Bayesian Inverse Reinforcement Learning 
+Alex James Chan, Mihaela van der Schaar
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Learning "What-if" Explanations for Sequential Decision-Making 
+Ioana Bica, Daniel Jarrett, Alihan Hüyük, Mihaela van der Schaar
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Learning advanced mathematical computations from examples 
+Francois Charton, Amaury Hayat, Guillaume Lample
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+Repurposing Pretrained Models for Robust Out-of-domain Few-Shot Learning 
+Namyeong Kwon, Hwidong Na, Gabriel Huang, Simon Lacoste-Julien
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Empirical Analysis of Unlabeled Entity Problem in Named Entity Recognition 
+Yangming Li, lemao liu, Shuming Shi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Calibration of Neural Networks using Splines 
+Kartik Gupta, Amir Rahimi, Thalaiyasingam Ajanthan, Thomas Mensink, Cristian Sminchisescu, Richard Hartley
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Probing BERT in Hyperbolic Spaces 
+Boli Chen, Yao Fu, Guangwei Xu, Pengjun Xie, Chuanqi Tan, Mosha Chen, Liping Jing
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Refining Deep Generative Models via Discriminator Gradient Flow 
+Abdul Fatir Ansari, Ming Liang Ang, Harold Soh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Coping with Label Shift via Distributionally Robust Optimisation 
+Jingzhao Zhang, Aditya Krishna Menon, Andreas Veit, Srinadh Bhojanapalli, Sanjiv Kumar, Suvrit Sra
+28 Sept 2020 (modified: 23 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Variational State-Space Models for Localisation and Dense 3D Mapping in 6 DoF 
+Atanas Mirchev, Baris Kayalibay, Patrick van der Smagt, Justin Bayer
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Few-Shot Bayesian Optimization with Deep Kernel Surrogates 
+Martin Wistuba, Josif Grabocka
+28 Sept 2020 (modified: 25 Jan 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+-Mix: A Domain-Agnostic Strategy for Contrastive Representation Learning 
+Kibok Lee, Yian Zhu, Kihyuk Sohn, Chun-Liang Li, Jinwoo Shin, Honglak Lee
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Graph Information Bottleneck for Subgraph Recognition 
+Junchi Yu, Tingyang Xu, Yu Rong, Yatao Bian, Junzhou Huang, Ran He
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Rethinking Positional Encoding in Language Pre-training 
+Guolin Ke, Di He, Tie-Yan Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Practical Massively Parallel Monte-Carlo Tree Search Applied to Molecular Design 
+Xiufeng Yang, Tanuj Aasawat, Kazuki Yoshizoe
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+When does preconditioning help or hurt generalization? 
+Shun-ichi Amari, Jimmy Ba, Roger Baker Grosse, Xuechen Li, Atsushi Nitanda, Taiji Suzuki, Denny Wu, Ji Xu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+ARMOURED: Adversarially Robust MOdels using Unlabeled data by REgularizing Diversity 
+Kangkang Lu, Cuong Manh Nguyen, Xun Xu, Kiran Krishnamachari, Yu Jing Goh, Chuan-Sheng Foo
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Learning Energy-Based Generative Models via Coarse-to-Fine Expanding and Sampling 
+Yang Zhao, Jianwen Xie, Ping Li
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 24 Replies
+Show details
+Multi-Prize Lottery Ticket Hypothesis: Finding Accurate Binary Neural Networks by Pruning A Randomly Weighted Network 
+James Diffenderfer, Bhavya Kailkhura
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 24 Replies
+Show details
+Learning Accurate Entropy Model with Global Reference for Image Compression 
+Yichen Qian, Zhiyu Tan, Xiuyu Sun, Ming Lin, Dongyang Li, Zhenhong Sun, Li Hao, Rong Jin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Convex Potential Flows: Universal Probability Distributions with Optimal Transport and Convex Optimization 
+Chin-Wei Huang, Ricky T. Q. Chen, Christos Tsirigotis, Aaron Courville
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+Greedy-GQ with Variance Reduction: Finite-time Analysis and Improved Complexity 
+Shaocong Ma, Ziyi Chen, Yi Zhou, Shaofeng Zou
+28 Sept 2020 (modified: 15 Feb 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Large Batch Simulation for Deep Reinforcement Learning 
+Brennan Shacklett, Erik Wijmans, Aleksei Petrenko, Manolis Savva, Dhruv Batra, Vladlen Koltun, Kayvon Fatahalian
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Hopper: Multi-hop Transformer for Spatiotemporal Reasoning 
+Honglu Zhou, Asim Kadav, Farley Lai, Alexandru Niculescu-Mizil, Martin Renqiang Min, Mubbasir Kapadia, Hans Peter Graf
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Efficient Reinforcement Learning in Factored MDPs with Application to Constrained RL 
+Xiaoyu Chen, Jiachen Hu, Lihong Li, Liwei Wang
+28 Sept 2020 (modified: 10 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Unbiased Teacher for Semi-Supervised Object Detection 
+Yen-Cheng Liu, Chih-Yao Ma, Zijian He, Chia-Wen Kuo, Kan Chen, Peizhao Zhang, Bichen Wu, Zsolt Kira, Peter Vajda
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+MELR: Meta-Learning via Modeling Episode-Level Relationships for Few-Shot Learning 
+Nanyi Fei, Zhiwu Lu, Tao Xiang, Songfang Huang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Partitioned Learned Bloom Filters 
+Kapil Vaidya, Eric Knorr, Michael Mitzenmacher, Tim Kraska
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Wasserstein Embedding for Graph Learning 
+Soheil Kolouri, Navid Naderializadeh, Gustavo K. Rohde, Heiko Hoffmann
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+High-Capacity Expert Binary Networks 
+Adrian Bulat, Brais Martinez, Georgios Tzimiropoulos
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 25 Replies
+Show details
+SAFENet: A Secure, Accurate and Fast Neural Network Inference 
+Qian Lou, Yilin Shen, Hongxia Jin, Lei Jiang
+28 Sept 2020 (modified: 20 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Learning Manifold Patch-Based Representations of Man-Made Shapes 
+Dmitriy Smirnov, Mikhail Bessmeltsev, Justin Solomon
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Universal approximation power of deep residual neural networks via nonlinear control theory 
+Paulo Tabuada, Bahman Gharesifard
+28 Sept 2020 (modified: 19 Feb 2021) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+Learning Neural Event Functions for Ordinary Differential Equations 
+Ricky T. Q. Chen, Brandon Amos, Maximilian Nickel
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Neural Spatio-Temporal Point Processes 
+Ricky T. Q. Chen, Brandon Amos, Maximilian Nickel
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Proximal Gradient Descent-Ascent: Variable Convergence under KŁ Geometry 
+Ziyi Chen, Yi Zhou, Tengyu Xu, Yingbin Liang
+28 Sept 2020 (modified: 17 Feb 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Adaptive Universal Generalized PageRank Graph Neural Network 
+Eli Chien, Jianhao Peng, Pan Li, Olgica Milenkovic
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Open Question Answering over Tables and Text 
+Wenhu Chen, Ming-Wei Chang, Eva Schlinger, William Yang Wang, William W. Cohen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Text Generation by Learning from Demonstrations 
+Richard Yuanzhe Pang, He He
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Tilted Empirical Risk Minimization 
+Tian Li, Ahmad Beirami, Maziar Sanjabi, Virginia Smith
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Explainable Subgraph Reasoning for Forecasting on Temporal Knowledge Graphs 
+Zhen Han, Peng Chen, Yunpu Ma, Volker Tresp
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Bayesian Context Aggregation for Neural Processes 
+Michael Volpp, Fabian Flürenbrock, Lukas Grossberger, Christian Daniel, Gerhard Neumann
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Conformation-Guided Molecular Representation with Hamiltonian Neural Networks 
+Ziyao Li, Shuwen Yang, Guojie Song, Lingsheng Cai
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Learning with AMIGo: Adversarially Motivated Intrinsic Goals 
+Andres Campero, Roberta Raileanu, Heinrich Kuttler, Joshua B. Tenenbaum, Tim Rocktäschel, Edward Grefenstette
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 25 Replies
+Show details
+Training with Quantization Noise for Extreme Model Compression 
+Pierre Stock, Angela Fan, Benjamin Graham, Edouard Grave, Rémi Gribonval, Herve Jegou, Armand Joulin
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Interpreting and Boosting Dropout from a Game-Theoretic View 
+Hao Zhang, Sen Li, YinChao Ma, Mingjie Li, Yichen Xie, Quanshi Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+VTNet: Visual Transformer Network for Object Goal Navigation 
+Heming Du, Xin Yu, Liang Zheng
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Exemplary Natural Images Explain CNN Activations Better than State-of-the-Art Feature Visualization 
+Judy Borowski, Roland Simon Zimmermann, Judith Schepers, Robert Geirhos, Thomas S. A. Wallis, Matthias Bethge, Wieland Brendel
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Multi-Class Uncertainty Calibration via Mutual Information Maximization-based Binning 
+Kanil Patel, William H. Beluch, Bin Yang, Michael Pfeiffer, Dan Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+A Discriminative Gaussian Mixture Model with Sparsity 
+Hideaki Hayashi, Seiichi Uchida
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Trusted Multi-View Classification 
+Zongbo Han, Changqing Zhang, Huazhu Fu, Joey Tianyi Zhou
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+IEPT: Instance-Level and Episode-Level Pretext Tasks for Few-Shot Learning 
+Manli Zhang, Jianhong Zhang, Zhiwu Lu, Tao Xiang, Mingyu Ding, Songfang Huang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Deep Encoder, Shallow Decoder: Reevaluating Non-autoregressive Machine Translation 
+Jungo Kasai, Nikolaos Pappas, Hao Peng, James Cross, Noah Smith
+28 Sept 2020 (modified: 14 Mar 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Effective Abstract Reasoning with Dual-Contrast Network 
+Tao Zhuo, Mohan Kankanhalli
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+On Position Embeddings in BERT 
+Benyou Wang, Lifeng Shang, Christina Lioma, Xin Jiang, Hao Yang, Qun Liu, Jakob Grue Simonsen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Neural Pruning via Growing Regularization 
+Huan Wang, Can Qin, Yulun Zhang, Yun Fu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Mixed-Features Vectors and Subspace Splitting 
+Alejandro Pimentel-Alarcón, Daniel L. Pimentel-Alarcón
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Hierarchical Reinforcement Learning by Discovering Intrinsic Options 
+Jesse Zhang, Haonan Yu, Wei Xu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Sharper Generalization Bounds for Learning with Gradient-dominated Objective Functions 
+Yunwen Lei, Yiming Ying
+28 Sept 2020 (modified: 25 Oct 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Representation Learning for Sequence Data with Deep Autoencoding Predictive Components 
+Junwen Bai, Weiran Wang, Yingbo Zhou, Caiming Xiong
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Average-case Acceleration for Bilinear Games and Normal Matrices 
+Carles Domingo-Enrich, Fabian Pedregosa, Damien Scieur
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Learning Task-General Representations with Generative Neuro-Symbolic Modeling 
+Reuben Feinman, Brenden M. Lake
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Is Label Smoothing Truly Incompatible with Knowledge Distillation: An Empirical Study 
+Zhiqiang Shen, Zechun Liu, Dejia Xu, Zitian Chen, Kwang-Ting Cheng, Marios Savvides
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+The Unreasonable Effectiveness of Patches in Deep Convolutional Kernels Methods 
+Louis THIRY, Michael Arbel, Eugene Belilovsky, Edouard Oyallon
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Graph Coarsening with Neural Networks 
+Chen Cai, Dingkang Wang, Yusu Wang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+On the Universality of the Double Descent Peak in Ridgeless Regression 
+David Holzmüller
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Deep Repulsive Clustering of Ordered Data Based on Order-Identity Decomposition 
+Seon-Ho Lee, Chang-Su Kim
+28 Sept 2020 (modified: 13 Mar 2021) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Rapid Task-Solving in Novel Environments 
+Samuel Ritter, Ryan Faulkner, Laurent Sartran, Adam Santoro, Matthew Botvinick, David Raposo
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+DINO: A Conditional Energy-Based GAN for Domain Translation 
+Konstantinos Vougioukas, Stavros Petridis, Maja Pantic
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Removing Undesirable Feature Contributions Using Out-of-Distribution Data 
+Saehyung Lee, Changhwa Park, Hyungyu Lee, Jihun Yi, Jonghyun Lee, Sungroh Yoon
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Accurate Learning of Graph Representations with Graph Multiset Pooling 
+Jinheon Baek, Minki Kang, Sung Ju Hwang
+28 Sept 2020 (modified: 07 Mar 2022) ICLR 2021 Poster Readers:  Everyone 34 Replies
+Show details
+Federated Semi-Supervised Learning with Inter-Client Consistency & Disjoint Learning 
+Wonyong Jeong, Jaehong Yoon, Eunho Yang, Sung Ju Hwang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Contrastive Learning with Adversarial Perturbations for Conditional Text Generation 
+Seanie Lee, Dong Bok Lee, Sung Ju Hwang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Optimal Conversion of Conventional Artificial Neural Networks to Spiking Neural Networks 
+Shikuang Deng, Shi Gu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Efficient Continual Learning with Modular Networks and Task-Driven Priors 
+Tom Veniat, Ludovic Denoyer, MarcAurelio Ranzato
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+On the Universality of Rotation Equivariant Point Cloud Networks 
+Nadav Dym, Haggai Maron
+28 Sept 2020 (modified: 09 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Neural Learning of One-of-Many Solutions for Combinatorial Problems in Structured Output Spaces 
+Yatin Nandwani, Deepanshu Jindal, Mausam ., Parag Singla
+28 Sept 2020 (modified: 18 Mar 2021) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+GAN2GAN: Generative Noise Learning for Blind Denoising with Single Noisy Images 
+Sungmin Cha, Taeeon Park, Byeongjoon Kim, Jongduk Baek, Taesup Moon
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+CPR: Classifier-Projection Regularization for Continual Learning 
+Sungmin Cha, Hsiang Hsu, Taebaek Hwang, Flavio Calmon, Taesup Moon
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+On the Dynamics of Training Attention Models 
+Haoye Lu, Yongyi Mao, Amiya Nayak
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 18 Replies
+Show details
+Model-Based Offline Planning 
+Arthur Argenson, Gabriel Dulac-Arnold
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Modelling Hierarchical Structure between Dialogue Policy and Natural Language Generator with Option Framework for Task-oriented Dialogue System 
+Jianhong Wang, Yuan Zhang, Tae-Kyun Kim, Yunjie Gu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Distilling Knowledge from Reader to Retriever for Question Answering 
+Gautier Izacard, Edouard Grave
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Efficient Certified Defenses Against Patch Attacks on Image Classifiers 
+Jan Hendrik Metzen, Maksym Yatsura
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Taking Notes on the Fly Helps Language Pre-Training 
+Qiyu Wu, Chen Xing, Yatao Li, Guolin Ke, Di He, Tie-Yan Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 22 Replies
+Show details
+Graph Edit Networks 
+Benjamin Paassen, Daniele Grattarola, Daniele Zambon, Cesare Alippi, Barbara Eva Hammer
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 5 Replies
+Show details
+FOCAL: Efficient Fully-Offline Meta-Reinforcement Learning via Distance Metric Learning and Behavior Regularization 
+Lanqing Li, Rui Yang, Dijun Luo
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Effective and Efficient Vote Attack on Capsule Networks 
+Jindong Gu, Baoyuan Wu, Volker Tresp
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Rapid Neural Architecture Search by Learning to Generate Graphs from Datasets 
+Hayeon Lee, Eunyoung Hyung, Sung Ju Hwang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 23 Replies
+Show details
+Impact of Representation Learning in Linear Bandits 
+Jiaqi Yang, Wei Hu, Jason D. Lee, Simon Shaolei Du
+28 Sept 2020 (modified: 14 Mar 2021) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Creative Sketch Generation 
+Songwei Ge, Vedanuj Goswami, Larry Zitnick, Devi Parikh
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Self-supervised Representation Learning with Relative Predictive Coding 
+Yao-Hung Hubert Tsai, Martin Q. Ma, Muqiao Yang, Han Zhao, Louis-Philippe Morency, Ruslan Salakhutdinov
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+One Network Fits All? Modular versus Monolithic Task Formulations in Neural Networks 
+Atish Agarwala, Abhimanyu Das, Brendan Juba, Rina Panigrahy, Vatsal Sharan, Xin Wang, Qiuyi Zhang
+28 Sept 2020 (modified: 29 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Conditionally Adaptive Multi-Task Learning: Improving Transfer Learning in NLP Using Fewer Parameters & Less Data 
+Jonathan Pilault, Amine El hattami, Christopher Pal
+28 Sept 2020 (modified: 03 Apr 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+A Universal Representation Transformer Layer for Few-Shot Image Classification 
+Lu Liu, William L. Hamilton, Guodong Long, Jing Jiang, Hugo Larochelle
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Isometric Propagation Network for Generalized Zero-shot Learning 
+Lu Liu, Tianyi Zhou, Guodong Long, Jing Jiang, Xuanyi Dong, Chengqi Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Towards Impartial Multi-task Learning 
+Liyang Liu, Yi Li, Zhanghui Kuang, Jing-Hao Xue, Yimin Chen, Wenming Yang, Qingmin Liao, Wayne Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+On Learning Universal Representations Across Languages 
+Xiangpeng Wei, Rongxiang Weng, Yue Hu, Luxi Xing, Heng Yu, Weihua Luo
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Isotropy in the Contextual Embedding Space: Clusters and Manifolds 
+Xingyu Cai, Jiaji Huang, Yuchen Bian, Kenneth Church
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+MoPro: Webly Supervised Learning with Momentum Prototypes 
+Junnan Li, Caiming Xiong, Steven Hoi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+GraphCodeBERT: Pre-training Code Representations with Data Flow 
+Daya Guo, Shuo Ren, Shuai Lu, Zhangyin Feng, Duyu Tang, Shujie LIU, Long Zhou, Nan Duan, Alexey Svyatkovskiy, Shengyu Fu, Michele Tufano, Shao Kun Deng, Colin Clement, Dawn Drain, Neel Sundaresan, Jian Yin, Daxin Jiang, Ming Zhou
+28 Sept 2020 (modified: 08 Mar 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Enjoy Your Editing: Controllable GANs for Image Editing via Latent Space Navigation 
+Peiye Zhuang, Oluwasanmi O Koyejo, Alex Schwing
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Fourier Neural Operator for Parametric Partial Differential Equations 
+Zongyi Li, Nikola Borislavov Kovachki, Kamyar Azizzadenesheli, Burigede liu, Kaushik Bhattacharya, Andrew Stuart, Anima Anandkumar
+28 Sept 2020 (modified: 06 Apr 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Training BatchNorm and Only BatchNorm: On the Expressive Power of Random Features in CNNs 
+Jonathan Frankle, David J. Schwab, Ari S. Morcos
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Towards Faster and Stabilized GAN Training for High-fidelity Few-shot Image Synthesis 
+Bingchen Liu, Yizhe Zhu, Kunpeng Song, Ahmed Elgammal
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 24 Replies
+Show details
+Targeted Attack against Deep Neural Networks via Flipping Limited Weight Bits 
+Jiawang Bai, Baoyuan Wu, Yong Zhang, Yiming Li, Zhifeng Li, Shu-Tao Xia
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+FedBN: Federated Learning on Non-IID Features via Local Batch Normalization 
+Xiaoxiao Li, Meirui JIANG, Xiaofei Zhang, Michael Kamp, Qi Dou
+28 Sept 2020 (modified: 25 Mar 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+AdamP: Slowing Down the Slowdown for Momentum Optimizers on Scale-invariant Weights 
+Byeongho Heo, Sanghyuk Chun, Seong Joon Oh, Dongyoon Han, Sangdoo Yun, Gyuwan Kim, Youngjung Uh, Jung-Woo Ha
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 24 Replies
+Show details
+Learning Subgoal Representations with Slow Dynamics 
+Siyuan Li, Lulu Zheng, Jianhao Wang, Chongjie Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+A Unified Approach to Interpreting and Boosting Adversarial Transferability 
+Xin Wang, Jie Ren, Shuyun Lin, Xiangming Zhu, Yisen Wang, Quanshi Zhang
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Perceptual Adversarial Robustness: Defense Against Unseen Threat Models 
+Cassidy Laidlaw, Sahil Singla, Soheil Feizi
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 21 Replies
+Show details
+Better Fine-Tuning by Reducing Representational Collapse 
+Armen Aghajanyan, Akshat Shrivastava, Anchit Gupta, Naman Goyal, Luke Zettlemoyer, Sonal Gupta
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Learning N:M Fine-grained Structured Sparse Neural Networks From Scratch 
+Aojun Zhou, Yukun Ma, Junnan Zhu, Jianbo Liu, Zhijie Zhang, Kun Yuan, Wenxiu Sun, Hongsheng Li
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Active Contrastive Learning of Audio-Visual Video Representations 
+Shuang Ma, Zhaoyang Zeng, Daniel McDuff, Yale Song
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+PseudoSeg: Designing Pseudo Labels for Semantic Segmentation 
+Yuliang Zou, Zizhao Zhang, Han Zhang, Chun-Liang Li, Xiao Bian, Jia-Bin Huang, Tomas Pfister
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Counterfactual Generative Networks 
+Axel Sauer, Andreas Geiger
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 20 Replies
+Show details
+Contemplating Real-World Object Classification 
+ali borji
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Explainable Deep One-Class Classification 
+Philipp Liznerski, Lukas Ruff, Robert A. Vandermeulen, Billy Joe Franks, Marius Kloft, Klaus Robert Muller
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Batch Reinforcement Learning Through Continuation Method 
+Yijie Guo, Shengyu Feng, Nicolas Le Roux, Ed Chi, Honglak Lee, Minmin Chen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Protecting DNNs from Theft using an Ensemble of Diverse Models 
+Sanjay Kariyappa, Atul Prakash, Moinuddin K Qureshi
+28 Sept 2020 (modified: 07 Mar 2021) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Domain Generalization with MixStyle 
+Kaiyang Zhou, Yongxin Yang, Yu Qiao, Tao Xiang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+Efficient Inference of Flexible Interaction in Spiking-neuron Networks 
+Feng Zhou, Yixuan Zhang, Jun Zhu
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+DICE: Diversity in Deep Ensembles via Conditional Redundancy Adversarial Estimation 
+Alexandre Rame, Matthieu Cord
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Universal Weakly Supervised Segmentation by Pixel-to-Segment Contrastive Learning 
+Tsung-Wei Ke, Jyh-Jing Hwang, Stella Yu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+Shape-Texture Debiased Neural Network Training 
+Yingwei Li, Qihang Yu, Mingxing Tan, Jieru Mei, Peng Tang, Wei Shen, Alan Yuille, cihang xie
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+Interactive Weak Supervision: Learning Useful Heuristics for Data Labeling 
+Benedikt Boecking, Willie Neiswanger, Eric Xing, Artur Dubrawski
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+MoVie: Revisiting Modulated Convolutions for Visual Counting and Beyond 
+Duy Kien Nguyen, Vedanuj Goswami, Xinlei Chen
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Improve Object Detection with Feature-based Knowledge Distillation: Towards Accurate and Efficient Detectors 
+Linfeng Zhang, Kaisheng Ma
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+Revisiting Dynamic Convolution via Matrix Decomposition 
+Yunsheng Li, Yinpeng Chen, Xiyang Dai, mengchen liu, Dongdong Chen, Ye Yu, Lu Yuan, Zicheng Liu, Mei Chen, Nuno Vasconcelos
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+DynaTune: Dynamic Tensor Program Optimization in Deep Neural Network Compilation 
+Minjia Zhang, Menghao Li, Chi Wang, Mingqin Li
+28 Sept 2020 (modified: 16 Mar 2021) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+MALI: A memory efficient and reverse accurate integrator for Neural ODEs 
+Juntang Zhuang, Nicha C Dvornek, sekhar tatikonda, James s Duncan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Bag of Tricks for Adversarial Training 
+Tianyu Pang, Xiao Yang, Yinpeng Dong, Hang Su, Jun Zhu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+Learning to Generate 3D Shapes with Generative Cellular Automata 
+Dongsu Zhang, Changwoon Choi, Jeonghwan Kim, Young Min Kim
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 13 Replies
+Show details
+SEED: Self-supervised Distillation For Visual Representation 
+Zhiyuan Fang, Jianfeng Wang, Lijuan Wang, Lei Zhang, Yezhou Yang, Zicheng Liu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 7 Replies
+Show details
+PDE-Driven Spatiotemporal Disentanglement 
+Jérémie Donà, Jean-Yves Franceschi, sylvain lamprier, patrick gallinari
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+Rethinking Soft Labels for Knowledge Distillation: A Bias–Variance Tradeoff Perspective 
+Helong Zhou, Liangchen Song, Jiajie Chen, Ye Zhou, Guoli Wang, Junsong Yuan, Qian Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Distributed Momentum for Byzantine-resilient Stochastic Gradient Descent 
+El Mahdi El Mhamdi, Rachid Guerraoui, Sébastien Rouault
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Scaling the Convex Barrier with Active Sets 
+Alessandro De Palma, Harkirat Behl, Rudy R Bunel, Philip Torr, M. Pawan Kumar
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 17 Replies
+Show details
+BSQ: Exploring Bit-Level Sparsity for Mixed-Precision Neural Network Quantization 
+Huanrui Yang, Lin Duan, Yiran Chen, Hai Li
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 19 Replies
+Show details
+Dual-mode ASR: Unify and Improve Streaming ASR with Full-context Modeling 
+Jiahui Yu, Wei Han, Anmol Gulati, Chung-Cheng Chiu, Bo Li, Tara N Sainath, Yonghui Wu, Ruoming Pang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 10 Replies
+Show details
+Policy-Driven Attack: Learning to Query for Hard-label Black-box Adversarial Examples 
+Ziang Yan, Yiwen Guo, Jian Liang, Changshui Zhang
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+PSTNet: Point Spatio-Temporal Convolution on Point Cloud Sequences 
+Hehe Fan, Xin Yu, Yuhang Ding, Yi Yang, Mohan Kankanhalli
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 9 Replies
+Show details
+Network Pruning That Matters: A Case Study on Retraining Variants 
+Duong Hoang Le, Binh-Son Hua
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 12 Replies
+Show details
+EEC: Learning to Encode and Regenerate Images for Continual Learning 
+Ali Ayub, Alan Wagner
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 8 Replies
+Show details
+DARTS-: Robustly Stepping out of Performance Collapse Without Indicators 
+Xiangxiang Chu, Xiaoxing Wang, Bo Zhang, Shun Lu, Xiaolin Wei, Junchi Yan
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+BiPointNet: Binary Neural Network for Point Clouds 
+Haotong Qin, Zhongang Cai, Mingyuan Zhang, Yifu Ding, Haiyu Zhao, Shuai Yi, Xianglong Liu, Hao Su
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 15 Replies
+Show details
+AdaFuse: Adaptive Temporal Fusion Network for Efficient Action Recognition 
+Yue Meng, Rameswar Panda, Chung-Ching Lin, Prasanna Sattigeri, Leonid Karlinsky, Kate Saenko, Aude Oliva, Rogerio Feris
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details
+Generating Furry Cars: Disentangling Object Shape and Appearance across Multiple Domains 
+Utkarsh Ojha, Krishna Kumar Singh, Yong Jae Lee
+28 Sept 2020 (modified: 17 Mar 2021) ICLR 2021 Poster Readers:  Everyone 11 Replies
+Show details
+Pruning Neural Networks at Initialization: Why Are We Missing the Mark? 
+Jonathan Frankle, Gintare Karolina Dziugaite, Daniel Roy, Michael Carbin
+28 Sept 2020 (modified: 21 Mar 2021) ICLR 2021 Poster Readers:  Everyone 14 Replies
+Show details
+BRECQ: Pushing the Limit of Post-Training Quantization by Block Reconstruction 
+Yuhang Li, Ruihao Gong, Xu Tan, Yang Yang, Peng Hu, Qi Zhang, Fengwei Yu, Wei Wang, Shi Gu
+28 Sept 2020 (modified: 10 Feb 2022) ICLR 2021 Poster Readers:  Everyone 16 Replies
+Show details

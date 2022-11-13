@@ -1,0 +1,220 @@
+Domino: Discovering Systematic Errors with Cross-Modal Embeddings 
+Sabri Eyuboglu, Maya Varma, Khaled Kamal Saab, Jean-Benoit Delbrouck, Christopher Lee-Messer, Jared Dunnmon, James Zou, Christopher Re
+29 Sept 2021 (modified: 11 May 2022) ICLR 2022 Oral Readers:  Everyone 14 Replies
+Show details
+Natural Language Descriptions of Deep Visual Features 
+Evan Hernandez, Sarah Schwettmann, David Bau, Teona Bagashvili, Antonio Torralba, Jacob Andreas
+29 Sept 2021 (modified: 09 May 2022) ICLR 2022 Oral Readers:  Everyone 13 Replies
+Show details
+Non-Transferable Learning: A New Approach for Model Ownership Verification and Applicability Authorization 
+Lixu Wang, Shichao Xu, Ruiqi Xu, Xiao Wang, Qi Zhu
+29 Sept 2021 (modified: 12 Mar 2022) ICLR 2022 Oral Readers:  Everyone 12 Replies
+Show details
+Neural Structured Prediction for Inductive Node Classification 
+Meng Qu, Huiyu Cai, Jian Tang
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 21 Replies
+Show details
+A New Perspective on "How Graph Neural Networks Go Beyond Weisfeiler-Lehman?" 
+Asiri Wijesinghe, Qing Wang
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 24 Replies
+Show details
+Minibatch vs Local SGD with Shuffling: Tight Convergence Bounds and Beyond 
+Chulhee Yun, Shashank Rajput, Suvrit Sra
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 9 Replies
+Show details
+The Hidden Convex Optimization Landscape of Regularized Two-Layer ReLU Networks: an Exact Characterization of Optimal Solutions 
+Yifei Wang, Jonathan Lacotte, Mert Pilanci
+29 Sept 2021 (modified: 13 Mar 2022) ICLR 2022 Oral Readers:  Everyone 9 Replies
+Show details
+Provably Filtering Exogenous Distractors using Multistep Inverse Dynamics 
+Yonathan Efroni, Dipendra Misra, Akshay Krishnamurthy, Alekh Agarwal, John Langford
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 19 Replies
+Show details
+Bootstrapped Meta-Learning 
+Sebastian Flennerhag, Yannick Schroecker, Tom Zahavy, Hado van Hasselt, David Silver, Satinder Singh
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 15 Replies
+Show details
+Coordination Among Neural Modules Through a Shared Global Workspace 
+Anirudh Goyal, Aniket Rajiv Didolkar, Alex Lamb, Kartikeya Badola, Nan Rosemary Ke, Nasim Rahaman, Jonathan Binas, Charles Blundell, Michael Curtis Mozer, Yoshua Bengio
+29 Sept 2021 (modified: 14 Mar 2022) ICLR 2022 Oral Readers:  Everyone 9 Replies
+Show details
+Data-Efficient Graph Grammar Learning for Molecular Generation 
+Minghao Guo, Veronika Thost, Beichen Li, Payel Das, Jie Chen, Wojciech Matusik
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 14 Replies
+Show details
+Poisoning and Backdooring Contrastive Learning 
+Nicholas Carlini, Andreas Terzis
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 11 Replies
+Show details
+Neural Collapse Under MSE Loss: Proximity to and Dynamics on the Central Path 
+X.Y. Han, Vardan Papyan, David L. Donoho
+29 Sept 2021 (modified: 10 May 2022) ICLR 2022 Oral Readers:  Everyone 19 Replies
+Show details
+Weighted Training for Cross-Task Learning 
+Shuxiao Chen, Koby Crammer, Hangfeng He, Dan Roth, Weijie J Su
+29 Sept 2021 (modified: 01 Mar 2022) ICLR 2022 Oral Readers:  Everyone 9 Replies
+Show details
+iLQR-VAE : control-based learning of input-driven dynamics with applications to neural data 
+Marine Schimel, Ta-Chu Kao, Kristopher T Jensen, Guillaume Hennequin
+29 Sept 2021 (modified: 06 May 2022) ICLR 2022 Oral Readers:  Everyone 4 Replies
+Show details
+Extending the WILDS Benchmark for Unsupervised Adaptation 
+Shiori Sagawa, Pang Wei Koh, Tony Lee, Irena Gao, Sang Michael Xie, Kendrick Shen, Ananya Kumar, Weihua Hu, Michihiro Yasunaga, Henrik Marklund, Sara Beery, Etienne David, Ian Stavness, Wei Guo, Jure Leskovec, Kate Saenko, Tatsunori Hashimoto, Sergey Levine, Chelsea Finn, Percy Liang
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 23 Replies
+Show details
+Asymmetry Learning for Counterfactually-invariant Classification in OOD Tasks 
+S Chandra Mouli, Bruno Ribeiro
+29 Sept 2021 (modified: 09 May 2022) ICLR 2022 Oral Readers:  Everyone 13 Replies
+Show details
+Comparing Distributions by Measuring Differences that Affect Decision Making 
+Shengjia Zhao, Abhishek Sinha, Yutong He, Aidan Perreault, Jiaming Song, Stefano Ermon
+29 Sept 2021 (modified: 17 Mar 2022) ICLR 2022 Oral Readers:  Everyone 8 Replies
+Show details
+MIDI-DDSP: Detailed Control of Musical Performance via Hierarchical Modeling 
+Yusong Wu, Ethan Manilow, Yi Deng, Rigel Swavely, Kyle Kastner, Tim Cooijmans, Aaron Courville, Cheng-Zhi Anna Huang, Jesse Engel
+29 Sept 2021 (modified: 05 May 2022) ICLR 2022 Oral Readers:  Everyone 7 Replies
+Show details
+Unsupervised Vision-Language Grammar Induction with Shared Structure Modeling 
+Bo Wan, Wenjuan Han, Zilong Zheng, Tinne Tuytelaars
+29 Sept 2021 (modified: 03 May 2022) ICLR 2022 Oral Readers:  Everyone 14 Replies
+Show details
+PiCO: Contrastive Label Disambiguation for Partial Label Learning 
+Haobo Wang, Ruixuan Xiao, Yixuan Li, Lei Feng, Gang Niu, Gang Chen, Junbo Zhao
+29 Sept 2021 (modified: 04 May 2022) ICLR 2022 Oral Readers:  Everyone 15 Replies
+Show details
+Pyraformer: Low-Complexity Pyramidal Attention for Long-Range Time Series Modeling and Forecasting 
+Shizhan Liu, Hang Yu, Cong Liao, Jianguo Li, Weiyao Lin, Alex X. Liu, Schahram Dustdar
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 27 Replies
+Show details
+Expressiveness and Approximation Properties of Graph Neural Networks 
+Floris Geerts, Juan L Reutter
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 29 Replies
+Show details
+Filtered-CoPhy: Unsupervised Learning of Counterfactual Physics in Pixel Space 
+Steeven JANNY, Fabien Baradel, Natalia Neverova, Madiha Nadri, Greg Mori, Christian Wolf
+29 Sept 2021 (modified: 01 Feb 2022) ICLR 2022 Oral Readers:  Everyone 14 Replies
+Show details
+BEiT: BERT Pre-Training of Image Transformers 
+Hangbo Bao, Li Dong, Songhao Piao, Furu Wei
+29 Sept 2021 (modified: 11 May 2022) ICLR 2022 Oral Readers:  Everyone 12 Replies
+Show details
+Fine-Tuning can Distort Pretrained Features and Underperform Out-of-Distribution 
+Ananya Kumar, Aditi Raghunathan, Robbie Matthew Jones, Tengyu Ma, Percy Liang
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 21 Replies
+Show details
+StyleAlign: Analysis and Applications of Aligned StyleGAN Models 
+Zongze Wu, Yotam Nitzan, Eli Shechtman, Dani Lischinski
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 16 Replies
+Show details
+Variational Inference for Discriminative Learning with Generative Modeling of Feature Incompletion 
+Kohei Miyaguchi, Takayuki Katsuki, Akira Koseki, Toshiya Iwamori
+29 Sept 2021 (modified: 22 Feb 2022) ICLR 2022 Oral Readers:  Everyone 13 Replies
+Show details
+Efficiently Modeling Long Sequences with Structured State Spaces 
+Albert Gu, Karan Goel, Christopher Re
+29 Sept 2021 (modified: 04 Mar 2022) ICLR 2022 Oral Readers:  Everyone 15 Replies
+Show details
+Large Language Models Can Be Strong Differentially Private Learners 
+Xuechen Li, Florian Tramer, Percy Liang, Tatsunori Hashimoto
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 17 Replies
+Show details
+GeoDiff: A Geometric Diffusion Model for Molecular Conformation Generation 
+Minkai Xu, Lantao Yu, Yang Song, Chence Shi, Stefano Ermon, Jian Tang
+29 Sept 2021 (modified: 06 Mar 2022) ICLR 2022 Oral Readers:  Everyone 16 Replies
+Show details
+Frame Averaging for Invariant and Equivariant Network Design 
+Omri Puny, Matan Atzmon, Edward J. Smith, Ishan Misra, Aditya Grover, Heli Ben-Hamu, Yaron Lipman
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 19 Replies
+Show details
+Einops: Clear and Reliable Tensor Manipulations with Einstein-like Notation 
+Alex Rogozhnikov
+29 Sept 2021 (modified: 21 Feb 2022) ICLR 2022 Oral Readers:  Everyone 16 Replies
+Show details
+A Fine-Grained Analysis on Distribution Shift 
+Olivia Wiles, Sven Gowal, Florian Stimberg, Sylvestre-Alvise Rebuffi, Ira Ktena, Krishnamurthy Dj Dvijotham, Ali Taylan Cemgil
+29 Sept 2021 (modified: 10 Mar 2022) ICLR 2022 Oral Readers:  Everyone 18 Replies
+Show details
+Open-Set Recognition: A Good Closed-Set Classifier is All You Need 
+Sagar Vaze, Kai Han, Andrea Vedaldi, Andrew Zisserman
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 13 Replies
+Show details
+Learning Strides in Convolutional Neural Networks 
+Rachid Riad, Olivier Teboul, David Grangier, Neil Zeghidour
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 13 Replies
+Show details
+Understanding over-squashing and bottlenecks on graphs via curvature 
+Jake Topping, Francesco Di Giovanni, Benjamin Paul Chamberlain, Xiaowen Dong, Michael M. Bronstein
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 23 Replies
+Show details
+Diffusion-Based Voice Conversion with Fast Maximum Likelihood Sampling Scheme 
+Vadim Popov, Ivan Vovk, Vladimir Gogoryan, Tasnima Sadekova, Mikhail Sergeevich Kudinov, Jiansheng Wei
+29 Sept 2021 (modified: 26 Feb 2022) ICLR 2022 Oral Readers:  Everyone 9 Replies
+Show details
+Resolving Training Biases via Influence-based Data Relabeling w
+Shuming Kong, Yanyan Shen, Linpeng Huang
+29 Sept 2021 (modified: 03 Mar 2022) ICLR 2022 Oral Readers:  Everyone 24 Replies
+Show details
+Representational Continuity for Unsupervised Continual Learning 
+Divyam Madaan, Jaehong Yoon, Yuanchun Li, Yunxin Liu, Sung Ju Hwang
+29 Sept 2021 (modified: 10 May 2022) ICLR 2022 Oral Readers:  Everyone 17 Replies
+Show details
+Vision-Based Manipulators Need to Also See from Their Hands 
+Kyle Hsu, Moo Jin Kim, Rafael Rafailov, Jiajun Wu, Chelsea Finn
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 14 Replies
+Show details
+Meta-Learning with Fewer Tasks through Task Interpolation 
+Huaxiu Yao, Linjun Zhang, Chelsea Finn
+29 Sept 2021 (modified: 12 Mar 2022) ICLR 2022 Oral Readers:  Everyone 15 Replies
+Show details
+DISCOVERING AND EXPLAINING THE REPRESENTATION BOTTLENECK OF DNNS 
+Huiqi Deng, Qihan Ren, Hao Zhang, Quanshi Zhang
+29 Sept 2021 (modified: 14 Mar 2022) ICLR 2022 Oral Readers:  Everyone 5 Replies
+Show details
+Sparse Communication via Mixed Distributions 
+António Farinhas, Wilker Aziz, Vlad Niculae, Andre Martins
+29 Sept 2021 (modified: 28 Feb 2022) ICLR 2022 Oral Readers:  Everyone 10 Replies
+Show details
+Finetuned Language Models are Zero-Shot Learners 
+Jason Wei, Maarten Bosma, Vincent Zhao, Kelvin Guu, Adams Wei Yu, Brian Lester, Nan Du, Andrew M. Dai, Quoc V Le
+29 Sept 2021 (modified: 10 Feb 2022) ICLR 2022 Oral Readers:  Everyone 14 Replies
+Show details
+F8Net: Fixed-Point 8-bit Only Multiplication for Network Quantization 
+Qing Jin, Jian Ren, Richard Zhuang, Sumant Hanumante, Zhengang Li, Zhiyu Chen, Yanzhi Wang, Kaiyuan Yang, Sergey Tulyakov
+29 Sept 2021 (modified: 25 Feb 2022) ICLR 2022 Oral Readers:  Everyone 30 Replies
+Show details
+Transform2Act: Learning a Transform-and-Control Policy for Efficient Agent Design 
+Ye Yuan, Yuda Song, Zhengyi Luo, Wen Sun, Kris M. Kitani
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 15 Replies
+Show details
+ProtoRes: Proto-Residual Network for Pose Authoring via Learned Inverse Kinematics 
+Boris N. Oreshkin, Florent Bocquelet, Felix G. Harvey, Bay Raitt, Dominic Laflamme
+29 Sept 2021 (modified: 17 Mar 2022) ICLR 2022 Oral Readers:  Everyone 25 Replies
+Show details
+Hyperparameter Tuning with Renyi Differential Privacy 
+Nicolas Papernot, Thomas Steinke
+29 Sept 2021 (modified: 10 Mar 2022) ICLR 2022 Oral Readers:  Everyone 15 Replies
+Show details
+Real-Time Neural Voice Camouflage 
+Mia Chiquier, Chengzhi Mao, Carl Vondrick
+29 Sept 2021 (modified: 19 Feb 2022) ICLR 2022 Oral Readers:  Everyone 9 Replies
+Show details
+CycleMLP: A MLP-like Architecture for Dense Prediction 
+Shoufa Chen, Enze Xie, Chongjian GE, Runjian Chen, Ding Liang, Ping Luo
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 5 Replies
+Show details
+Analytic-DPM: an Analytic Estimate of the Optimal Reverse Variance in Diffusion Probabilistic Models 
+Fan Bao, Chongxuan Li, Jun Zhu, Bo Zhang
+29 Sept 2021 (modified: 03 May 2022) ICLR 2022 Oral Readers:  Everyone 21 Replies
+Show details
+RISP: Rendering-Invariant State Predictor with Differentiable Simulation and Rendering for Cross-Domain Parameter Estimation 
+Pingchuan Ma, Tao Du, Joshua B. Tenenbaum, Wojciech Matusik, Chuang Gan
+29 Sept 2021 (modified: 16 Mar 2022) ICLR 2022 Oral Readers:  Everyone 13 Replies
+Show details
+The Information Geometry of Unsupervised Reinforcement Learning 
+Benjamin Eysenbach, Ruslan Salakhutdinov, Sergey Levine
+29 Sept 2021 (modified: 14 Mar 2022) ICLR 2022 Oral Readers:  Everyone 4 Replies
+Show details
+Language modeling via stochastic processes 
+Rose E Wang, Esin Durmus, Noah Goodman, Tatsunori Hashimoto
+29 Sept 2021 (modified: 15 Mar 2022) ICLR 2022 Oral Readers:  Everyone 11 Replies
+Show details

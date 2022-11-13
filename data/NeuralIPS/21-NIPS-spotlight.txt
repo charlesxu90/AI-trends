@@ -1,0 +1,1136 @@
+Collaborating with Humans without Human Data 
+DJ Strouse, Kevin R. McKee, Matthew Botvinick, Edward Hughes, Richard Everett
+21 May 2021 (modified: 12 Jan 2022) 11 Replies
+Show details
+Sliced Mutual Information: A Scalable Measure of Statistical Dependence 
+Ziv Goldfeld, Kristjan Greenewald
+21 May 2021 (modified: 27 Jan 2022) 11 Replies
+Show details
+Forster Decomposition and Learning Halfspaces with Noise 
+Ilias Diakonikolas, Daniel Kane, Christos Tzamos
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+Generalized Depthwise-Separable Convolutions for Adversarially Robust and Efficient Neural Networks 
+Hassan Dbouk, Naresh Shanbhag
+21 May 2021 (modified: 26 Oct 2021) 7 Replies
+Show details
+Statistical Query Lower Bounds for List-Decodable Linear Regression 
+Ilias Diakonikolas, Daniel Kane, Ankit Pensia, Thanasis Pittas, Alistair Stewart
+21 May 2021 (modified: 15 Jan 2022) 13 Replies
+Show details
+Early-stopped neural networks are consistent 
+Ziwei Ji, Justin D. Li, Matus Telgarsky
+21 May 2021 (modified: 21 Jan 2022) 13 Replies
+Show details
+On the Value of Infinite Gradients in Variational Autoencoder Models 
+Bin Dai, Li Kevin Wenliang, David Wipf
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+On the Power of Differentiable Learning versus PAC and SQ Learning 
+Emmanuel Abbe, Pritish Kamath, eran malach, Colin Sandon, Nathan Srebro
+21 May 2021 (modified: 21 Jan 2022) 5 Replies
+Show details
+Learning Disentangled Behavior Embeddings 
+Changhao Shi, Sivan Schwartz, Shahar Levy, Shay Achvat, Maisan Abboud, Amir Ghanayim, Jackie Schiller, Gal Mishne
+21 May 2021 (modified: 31 Jan 2022) 12 Replies
+Show details
+Learning Generalized Gumbel-max Causal Mechanisms 
+Guy Lorberbom, Daniel D. Johnson, Chris J. Maddison, Daniel Tarlow, Tamir Hazan
+21 May 2021 (modified: 13 Jan 2022) 17 Replies
+Show details
+Offline RL Without Off-Policy Evaluation 
+David Brandfonbrener, William F Whitney, Rajesh Ranganath, Joan Bruna
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+Learning with Holographic Reduced Representations 
+Ashwinkumar Ganesan, Hang Gao, Sunil Gandhi, Edward Raff, Tim Oates, James Holt, Mark McLean
+21 May 2021 (modified: 25 Jan 2022) 13 Replies
+Show details
+Variational Inference for Continuous-Time Switching Dynamical Systems 
+Lukas Köhs, Bastian Alt, Heinz Koeppl
+21 May 2021 (modified: 25 Oct 2021) 13 Replies
+Show details
+Clustering Effect of Adversarial Robust Models 
+Yang Bai, Xin Yan, Yong Jiang, Shu-Tao Xia, Yisen Wang
+21 May 2021 (modified: 05 Jan 2022) 12 Replies
+Show details
+Believe What You See: Implicit Constraint Approach for Offline Multi-Agent Reinforcement Learning 
+Yiqin Yang, Xiaoteng Ma, Chenghao Li, Zewu Zheng, Qiyuan Zhang, Gao Huang, Jun Yang, Qianchuan Zhao
+21 May 2021 (modified: 01 Nov 2021) 28 Replies
+Show details
+An Infinite-Feature Extension for Bayesian ReLU Nets That Fixes Their Asymptotic Overconfidence 
+Agustinus Kristiadi, Matthias Hein, Philipp Hennig
+21 May 2021 (modified: 24 Jan 2022) 16 Replies
+Show details
+Program Synthesis Guided Reinforcement Learning for Partially Observed Environments 
+Yichen Yang, Jeevana Priya Inala, Osbert Bastani, Yewen Pu, Armando Solar-Lezama, Martin Rinard
+21 May 2021 (modified: 26 Oct 2021) 23 Replies
+Show details
+Sequence-to-Sequence Learning with Latent Neural Grammars 
+Yoon Kim
+21 May 2021 (modified: 17 Dec 2021) 12 Replies
+Show details
+Beyond Tikhonov: faster learning with self-concordant losses, via iterative regularization 
+Gaspard Beugnot, Julien Mairal, Alessandro Rudi
+21 May 2021 (modified: 25 Oct 2021) 10 Replies
+Show details
+Closing the Gap: Tighter Analysis of Alternating Stochastic Gradient Methods for Bilevel Problems 
+Tianyi Chen, Yuejiao Sun, Wotao Yin
+21 May 2021 (modified: 28 Jan 2022) 11 Replies
+Show details
+Coresets for Decision Trees of Signals 
+Ibrahim Jubran, Ernesto Evgeniy Sanches Shayda, Ilan Newman, Dan Feldman
+21 May 2021 (modified: 24 Oct 2021) 10 Replies
+Show details
+Continuous vs. Discrete Optimization of Deep Neural Networks 
+Omer Elkabetz, Nadav Cohen
+21 May 2021 (modified: 25 Dec 2021) 12 Replies
+Show details
+Diffusion Models Beat GANs on Image Synthesis 
+Prafulla Dhariwal, Alexander Quinn Nichol
+21 May 2021 (modified: 26 Jan 2022) 9 Replies
+Show details
+Aligned Structured Sparsity Learning for Efficient Image Super-Resolution 
+Yulun Zhang, Huan Wang, Can Qin, Yun Fu
+21 May 2021 (modified: 22 Jan 2022) 10 Replies
+Show details
+Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation 
+Lei Ke, Xia Li, Martin Danelljan, Yu-Wing Tai, Chi-Keung Tang, Fisher Yu
+21 May 2021 (modified: 09 Nov 2021) 11 Replies
+Show details
+Bootstrapping the Error of Oja's Algorithm 
+Robert Lunde, Purnamrita Sarkar, Rachel Ward
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+Regulating algorithmic filtering on social media 
+Sarah Cen, Devavrat Shah
+21 May 2021 (modified: 28 Jan 2022) 15 Replies
+Show details
+Robust Predictable Control 
+Benjamin Eysenbach, Ruslan Salakhutdinov, Sergey Levine
+21 May 2021 (modified: 21 Jan 2022) 14 Replies
+Show details
+Neural Algorithmic Reasoners are Implicit Planners 
+Andreea Deac, Petar Veličković, Ognjen Milinković, Pierre-Luc Bacon, Jian Tang, Mladen Nikolic
+21 May 2021 (modified: 21 Jan 2022) 14 Replies
+Show details
+Online Selective Classification with Limited Feedback 
+Aditya Gangrade, Anil Kag, Ashok Cutkosky, Venkatesh Saligrama
+21 May 2021 (modified: 26 Oct 2021) 15 Replies
+Show details
+A Variational Perspective on Diffusion-Based Generative Models and Score Matching 
+Chin-Wei Huang, Jae Hyun Lim, Aaron Courville
+21 May 2021 (modified: 22 Jan 2022) 14 Replies
+Show details
+Unintended Selection: Persistent Qualification Rate Disparities and Interventions 
+Reilly Raab, Yang Liu
+21 May 2021 (modified: 30 Dec 2021) 12 Replies
+Show details
+Two steps to risk sensitivity 
+Christopher Gagne, Peter Dayan
+21 May 2021 (modified: 22 Oct 2021) 11 Replies
+Show details
+Mixture Proportion Estimation and PU Learning:A Modern Approach 
+Saurabh Garg, Yifan Wu, Alex Smola, Sivaraman Balakrishnan, Zachary Chase Lipton
+21 May 2021 (modified: 21 Jan 2022) 13 Replies
+Show details
+Fair Exploration via Axiomatic Bargaining 
+Jackie Baek, Vivek Farias
+21 May 2021 (modified: 26 Oct 2021) 10 Replies
+Show details
+Neural Program Generation Modulo Static Analysis 
+Rohan Mukherjee, Yeming Wen, Dipak Chaudhari, Thomas Reps, Swarat Chaudhuri, Chris Jermaine
+21 May 2021 (modified: 09 Nov 2021) 14 Replies
+Show details
+Rethinking gradient sparsification as total error minimization 
+Atal Narayan Sahu, Aritra Dutta, Ahmed M. Abdelmoniem, Trambak Banerjee, Marco Canini, Panos Kalnis
+21 May 2021 (modified: 09 Nov 2021) 11 Replies
+Show details
+Collaborating with Humans without Human Data 
+DJ Strouse, Kevin R. McKee, Matthew Botvinick, Edward Hughes, Richard Everett
+21 May 2021 (modified: 12 Jan 2022) 17 Replies
+Show details
+Flexible Option Learning 
+Martin Klissarov, Doina Precup
+21 May 2021 (modified: 28 Oct 2021) 8 Replies
+Show details
+Double Machine Learning Density Estimation for Local Treatment Effects with Instruments 
+Yonghan Jung, Jin Tian, Elias Bareinboim
+21 May 2021 (modified: 31 Jan 2022) 9 Replies
+Show details
+SLOE: A Faster Method for Statistical Inference in High-Dimensional Logistic Regression 
+Steve Yadlowsky, Taedong Yun, Cory Y McLean, Alexander D'Amour
+21 May 2021 (modified: 22 Jan 2022) 9 Replies
+Show details
+Differential Privacy Dynamics of Langevin Diffusion and Noisy Gradient Descent 
+Rishav Chourasia, Jiayuan Ye, Reza Shokri
+21 May 2021 (modified: 26 Oct 2021) 15 Replies
+Show details
+Behavior From the Void: Unsupervised Active Pre-Training 
+Hao Liu, Pieter Abbeel
+21 May 2021 (modified: 10 Jan 2022) 12 Replies
+Show details
+Neural Scene Flow Prior 
+Xueqian Li, Jhony Kaesemodel Pontes, Simon Lucey
+21 May 2021 (modified: 21 Jan 2022) 19 Replies
+Show details
+Sliced Mutual Information: A Scalable Measure of Statistical Dependence 
+Ziv Goldfeld, Kristjan Greenewald
+21 May 2021 (modified: 27 Jan 2022) 11 Replies
+Show details
+Removing Inter-Experimental Variability from Functional Data in Systems Neuroscience 
+Dominic Gonschorek, Larissa Höfling, Klaudia P. Szatko, Katrin Franke, Timm Schubert, Benjamin Adric Dunn, Philipp Berens, David A. Klindt, Thomas Euler
+21 May 2021 (modified: 09 Nov 2021) 13 Replies
+Show details
+Towards optimally abstaining from prediction with OOD test examples 
+Adam Tauman Kalai, Varun Kanade
+21 May 2021 (modified: 22 Jan 2022) 10 Replies
+Show details
+Bias and variance of the Bayesian-mean decoder 
+Arthur Prat-Carrabin, Michael Woodford
+21 May 2021 (modified: 13 Jan 2022) 9 Replies
+Show details
+Forster Decomposition and Learning Halfspaces with Noise 
+Ilias Diakonikolas, Daniel Kane, Christos Tzamos
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+Redesigning the Transformer Architecture with Insights from Multi-particle Dynamical Systems 
+Subhabrata Dutta, Tanya Gautam, Soumen Chakrabarti, Tanmoy Chakraborty
+21 May 2021 (modified: 28 Jan 2022) 15 Replies
+Show details
+Probabilistic Tensor Decomposition of Neural Population Spiking Activity 
+Hugo Soulat, Sepiedeh Keshavarzi, Troy William Margrie, Maneesh Sahani
+21 May 2021 (modified: 05 Nov 2021) 10 Replies
+Show details
+What’s a good imputation to predict with missing values? 
+Marine Le Morvan, Julie Josse, Erwan Scornet, Gael Varoquaux
+21 May 2021 (modified: 29 Oct 2021) 10 Replies
+Show details
+Calibration and Consistency of Adversarial Surrogate Losses 
+Pranjal Awasthi, Natalie Frank, Anqi Mao, Mehryar Mohri, Yutao Zhong
+21 May 2021 (modified: 13 Jan 2022) 16 Replies
+Show details
+Neural optimal feedback control with local learning rules 
+Johannes Friedrich, Siavash Golkar, Shiva Farashahi, Alexander Genkin, Anirvan M. Sengupta, Dmitri Chklovskii
+21 May 2021 (modified: 03 Nov 2021) 13 Replies
+Show details
+Is Automated Topic Model Evaluation Broken? The Incoherence of Coherence 
+Alexander Hoyle, Pranav Goel, Andrew Hian-Cheong, Denis Peskov, Jordan Lee Boyd-Graber, Philip Resnik
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+Generalized Depthwise-Separable Convolutions for Adversarially Robust and Efficient Neural Networks 
+Hassan Dbouk, Naresh Shanbhag
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+Multimodal and Multilingual Embeddings for Large-Scale Speech Mining 
+Paul-Ambroise Duquenne, Hongyu Gong, Holger Schwenk
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+GeoMol: Torsional Geometric Generation of Molecular 3D Conformer Ensembles 
+Octavian-Eugen Ganea, Lagnajit Pattanaik, Connor W. Coley, Regina Barzilay, Klavs Jensen, William Green, Tommi S. Jaakkola
+21 May 2021 (modified: 14 Jan 2022) 9 Replies
+Show details
+Look at What I’m Doing: Self-Supervised Spatial Grounding of Narrations in Instructional Videos 
+Reuben Tan, Bryan A. Plummer, Kate Saenko, Hailin Jin, Bryan Russell
+21 May 2021 (modified: 31 Jan 2022) 14 Replies
+Show details
+Revisiting ResNets: Improved Training and Scaling Strategies 
+Irwan Bello, William Fedus, Xianzhi Du, Ekin Dogus Cubuk, Aravind Srinivas, Tsung-Yi Lin, Jonathon Shlens, Barret Zoph
+21 May 2021 (modified: 31 Jan 2022) 12 Replies
+Show details
+Statistical Query Lower Bounds for List-Decodable Linear Regression 
+Ilias Diakonikolas, Daniel Kane, Ankit Pensia, Thanasis Pittas, Alistair Stewart
+21 May 2021 (modified: 15 Jan 2022) 10 Replies
+Show details
+Exploration-Exploitation in Multi-Agent Competition: Convergence with Bounded Rationality 
+Stefanos Leonardos, Georgios Piliouras, Kelly Spendlove
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+Towards a Unified Information-Theoretic Framework for Generalization 
+MAHDI HAGHIFAM, Gintare Karolina Dziugaite, Shay Moran, Daniel M. Roy
+21 May 2021 (modified: 21 Jan 2022) 8 Replies
+Show details
+Agnostic Reinforcement Learning with Low-Rank MDPs and Rich Observations 
+Ayush Sekhari, Christoph Dann, Mehryar Mohri, Yishay Mansour, Karthik Sridharan
+21 May 2021 (modified: 27 Oct 2021) 11 Replies
+Show details
+Make Sure You're Unsure: A Framework for Verifying Probabilistic Specifications 
+Leonard Berrada, Sumanth Dathathri, Krishnamurthy Dj Dvijotham, Robert Stanforth, Rudy R Bunel, Jonathan Uesato, Sven Gowal, M. Pawan Kumar
+21 May 2021 (modified: 24 Jan 2022) 11 Replies
+Show details
+DropGNN: Random Dropouts Increase the Expressiveness of Graph Neural Networks 
+Pál András Papp, Karolis Martinkus, Lukas Faber, Roger Wattenhofer
+21 May 2021 (modified: 21 Jan 2022) 13 Replies
+Show details
+A Central Limit Theorem for Differentially Private Query Answering 
+Jinshuo Dong, Weijie J Su, Linjun Zhang
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+Mind the Gap: Assessing Temporal Generalization in Neural Language Models 
+Angeliki Lazaridou, Adhiguna Kuncoro, Elena Gribovskaya, Devang Agrawal, Adam Liska, Tayfun Terzi, Mai Gimenez, Cyprien de Masson d'Autume, Tomáš Kočiský, Sebastian Ruder, Dani Yogatama, Kris Cao, Susannah Young, Phil Blunsom
+21 May 2021 (modified: 22 Jan 2022) 13 Replies
+Show details
+A flow-based latent state generative model of neural population responses to natural images 
+Mohammad Bashiri, Edgar Y. Walker, Konstantin-Klemens Lurz, Akshay Kumar Jagadish, Taliah Muhammad, Zhiwei Ding, Zhuokun Ding, Andreas S. Tolias, Fabian H. Sinz
+21 May 2021 (modified: 05 Feb 2022) 20 Replies
+Show details
+Sample Complexity of Tree Search Configuration: Cutting Planes and Beyond 
+Nina Balcan, Siddharth Prasad, Tuomas Sandholm, Ellen Vitercik
+21 May 2021 (modified: 21 Jan 2022) 10 Replies
+Show details
+Test-Time Classifier Adjustment Module for Model-Agnostic Domain Generalization 
+Yusuke Iwasawa, Yutaka Matsuo
+21 May 2021 (modified: 28 Jan 2022) 13 Replies
+Show details
+Overcoming Catastrophic Forgetting in Incremental Few-Shot Learning by Finding Flat Minima 
+Guangyuan SHI, Jiaxin Chen, Wenlong Zhang, Li-Ming Zhan, Xiao-Ming Wu
+21 May 2021 (modified: 04 Nov 2021) 18 Replies
+Show details
+A sampling-based circuit for optimal decision making 
+Camille E. Rullán Buxó, Cristina Savin
+21 May 2021 (modified: 25 Oct 2021) 11 Replies
+Show details
+Coresets for Time Series Clustering 
+Lingxiao Huang, K. Sudhir, Nisheeth K Vishnoi
+21 May 2021 (modified: 22 Jan 2022) 14 Replies
+Show details
+Early-stopped neural networks are consistent 
+Ziwei Ji, Justin D. Li, Matus Telgarsky
+21 May 2021 (modified: 21 Jan 2022) 16 Replies
+Show details
+Robust and Fully-Dynamic Coreset for Continuous-and-Bounded Learning (With Outliers) Problems 
+Zixiu Wang, Yiwen Guo, Hu Ding
+21 May 2021 (modified: 14 Jan 2022) 18 Replies
+Show details
+Batch Normalization Orthogonalizes Representations in Deep Random Networks 
+Hadi Daneshmand, Amir Joudaki, Francis Bach
+21 May 2021 (modified: 22 Jan 2022) 14 Replies
+Show details
+A Unified Approach to Fair Online Learning via Blackwell Approachability 
+Evgenii E Chzhen, Christophe Giraud, Gilles Stoltz
+21 May 2021 (modified: 15 Oct 2021) 11 Replies
+Show details
+Offline Reinforcement Learning as One Big Sequence Modeling Problem 
+Michael Janner, Qiyang Li, Sergey Levine
+21 May 2021 (modified: 28 Jan 2022) 16 Replies
+Show details
+Maximum Likelihood Training of Score-Based Diffusion Models 
+Yang Song, Conor Durkan, Iain Murray, Stefano Ermon
+21 May 2021 (modified: 24 Oct 2021) 14 Replies
+Show details
+Littlestone Classes are Privately Online Learnable 
+Noah Golowich, Roi Livni
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+Mixability made efficient: Fast online multiclass logistic regression 
+Rémi Jézéquel, Pierre Gaillard, Alessandro Rudi
+21 May 2021 (modified: 29 Jan 2022) 12 Replies
+Show details
+Credit Assignment in Neural Networks through Deep Feedback Control 
+Alexander Meulemans, Matilde Tristany Farinha, Javier Garcia Ordonez, Pau Vilimelis Aceituno, Joao Sacramento, Benjamin F Grewe
+21 May 2021 (modified: 24 Jan 2022) 16 Replies
+Show details
+Precise characterization of the prior predictive distribution of deep ReLU networks 
+Lorenzo Noci, Gregor Bachmann, Kevin Roth, Sebastian Nowozin, Thomas Hofmann
+21 May 2021 (modified: 25 Jan 2022) 8 Replies
+Show details
+Focal Attention for Long-Range Interactions in Vision Transformers 
+Jianwei Yang, Chunyuan Li, Pengchuan Zhang, Xiyang Dai, Bin Xiao, Lu Yuan, Jianfeng Gao
+21 May 2021 (modified: 21 Jan 2022) 12 Replies
+Show details
+On the Value of Infinite Gradients in Variational Autoencoder Models 
+Bin Dai, Li Kevin Wenliang, David Wipf
+21 May 2021 (modified: 26 Oct 2021) 20 Replies
+Show details
+Instance-Dependent Partial Label Learning 
+Ning Xu, Congyu Qiao, Xin Geng, Min-Ling Zhang
+21 May 2021 (modified: 22 Jan 2022) 7 Replies
+Show details
+Foundations of Symbolic Languages for Model Interpretability 
+Marcelo Arenas, Daniel Báez, Pablo Barcelo, Jorge Pérez, Bernardo Subercaseaux
+21 May 2021 (modified: 01 Nov 2021) 10 Replies
+Show details
+Multiwavelet-based Operator Learning for Differential Equations 
+Gaurav Gupta, Xiongye Xiao, Paul Bogdan
+21 May 2021 (modified: 21 Jan 2022) 20 Replies
+Show details
+Combiner: Full Attention Transformer with Sparse Computation Cost 
+Hongyu Ren, Hanjun Dai, Zihang Dai, Mengjiao Yang, Jure Leskovec, Dale Schuurmans, Bo Dai
+21 May 2021 (modified: 26 Oct 2021) 20 Replies
+Show details
+Uniform Sampling over Episode Difficulty 
+Sebastien Arnold, Guneet Singh Dhillon, Avinash Ravichandran, Stefano Soatto
+21 May 2021 (modified: 15 Jan 2022) 14 Replies
+Show details
+SPANN: Highly-efficient Billion-scale Approximate Nearest Neighborhood Search 
+Qi Chen, Bing Zhao, Haidong Wang, Mingqin Li, Chuanjie Liu, Zengzhong Li, Mao Yang, Jingdong Wang
+21 May 2021 (modified: 20 Dec 2021) 11 Replies
+Show details
+Intriguing Properties of Vision Transformers 
+Muzammal Naseer, Kanchana Ranasinghe, Salman Khan, Munawar Hayat, Fahad Khan, Ming-Hsuan Yang
+21 May 2021 (modified: 28 Oct 2021) 13 Replies
+Show details
+On the Existence of The Adversarial Bayes Classifier 
+Pranjal Awasthi, Natalie Frank, Mehryar Mohri
+21 May 2021 (modified: 13 Jan 2022) 14 Replies
+Show details
+Neural Symplectic Form: Learning Hamiltonian Equations on General Coordinate Systems 
+Yuhan Chen, Takashi Matsubara, Takaharu Yaguchi
+21 May 2021 (modified: 22 Jan 2022) 21 Replies
+Show details
+On the Power of Differentiable Learning versus PAC and SQ Learning 
+Emmanuel Abbe, Pritish Kamath, eran malach, Colin Sandon, Nathan Srebro
+21 May 2021 (modified: 21 Jan 2022) 9 Replies
+Show details
+Learning MDPs from Features: Predict-Then-Optimize for Sequential Decision Making by Reinforcement Learning 
+Kai Wang, Sanket Shah, Haipeng Chen, Andrew Perrault, Finale Doshi-Velez, Milind Tambe
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+MEST: Accurate and Fast Memory-Economic Sparse Training Framework on the Edge 
+Geng Yuan, Xiaolong Ma, Wei Niu, Zhengang Li, Zhenglun Kong, Ning Liu, Yifan Gong, Zheng Zhan, Chaoyang He, Qing Jin, Siyue Wang, Minghai Qin, Bin Ren, Yanzhi Wang, Sijia Liu, Xue Lin
+21 May 2021 (modified: 26 Oct 2021) 17 Replies
+Show details
+Learning to delegate for large-scale vehicle routing 
+Sirui Li, Zhongxia Yan, Cathy Wu
+21 May 2021 (modified: 12 Jan 2022) 21 Replies
+Show details
+Fair Sparse Regression with Clustering: An Invex Relaxation for a Combinatorial Problem 
+Adarsh Barik, Jean Honorio
+21 May 2021 (modified: 22 Jan 2022) 18 Replies
+Show details
+Online Active Learning with Surrogate Loss Functions 
+Giulia DeSalvo, Claudio Gentile, Tobias Sommer Thune
+21 May 2021 (modified: 12 Jan 2022) 13 Replies
+Show details
+Learning Disentangled Behavior Embeddings 
+Changhao Shi, Sivan Schwartz, Shahar Levy, Shay Achvat, Maisan Abboud, Amir Ghanayim, Jackie Schiller, Gal Mishne
+21 May 2021 (modified: 31 Jan 2022) 11 Replies
+Show details
+Auditing Black-Box Prediction Models for Data Minimization Compliance 
+Bashir Rastegarpanah, Krishna P. Gummadi, Mark Crovella
+21 May 2021 (modified: 27 Oct 2021) 8 Replies
+Show details
+Efficiently Identifying Task Groupings for Multi-Task Learning 
+Christopher Fifty, Ehsan Amid, Zhe Zhao, Tianhe Yu, Rohan Anil, Chelsea Finn
+21 May 2021 (modified: 24 Jan 2022) 13 Replies
+Show details
+Profiling Pareto Front With Multi-Objective Stein Variational Gradient Descent 
+Xingchao Liu, Xin Tong, qiang liu
+21 May 2021 (modified: 23 Jan 2022) 18 Replies
+Show details
+Provably Faster Algorithms for Bilevel Optimization 
+Junjie Yang, Kaiyi Ji, Yingbin Liang
+21 May 2021 (modified: 22 Jan 2022) 12 Replies
+Show details
+Towards Gradient-based Bilevel Optimization with Non-convex Followers and Beyond 
+Risheng Liu, Yaohua Liu, Shangzhi Zeng, Jin Zhang
+21 May 2021 (modified: 26 Oct 2021) 14 Replies
+Show details
+Averaging on the Bures-Wasserstein manifold: dimension-free convergence of gradient descent 
+Jason Altschuler, Sinho Chewi, Patrik Robert Gerber, Austin J Stromme
+21 May 2021 (modified: 21 Jan 2022) 11 Replies
+Show details
+A single gradient step finds adversarial examples on random two-layers neural networks 
+Sebastien Bubeck, Yeshwanth Cherapanamjeri, Gauthier Gidel, Remi Tachet des Combes
+21 May 2021 (modified: 27 Oct 2021) 9 Replies
+Show details
+List-Decodable Mean Estimation in Nearly-PCA Time 
+Ilias Diakonikolas, Daniel Kane, Daniel Kongsgaard, Jerry Li, Kevin Tian
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+Practical Near Neighbor Search via Group Testing 
+Joshua Engels, Benjamin Coleman, Anshumali Shrivastava
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+Logarithmic Regret in Feature-based Dynamic Pricing 
+Jianyu Xu, Yu-Xiang Wang
+21 May 2021 (modified: 24 Jan 2022) 14 Replies
+Show details
+Probabilistic Attention for Interactive Segmentation 
+Prasad Gabbur, Manjot Bilkhu, Javier Movellan
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+PLUR: A Unifying, Graph-Based View of Program Learning, Understanding, and Repair 
+Zimin Chen, Vincent Josua Hellendoorn, Pascal Lamblin, Petros Maniatis, Pierre-Antoine Manzagol, Daniel Tarlow, Subhodeep Moitra
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+Tractable Regularization of Probabilistic Circuits 
+Anji Liu, Guy Van den Broeck
+21 May 2021 (modified: 21 Jan 2022) 9 Replies
+Show details
+Representation Learning for Event-based Visuomotor Policies 
+Sai Vemprala, Sami Mian, Ashish Kapoor
+21 May 2021 (modified: 12 Jan 2022) 11 Replies
+Show details
+Dense Keypoints via Multiview Supervision 
+Zhixuan Yu, Haozheng Yu, Long Sha, Sujoy Ganguly, Hyun Soo Park
+21 May 2021 (modified: 25 Jan 2022) 24 Replies
+Show details
+Learning Generalized Gumbel-max Causal Mechanisms 
+Guy Lorberbom, Daniel D. Johnson, Chris J. Maddison, Daniel Tarlow, Tamir Hazan
+21 May 2021 (modified: 13 Jan 2022) 7 Replies
+Show details
+Neural Human Performer: Learning Generalizable Radiance Fields for Human Performance Rendering 
+YoungJoong Kwon, Dahun Kim, Duygu Ceylan, Henry Fuchs
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+Neural Additive Models: Interpretable Machine Learning with Neural Nets 
+Rishabh Agarwal, Levi Melnick, Nicholas Frosst, Xuezhou Zhang, Ben Lengerich, Rich Caruana, Geoffrey Hinton
+21 May 2021 (modified: 12 Jan 2022) 9 Replies
+Show details
+Bellman Eluder Dimension: New Rich Classes of RL Problems, and Sample-Efficient Algorithms 
+Chi Jin, Qinghua Liu, Sobhan Miryoosefi
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+Across-animal odor decoding by probabilistic manifold alignment 
+Pedro Herrero-Vidal, Dmitry Rinberg, Cristina Savin
+21 May 2021 (modified: 25 Oct 2021) 13 Replies
+Show details
+Correlated Stochastic Block Models: Exact Graph Matching with Applications to Recovering Communities 
+Miklos Z. Racz, Anirudh Sridhar
+21 May 2021 (modified: 23 Oct 2021) 9 Replies
+Show details
+Constrained Robust Submodular Partitioning 
+Shengjie Wang, Tianyi Zhou, Chandrashekhar Lavania, Jeff Bilmes
+21 May 2021 (modified: 22 Jan 2022) 10 Replies
+Show details
+Numerical Composition of Differential Privacy 
+Sivakanth Gopi, Yin Tat Lee, Lukas Wutschitz
+21 May 2021 (modified: 22 Jan 2022) 14 Replies
+Show details
+Amortized Synthesis of Constrained Configurations Using a Differentiable Surrogate 
+Xingyuan Sun, Tianju Xue, Szymon Rusinkiewicz, Ryan P Adams
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+Optimal Sketching for Trace Estimation 
+Shuli Jiang, Hai Pham, David Woodruff, Qiuyi Zhang
+21 May 2021 (modified: 27 Jan 2022) 9 Replies
+Show details
+A Provably Efficient Sample Collection Strategy for Reinforcement Learning 
+Jean Tarbouriech, Matteo Pirotta, Michal Valko, Alessandro Lazaric
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+Reinforcement Learning in Newcomblike Environments 
+James Henry Bell, Linda Linsefors, Caspar Oesterheld, Joar Max Viktor Skalse
+21 May 2021 (modified: 24 Jan 2022) 18 Replies
+Show details
+Shaping embodied agent behavior with activity-context priors from egocentric video 
+Tushar Nagarajan, Kristen Grauman
+21 May 2021 (modified: 26 Oct 2021) 16 Replies
+Show details
+Slice Sampling Reparameterization Gradients 
+David M. Zoltowski, Diana Cai, Ryan P Adams
+21 May 2021 (modified: 15 Jan 2022) 11 Replies
+Show details
+Instance-Conditioned GAN 
+Arantxa Casanova, Marlene Careil, Jakob Verbeek, Michal Drozdzal, Adriana Romero
+21 May 2021 (modified: 20 Oct 2021) 9 Replies
+Show details
+Iteratively Reweighted Least Squares for Basis Pursuit with Global Linear Convergence Rate 
+Christian Kümmerle, Claudio Mayrink Verdun, Dominik Stöger
+21 May 2021 (modified: 15 Jan 2022) 12 Replies
+Show details
+Generalization Bounds For Meta-Learning: An Information-Theoretic Analysis 
+Qi CHEN, Changjian Shui, Mario Marchand
+21 May 2021 (modified: 21 Jan 2022) 17 Replies
+Show details
+Why Do Pretrained Language Models Help in Downstream Tasks? An Analysis of Head and Prompt Tuning 
+Colin Wei, Sang Michael Xie, Tengyu Ma
+21 May 2021 (modified: 28 Oct 2021) 10 Replies
+Show details
+Invariance Principle Meets Information Bottleneck for Out-of-Distribution Generalization 
+Kartik Ahuja, Ethan Caballero, Dinghuai Zhang, Jean-Christophe Gagnon-Audet, Yoshua Bengio, Ioannis Mitliagkas, Irina Rish
+21 May 2021 (modified: 09 Nov 2021) 21 Replies
+Show details
+Breaking the Sample Complexity Barrier to Regret-Optimal Model-Free Reinforcement Learning 
+Gen Li, Laixi Shi, Yuxin Chen, Yuantao Gu, Yuejie Chi
+21 May 2021 (modified: 21 Jan 2022) 10 Replies
+Show details
+Proper Value Equivalence 
+Christopher Grimm, Andre Barreto, Gregory Farquhar, David Silver, Satinder Singh
+21 May 2021 (modified: 22 Jan 2022) 11 Replies
+Show details
+Learning Equilibria in Matching Markets from Bandit Feedback 
+Meena Jagadeesan, Alexander Wei, Yixin Wang, Michael Jordan, Jacob Steinhardt
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+PLUGIn: A simple algorithm for inverting generative models with recovery guarantees 
+Babhru Joshi, Xiaowei Li, Yaniv Plan, Ozgur Yilmaz
+21 May 2021 (modified: 26 Oct 2021) 8 Replies
+Show details
+A Closer Look at the Worst-case Behavior of Multi-armed Bandit Algorithms 
+Anand Kalvit, assaf zeevi
+21 May 2021 (modified: 22 Jan 2022) 9 Replies
+Show details
+Techniques for Symbol Grounding with SATNet 
+Sever Topan, David Rolnick, Xujie Si
+21 May 2021 (modified: 23 Jan 2022) 17 Replies
+Show details
+Differentially Private Model Personalization 
+Prateek Jain, J Keith Rush, Adam Smith, Shuang Song, Abhradeep Guha Thakurta
+21 May 2021 (modified: 22 Jan 2022) 12 Replies
+Show details
+Bootstrap Your Object Detector via Mixed Training 
+Mengde Xu, Zheng Zhang, Fangyun Wei, Yutong Lin, Yue Cao, Stephen Lin, Han Hu, Xiang Bai
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+Newton-LESS: Sparsification without Trade-offs for the Sketched Newton Update 
+Michal Derezinski, Jonathan Lacotte, Mert Pilanci, Michael W. Mahoney
+21 May 2021 (modified: 21 Jan 2022) 12 Replies
+Show details
+Subgroup Generalization and Fairness of Graph Neural Networks 
+Jiaqi Ma, Junwei Deng, Qiaozhu Mei
+21 May 2021 (modified: 09 Nov 2021) 13 Replies
+Show details
+How Well do Feature Visualizations Support Causal Understanding of CNN Activations? 
+Roland Simon Zimmermann, Judy Borowski, Robert Geirhos, Matthias Bethge, Thomas S. A. Wallis, Wieland Brendel
+21 May 2021 (modified: 17 Dec 2021) 13 Replies
+Show details
+Beyond Value-Function Gaps: Improved Instance-Dependent Regret Bounds for Episodic Reinforcement Learning 
+Christoph Dann, Teodor Vanislavov Marinov, Mehryar Mohri, Julian Zimmert
+21 May 2021 (modified: 26 Oct 2021) 10 Replies
+Show details
+Diffusion Schrödinger Bridge with Applications to Score-Based Generative Modeling 
+Valentin De Bortoli, James Thornton, Jeremy Heng, Arnaud Doucet
+21 May 2021 (modified: 21 Jan 2022) 11 Replies
+Show details
+On the Representation of Solutions to Elliptic PDEs in Barron Spaces 
+Ziang Chen, Jianfeng Lu, Yulong Lu
+21 May 2021 (modified: 22 Jan 2022) 12 Replies
+Show details
+Variational Bayesian Optimistic Sampling 
+Brendan O'Donoghue, Tor Lattimore
+21 May 2021 (modified: 24 Jan 2022) 16 Replies
+Show details
+RL for Latent MDPs: Regret Guarantees and a Lower Bound 
+Jeongyeol Kwon, Yonathan Efroni, Constantine Caramanis, Shie Mannor
+21 May 2021 (modified: 27 Oct 2021) 11 Replies
+Show details
+Stochastic Shortest Path: Minimax, Parameter-Free and Towards Horizon-Free Regret 
+Jean Tarbouriech, Runlong Zhou, Simon Shaolei Du, Matteo Pirotta, Michal Valko, Alessandro Lazaric
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+Learning Large Neighborhood Search Policy for Integer Programming 
+Yaoxin Wu, Wen Song, Zhiguang Cao, Jie Zhang
+21 May 2021 (modified: 28 Dec 2021) 12 Replies
+Show details
+Statistical Regeneration Guarantees of the Wasserstein Autoencoder with Latent Space Consistency 
+Anish Chakrabarty, Swagatam Das
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+Deep learning is adaptive to intrinsic dimensionality of model smoothness in anisotropic Besov space 
+Taiji Suzuki, Atsushi Nitanda
+21 May 2021 (modified: 21 Jan 2022) 8 Replies
+Show details
+The functional specialization of visual cortex emerges from training parallel pathways with self-supervised predictive learning 
+Shahab Bakhtiari, Patrick J Mineault, Tim Lillicrap, Christopher C Pack, Blake Aaron Richards
+21 May 2021 (modified: 26 Oct 2021) 19 Replies
+Show details
+Tensor Normal Training for Deep Learning Models 
+Yi Ren, Donald Goldfarb
+21 May 2021 (modified: 22 Dec 2021) 12 Replies
+Show details
+Information Directed Sampling for Sparse Linear Bandits 
+Botao Hao, Tor Lattimore, Wei Deng
+21 May 2021 (modified: 31 Jan 2022) 11 Replies
+Show details
+Reward is enough for convex MDPs 
+Tom Zahavy, Brendan O'Donoghue, Guillaume Desjardins, Satinder Singh
+21 May 2021 (modified: 21 Jan 2022) 14 Replies
+Show details
+Repulsive Deep Ensembles are Bayesian 
+Francesco D'Angelo, Vincent Fortuin
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction 
+Peng Wang, Lingjie Liu, Yuan Liu, Christian Theobalt, Taku Komura, Wenping Wang
+21 May 2021 (modified: 26 Oct 2021) 10 Replies
+Show details
+Pruning Randomly Initialized Neural Networks with Iterative Randomization 
+Daiki Chijiwa, Shin'ya Yamaguchi, Yasutoshi Ida, Kenji Umakoshi, Tomohiro INOUE
+21 May 2021 (modified: 26 Oct 2021) 12 Replies
+Show details
+Sequential Algorithms for Testing Closeness of Distributions 
+Aadil Oufkir, Omar Fawzi, Nicolas Flammarion, Aurélien Garivier
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+DiBS: Differentiable Bayesian Structure Learning 
+Lars Lorch, Jonas Rothfuss, Bernhard Schölkopf, Andreas Krause
+21 May 2021 (modified: 17 Dec 2021) 14 Replies
+Show details
+Learning Gaussian Mixtures with Generalized Linear Models: Precise Asymptotics in High-dimensions 
+Bruno Loureiro, Gabriele Sicuro, Cedric Gerbelot, Alessandro Pacco, Florent Krzakala, Lenka Zdeborova
+21 May 2021 (modified: 21 Jan 2022) 7 Replies
+Show details
+Doubly Robust Thompson Sampling with Linear Payoffs 
+Wonyoung Kim, Gi-Soo Kim, Myunghee Cho Paik
+21 May 2021 (modified: 14 Jan 2022) 17 Replies
+Show details
+Determinantal point processes based on orthogonal polynomials for sampling minibatches in SGD 
+Rémi Bardenet, Subhroshekhar Ghosh, Meixia LIN
+21 May 2021 (modified: 22 Jan 2022) 12 Replies
+Show details
+Property-Aware Relation Networks for Few-Shot Molecular Property Prediction 
+Yaqing Wang, ABULIKEMU ABUDUWEILI, quanming yao, Dejing Dou
+21 May 2021 (modified: 25 Jan 2022) 12 Replies
+Show details
+Coresets for Clustering with Missing Values 
+Vladimir Braverman, Shaofeng H.-C. Jiang, Robert Krauthgamer, Xuan Wu
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+Process for Adapting Language Models to Society (PALMS) with Values-Targeted Datasets 
+Irene Solaiman, Christy Dennison
+21 May 2021 (modified: 28 Jan 2022) 17 Replies
+Show details
+Widening the Pipeline in Human-Guided Reinforcement Learning with Explanation and Context-Aware Data Augmentation 
+Lin Guan, Mudit Verma, Sihang Guo, Ruohan Zhang, Subbarao Kambhampati
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+PARP: Prune, Adjust and Re-Prune for Self-Supervised Speech Recognition 
+Cheng-I Lai, Yang Zhang, Alexander H. Liu, Shiyu Chang, Yi-Lun Liao, Yung-Sung Chuang, Kaizhi Qian, Sameer Khurana, David Daniel Cox, James R. Glass
+21 May 2021 (modified: 26 Oct 2021) 14 Replies
+Show details
+Breaking the Dilemma of Medical Image-to-image Translation 
+Lingke Kong, Chenyu Lian, Detian Huang, ZhenJiang Li, Yanle Hu, Qichao Zhou
+21 May 2021 (modified: 22 Jan 2022) 13 Replies
+Show details
+Subgraph Federated Learning with Missing Neighbor Generation 
+Ke ZHANG, Carl Yang, Xiaoxiao Li, Lichao Sun, Siu Ming Yiu
+21 May 2021 (modified: 21 Jan 2022) 10 Replies
+Show details
+Offline RL Without Off-Policy Evaluation 
+David Brandfonbrener, William F Whitney, Rajesh Ranganath, Joan Bruna
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+Efficient Online Estimation of Causal Effects by Deciding What to Observe 
+Shantanu Gupta, Zachary Chase Lipton, David Childers
+21 May 2021 (modified: 27 Oct 2021) 13 Replies
+Show details
+Covariance-Aware Private Mean Estimation Without Private Covariance Estimation 
+Gavin R Brown, Marco Gaboardi, Adam Smith, Jonathan Ullman, Lydia Zakynthinou
+21 May 2021 (modified: 26 Oct 2021) 6 Replies
+Show details
+Learning with Holographic Reduced Representations 
+Ashwinkumar Ganesan, Hang Gao, Sunil Gandhi, Edward Raff, Tim Oates, James Holt, Mark McLean
+21 May 2021 (modified: 25 Jan 2022) 18 Replies
+Show details
+Supercharging Imbalanced Data Learning With Energy-based Contrastive Representation Transfer 
+Junya Chen, Zidi Xiu, Benjamin Goldstein, Ricardo Henao, Lawrence Carin, Chenyang Tao
+21 May 2021 (modified: 22 Jan 2022) 17 Replies
+Show details
+Learning to See by Looking at Noise 
+Manel Baradad, Jonas Wulff, Tongzhou Wang, Phillip Isola, Antonio Torralba
+21 May 2021 (modified: 21 Jan 2022) 16 Replies
+Show details
+Excess Capacity and Backdoor Poisoning 
+Naren Sarayu Manoj, Avrim Blum
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+Random Shuffling Beats SGD Only After Many Epochs on Ill-Conditioned Problems 
+Itay Safran, Ohad Shamir
+21 May 2021 (modified: 22 Jan 2022) 16 Replies
+Show details
+Measuring Generalization with Optimal Transport 
+Ching-Yao Chuang, Youssef Mroueh, Kristjan Greenewald, Antonio Torralba, Stefanie Jegelka
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+A Normative and Biologically Plausible Algorithm for Independent Component Analysis 
+Yanis Bahroun, Dmitri Chklovskii, Anirvan M. Sengupta
+21 May 2021 (modified: 26 Oct 2021) 23 Replies
+Show details
+Counterfactual Invariance to Spurious Correlations in Text Classification 
+Victor Veitch, Alexander D'Amour, Steve Yadlowsky, Jacob Eisenstein
+21 May 2021 (modified: 02 Nov 2021) 13 Replies
+Show details
+Your head is there to move you around: Goal-driven models of the primate dorsal pathway 
+Patrick J Mineault, Shahab Bakhtiari, Blake Aaron Richards, Christopher C Pack
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+On Inductive Biases for Heterogeneous Treatment Effect Estimation 
+Alicia Curth, Mihaela van der Schaar
+21 May 2021 (modified: 26 Oct 2021) 13 Replies
+Show details
+Subgame solving without common knowledge 
+Brian Hu Zhang, Tuomas Sandholm
+21 May 2021 (modified: 21 Jan 2022) 10 Replies
+Show details
+Improved Coresets and Sublinear Algorithms for Power Means in Euclidean Spaces 
+Vincent Cohen-Addad, David Saulpic, Chris Schwiegelshohn
+21 May 2021 (modified: 12 Jan 2022) 19 Replies
+Show details
+H-NeRF: Neural Radiance Fields for Rendering and Temporal Reconstruction of Humans in Motion 
+Hongyi Xu, Thiemo Alldieck, Cristian Sminchisescu
+21 May 2021 (modified: 24 Jan 2022) 14 Replies
+Show details
+On Linear Stability of SGD and Input-Smoothness of Neural Networks 
+Chao Ma, Lexing Ying
+21 May 2021 (modified: 21 Jan 2022) 10 Replies
+Show details
+Speedy Performance Estimation for Neural Architecture Search 
+Binxin Ru, Clare Lyle, Lisa Schut, Miroslav Fil, Mark van der Wilk, Yarin Gal
+21 May 2021 (modified: 26 Oct 2021) 15 Replies
+Show details
+ASSANet: An Anisotropic Separable Set Abstraction for Efficient Point Cloud Representation Learning 
+Guocheng Qian, Hasan Abed Al Kader Hammoud, Guohao Li, Ali Thabet, Bernard Ghanem
+21 May 2021 (modified: 24 Jan 2022) 13 Replies
+Show details
+Variational Inference for Continuous-Time Switching Dynamical Systems 
+Lukas Köhs, Bastian Alt, Heinz Koeppl
+21 May 2021 (modified: 25 Oct 2021) 12 Replies
+Show details
+Aligning Pretraining for Detection via Object-Level Contrastive Learning 
+Fangyun Wei, Yue Gao, Zhirong Wu, Han Hu, Stephen Lin
+21 May 2021 (modified: 22 Oct 2021) 12 Replies
+Show details
+Clustering Effect of Adversarial Robust Models 
+Yang Bai, Xin Yan, Yong Jiang, Shu-Tao Xia, Yisen Wang
+21 May 2021 (modified: 05 Jan 2022) 7 Replies
+Show details
+Perturbation-based Regret Analysis of Predictive Control in Linear Time Varying Systems 
+Yiheng Lin, Yang Hu, Guanya Shi, Haoyuan Sun, Guannan Qu, Adam Wierman
+21 May 2021 (modified: 21 Jan 2022) 11 Replies
+Show details
+Width-based Lookaheads with Learnt Base Policies and Heuristics Over the Atari-2600 Benchmark 
+Stefan O'Toole, Nir Lipovetzky, Miquel Ramirez, Adrian Pearce
+21 May 2021 (modified: 06 Jan 2022) 16 Replies
+Show details
+Understanding the Under-Coverage Bias in Uncertainty Estimation 
+Yu Bai, Song Mei, Huan Wang, Caiming Xiong
+21 May 2021 (modified: 20 Oct 2021) 9 Replies
+Show details
+Near-Optimal Lower Bounds For Convex Optimization For All Orders of Smoothness 
+Ankit Garg, Robin Kothari, Praneeth Netrapalli, Suhail Sherif
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+iFlow: Numerically Invertible Flows for Efficient Lossless Compression via a Uniform Coder 
+Shifeng Zhang, Ning Kang, Tom Ryder, Zhenguo Li
+21 May 2021 (modified: 22 Jan 2022) 19 Replies
+Show details
+Uniform Concentration Bounds toward a Unified Framework for Robust Clustering 
+Debolina Paul, Saptarshi Chakraborty, Swagatam Das, Jason Xu
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+A Geometric Analysis of Neural Collapse with Unconstrained Features 
+Zhihui Zhu, Tianyu DING, Jinxin Zhou, Xiao Li, Chong You, Jeremias Sulam, Qing Qu
+21 May 2021 (modified: 26 Oct 2021) 16 Replies
+Show details
+Refining Language Models with Compositional Explanations 
+Huihan Yao, Ying Chen, Qinyuan Ye, Xisen Jin, Xiang Ren
+21 May 2021 (modified: 21 Jan 2022) 16 Replies
+Show details
+Believe What You See: Implicit Constraint Approach for Offline Multi-Agent Reinforcement Learning 
+Yiqin Yang, Xiaoteng Ma, Chenghao Li, Zewu Zheng, Qiyuan Zhang, Gao Huang, Jun Yang, Qianchuan Zhao
+21 May 2021 (modified: 01 Nov 2021) 23 Replies
+Show details
+Generic Neural Architecture Search via Regression 
+Yuhong Li, Cong Hao, Pan Li, Jinjun Xiong, Deming Chen
+21 May 2021 (modified: 24 Jan 2022) 30 Replies
+Show details
+Explaining heterogeneity in medial entorhinal cortex with task-driven neural networks 
+Aran Nayebi, Alexander Attinger, Malcolm G. Campbell, Kiah Hardcastle, Isabel I. C. Low, Caitlin S. Mallory, Gabriel Carreira Mel, Ben Sorscher, Alex H Williams, Surya Ganguli, Lisa Giocomo, Daniel LK Yamins
+21 May 2021 (modified: 18 Dec 2021) 20 Replies
+Show details
+A Minimalist Approach to Offline Reinforcement Learning 
+Scott Fujimoto, Shixiang Gu
+21 May 2021 (modified: 21 Jan 2022) 11 Replies
+Show details
+Lower and Upper Bounds on the Pseudo-Dimension of Tensor Network Models 
+Behnoush Khavari, Guillaume Rabusseau
+21 May 2021 (modified: 22 Jan 2022) 7 Replies
+Show details
+Fractal Structure and Generalization Properties of Stochastic Optimization Algorithms 
+Alexander Camuto, George Deligiannidis, Murat A Erdogdu, Mert Gurbuzbalaban, Umut Simsekli, Lingjiong Zhu
+21 May 2021 (modified: 27 Jan 2022) 15 Replies
+Show details
+Lossy Compression for Lossless Prediction 
+Yann Dubois, Benjamin Bloem-Reddy, Karen Ullrich, Chris J. Maddison
+21 May 2021 (modified: 28 Jan 2022) 27 Replies
+Show details
+Necessary and sufficient graphical conditions for optimal adjustment sets in causal graphical models with hidden variables 
+Jakob Runge
+21 May 2021 (modified: 05 Jan 2022) 14 Replies
+Show details
+Safe Reinforcement Learning with Natural Language Constraints 
+Tsung-Yen Yang, Michael Hu, Yinlam Chow, Peter Ramadge, Karthik R Narasimhan
+21 May 2021 (modified: 24 Jan 2022) 9 Replies
+Show details
+Bayesian decision-making under misspecified priors with applications to meta-learning 
+Max Simchowitz, Christopher Tosh, Akshay Krishnamurthy, Daniel Hsu, Thodoris Lykouris, Miroslav Dudík, Robert E. Schapire
+21 May 2021 (modified: 21 Jan 2022) 12 Replies
+Show details
+Interactive Label Cleaning with Example-based Explanations 
+Stefano Teso, Andrea Bontempelli, Fausto Giunchiglia, Andrea Passerini
+21 May 2021 (modified: 24 Jan 2022) 11 Replies
+Show details
+A Geometric Perspective towards Neural Calibration via Sensitivity Decomposition 
+Junjiao Tian, Dylan Yung, Yen-Chang Hsu, Zsolt Kira
+21 May 2021 (modified: 23 Jan 2022) 12 Replies
+Show details
+The Semi-Random Satisfaction of Voting Axioms 
+Lirong Xia
+21 May 2021 (modified: 27 Oct 2021) 12 Replies
+Show details
+Semi-Supervised Semantic Segmentation via Adaptive Equalization Learning 
+Hanzhe Hu, Fangyun Wei, Han Hu, Qiwei Ye, Jinshi Cui, Liwei Wang
+21 May 2021 (modified: 04 Jan 2022) 9 Replies
+Show details
+An Infinite-Feature Extension for Bayesian ReLU Nets That Fixes Their Asymptotic Overconfidence 
+Agustinus Kristiadi, Matthias Hein, Philipp Hennig
+21 May 2021 (modified: 24 Jan 2022) 20 Replies
+Show details
+Online and Offline Reinforcement Learning by Planning with a Learned Model 
+Julian Schrittwieser, Thomas K Hubert, Amol Mandhane, Mohammadamin Barekatain, Ioannis Antonoglou, David Silver
+21 May 2021 (modified: 25 Oct 2021) 12 Replies
+Show details
+Decentralized Learning in Online Queuing Systems 
+Flore Sentenac, Etienne Boursier, Vianney Perchet
+21 May 2021 (modified: 21 Jan 2022) 13 Replies
+Show details
+Vector-valued Distance and Gyrocalculus on the Space of Symmetric Positive Definite Matrices 
+Federico Lopez, Maria Beatrice Pozzetti, Steve J Trettel, Michael Strube, Anna Wienhard
+21 May 2021 (modified: 25 Oct 2021) 14 Replies
+Show details
+Deep Self-Dissimilarities as Powerful Visual Fingerprints 
+Idan Kligvasser, Tamar Rott Shaham, Yuval Bahat, Tomer Michaeli
+21 May 2021 (modified: 25 Oct 2021) 11 Replies
+Show details
+Light Field Networks: Neural Scene Representations with Single-Evaluation Rendering 
+Vincent Sitzmann, Semon Rezchikov, William T. Freeman, Joshua B. Tenenbaum, Fredo Durand
+21 May 2021 (modified: 28 Jan 2022) 16 Replies
+Show details
+Ultrahyperbolic Neural Networks 
+Marc T Law
+21 May 2021 (modified: 15 Jan 2022) 16 Replies
+Show details
+Improved Learning Rates of a Functional Lasso-type SVM with Sparse Multi-Kernel Representation 
+shaogao lv, Junhui Wang, Jiankun Liu, Yong Liu
+21 May 2021 (modified: 21 Jan 2022) 15 Replies
+Show details
+Fast Bayesian Inference for Gaussian Cox Processes via Path Integral Formulation 
+Hideaki Kim
+21 May 2021 (modified: 09 Nov 2021) 12 Replies
+Show details
+Learning to Compose Visual Relations 
+Nan Liu, Shuang Li, Yilun Du, Joshua B. Tenenbaum, Antonio Torralba
+21 May 2021 (modified: 08 Nov 2021) 16 Replies
+Show details
+Program Synthesis Guided Reinforcement Learning for Partially Observed Environments 
+Yichen Yang, Jeevana Priya Inala, Osbert Bastani, Yewen Pu, Armando Solar-Lezama, Martin Rinard
+21 May 2021 (modified: 26 Oct 2021) 15 Replies
+Show details
+Robust Learning of Optimal Auctions 
+Wenshuo Guo, Michael Jordan, Emmanouil Zampetakis
+21 May 2021 (modified: 21 Jan 2022) 10 Replies
+Show details
+Hash Layers For Large Sparse Models 
+Stephen Roller, Sainbayar Sukhbaatar, Arthur Szlam, Jason E Weston
+21 May 2021 (modified: 21 Jan 2022) 10 Replies
+Show details
+Uncertain Decisions Facilitate Better Preference Learning 
+Cassidy Laidlaw, Stuart Russell
+21 May 2021 (modified: 29 Oct 2021) 10 Replies
+Show details
+Parametric Complexity Bounds for Approximating PDEs with Neural Networks 
+Tanya Marwah, Zachary Chase Lipton, Andrej Risteski
+21 May 2021 (modified: 21 Jan 2022) 30 Replies
+Show details
+Bayesian Bellman Operators 
+Matthew Fellows, Kristian Hartikainen, Shimon Whiteson
+21 May 2021 (modified: 21 Jan 2022) 13 Replies
+Show details
+Refined Learning Bounds for Kernel and Approximate $k$-Means 
+Yong Liu
+21 May 2021 (modified: 21 Jan 2022) 12 Replies
+Show details
+Sequence-to-Sequence Learning with Latent Neural Grammars 
+Yoon Kim
+21 May 2021 (modified: 17 Dec 2021) 11 Replies
+Show details
+FjORD: Fair and Accurate Federated Learning under heterogeneous targets with Ordered Dropout 
+Samuel Horváth, Stefanos Laskaridis, Mario Almeida, Ilias Leontiadis, Stylianos Venieris, Nicholas Donald Lane
+21 May 2021 (modified: 10 Jan 2022) 14 Replies
+Show details
+Beyond Tikhonov: faster learning with self-concordant losses, via iterative regularization 
+Gaspard Beugnot, Julien Mairal, Alessandro Rudi
+21 May 2021 (modified: 25 Oct 2021) 15 Replies
+Show details
+TOHAN: A One-step Approach towards Few-shot Hypothesis Adaptation 
+Haoang Chi, Feng Liu, Wenjing Yang, Long Lan, Tongliang Liu, Bo Han, William Cheung, James Kwok
+21 May 2021 (modified: 26 Oct 2021) 23 Replies
+Show details
+Self-Supervised Learning Disentangled Group Representation as Feature 
+Tan Wang, Zhongqi Yue, Jianqiang Huang, Qianru Sun, Hanwang Zhang
+21 May 2021 (modified: 28 Oct 2021) 18 Replies
+Show details
+Align before Fuse: Vision and Language Representation Learning with Momentum Distillation 
+Junnan Li, Ramprasaath R. Selvaraju, Akhilesh Deepak Gotmare, Shafiq Joty, Caiming Xiong, Steven Hoi
+21 May 2021 (modified: 22 Jan 2022) 15 Replies
+Show details
+Spherical Motion Dynamics: Learning Dynamics of Normalized Neural Network using SGD and Weight Decay 
+Ruosi Wan, Zhanxing Zhu, Xiangyu Zhang, Jian Sun
+21 May 2021 (modified: 23 Jan 2022) 20 Replies
+Show details
+Embedding Principle of Loss Landscape of Deep Neural Networks 
+Yaoyu Zhang, Zhongwang Zhang, Tao Luo, Zhiqin Xu
+21 May 2021 (modified: 22 Jan 2022) 17 Replies
+Show details
+ViSER: Video-Specific Surface Embeddings for Articulated 3D Shape Reconstruction 
+Gengshan Yang, Deqing Sun, Varun Jampani, Daniel Vlasic, Forrester Cole, Ce Liu, Deva Ramanan
+21 May 2021 (modified: 23 Jan 2022) 10 Replies
+Show details
+A$^2$-Net: Learning Attribute-Aware Hash Codes for Large-Scale Fine-Grained Image Retrieval 
+Xiu-Shen Wei, Yang Shen, Xuhao Sun, Han-Jia Ye, Jian Yang
+21 May 2021 (modified: 25 Oct 2021) 9 Replies
+Show details
+Closing the Gap: Tighter Analysis of Alternating Stochastic Gradient Methods for Bilevel Problems 
+Tianyi Chen, Yuejiao Sun, Wotao Yin
+21 May 2021 (modified: 28 Jan 2022) 10 Replies
+Show details
+Coresets for Decision Trees of Signals 
+Ibrahim Jubran, Ernesto Evgeniy Sanches Shayda, Ilan Newman, Dan Feldman
+21 May 2021 (modified: 24 Oct 2021) 7 Replies
+Show details
+Private Non-smooth ERM and SCO in Subquadratic Steps 
+Janardhan Kulkarni, Yin Tat Lee, Daogao Liu
+21 May 2021 (modified: 26 Oct 2021) 9 Replies
+Show details
+Private learning implies quantum stability 
+Yihui Quek, Srinivasan A, John Smolin
+21 May 2021 (modified: 09 Oct 2021) 11 Replies
+Show details
+Finding Discriminative Filters for Specific Degradations in Blind Super-Resolution 
+Liangbin Xie, Xintao Wang, Chao Dong, Zhongang Qi, Ying Shan
+21 May 2021 (modified: 23 Jan 2022) 12 Replies
+Show details
+Continuous vs. Discrete Optimization of Deep Neural Networks 
+Omer Elkabetz, Nadav Cohen
+21 May 2021 (modified: 25 Dec 2021) 19 Replies
+Show details
+Diffusion Models Beat GANs on Image Synthesis 
+Prafulla Dhariwal, Alexander Quinn Nichol
+21 May 2021 (modified: 26 Jan 2022) 12 Replies
+Show details
+On the Convergence and Sample Efficiency of Variance-Reduced Policy Gradient Method 
+Junyu Zhang, Chengzhuo Ni, Zheng Yu, Csaba Szepesvari, Mengdi Wang
+21 May 2021 (modified: 19 Oct 2021) 10 Replies
+Show details
+DOCTOR: A Simple Method for Detecting Misclassification Errors 
+Federica Granese, Marco Romanelli, Daniele Gorla, Catuscia Palamidessi, Pablo Piantanida
+21 May 2021 (modified: 27 Oct 2021) 10 Replies
+Show details
+The Sensory Neuron as a Transformer: Permutation-Invariant Neural Networks for Reinforcement Learning 
+Yujin Tang, David Ha
+21 May 2021 (modified: 21 Dec 2021) 18 Replies
+Show details
+Iterative Teaching by Label Synthesis 
+Weiyang Liu, Zhen Liu, Hanchen Wang, Liam Paull, Bernhard Schölkopf, Adrian Weller
+21 May 2021 (modified: 09 Nov 2021) 19 Replies
+Show details
+Exact marginal prior distributions of finite Bayesian neural networks 
+Jacob A Zavatone-Veth, Cengiz Pehlevan
+21 May 2021 (modified: 18 Oct 2021) 13 Replies
+Show details
+Learning Interpretable Decision Rule Sets: A Submodular Optimization Approach 
+Fan Yang, Kai He, Linxiao Yang, Hongxia Du, Jingbang Yang, Bo Yang, Liang Sun
+21 May 2021 (modified: 26 Oct 2021) 10 Replies
+Show details
+Training Feedback Spiking Neural Networks by Implicit Differentiation on the Equilibrium State 
+Mingqing Xiao, Qingyan Meng, Zongpeng Zhang, Yisen Wang, Zhouchen Lin
+21 May 2021 (modified: 04 Jan 2022) 10 Replies
+Show details
+Optimal Policies Tend To Seek Power 
+Alexander Matt Turner, Logan Riggs Smith, Rohin Shah, Andrew Critch, Prasad Tadepalli
+21 May 2021 (modified: 03 Jan 2022) 27 Replies
+Show details
+Subgaussian and Differentiable Importance Sampling for Off-Policy Evaluation and Learning 
+Alberto Maria Metelli, Alessio Russo, Marcello Restelli
+21 May 2021 (modified: 15 Jan 2022) 17 Replies
+Show details
+Hardware-adaptive Efficient Latency Prediction for NAS via Meta-Learning 
+Hayeon Lee, Sewoong Lee, Song Chong, Sung Ju Hwang
+21 May 2021 (modified: 24 Jan 2022) 19 Replies
+Show details
+Node Dependent Local Smoothing for Scalable Graph Learning 
+Wentao Zhang, Mingyu Yang, Zeang Sheng, Yang Li, Wen Ouyang, Yangyu Tao, Zhi Yang, Bin CUI
+21 May 2021 (modified: 30 Dec 2021) 17 Replies
+Show details
+A Theory-Driven Self-Labeling Refinement Method for Contrastive Representation Learning 
+Pan Zhou, Caiming Xiong, Xiaotong Yuan, Steven Hoi
+21 May 2021 (modified: 22 Jan 2022) 11 Replies
+Show details
+RIM: Reliable Influence-based Active Learning on Graphs 
+Wentao Zhang, Yexin Wang, Zhenbang You, Meng Cao, Ping Huang, Jiulong Shan, Zhi Yang, Bin CUI
+21 May 2021 (modified: 30 Dec 2021) 13 Replies
+Show details
+Task-Adaptive Neural Network Search with Meta-Contrastive Learning 
+Wonyong Jeong, Hayeon Lee, Geon Park, Eunyoung Hyung, Jinheon Baek, Sung Ju Hwang
+21 May 2021 (modified: 22 Jan 2022) 18 Replies
+Show details
+Baleen: Robust Multi-Hop Reasoning at Scale via Condensed Retrieval 
+Omar Khattab, Christopher Potts, Matei Zaharia
+21 May 2021 (modified: 26 Oct 2021) 11 Replies
+Show details
+Pragmatic Image Compression for Human-in-the-Loop Decision-Making 
+Siddharth Reddy, Anca Dragan, Sergey Levine
+21 May 2021 (modified: 21 Jan 2022) 17 Replies
+Show details
+Near-optimal Offline and Streaming Algorithms for Learning Non-Linear Dynamical Systems 
+Suhas S Kowshik, Dheeraj Mysore Nagaraj, Prateek Jain, Praneeth Netrapalli
+21 May 2021 (modified: 26 Oct 2021) 14 Replies
+Show details
+Adversarial Teacher-Student Representation Learning for Domain Generalization 
+Fu-En Yang, Yuan-Chia Cheng, Zu-Yun Shiau, Yu-Chiang Frank Wang
+21 May 2021 (modified: 21 Jan 2022) 17 Replies
+Show details
+Habitat 2.0: Training Home Assistants to Rearrange their Habitat 
+Andrew Szot, Alexander Clegg, Eric Undersander, Erik Wijmans, Yili Zhao, John M Turner, Noah D Maestre, Mustafa Mukadam, Devendra Singh Chaplot, Oleksandr Maksymets, Aaron Gokaslan, Vladimír Vondruš, Sameer Dharur, Franziska Meier, Wojciech Galuba, Angel X Chang, Zsolt Kira, Vladlen Koltun, Jitendra Malik, Manolis Savva, Dhruv Batra
+21 May 2021 (modified: 15 Jan 2022) 20 Replies
+Show details
+Conformal Prediction using Conditional Histograms 
+Matteo Sesia, Yaniv Romano
+21 May 2021 (modified: 21 Jan 2022) 18 Replies
+Show details
+Reliable Estimation of KL Divergence using a Discriminator in Reproducing Kernel Hilbert Space 
+Sandesh Ghimire, Aria Masoomi, Jennifer Dy
+21 May 2021 (modified: 21 Jan 2022) 12 Replies
+Show details
+IQ-Learn: Inverse soft-Q Learning for Imitation 
+Divyansh Garg, Shuvam Chakraborty, Chris Cundy, Jiaming Song, Stefano Ermon
+21 May 2021 (modified: 23 Jan 2022) 18 Replies
+Show details
+Second-Order Neural ODE Optimizer 
+Guan-Horng Liu, Tianrong Chen, Evangelos Theodorou
+21 May 2021 (modified: 06 Nov 2021) 16 Replies
+Show details
+Long Short-Term Transformer for Online Action Detection 
+Mingze Xu, Yuanjun Xiong, Hao Chen, Xinyu Li, Wei Xia, Zhuowen Tu, Stefano Soatto
+21 May 2021 (modified: 22 Dec 2021) 14 Replies
+Show details
+Representation Learning Beyond Linear Prediction Functions 
+Ziping Xu, Ambuj Tewari
+21 May 2021 (modified: 10 Oct 2021) 11 Replies
+Show details
+Aligned Structured Sparsity Learning for Efficient Image Super-Resolution 
+Yulun Zhang, Huan Wang, Can Qin, Yun Fu
+21 May 2021 (modified: 22 Jan 2022) 8 Replies
+Show details
+Image Generation using Continuous Filter Atoms 
+Ze Wang, Seunghyun Hwang, Zichen Miao, Qiang Qiu
+21 May 2021 (modified: 23 Jan 2022) 13 Replies
+Show details
+Explaining Latent Representations with a Corpus of Examples 
+Jonathan Crabbé, Zhaozhi Qian, Fergus Imrie, Mihaela van der Schaar
+21 May 2021 (modified: 25 Oct 2021) 16 Replies
+Show details
+Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation 
+Lei Ke, Xia Li, Martin Danelljan, Yu-Wing Tai, Chi-Keung Tang, Fisher Yu
+21 May 2021 (modified: 09 Nov 2021) 13 Replies
+Show details
+Per-Pixel Classification is Not All You Need for Semantic Segmentation 
+Bowen Cheng, Alex Schwing, Alexander Kirillov
+21 May 2021 (modified: 25 Oct 2021) 13 Replies
+Show details
+SOFT: Softmax-free Transformer with Linear Complexity 
+Jiachen Lu, Jinghan Yao, Junge Zhang, Xiatian Zhu, Hang Xu, Weiguo Gao, Chunjing Xu, Tao Xiang, Li Zhang
+21 May 2021 (modified: 09 Nov 2021) 12 Replies
+Show details
