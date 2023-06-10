@@ -8,18 +8,4 @@ Conferences included: ICML, ICLR, NIPS, AAAI.
 
 ![Number of papers published on certain topic](./figures/Topics_summary.jpg)
 
-
-### Comparison of papers published on ICML, AAAI, ICLR and NIPS in 2022
-
-![2022 comparison](./figures/ICLR_AAAI_ICLR_cmp.jpg)
-
-### Papers published on ICML in 2021 and 2022
-
-![ICML comparison](./figures/ICML_trend.jpg)
-
-### Papers published on ICLR in 2021 and 2022
-
-![ICLR comparison](./figures/ICLR_trend.jpg)
-
-
 License: [MIT license](./LICENSE)
