@@ -3,8 +3,6 @@ Track the trends of hot topics in AI conferences.
 
 Conferences included: CVPR, ICML, ICLR, NIPS.
 
-### Summary of papers submitted of different topics:
-
 ## 2023 
 | **Type**            | Topics                                                            |
 |---------------------|-------------------------------------------------------------------|
