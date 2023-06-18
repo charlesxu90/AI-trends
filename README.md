@@ -6,19 +6,23 @@ Conferences included: CVPR, ICML, ICLR, NIPS.
 ### Summary of papers submitted of different topics:
 
 ## 2023 
-
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | zero_few-shot, graph, representation, optimization, transformer   |
+| **Emerging topics** | diffusion models, self-supervision, llm                           |
+| **Fading topics**   | 3d, segmentation, vae, flow, bayesian                             |
 
 ## 2022 
-| **Type**            | Topics                                                                                     |
-|---------------------|--------------------------------------------------------------------------------------------|
-| **Top 5 topics**    | RL, graph, optimization, transformer, zero_few-shot, representation, and generative models |
-| **Emerging topics** | Diffusion models, and segmentation                                                         |
-| **Fading topics**   | Flow, meta-learning, adaptive                                                              |
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | zero_few-shot, graph, optimization, transformer, representation   |
+| **Emerging topics** | diffusion models, 3d, multi-view, segmentation, llm               |
+| **Fading topics**   | curriculum learning, decision trees, vae, bayesian, meta-learning |
 
 
 Notes:
-- Top 5 topics: top 5 topics with the most articles on conferences.
-- Emerging topics: topics emerged, or with rank increased.
-- Fading topics: topics disappeared, or with rank decreased.
+- Top 5 topics: topics with the number of articles among the top 5.
+- Emerging topics: topics with increasing ratio among the top 5.
+- Fading topics: topics with decreasing ratio among the top 5.
 
 License: [MIT license](./LICENSE)
