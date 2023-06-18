@@ -19,6 +19,10 @@ Conferences included: CVPR, ICML, ICLR, NIPS.
 | **Emerging topics** | diffusion models, 3d, multi-view, segmentation, llm               |
 | **Fading topics**   | curriculum learning, decision trees, vae, bayesian, meta-learning |
 
+## 2021 
+| **Type**            | Topics                                                                     |
+|---------------------|----------------------------------------------------------------------------|
+| **Top 5 topics**    | zero_few-shot, graph, representation, optimization, reinforcement learning |
 
 Notes:
 - Top 5 topics: topics with the number of articles among the top 5.
