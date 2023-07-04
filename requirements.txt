@@ -2,3 +2,4 @@ gensim
 nltk
 spacy
 xmltodict
+xlsxwriter
