@@ -22,7 +22,7 @@
 # scrapy crawl scrapy_openreview2 -o 2023/icml2023-ILHF-poster.json  -a year=2023 -a source=ICML -a type=poster -a venue='ILHF%20Workshop%20ICML%202023' -a details='replyCount%2Cinvitation%2Coriginal' --nolog
 
 # ICML 2023
-# scrapy crawl scrapy_openreview2 -o 2023/icml2023-oral.json  -a year=2023 -a source=ICML -a type=oral -a venue='ICML%202023%20OralPoster' -a details='replyCount%2Cinvitation%2Coriginal' --nolog
+scrapy crawl scrapy_openreview2 -o 2023/icml2023-oral.json  -a year=2023 -a source=ICML -a type=oral -a venue='ICML%202023%20OralPoster' -a details='replyCount%2Cinvitation%2Coriginal' --nolog
 scrapy crawl scrapy_openreview2 -o 2023/icml2023-poster1.json  -a year=2023 -a source=ICML -a type=poster -a venue='ICML%202023%20Poster' -a details='replyCount%2Cinvitation%2Coriginal' --nolog
 scrapy crawl scrapy_openreview2 -o 2023/icml2023-poster2.json  -a year=2023 -a source=ICML -a type=poster -a venue='ICML%202023%20Poster' -a details='replyCount%2Cinvitation%2Coriginal' --nolog -a offset=1000 
 

@@ -40,9 +40,9 @@ class ScrapyOpenreview2Spider(scrapy.Spider):
         for data in result.get("notes"):
             title = data.get("content").get('title').get('value')
             print(title)
-            authors = str(data.get("content").get('authors').get('value'))
+            authors = str(data.get("content").get('authors').get('value')).replace('\"', '').replace("[", "").replace("]", "")
             try:
-                keywords = data.get("content").get('keywords').get('value')
+                keywords = data.get("content").get('keywords').get('value').replace('\"', '').replace("[", "").replace("]", "")
             except:
                 keywords = ""
             abstract = data.get("content").get('abstract').get('value')
