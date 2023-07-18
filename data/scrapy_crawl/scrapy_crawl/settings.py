@@ -1,4 +1,4 @@
-# Scrapy settings for openreview project
+# Scrapy settings for scrapy_crawl project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "openreview"
+BOT_NAME = "scrapy_crawl"
 
-SPIDER_MODULES = ["openreview.spiders"]
-NEWSPIDER_MODULE = "openreview.spiders"
+SPIDER_MODULES = ["scrapy_crawl.spiders"]
+NEWSPIDER_MODULE = "scrapy_crawl.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "openreview (+http://www.yourdomain.com)"
+#USER_AGENT = "scrapy_crawl (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "openreview.middlewares.OpenreviewSpiderMiddleware": 543,
+#    "scrapy_crawl.middlewares.ScrapyCrawlSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "openreview.middlewares.OpenreviewDownloaderMiddleware": 543,
+#    "scrapy_crawl.middlewares.ScrapyCrawlDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "openreview.pipelines.OpenreviewPipeline": 300,
+#    "scrapy_crawl.pipelines.ScrapyCrawlPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

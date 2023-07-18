@@ -6,7 +6,7 @@
 import scrapy
 
 
-class OpenreviewItem(scrapy.Item):
+class ScrapyCrawlItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
