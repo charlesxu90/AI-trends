@@ -41,11 +41,16 @@ class ScrapyOpenreview2Spider(scrapy.Spider):
             title = data.get("content").get('title').get('value')
             print(title)
             authors = str(data.get("content").get('authors').get('value'))
-            keywords = data.get("content").get('keywords').get('value')
+            try:
+                keywords = data.get("content").get('keywords').get('value')
+            except:
+                keywords = ""
             abstract = data.get("content").get('abstract').get('value')
-            pdf_link = data.get("content").get('pdf').get('value')
-            # lst = [title, year, source, authors, keywords, abstract, pdf_link]
-            # yield lst
+            try:
+                pdf_link = data.get("content").get('pdf').get('value')
+            except:
+                pdf_link = ""
+
             dct = {'title': title, 
                    'year': self.year, 
                    'source': self.source, 

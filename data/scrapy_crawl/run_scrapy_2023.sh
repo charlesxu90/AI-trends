@@ -19,9 +19,10 @@
 # scrapy genspider scrapy_openreview2 api2.openreview.net
 # ICML
 # Interactive Learning with Implicit Human Feedback Workshop at ICML 2023 (ILHF)
-scrapy crawl scrapy_openreview2 -o 2023/icml2023-ILHF-poster.json  -a year=2023 -a source=ICML -a type=poster -a venue='ILHF%20Workshop%20ICML%202023' -a details='replyCount%2Cinvitation%2Coriginal' --nolog
+# scrapy crawl scrapy_openreview2 -o 2023/icml2023-ILHF-poster.json  -a year=2023 -a source=ICML -a type=poster -a venue='ILHF%20Workshop%20ICML%202023' -a details='replyCount%2Cinvitation%2Coriginal' --nolog
 
 # ICML 2023
-# scrapy crawl scrapy_openreview2 -o 2023/icml2023-oral.json  -a year=2023 -a source=ICML -a type=spotlight -a venue='DARL+2022+Spotlight' -a invitation='ICML.cc%2F2022%2FWorkshop%2FDARL%2F-%2FBlind_Submission' --nolog
-# scrapy crawl scrapy_openreview2 -o 2023/icml2023-poster.json  -a year=2023 -a source=ICML -a type=poster -a venue='DARL+2022' -a invitation='ICML.cc%2F2022%2FWorkshop%2FDARL%2F-%2FBlind_Submission' --nolog
+# scrapy crawl scrapy_openreview2 -o 2023/icml2023-oral.json  -a year=2023 -a source=ICML -a type=oral -a venue='ICML%202023%20OralPoster' -a details='replyCount%2Cinvitation%2Coriginal' --nolog
+scrapy crawl scrapy_openreview2 -o 2023/icml2023-poster1.json  -a year=2023 -a source=ICML -a type=poster -a venue='ICML%202023%20Poster' -a details='replyCount%2Cinvitation%2Coriginal' --nolog
+scrapy crawl scrapy_openreview2 -o 2023/icml2023-poster2.json  -a year=2023 -a source=ICML -a type=poster -a venue='ICML%202023%20Poster' -a details='replyCount%2Cinvitation%2Coriginal' --nolog -a offset=1000 
 
