@@ -3,6 +3,13 @@ Track the trends of hot topics in AI conferences.
 
 Conferences included: CVPR, ICML, ICLR, NIPS.
 
+## 2023 ICML
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | 'zero_few-shot', 'graph', 'optimization', 'reinforcement learning', 'representation'   |
+| **Emerging topics** | 'motion', 'decision trees', 'radiance field', 'diffusion models', 'federated learning' |
+| **Fading topics**   | 'self-supervision', 'multi-agent', 'contrastive learning', 'meta-learning', 'transfer learning'|
+
 ## 2023 CVPR
 | **Type**            | Topics                                                            |
 |---------------------|-------------------------------------------------------------------|
