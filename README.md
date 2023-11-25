@@ -3,6 +3,18 @@ Track the trends of hot topics in AI conferences.
 
 Conferences included: CVPR, ICML, ICLR, NIPS.
 
+## 2023 NIPS
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | 'object detection', 'zero_few-shot', 'graph', 'optimization', 'llm' |
+| **Emerging topics** | 'object detection', 'radiance field', 'motion', 'differential equation solving', 'rl'|
+| **Fading topics**   | 'decision trees', 'vae', 'multi-agent', 'sparse', 'self-supervision'|
+
+## 2023 ICCV
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | 'object detection', '3d', 'segmentation', 'transformer', 'zero_few-shot'|
+
 ## 2023 ICML
 | **Type**            | Topics                                                            |
 |---------------------|-------------------------------------------------------------------|
@@ -23,6 +35,8 @@ Conferences included: CVPR, ICML, ICLR, NIPS.
 | **Top 5 topics**    | zero_few-shot, graph, representation, optimization, transformer   |
 | **Emerging topics** | diffusion models, self-supervision, llm                           |
 | **Fading topics**   | 3d, segmentation, vae, flow, bayesian                             |
+
+
 
 
 Notes:
