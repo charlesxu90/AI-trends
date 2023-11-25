@@ -29,6 +29,6 @@
 ### NIPS ### 
 # scrapy crawl scrapy_openreview2 -o 2023/nips2023-oral.json  -a year=2023 -a source=NIPS -a type=oral -a venue='NeurIPS%202023%20oral' -a details='replyCount%2Cpresentation' --nolog -a offset=0
 # scrapy crawl scrapy_openreview2 -o 2023/nips2023-spotlight.json  -a year=2023 -a source=NIPS -a type=spotlight -a venue='NeurIPS%202023%20spotlight' -a details='replyCount%2Cpresentation' --nolog -a offset=0
-scrapy crawl scrapy_openreview2 -o 2023/nips2023-poster1.json  -a year=2023 -a source=NIPS -a type=poster -a venue='NeurIPS%202023%20poster' -a details='replyCount%2Cpresentation' --nolog -a offset=0 
-scrapy crawl scrapy_openreview2 -o 2023/nips2023-poster2.json  -a year=2023 -a source=NIPS -a type=poster -a venue='NeurIPS%202023%20poster' -a details='replyCount%2Cpresentation' --nolog -a offset=1000
-scrapy crawl scrapy_openreview2 -o 2023/nips2023-poster3.json  -a year=2023 -a source=NIPS -a type=poster -a venue='NeurIPS%202023%20poster' -a details='replyCount%2Cpresentation' --nolog -a offset=2000
+scrapy crawl scrapy_openreview2 -o 2023/nips2023-poster1.json  -a year=2023 -a source=NIPS -a type=poster -a venue='NeurIPS%202023%20poster' -a details='replyCount%2Cpresentation' --nolog -a offset=0 -a limit=1000 
+# scrapy crawl scrapy_openreview2 -o 2023/nips2023-poster2.json  -a year=2023 -a source=NIPS -a type=poster -a venue='NeurIPS%202023%20poster' -a details='replyCount%2Cpresentation' --nolog -a offset=1000
+# scrapy crawl scrapy_openreview2 -o 2023/nips2023-poster3.json  -a year=2023 -a source=NIPS -a type=poster -a venue='NeurIPS%202023%20poster' -a details='replyCount%2Cpresentation' --nolog -a offset=2000
