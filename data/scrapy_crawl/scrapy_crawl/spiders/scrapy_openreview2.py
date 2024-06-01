@@ -10,6 +10,7 @@ class ScrapyOpenreview2Spider(scrapy.Spider):
                 #  invitation='ICLR.cc%2F2023%2FConference%2F-%2FBlind_Submission', 
                  details='replyCount', 
                  venue=None, 
+                 domain=None,
                  offset=0, limit=1000):
         """
         year: 2023
@@ -26,6 +27,8 @@ class ScrapyOpenreview2Spider(scrapy.Spider):
         urls.append(f"details={details}")
         urls.append(f"offset={offset}")
         urls.append(f"limit={limit}")
+        if domain is not None:
+            urls.append(f"domain={domain}")
         # urls.append(f"invitation={invitation}")
         
         self.start_urls = ["https://api2.openreview.net/notes?" + '&'.join(urls)]
