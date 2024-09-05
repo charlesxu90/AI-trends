@@ -2,7 +2,30 @@
 Track the trends of hot topics in AI conferences.
 
 Conferences included: CVPR, ICML, ICLR, NIPS.
+# 2024
 
+## 2024 ICML
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | 'graph', 'zero_few-shot', 'llm', 'optimization', 'transformer' |
+| Emerging topics | 'deformation', 'autonomous driving', 'object detection', 'splatting', 'token'| 
+| Fading topics | 'curriculum learning', 'vae', 'rl', 'weakly-supervised', 'imitation learning'| 
+
+## 2024 CVPR
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | '3d', 'generative model', 'segmentation', 'multimodal', 'zero_few-shot' |
+| **Emerging topics** | 'high-fidelity', 'optical flow', 'streaming', 'self-learning', 'decomposition' |
+| **Fading topics**   | 'time series forecasting', 'curriculum learning', 'text-video', 'self-supervision', 'meta-learning' |
+
+## 2024 ICLR
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | zero_few-shot, graph, representation, optimization, transformer   |
+| **Emerging topics** | 'biased', 'token', 'text-guided', 'self-learning', 'autonomous driving' |
+| **Fading topics**   | 'self-supervision', 'enhancement', 'weakly-supervised', 'category discovery', 'decision trees' |
+
+# 2023
 ## 2023 NIPS
 | **Type**            | Topics                                                            |
 |---------------------|-------------------------------------------------------------------|
