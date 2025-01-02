@@ -4,6 +4,13 @@ Track the trends of hot topics in AI conferences.
 Conferences included: CVPR, ICML, ICLR, NIPS.
 # 2024
 
+## 2024 NIPS
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | 'zero_few-shot', 'graph', 'llm', 'optimization', 'transformer' |
+| Emerging topics | '4D', 'splatting', 'diffusion transformer', 'state space model', 'text-to-video'| 
+| Fading topics | 'bayesian', 'self-learning', 'Non-parametric', 'contrastive learning', 'category discovery'| 
+
 ## 2024 ICML
 | **Type**            | Topics                                                            |
 |---------------------|-------------------------------------------------------------------|
