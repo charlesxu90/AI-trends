@@ -8,7 +8,7 @@ Conferences included: CVPR, ICML, ICLR, NIPS.
 | **Type**            | Topics                                                            |
 |---------------------|-------------------------------------------------------------------|
 | **Top 5 topics**    | 'graph', 'zero_few-shot', 'llm', 'generative model', 'transformer'   |
-| **Emerging topics** | 'Diffusion models', 'Flow matching', 'Flow', 'Agentic AI', 'Mathematical reasoning' |
+| **Emerging topics** | 'splatting', 'diffusion transformer', 'state space model', 'Flow matching', 'RAG' |
 | **Fading topics**   | 'Deep Equilibrium Models', 'domain adaptation', 'Spiking Neural Networks', 'optical flow', 'neural collapse' |
 
 # 2024
