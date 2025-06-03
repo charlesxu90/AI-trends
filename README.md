@@ -2,6 +2,15 @@
 Track the trends of hot topics in AI conferences.
 
 Conferences included: CVPR, ICML, ICLR, NIPS.
+# 2025
+
+## 2025 ICLR
+| **Type**            | Topics                                                            |
+|---------------------|-------------------------------------------------------------------|
+| **Top 5 topics**    | 'graph', 'zero_few-shot', 'llm', 'generative model', 'transformer'   |
+| **Emerging topics** | 'Diffusion models', 'Flow matching', 'Flow', 'Agentic AI', 'Mathematical reasoning' |
+| **Fading topics**   | 'Deep Equilibrium Models', 'domain adaptation', 'Spiking Neural Networks', 'optical flow', 'neural collapse' |
+
 # 2024
 
 ## 2024 NIPS
