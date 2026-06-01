@@ -33,6 +33,8 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 
 DEFAULT_DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 DEFAULT_TOP_N = 5
+# Conference identity (filename token -> label) comes from the conference registry
+# (config/conferences.json). See ai_trend.registry.
 # A topic must have at least this many papers in the *previous* year to be eligible
 # for emerging/fading. This excludes the undefined "0 -> n" case, whose infinite
 # ratio otherwise lets a topic that merely first appears (often a back-labeling
@@ -46,15 +48,6 @@ DEFAULT_MIN_PREV = 1
 # declining (often to near zero), so a current floor would wrongly exclude them.
 DEFAULT_MIN_COUNT = 10
 TOPICS_GLOB = "*.csv_topics.csv"
-
-# Filename conference token -> canonical conference label.
-CONFERENCE_LABELS = {
-    "iclr": "ICLR",
-    "cvpr": "CVPR",
-    "icml": "ICML",
-    "nips": "NIPS",
-    "iccv": "ICCV",
-}
 _YEAR_DIR = re.compile(r"^\d{4}$")
 
 
@@ -71,15 +64,20 @@ class Trend:
     counts: dict[str, int] = field(default_factory=dict)
 
 
-def parse_conference(filename: str) -> str | None:
+def parse_conference(filename: str, token_to_label: dict[str, str] | None = None) -> str | None:
     """Map a ``*_topics.csv`` filename to a canonical conference label.
 
     ``5_iclr.csv_topics.csv`` -> ``ICLR``; ``10_ICCV.csv_topics.csv`` -> ``ICCV``.
-    Returns ``None`` if the conference token is not recognised.
+    ``token_to_label`` comes from the conference registry; if omitted it is loaded
+    from the default config. Returns ``None`` if the token is not recognised.
     """
+    if token_to_label is None:
+        from ai_trend.registry import ConferenceRegistry
+
+        token_to_label = ConferenceRegistry.load().token_to_label
     stem = filename.split(".csv", 1)[0]  # '5_iclr' from '5_iclr.csv_topics.csv'
     _, _, token = stem.partition("_")
-    return CONFERENCE_LABELS.get(token.lower())
+    return token_to_label.get(token.lower())
 
 
 def topic_counts(topics: Iterable[str], taxonomy: "Taxonomy") -> dict[str, int]:
@@ -159,8 +157,15 @@ def compute_trends(
     )
 
 
-def discover_conference_years(data_dir: Path | str = DEFAULT_DATA_DIR) -> dict[str, dict[int, Path]]:
+def discover_conference_years(
+    data_dir: Path | str = DEFAULT_DATA_DIR,
+    token_to_label: dict[str, str] | None = None,
+) -> dict[str, dict[int, Path]]:
     """Index ``{conference: {year: topics_csv_path}}`` from ``data/<year>/``."""
+    if token_to_label is None:
+        from ai_trend.registry import ConferenceRegistry
+
+        token_to_label = ConferenceRegistry.load().token_to_label
     data_dir = Path(data_dir)
     index: dict[str, dict[int, Path]] = {}
     for year_dir in sorted(data_dir.iterdir()):
@@ -168,7 +173,7 @@ def discover_conference_years(data_dir: Path | str = DEFAULT_DATA_DIR) -> dict[s
             continue
         year = int(year_dir.name)
         for path in sorted(year_dir.glob(TOPICS_GLOB)):
-            conference = parse_conference(path.name)
+            conference = parse_conference(path.name, token_to_label)
             if conference is None:
                 continue
             index.setdefault(conference, {})[year] = path

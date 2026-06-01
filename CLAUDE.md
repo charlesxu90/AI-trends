@@ -130,21 +130,35 @@ ai_trend/                   tested, deterministic Python package
   assign.py                 substring topic matcher (the core labeling)
   curate_io.py              build curation payload; parse + apply AI decisions
   trends.py                 top/emerging/fading per conference-year + markdown render
-  cli.py                    `ai-trend candidates|curate|assign|trends`
+  registry.py               configurable conference registry (M3)
+  site.py                   export static-site JSON for GitHub Pages (M4)
+  cli.py                    `ai-trend candidates|curate|assign|trends|export-site`
 
+config/conferences.json                 tracked conferences (label + filename tokens)
 .claude/skills/curate-topics/SKILL.md   the AI reasoning step (only non-deterministic part)
 scripts/migrate_notebook_taxonomy.py    regenerate config/* from the notebook
 scripts/check_agreement.py              verify assignment vs committed labels
-tests/                      pytest suite (target >=80% coverage; currently ~96%)
+tests/                      pytest suite (target >=80% coverage; currently ~94%)
 
 data/{year}/{N}_{conf}.csv              source papers (gitignored)
 data/{year}/{N}_{conf}.csv_topics.csv   labeled output (adds `topic` column)
-data/trends/trends.json                 computed trends (M2 output)
+data/trends/trends.json                 computed trends (M2 output, gitignored)
+docs/                                   static GitHub Pages site (committed)
+docs/data/                              site JSON: manifest, trends, paper shards
 *.ipynb                                  original/legacy pipeline (still present)
 ```
 
-Pipeline: `candidates → /curate-topics skill → curate → assign → trends`. Only the
-skill reasons; everything else is pure and reproducible.
+Pipeline: `candidates → /curate-topics skill → curate → assign → trends →
+export-site`. Only the skill reasons; everything else is pure and reproducible.
+
+## Site (Milestone 4)
+
+Static, no framework. `ai-trend export-site` writes `docs/data/` (manifest +
+trends + per-conference-year paper shards, abstracts truncated). `docs/index.html`
++ `docs/assets/{app.js,style.css}` render a trends dashboard and a drill-down
+paper browser. `docs/` (incl. generated `docs/data/`, ~23 MB) is committed so
+Pages can serve it. Enable: Settings → Pages → branch `main`, folder `/docs`.
+Re-run `export-site` after any re-assign/trends change.
 
 ## Hard constraints (do not break)
 

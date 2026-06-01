@@ -95,6 +95,31 @@ PYTHONNOUSERSITE=1 ./env/bin/python -m pytest --cov=ai_trend
 
 43 tests, 95% coverage. Tests that need the scispaCy model self-skip when absent.
 
+## Conference registry (Milestone 3)
+
+The tracked conferences live in `config/conferences.json` (label + filename
+tokens). Adding a venue is a config edit — no code change. `ai_trend/registry.py`
+loads it; trends/site discovery read conference identity from it.
+
+## GitHub Pages site (Milestone 4)
+
+```bash
+# Rebuild the site's data (after re-assigning topics / trends)
+PYTHONNOUSERSITE=1 ./env/bin/ai-trend export-site   # writes docs/data/*
+```
+
+- `ai_trend/site.py` exports `docs/data/manifest.json`, `docs/data/trends.json`,
+  and per-conference-year shards `docs/data/papers/<LABEL>_<year>.json` (abstracts
+  truncated to ~240 chars; shards loaded on demand).
+- The site is static (`docs/index.html` + `docs/assets/`): a trends dashboard
+  (top/emerging/fading + a counts bar chart) and a paper browser (filter by
+  venue/year/topic, full-text search, PDF links). Clicking any topic drills into
+  its papers. No framework/build step.
+- **Enable Pages:** GitHub repo → Settings → Pages → "Deploy from a branch" →
+  branch `main`, folder `/docs`. The site then serves at the Pages URL.
+- Verified with a headless smoke test (no JS errors; drill-down, filters, and
+  conference switching all work against the real data).
+
 ## Notes / known follow-ups
 
 - 2021–2023 `*_topics.csv` have been re-assigned with the unified taxonomy (done in

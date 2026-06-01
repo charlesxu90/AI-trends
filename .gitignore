@@ -128,7 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Data folder
-data/
+# Data folder (top-level source/derived data only; NOT docs/data which the
+# Pages site needs committed). Anchored with a leading slash so it does not also
+# match docs/data/.
+/data/
 
 figures/

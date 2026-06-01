@@ -165,6 +165,31 @@ def cmd_trends(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_export_site(args: argparse.Namespace) -> int:
+    from ai_trend.site import export_site
+
+    data_dir = Path(args.data_dir)
+    if not data_dir.exists():
+        _eprint(f"error: data directory not found: {data_dir}")
+        return 2
+
+    taxonomy = Taxonomy.load(Path(args.config))
+    manifest = export_site(
+        args.out_dir,
+        taxonomy=taxonomy,
+        data_dir=data_dir,
+        top_n=args.top_n,
+        min_prev=args.min_prev,
+        min_count=args.min_count,
+        abstract_chars=args.abstract_chars,
+    )
+    papers = sum(s["count"] for s in manifest["shards"])
+    _eprint(
+        f"exported {len(manifest['shards'])} shards / {papers} papers -> {args.out_dir}"
+    )
+    return 0
+
+
 def cmd_assign(args: argparse.Namespace) -> int:
     from ai_trend.assign import assign_csv
 
@@ -235,6 +260,15 @@ def build_parser() -> argparse.ArgumentParser:
         "--include-counts", action="store_true", help="embed per-topic counts (json)"
     )
     p_trd.set_defaults(func=cmd_trends)
+
+    p_exp = sub.add_parser("export-site", help="build static-site JSON for GitHub Pages")
+    p_exp.add_argument("--data-dir", default="data", help="root holding <year>/ folders")
+    p_exp.add_argument("--out-dir", default="docs/data", help="site data output directory")
+    p_exp.add_argument("--top-n", type=int, default=5)
+    p_exp.add_argument("--min-prev", type=int, default=1)
+    p_exp.add_argument("--min-count", type=int, default=10)
+    p_exp.add_argument("--abstract-chars", type=int, default=240)
+    p_exp.set_defaults(func=cmd_export_site)
 
     return parser
 

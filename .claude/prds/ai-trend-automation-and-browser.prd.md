@@ -50,8 +50,8 @@ We'll know we're right when **a full monthly refresh (crawl → topic assignment
 |---|---|---|---|---|
 | 1 | Automated topic assignment | Papers in `*_topics.csv` are labeled by an AI skill against the curated taxonomy with no manual editing | complete | `.claude/plans/ai-trend-automation-and-browser.plan.md` |
 | 2 | Automated trend computation | Top-5 / emerging / fading topics per conference-year are generated automatically as structured data | complete | `.claude/plans/ai-trend-automation-and-browser.plan.md` |
-| 3 | Configurable conference registry | The 5 conferences (and future ones) are defined in config; pipeline reads from it | pending | — |
-| 4 | GitHub Pages browser | Public site with trend dashboard + topic→paper drill-down, search and filters | pending | — |
+| 3 | Configurable conference registry | The 5 conferences (and future ones) are defined in config; pipeline reads from it | complete | `config/conferences.json` + `ai_trend/registry.py` |
+| 4 | GitHub Pages browser | Public site with trend dashboard + topic→paper drill-down, search and filters | complete | `docs/` + `ai_trend/site.py` |
 | 5 | Monthly unattended refresh | Scheduled run executes the full pipeline and republishes the site without manual steps | pending | — |
 
 ## Open Questions
