@@ -1,0 +1,583 @@
+{
+  "reinforcement learning": [
+    "reinforcement learning",
+    "deep reinforcement",
+    "agent",
+    "deep reinforcement learning",
+    "reinforcement",
+    "off-policy",
+    "actor-critic",
+    "markov decision process",
+    "markov decision processes",
+    "bandits",
+    "decision transformer"
+  ],
+  "offline reinforcement learning": [
+    "offline reinforcement learning",
+    "offline reinforcement",
+    "offline"
+  ],
+  "graph": [
+    "graph",
+    "graphs",
+    "graph neural networks",
+    "knowledge graph",
+    "graph convolutional",
+    "graph convolutional network",
+    "graph representation learning",
+    "gnn",
+    "graph convolutional networks",
+    "knowledge graphs",
+    "gcn",
+    "graph generation",
+    "gin",
+    "graph learning",
+    "graph representations",
+    "graph networks",
+    "random graph",
+    "graph transformer"
+  ],
+  "optimization": [
+    "optimization",
+    "constrain"
+  ],
+  "zero_few-shot": [
+    "low",
+    "shot learning",
+    "zero-shot",
+    "weak",
+    "few-shot learning",
+    "self-supervised"
+  ],
+  "transformer": [
+    "transformer",
+    "attention",
+    "vision transformer",
+    "transformers",
+    "bert",
+    "scaling",
+    "vision transformers",
+    "long-range",
+    "long-context",
+    " long context",
+    "long range",
+    "window"
+  ],
+  "representation": [
+    "representation",
+    "graph representation learning",
+    "representations"
+  ],
+  "vae": [
+    "variational autoencoders",
+    "vae"
+  ],
+  "generative model": [
+    "generative model",
+    "generation",
+    "generative",
+    "generative models",
+    "deep generative models",
+    "image generation"
+  ],
+  "online learning": [
+    "online learning",
+    "online"
+  ],
+  "adaptive": [
+    "adaptive"
+  ],
+  "bayesian": [
+    "bayes",
+    "bayesian"
+  ],
+  "contrastive learning": [
+    "contrastive",
+    "contrastive learning",
+    "contrastive representation"
+  ],
+  "inference": [
+    "inference"
+  ],
+  "metric": [
+    "metric"
+  ],
+  "meta-learning": [
+    "meta-learning",
+    "meta",
+    "meta-reinforcement",
+    "meta-reinforcement learning"
+  ],
+  "sparse": [
+    "sparse"
+  ],
+  "transfer learning": [
+    "transfer",
+    "transferable",
+    "finetuning",
+    "finetune"
+  ],
+  "active learning": [
+    "active",
+    "active learning"
+  ],
+  "flow": [
+    "flow"
+  ],
+  "augmentation": [
+    "augmentation",
+    "augmented"
+  ],
+  "federated learning": [
+    "federated learning",
+    "decentralized"
+  ],
+  "distillation": [
+    "distillation",
+    "knowledge distillation",
+    "distil"
+  ],
+  "multi-agent": [
+    "multi-agent",
+    "multi-agent reinforcement learning",
+    "markov game",
+    "markov games",
+    "cooperative multi-agent"
+  ],
+  "segmentation": [
+    "segmentation",
+    "scene decomposition",
+    "decomposition",
+    "object detection",
+    "video object"
+  ],
+  "multi-task": [
+    "multi-task"
+  ],
+  "multimodal": [
+    "multimodal",
+    "multi-modal",
+    "cross-modal",
+    "cross-domain",
+    "cross-lingual",
+    "aligned",
+    "vision-language model",
+    "video-language",
+    "vision-language models",
+    "vision-and-language navigation",
+    "language-image",
+    "image-text",
+    "video transformer",
+    "video generation",
+    "multimodal large language",
+    "multimodal model"
+  ],
+  "imitation learning": [
+    "imitation learning"
+  ],
+  "low-rank": [
+    "low-rank"
+  ],
+  "multi-view": [
+    "multi-view",
+    "dual-view"
+  ],
+  "diffusion models": [
+    "diffusion models",
+    "diffusion model",
+    "latent diffusion",
+    "diffusion-based",
+    "diffusion probabilistic model",
+    "diffuse",
+    "fusion models",
+    "denoising diffusion"
+  ],
+  "curriculum learning": [
+    "curriculum learning"
+  ],
+  "decision trees": [
+    "decision trees"
+  ],
+  "3d": [
+    "3d",
+    "3d gaussian"
+  ],
+  "self-supervision": [
+    "self-supervision"
+  ],
+  "llm": [
+    "prompt",
+    "vit",
+    "large language model",
+    "llms",
+    "lms",
+    "chain-of-thought",
+    "rlhf"
+  ],
+  "motion": [
+    "motion"
+  ],
+  "radiance field": [
+    "radiance field",
+    "neural field",
+    "radiance",
+    "nerfs",
+    "neural implicit surface",
+    "neural fields",
+    "nerf"
+  ],
+  "enhancement": [
+    "image enhancement",
+    "image restoration",
+    "video enhancement"
+  ],
+  "reasoning": [
+    "reasoning",
+    "math"
+  ],
+  "weakly-supervised": [
+    "weakly-supervised",
+    "weakly supervised",
+    "one-shot"
+  ],
+  "embodied ai": [
+    "environment",
+    "embodied",
+    "robotics",
+    "robotic"
+  ],
+  "domain adaptation": [
+    "domain adaptation",
+    "source-free"
+  ],
+  "foundation models": [
+    "foundation model"
+  ],
+  "monocular depth estimation": [
+    "monocular depth"
+  ],
+  "animation": [
+    "talking-head",
+    "face animation",
+    "talking head",
+    "talking portrait",
+    "talking face",
+    "face reenactment",
+    "animatable",
+    "animation"
+  ],
+  "scene reconstruction": [
+    "scene reconstruction",
+    "view synthesis"
+  ],
+  "point cloud": [
+    "point cloud",
+    "scene flow"
+  ],
+  "text-video": [
+    "text-video",
+    "video-text"
+  ],
+  "category discovery": [
+    "category discovery",
+    "category-level"
+  ],
+  "rl": [
+    "contextual bandit",
+    "decision processes"
+  ],
+  "world models": [
+    "world model"
+  ],
+  "monte carlo": [
+    "monte carlo",
+    "monte-carlo"
+  ],
+  "differential equation solving": [
+    "differential equation",
+    "physics-informed"
+  ],
+  "time series forecasting": [
+    "time series forecasting",
+    "time series",
+    "long-term forecasting",
+    "time-series forecasting",
+    "multivariate time series"
+  ],
+  "privacy": [
+    "privacy",
+    "auditing"
+  ],
+  "explainable AI": [
+    "interpretation",
+    "interpretability",
+    "interpreting",
+    "interpret",
+    "explaining"
+  ],
+  "chemical ai": [
+    "molecular"
+  ],
+  "search": [
+    "search",
+    "searching"
+  ],
+  "symbolic AI": [
+    "symbol",
+    "symbolic"
+  ],
+  "watermark": [
+    "watermark"
+  ],
+  "model merging": [
+    "model merging",
+    "model merge"
+  ],
+  "reward model": [
+    "reward model"
+  ],
+  "adaptation": [
+    "adaptive",
+    "adaptation",
+    "adaptiveness",
+    "adapters",
+    "adapted",
+    "adapter"
+  ],
+  "text-guided": [
+    "text-guided",
+    "language-guided",
+    "guided "
+  ],
+  "high-fidelity": [
+    "high-fidelity"
+  ],
+  "camera": [
+    "camera"
+  ],
+  "4d": [
+    "4d"
+  ],
+  "splatting": [
+    "splatting",
+    "splat",
+    "gaussian splatting"
+  ],
+  "personalization": [
+    "personal",
+    "personalized",
+    "personalization"
+  ],
+  "autonomous driving": [
+    "autonomous driving",
+    "autonomous"
+  ],
+  "token": [
+    "token"
+  ],
+  "streaming": [
+    "streaming",
+    "stream"
+  ],
+  "layout": [
+    "layout"
+  ],
+  "entangle": [
+    "disentangle",
+    "entangle"
+  ],
+  "object detection": [
+    "detector"
+  ],
+  "optical flow": [
+    "optical flow",
+    "optical"
+  ],
+  "text-to-3d generation": [
+    "text-to-3d generation",
+    "text-to-3d"
+  ],
+  "action detection": [
+    "action detection",
+    "action"
+  ],
+  "deformation": [
+    "deformation"
+  ],
+  "text-to-video": [
+    "text-to-video",
+    "text-to-video generation",
+    "video editing",
+    "video generation",
+    "video diffusion models"
+  ],
+  "self-learning": [
+    "self-supervised",
+    "self-learning",
+    "self-alignment "
+  ],
+  "decomposition": [
+    "decomposition",
+    "composite",
+    "compositional",
+    "decomposed"
+  ],
+  "biased": [
+    "biased",
+    "debiase",
+    "unbiased"
+  ],
+  "music generation": [
+    "music generation",
+    "music"
+  ],
+  "hierarchical": [
+    "hierarchical"
+  ],
+  "RAG": [
+    "retrieval-augmented",
+    "retrieval-augmented generation"
+  ],
+  "memory-efficient LLM": [
+    "memory-efficient"
+  ],
+  "optimal transport": [
+    "optimal transport"
+  ],
+  "guidance in generative model": [
+    "guidance"
+  ],
+  "state space model": [
+    "state space model",
+    "mamba"
+  ],
+  "black-box": [
+    "black-box"
+  ],
+  "Spiking Neural Networks": [
+    "spiking neural networks"
+  ],
+  "Non-parametric": [
+    "nonparametric",
+    "non-parametric"
+  ],
+  "Factual": [
+    "factual",
+    "counterfactual"
+  ],
+  "diffusion transformer": [
+    "diffusion transformer"
+  ],
+  "mixture-of-experts": [
+    "mixture-of-experts",
+    "moe",
+    "Mixture of Multimodal Experts"
+  ],
+  "llm agent": [
+    "llm agent",
+    "llm-based"
+  ],
+  "neural collapse": [
+    "neural collapse"
+  ],
+  "4D": [
+    "4d generation",
+    "3D Dynamic"
+  ],
+  "cooperate": [
+    "cooperate",
+    "cooperative"
+  ],
+  "tokenize": [
+    "tokenize",
+    "tokenization"
+  ],
+  "Consistency Model": [
+    "consistency model"
+  ],
+  "Deep Equilibrium Models": [
+    "deep equilibrium models",
+    "deep equilibrium"
+  ],
+  "diffusion priors": [
+    "diffusion priors",
+    "diffusion prior"
+  ],
+  "LLM reflection": [
+    "reflection"
+  ],
+  "Topological": [
+    "topological",
+    "topology",
+    "topologic"
+  ],
+  "Data processing": [
+    "data selection",
+    "Data Imputation"
+  ],
+  "training dynamics": [
+    "training dynamics"
+  ],
+  "prune": [
+    "prune",
+    "pruning"
+  ],
+  "EEG": [
+    "eeg",
+    "EEG"
+  ],
+  "distribution shifts": [
+    "distribution shifts",
+    "distribution shift"
+  ],
+  "linear networks": [
+    "linear networks",
+    "linear network"
+  ],
+  "Concept Bottleneck Models": [
+    "concept bottleneck models",
+    "concept bottleneck"
+  ],
+  "gflownet": [
+    "gflownet",
+    "gflow"
+  ],
+  "Membership Inference": [
+    "membership inference"
+  ],
+  "Diffusion models": [
+    "discrete diffusion",
+    "discrete diffusion models",
+    "sage",
+    "multi-turn",
+    "mitigation",
+    "dpo"
+  ],
+  "Flow matching": [
+    "flow matching"
+  ],
+  "multi-modal": [
+    "mllm",
+    "vlm",
+    "multimodal models",
+    "multimodal llms"
+  ],
+  "Code generation": [
+    "code generation",
+    "code models",
+    "code model",
+    "code generation models",
+    "code generation model"
+  ],
+  "Mathematical reasoning": [
+    "mathematical reasoning"
+  ],
+  "Flow": [
+    "rectified flow",
+    "gflownets"
+  ],
+  "Agentic AI": [
+    "agents",
+    "multi-agent"
+  ]
+}
