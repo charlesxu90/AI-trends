@@ -43,12 +43,20 @@ class Candidate:
 
 
 def load_model(model_path: Path | str = DEFAULT_MODEL_PATH) -> "Language":
+    """Load the scispaCy model from a local path, or fall back to an installed
+    package name (e.g. ``en_core_sci_lg`` pip-installed in CI)."""
     import spacy
 
-    model_path = Path(model_path)
-    if not model_path.exists():
-        raise FileNotFoundError(f"spaCy model not found: {model_path}")
-    nlp = spacy.load(str(model_path))
+    target = str(model_path)
+    if Path(target).exists():
+        nlp = spacy.load(target)
+    else:
+        try:
+            nlp = spacy.load(target)  # works for an installed package name
+        except (OSError, IOError) as exc:
+            raise FileNotFoundError(
+                f"spaCy model not found at path or as package: {target}"
+            ) from exc
     nlp.max_length = max(nlp.max_length, _MAX_DOC_CHARS)
     return nlp
 

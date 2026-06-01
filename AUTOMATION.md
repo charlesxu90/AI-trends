@@ -120,6 +120,44 @@ PYTHONNOUSERSITE=1 ./env/bin/ai-trend export-site   # writes docs/data/*
 - Verified with a headless smoke test (no JS errors; drill-down, filters, and
   conference switching all work against the real data).
 
+## Monthly unattended refresh (Milestone 5)
+
+End-to-end orchestration: **crawl → process → assign → AI-curate → trends → export-site**.
+
+```bash
+# Deterministic core only (re-derive labels/trends/site from existing data):
+PYTHONNOUSERSITE=1 ./env/bin/ai-trend refresh
+
+# Full pipeline (needs ANTHROPIC_API_KEY for curation; valid crawl config):
+ANTHROPIC_API_KEY=sk-... PYTHONNOUSERSITE=1 ./env/bin/ai-trend refresh --crawl --curate
+```
+
+Stages:
+- `ai-trend crawl` — runs OpenReview Scrapy jobs from `config/crawl.json`. **venue/domain
+  strings change every cycle and must be updated**; CVPR/ICCV are not on OpenReview
+  (CVF, separate/manual). Best-effort: a failed job never aborts the run.
+- `ai-trend process` — merges crawled JSON → `data/<year>/<month>_<key>.csv`
+  (tolerates concatenated-array JSON; de-dupes by title).
+- `ai-trend assign` — deterministic topic labels (M1).
+- AI curation — `ai_trend/curate_ai.py` does the `curate-topics` reasoning headless
+  via the Anthropic API (`ANTHROPIC_API_KEY`); skipped gracefully if unavailable.
+- `ai-trend trends` / `export-site` — M2 / M4 outputs.
+
+`ai-trend refresh` is idempotent: with no new data it just re-derives outputs, so a
+scheduled run is safe anytime (produces no diff when nothing changed).
+
+### Scheduled workflow → PR
+
+`.github/workflows/refresh.yml` runs monthly (cron `0 6 1 * *`) + manual dispatch:
+sets up the pinned env, pip-installs the scispaCy model (`en_core_sci_lg`) and
+`anthropic`/`scrapy`, runs `refresh --crawl --curate`, and **opens a PR** with the
+regenerated `config/`, `data/**_topics.csv`, `docs/`, and `README` for review.
+Merging triggers the Pages deploy.
+
+**Setup required:** add repo secret `ANTHROPIC_API_KEY`, and enable
+Settings → Actions → General → "Allow GitHub Actions to create and approve pull
+requests". Keep `config/crawl.json` venue strings current.
+
 ## Notes / known follow-ups
 
 - 2021–2023 `*_topics.csv` have been re-assigned with the unified taxonomy (done in
@@ -127,6 +165,7 @@ PYTHONNOUSERSITE=1 ./env/bin/ai-trend export-site   # writes docs/data/*
 - The README trend tables are still hand-written and now lag
   `data/trends/trends.json`; regenerate with `ai-trend trends --format markdown`
   when you want them refreshed.
-- **Milestone 3** (configurable conference registry) and **Milestone 4** (the
-  GitHub Pages browser, which will consume `data/trends/trends.json` and the
-  `*_topics.csv`) are next.
+- **CVPR / ICCV crawl** is not automated (CVF source, not OpenReview) — those
+  years are added manually for now.
+- **Crawl venue strings** in `config/crawl.json` need per-cycle maintenance; the
+  scheduled run degrades gracefully when they're stale (no new data → no PR).

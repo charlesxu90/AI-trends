@@ -4,31 +4,36 @@
       "key": "iclr",
       "label": "ICLR",
       "name": "International Conference on Learning Representations",
-      "tokens": ["iclr"]
+      "tokens": ["iclr"],
+      "month": 5
     },
     {
       "key": "cvpr",
       "label": "CVPR",
       "name": "Conference on Computer Vision and Pattern Recognition",
-      "tokens": ["cvpr"]
+      "tokens": ["cvpr"],
+      "month": 6
     },
     {
       "key": "iccv",
       "label": "ICCV",
       "name": "International Conference on Computer Vision",
-      "tokens": ["iccv"]
+      "tokens": ["iccv"],
+      "month": 10
     },
     {
       "key": "icml",
       "label": "ICML",
       "name": "International Conference on Machine Learning",
-      "tokens": ["icml"]
+      "tokens": ["icml"],
+      "month": 7
     },
     {
       "key": "nips",
       "label": "NIPS",
       "name": "Conference on Neural Information Processing Systems",
-      "tokens": ["nips", "neurips"]
+      "tokens": ["nips", "neurips"],
+      "month": 12
     }
   ]
 }

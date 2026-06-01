@@ -1,0 +1,87 @@
+name: Monthly data refresh
+
+# Runs the full pipeline (crawl -> process -> assign -> AI curate -> trends ->
+# export-site) and opens a PR with any regenerated data/site. Conferences release
+# annually, so most monthly runs will produce no diff (and thus no PR).
+#
+# Requirements:
+#   - Secret ANTHROPIC_API_KEY (for AI curation; without it, curation is skipped).
+#   - Repo setting: Settings -> Actions -> General -> "Allow GitHub Actions to
+#     create and approve pull requests" must be enabled.
+#   - Crawl venue/domain strings in config/crawl.json must be current (they change
+#     each cycle); a stale/empty crawl simply yields no new data.
+
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the 1st of each month
+  workflow_dispatch:
+    inputs:
+      crawl:
+        description: "Run the OpenReview crawl"
+        type: boolean
+        default: true
+      curate:
+        description: "Run AI topic curation"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip "setuptools<81"
+          pip install -e . --no-deps
+          pip install -r requirements-lock.txt
+          pip install scrapy "anthropic>=0.40"
+          pip install "https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.1/en_core_sci_lg-0.5.1.tar.gz"
+
+      - name: Resolve stage flags
+        id: flags
+        run: |
+          CRAWL="${{ github.event.inputs.crawl }}"; CURATE="${{ github.event.inputs.curate }}"
+          # default to true on schedule (no inputs)
+          [ "$CRAWL" = "false" ] && echo "crawl=" >> "$GITHUB_OUTPUT" || echo "crawl=--crawl" >> "$GITHUB_OUTPUT"
+          [ "$CURATE" = "false" ] && echo "curate=" >> "$GITHUB_OUTPUT" || echo "curate=--curate" >> "$GITHUB_OUTPUT"
+
+      - name: Run refresh
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          ai-trend refresh ${{ steps.flags.outputs.crawl }} ${{ steps.flags.outputs.curate }} \
+            --spacy-model en_core_sci_lg
+
+      - name: Open pull request with refreshed data
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/monthly-refresh
+          delete-branch: true
+          commit-message: "chore: monthly AI-trend data refresh"
+          title: "chore: monthly AI-trend data refresh"
+          body: |
+            Automated monthly refresh: crawl → process → assign → AI curate → trends → export-site.
+
+            Review the regenerated taxonomy (`config/`), labels (`data/**_topics.csv`),
+            and site (`docs/`). Merge to publish (the Pages workflow redeploys on merge).
+          add-paths: |
+            config/**
+            data/**
+            docs/**
+            README.md
