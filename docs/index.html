@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Trends in Conferences</title>
+  <meta name="description" content="Hot, emerging, and fading research topics across CVPR, ICCV, ICML, ICLR, and NeurIPS — with the papers behind every trend." />
+  <link rel="preload" href="data/manifest.json" as="fetch" crossorigin />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap site-head__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark" aria-hidden="true">◵</span>
+        <span class="brand__text">AI&nbsp;Trends<span class="brand__dim">/conferences</span></span>
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#trends">Trends</a>
+        <a href="#browse">Browse</a>
+        <a class="nav__ext" href="https://github.com/charlesxu90/AI-trends" rel="noopener">Source ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="wrap hero__inner">
+        <p class="eyebrow">CVPR · ICCV · ICML · ICLR · NeurIPS &nbsp;|&nbsp; 2021—2025</p>
+        <h1 id="hero-h" class="hero__title">
+          What the field is<br /><em>actually</em> working on.
+        </h1>
+        <p class="hero__lede">
+          Every accepted paper, labelled by topic and tracked year over year —
+          the <strong>top</strong>, the <strong>emerging</strong>, and the
+          <strong>fading</strong>, with the papers behind each one a click away.
+        </p>
+        <div class="hero__stats" id="hero-stats" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="trends" aria-labelledby="trends-h">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="trends-h" class="section__title"><span class="section__num">01</span> Trends</h2>
+          <p class="section__hint">Pick a venue and year. Click any topic to see its papers.</p>
+        </div>
+
+        <div class="picker" role="group" aria-label="Choose conference and year">
+          <div class="picker__row" id="conf-pills" aria-label="Conference"></div>
+          <div class="picker__row picker__row--years" id="year-pills" aria-label="Year"></div>
+        </div>
+
+        <div id="trend-panel" class="trend-panel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="browse" aria-labelledby="browse-h">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="browse-h" class="section__title"><span class="section__num">02</span> Browse papers</h2>
+          <p class="section__hint">Filter by venue, year, and topic, or search titles, abstracts, and authors.</p>
+        </div>
+
+        <form class="filters" id="filters" autocomplete="off" aria-label="Paper filters">
+          <label class="field">
+            <span class="field__label">Conference</span>
+            <select id="f-conf" class="field__input"></select>
+          </label>
+          <label class="field">
+            <span class="field__label">Year</span>
+            <select id="f-year" class="field__input"></select>
+          </label>
+          <label class="field">
+            <span class="field__label">Topic</span>
+            <select id="f-topic" class="field__input"><option value="">All topics</option></select>
+          </label>
+          <label class="field field--grow">
+            <span class="field__label">Search</span>
+            <input id="f-search" class="field__input" type="search" placeholder="title, abstract, author…" />
+          </label>
+        </form>
+
+        <p class="result-meta" id="result-meta" aria-live="polite"></p>
+        <ol class="papers" id="papers"></ol>
+        <div class="more" id="more-wrap" hidden>
+          <button class="btn" id="more-btn" type="button">Show more</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap site-foot__inner">
+      <p>Topic labels are assigned automatically against a curated taxonomy; trends are computed from accepted-paper counts year over year.</p>
+      <p class="site-foot__meta">
+        <a href="https://github.com/charlesxu90/AI-trends" rel="noopener">charlesxu90/AI-trends</a>
+        · MIT License
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
