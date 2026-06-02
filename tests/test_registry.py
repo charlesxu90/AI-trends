@@ -41,6 +41,12 @@ def test_from_dicts_rejects_malformed_entry():
         ConferenceRegistry.from_dicts([{"key": "x"}])  # missing label/tokens
 
 
+def test_load_rejects_missing_conferences_key(tmp_path):
+    (tmp_path / "conferences.json").write_text(json.dumps({"oops": []}), encoding="utf-8")
+    with pytest.raises(RegistryError):
+        ConferenceRegistry.load(tmp_path)
+
+
 def test_custom_registry_drives_token_mapping(tmp_path):
     (tmp_path / "conferences.json").write_text(
         json.dumps(

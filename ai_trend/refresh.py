@@ -31,7 +31,7 @@ def _source_csvs(data_dir: Path) -> list[Path]:
     """Source paper CSVs under data/<year>/, excluding derived/aux files."""
     out: list[Path] = []
     for path in sorted(Path(data_dir).glob("[0-9][0-9][0-9][0-9]/*.csv")):
-        if path.name.endswith("_topics.csv") or path.name.endswith(".xlsx"):
+        if path.name.endswith("_topics.csv"):
             continue
         out.append(path)
     return out

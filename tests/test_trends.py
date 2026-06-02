@@ -56,6 +56,12 @@ def test_topic_counts_breaks_on_nan():
     assert all(v == 0 for v in counts.values())
 
 
+def test_topic_counts_continues_past_empty_segment():
+    # an empty middle segment must not drop topics that follow it
+    counts = topic_counts(["graph;;llm"], TAXONOMY)
+    assert counts["graph"] == 1 and counts["llm"] == 1
+
+
 # ---- compute_trends ---------------------------------------------------------
 def test_top_sorted_by_count():
     current = {"graph": 10, "llm": 8, "vae": 1, "rl": 0}

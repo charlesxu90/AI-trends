@@ -91,7 +91,7 @@ def topic_counts(topics: Iterable[str], taxonomy: "Taxonomy") -> dict[str, int]:
     for cell in topics:
         for topic in str(cell).split(";"):
             if topic == "" or topic == "nan":
-                break
+                continue  # skip sentinels, but keep counting later topics in the cell
             counts[topic] = counts.get(topic, 0) + 1
     return counts
 

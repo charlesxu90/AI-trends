@@ -55,11 +55,14 @@ jobs:
 
       - name: Resolve stage flags
         id: flags
+        env:
+          # Pass dispatch inputs via env (never interpolate ${{ }} into the shell body).
+          CRAWL_INPUT: ${{ github.event.inputs.crawl }}
+          CURATE_INPUT: ${{ github.event.inputs.curate }}
         run: |
-          CRAWL="${{ github.event.inputs.crawl }}"; CURATE="${{ github.event.inputs.curate }}"
-          # default to true on schedule (no inputs)
-          [ "$CRAWL" = "false" ] && echo "crawl=" >> "$GITHUB_OUTPUT" || echo "crawl=--crawl" >> "$GITHUB_OUTPUT"
-          [ "$CURATE" = "false" ] && echo "curate=" >> "$GITHUB_OUTPUT" || echo "curate=--curate" >> "$GITHUB_OUTPUT"
+          # default to enabled on schedule (no inputs provided)
+          [ "$CRAWL_INPUT" = "false" ] && echo "crawl=" >> "$GITHUB_OUTPUT" || echo "crawl=--crawl" >> "$GITHUB_OUTPUT"
+          [ "$CURATE_INPUT" = "false" ] && echo "curate=" >> "$GITHUB_OUTPUT" || echo "curate=--curate" >> "$GITHUB_OUTPUT"
 
       - name: Run refresh
         env:

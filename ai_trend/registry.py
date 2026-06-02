@@ -80,7 +80,10 @@ class ConferenceRegistry:
         if not path.exists():
             return cls.from_dicts(DEFAULT_CONFERENCES)
         data = json.loads(path.read_text(encoding="utf-8"))
-        return cls.from_dicts(data["conferences"])
+        conferences = data.get("conferences") if isinstance(data, dict) else None
+        if not isinstance(conferences, list):
+            raise RegistryError(f"{path} must contain a 'conferences' list")
+        return cls.from_dicts(conferences)
 
     @property
     def token_to_label(self) -> dict[str, str]:

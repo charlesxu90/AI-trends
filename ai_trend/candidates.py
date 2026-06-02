@@ -48,15 +48,13 @@ def load_model(model_path: Path | str = DEFAULT_MODEL_PATH) -> "Language":
     import spacy
 
     target = str(model_path)
-    if Path(target).exists():
+    try:
+        # spacy.load accepts both a local path and an installed package name
         nlp = spacy.load(target)
-    else:
-        try:
-            nlp = spacy.load(target)  # works for an installed package name
-        except (OSError, IOError) as exc:
-            raise FileNotFoundError(
-                f"spaCy model not found at path or as package: {target}"
-            ) from exc
+    except (OSError, IOError) as exc:
+        raise FileNotFoundError(
+            f"spaCy model not found at path or as package: {target}"
+        ) from exc
     nlp.max_length = max(nlp.max_length, _MAX_DOC_CHARS)
     return nlp
 

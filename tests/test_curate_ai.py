@@ -49,6 +49,30 @@ def test_parse_response_text_raises_without_json():
         parse_response_text("no json here")
 
 
+def test_curate_with_ai_skips_api_when_no_candidates(tmp_path, monkeypatch):
+    import json as _json
+
+    import pandas as pd
+
+    from ai_trend import curate_ai
+
+    config = tmp_path / "config"
+    config.mkdir()
+    (config / "taxonomy.json").write_text(_json.dumps({"graph": ["graph"]}), encoding="utf-8")
+    (config / "useless_keywords.json").write_text("[]", encoding="utf-8")
+    csv = tmp_path / "p.csv"
+    pd.DataFrame({"title": ["a paper"]}).to_csv(csv, index=False)
+
+    # no candidates above threshold -> must not call the API
+    monkeypatch.setattr("ai_trend.candidates.candidate_keywords", lambda *a, **k: [])
+    client = _FakeClient('{"decisions": []}')
+
+    result = curate_ai.curate_with_ai(csv, client, config_dir=config)
+    assert client.messages.last_kwargs is None  # API never invoked
+    assert result.other_keywords == []
+    assert sum(result.summary.values()) == 0  # no decisions applied
+
+
 def test_decide_calls_client_and_returns_parsed():
     payload = {"existing_topics": ["graph"], "candidates": [{"keyword": "gnn", "count": 9, "examples": []}]}
     client = _FakeClient('{"decisions": [{"keyword": "gnn", "action": "existing", "topic": "graph"}]}')

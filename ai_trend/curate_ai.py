@@ -129,6 +129,9 @@ def curate_with_ai(
     candidates = candidate_keywords(
         titles, working, model_path=model_path or str(DEFAULT_MODEL_PATH), threshold=threshold
     )
+    if not candidates:
+        # nothing new above threshold -> no taxonomy change, skip the API call
+        return apply_decision(taxonomy, [])
     payload = build_curation_payload(candidates, working, conference=conference, year=year)
 
     decisions = parse_decision(decide(payload, client, model=model))
