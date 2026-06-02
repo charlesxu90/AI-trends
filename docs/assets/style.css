@@ -64,8 +64,8 @@ em { font-style: italic; }
   border-bottom: 1px solid var(--line-soft);
 }
 .site-head__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand { display: inline-flex; align-items: baseline; gap: 0.5ch; text-decoration: none; font-weight: 800; letter-spacing: -0.02em; }
-.brand__mark { color: var(--accent); font-size: 1.3em; transform: translateY(2px); }
+.brand { display: inline-flex; align-items: center; gap: 0.6ch; text-decoration: none; font-weight: 800; letter-spacing: -0.02em; }
+.brand__logo { width: 1.9em; height: 1.9em; display: block; }
 .brand__dim { color: var(--muted); font-weight: 600; }
 .nav { display: flex; gap: clamp(1rem, 3vw, 2rem); align-items: center; font-weight: 600; }
 .nav a { text-decoration: none; color: var(--muted); transition: color var(--dur) var(--ease); }

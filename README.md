@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="AI Trends logo" width="120" height="120" />
+</p>
+
 # AI Trends in Conferences
 
 **Live site → https://charlesxu90.github.io/AI-trends/**
