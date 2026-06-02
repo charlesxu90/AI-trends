@@ -45,6 +45,7 @@ def refresh(
     site_dir: Path | str = DEFAULT_SITE_DIR,
     crawl_config: Path | str = DEFAULT_CRAWL_CONFIG,
     do_crawl: bool = False,
+    do_discover: bool = False,
     do_curate: bool = False,
     client: "AnthropicLike | None" = None,
     model: str | None = None,
@@ -55,11 +56,15 @@ def refresh(
     config_dir = Path(config_dir)
     data_dir = Path(data_dir)
     registry = ConferenceRegistry.load(config_dir)
-    summary: dict[str, Any] = {"crawled": 0, "processed": 0, "curated": 0, "assigned": 0}
+    summary: dict[str, Any] = {"crawled": 0, "discovered": 0, "processed": 0, "curated": 0, "assigned": 0}
 
     # 1. crawl (best-effort)
     if do_crawl:
         summary["crawled"] = _run_crawl(crawl_config, raw_dir, log)
+
+    # 1b. discover & ingest newly-available conference-years (probe-based watch)
+    if do_discover:
+        summary["discovered"] = _discover_and_ingest(registry, data_dir, log)
 
     # 2. process crawled JSON -> source CSVs
     from ai_trend.ingest import process
@@ -121,6 +126,49 @@ def refresh(
     log(f"export-site: {summary['site_shards']} shards / {summary['site_papers']} papers")
 
     return summary
+
+
+def _discover_and_ingest(registry, data_dir: Path | str, log: Callable[[str], None]) -> int:
+    """Probe current+next year for each conference; ingest any newly-available ones.
+
+    Deterministic equivalent of the track-conferences skill (no web search): if a
+    venue's papers are published and not already ingested, download them. Best-effort.
+    """
+    import datetime
+
+    import requests
+
+    from ai_trend.cvf import scrape_to_csv
+    from ai_trend.openreview import fetch_to_csv
+    from ai_trend.probe import probe
+
+    year_now = datetime.date.today().year
+    session = requests.Session()
+    ingested = 0
+    for conf in registry.conferences:
+        for year in (year_now, year_now + 1):
+            out = Path(data_dir) / str(year) / f"{conf.month}_{conf.key}.csv"
+            if out.exists():
+                continue  # already ingested
+            try:
+                result = probe(conf, year, session=session)
+            except Exception as exc:
+                log(f"discover: probe {conf.label} {year} failed ({exc})")
+                continue
+            if not result.available:
+                continue
+            log(f"discover: {conf.label} {year} available ({result.count} papers) — ingesting")
+            try:
+                if conf.source == "cvf":
+                    n = scrape_to_csv(conf.label, year, out)
+                else:
+                    group = conf.openreview_group or f"{conf.label}.cc"
+                    n = fetch_to_csv(f"{group}/{year}/Conference", conf.label, year, out)
+                log(f"discover: ingested {conf.label} {year} ({n} papers) -> {out}")
+                ingested += 1
+            except Exception as exc:
+                log(f"discover: ingest {conf.label} {year} failed ({exc})")
+    return ingested
 
 
 def _run_crawl(crawl_config: Path | str, raw_dir: Path | str, log: Callable[[str], None]) -> int:

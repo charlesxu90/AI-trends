@@ -185,6 +185,7 @@ def cmd_refresh(args: argparse.Namespace) -> int:
         site_dir=args.site_dir,
         crawl_config=args.crawl_config,
         do_crawl=args.crawl,
+        do_discover=args.discover,
         do_curate=args.curate,
         client=client,
         model=args.model,
@@ -560,6 +561,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_ref = sub.add_parser("refresh", help="run the full pipeline (process->assign->trends->export)")
     p_ref.add_argument("--crawl", action="store_true", help="also run the OpenReview crawl")
+    p_ref.add_argument("--discover", action="store_true", help="probe current/next-year venues and ingest newly-available ones")
     p_ref.add_argument("--curate", action="store_true", help="also run AI topic curation (needs ANTHROPIC_API_KEY)")
     p_ref.add_argument("--data-dir", default="data")
     p_ref.add_argument("--raw-dir", default="data/scrapy_crawl")
