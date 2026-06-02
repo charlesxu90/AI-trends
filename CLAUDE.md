@@ -148,6 +148,10 @@ config/crawl.json                       OpenReview crawl jobs (venue/domain per 
 .github/workflows/refresh.yml           monthly pipeline -> opens a PR (M5)
 .claude/skills/curate-topics/SKILL.md   the AI reasoning step (only non-deterministic part)
 .claude/skills/add-conference/SKILL.md  URL -> full pipeline (natural-language front door, M6)
+.claude/skills/track-conferences/SKILL.md  web-search conference dates; ingest when papers go live
+CONFERENCES.md                          maintained table of per-conference-year source URLs + dates
+ai_trend/probe.py                       check if a conference-year's papers are published yet
+ai_trend/sources.py                     URL detect + CONFERENCES.md parser
 scripts/migrate_notebook_taxonomy.py    regenerate config/* from the notebook
 scripts/check_agreement.py              verify assignment vs committed labels
 tests/                      pytest suite (target >=80% coverage; currently ~94%)

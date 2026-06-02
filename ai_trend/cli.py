@@ -303,6 +303,21 @@ def cmd_citations(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_probe(args: argparse.Namespace) -> int:
+    from ai_trend.probe import probe_label
+    from ai_trend.registry import ConferenceRegistry
+
+    registry = ConferenceRegistry.load(Path(args.config))
+    try:
+        result = probe_label(args.conference, args.year, registry)
+    except ValueError as exc:
+        _eprint(f"error: {exc}")
+        return 2
+    state = "AVAILABLE" if result.available else "not yet"
+    _eprint(f"{result.conference} {result.year}: {state} ({result.count} papers) [{result.source}] {result.url}")
+    return 0 if result.available else 1
+
+
 def cmd_check_sources(args: argparse.Namespace) -> int:
     from ai_trend.sources import DEFAULT_SOURCES_MD, parse_sources_md
 
@@ -569,6 +584,11 @@ def build_parser() -> argparse.ArgumentParser:
     p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
     p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")
     p_cit.set_defaults(func=cmd_citations)
+
+    p_prb = sub.add_parser("probe", help="check whether a conference-year's papers are published yet")
+    p_prb.add_argument("conference", help="conference label/token, e.g. ICCV")
+    p_prb.add_argument("year", type=int)
+    p_prb.set_defaults(func=cmd_probe)
 
     p_src = sub.add_parser("check-sources", help="parse CONFERENCES.md; report gaps (and --check links)")
     p_src.add_argument("--file", default=None, help="sources markdown (default: CONFERENCES.md)")

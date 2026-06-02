@@ -22,11 +22,11 @@ CONFERENCES_FILENAME = "conferences.json"
 # Fallback used when config/conferences.json is missing. ``month`` sets the output
 # CSV filename prefix (``<month>_<key>.csv``), matching the historical convention.
 DEFAULT_CONFERENCES = [
-    {"key": "iclr", "label": "ICLR", "name": "International Conference on Learning Representations", "tokens": ["iclr"], "month": 5, "source": "openreview"},
+    {"key": "iclr", "label": "ICLR", "name": "International Conference on Learning Representations", "tokens": ["iclr"], "month": 5, "source": "openreview", "openreview_group": "ICLR.cc"},
     {"key": "cvpr", "label": "CVPR", "name": "Conference on Computer Vision and Pattern Recognition", "tokens": ["cvpr"], "month": 6, "source": "cvf"},
     {"key": "iccv", "label": "ICCV", "name": "International Conference on Computer Vision", "tokens": ["iccv"], "month": 10, "source": "cvf"},
-    {"key": "icml", "label": "ICML", "name": "International Conference on Machine Learning", "tokens": ["icml"], "month": 7, "source": "openreview"},
-    {"key": "nips", "label": "NIPS", "name": "Conference on Neural Information Processing Systems", "tokens": ["nips", "neurips"], "month": 12, "source": "openreview"},
+    {"key": "icml", "label": "ICML", "name": "International Conference on Machine Learning", "tokens": ["icml"], "month": 7, "source": "openreview", "openreview_group": "ICML.cc"},
+    {"key": "nips", "label": "NIPS", "name": "Conference on Neural Information Processing Systems", "tokens": ["nips", "neurips"], "month": 12, "source": "openreview", "openreview_group": "NeurIPS.cc"},
 ]
 
 
@@ -42,6 +42,7 @@ class Conference:
     tokens: tuple[str, ...]
     month: int = 1  # output CSV filename prefix: <month>_<key>.csv
     source: str = "openreview"  # download source: "openreview" | "cvf"
+    openreview_group: str | None = None  # api2 group base, e.g. "NeurIPS.cc" (NIPS!)
 
     @property
     def primary_token(self) -> str:
@@ -72,6 +73,7 @@ class ConferenceRegistry:
                     tokens=tuple(t.lower() for t in tokens),
                     month=int(entry.get("month", 1)),
                     source=entry.get("source", "openreview"),
+                    openreview_group=entry.get("openreview_group"),
                 )
             )
         return cls(conferences=conferences)
