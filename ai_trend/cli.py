@@ -165,6 +165,73 @@ def cmd_trends(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_refresh(args: argparse.Namespace) -> int:
+    from ai_trend.refresh import refresh
+
+    client = None
+    if args.curate:
+        try:
+            from ai_trend.curate_ai import make_client
+
+            client = make_client()
+        except Exception as exc:  # missing SDK or key: degrade, don't abort the run
+            _eprint(f"warning: --curate requested but no Anthropic client ({exc}); skipping curation")
+
+    summary = refresh(
+        config_dir=Path(args.config),
+        data_dir=args.data_dir,
+        raw_dir=args.raw_dir,
+        site_dir=args.site_dir,
+        crawl_config=args.crawl_config,
+        do_crawl=args.crawl,
+        do_curate=args.curate,
+        client=client,
+        model=args.model,
+        spacy_model=args.spacy_model,
+        log=_eprint,
+    )
+    _eprint(f"refresh complete: {summary}")
+    return 0
+
+
+def cmd_crawl(args: argparse.Namespace) -> int:
+    from ai_trend.crawl import crawl, load_jobs
+
+    config_path = Path(args.crawl_config)
+    if not config_path.exists():
+        _eprint(f"error: crawl config not found: {config_path}")
+        return 2
+    spider, details, jobs = load_jobs(config_path)
+    if not jobs:
+        _eprint("no crawl jobs defined; nothing to do")
+        return 0
+    results = crawl(
+        jobs, raw_dir=args.raw_dir, spider=spider, details=details, dry_run=args.dry_run
+    )
+    ok = sum(1 for r in results if r.ok)
+    for r in results:
+        if not r.ok:
+            _eprint(f"  FAILED {r.job.output_name()}: {r.message}")
+    _eprint(f"crawl: {ok}/{len(results)} jobs ok -> {args.raw_dir}")
+    return 0 if ok else 1
+
+
+def cmd_process(args: argparse.Namespace) -> int:
+    from ai_trend.ingest import process
+    from ai_trend.registry import ConferenceRegistry
+
+    raw_dir = Path(args.raw_dir)
+    if not raw_dir.exists():
+        _eprint(f"error: raw dir not found: {raw_dir}")
+        return 2
+    registry = ConferenceRegistry.load(Path(args.config))
+    written = process(raw_dir, args.out_dir, registry)
+    for path in written:
+        _eprint(f"  wrote {path}")
+    _eprint(f"process: merged {len(written)} conference-year CSV(s)")
+    return 0
+
+
 def cmd_export_site(args: argparse.Namespace) -> int:
     from ai_trend.site import export_site
 
@@ -260,6 +327,28 @@ def build_parser() -> argparse.ArgumentParser:
         "--include-counts", action="store_true", help="embed per-topic counts (json)"
     )
     p_trd.set_defaults(func=cmd_trends)
+
+    p_ref = sub.add_parser("refresh", help="run the full pipeline (process->assign->trends->export)")
+    p_ref.add_argument("--crawl", action="store_true", help="also run the OpenReview crawl")
+    p_ref.add_argument("--curate", action="store_true", help="also run AI topic curation (needs ANTHROPIC_API_KEY)")
+    p_ref.add_argument("--data-dir", default="data")
+    p_ref.add_argument("--raw-dir", default="data/scrapy_crawl")
+    p_ref.add_argument("--site-dir", default="docs/data")
+    p_ref.add_argument("--crawl-config", default="config/crawl.json")
+    p_ref.add_argument("--model", default=None, help="Anthropic model for curation")
+    p_ref.add_argument("--spacy-model", default=None, help="scispaCy model path or package name")
+    p_ref.set_defaults(func=cmd_refresh)
+
+    p_crawl = sub.add_parser("crawl", help="run OpenReview crawl jobs from config/crawl.json")
+    p_crawl.add_argument("--crawl-config", default="config/crawl.json")
+    p_crawl.add_argument("--raw-dir", default="data/scrapy_crawl")
+    p_crawl.add_argument("--dry-run", action="store_true", help="print commands, run nothing")
+    p_crawl.set_defaults(func=cmd_crawl)
+
+    p_proc = sub.add_parser("process", help="merge crawled JSON into per-conference CSVs")
+    p_proc.add_argument("--raw-dir", default="data/scrapy_crawl")
+    p_proc.add_argument("--out-dir", default="data")
+    p_proc.set_defaults(func=cmd_process)
 
     p_exp = sub.add_parser("export-site", help="build static-site JSON for GitHub Pages")
     p_exp.add_argument("--data-dir", default="data", help="root holding <year>/ folders")

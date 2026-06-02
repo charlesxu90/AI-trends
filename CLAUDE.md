@@ -132,9 +132,16 @@ ai_trend/                   tested, deterministic Python package
   trends.py                 top/emerging/fading per conference-year + markdown render
   registry.py               configurable conference registry (M3)
   site.py                   export static-site JSON for GitHub Pages (M4)
-  cli.py                    `ai-trend candidates|curate|assign|trends|export-site`
+  ingest.py                 merge crawled JSON -> per-conference CSV (M5)
+  crawl.py                  config-driven OpenReview Scrapy wrapper (M5)
+  curate_ai.py              headless AI curation via Anthropic API (M5)
+  refresh.py                full-pipeline orchestrator (M5)
+  cli.py                    candidates|curate|assign|trends|export-site|crawl|process|refresh
 
-config/conferences.json                 tracked conferences (label + filename tokens)
+config/conferences.json                 tracked conferences (label, tokens, month)
+config/crawl.json                       OpenReview crawl jobs (venue/domain per cycle)
+.github/workflows/pages.yml             deploy docs/ to Pages on push
+.github/workflows/refresh.yml           monthly pipeline -> opens a PR (M5)
 .claude/skills/curate-topics/SKILL.md   the AI reasoning step (only non-deterministic part)
 scripts/migrate_notebook_taxonomy.py    regenerate config/* from the notebook
 scripts/check_agreement.py              verify assignment vs committed labels

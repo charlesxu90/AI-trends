@@ -52,7 +52,7 @@ We'll know we're right when **a full monthly refresh (crawl → topic assignment
 | 2 | Automated trend computation | Top-5 / emerging / fading topics per conference-year are generated automatically as structured data | complete | `.claude/plans/ai-trend-automation-and-browser.plan.md` |
 | 3 | Configurable conference registry | The 5 conferences (and future ones) are defined in config; pipeline reads from it | complete | `config/conferences.json` + `ai_trend/registry.py` |
 | 4 | GitHub Pages browser | Public site with trend dashboard + topic→paper drill-down, search and filters | complete | `docs/` + `ai_trend/site.py` |
-| 5 | Monthly unattended refresh | Scheduled run executes the full pipeline and republishes the site without manual steps | pending | — |
+| 5 | Monthly unattended refresh | Scheduled run executes the full pipeline and republishes the site without manual steps | complete | `.github/workflows/refresh.yml` + `ai_trend/refresh.py` |
 
 ## Open Questions
 - [ ] What confidence threshold (if any) makes an autonomous topic label acceptable, given there is no review gate?

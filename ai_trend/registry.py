@@ -19,13 +19,14 @@ from ai_trend.taxonomy import DEFAULT_CONFIG_DIR
 
 CONFERENCES_FILENAME = "conferences.json"
 
-# Fallback used when config/conferences.json is missing.
+# Fallback used when config/conferences.json is missing. ``month`` sets the output
+# CSV filename prefix (``<month>_<key>.csv``), matching the historical convention.
 DEFAULT_CONFERENCES = [
-    {"key": "iclr", "label": "ICLR", "name": "International Conference on Learning Representations", "tokens": ["iclr"]},
-    {"key": "cvpr", "label": "CVPR", "name": "Conference on Computer Vision and Pattern Recognition", "tokens": ["cvpr"]},
-    {"key": "iccv", "label": "ICCV", "name": "International Conference on Computer Vision", "tokens": ["iccv"]},
-    {"key": "icml", "label": "ICML", "name": "International Conference on Machine Learning", "tokens": ["icml"]},
-    {"key": "nips", "label": "NIPS", "name": "Conference on Neural Information Processing Systems", "tokens": ["nips", "neurips"]},
+    {"key": "iclr", "label": "ICLR", "name": "International Conference on Learning Representations", "tokens": ["iclr"], "month": 5},
+    {"key": "cvpr", "label": "CVPR", "name": "Conference on Computer Vision and Pattern Recognition", "tokens": ["cvpr"], "month": 6},
+    {"key": "iccv", "label": "ICCV", "name": "International Conference on Computer Vision", "tokens": ["iccv"], "month": 10},
+    {"key": "icml", "label": "ICML", "name": "International Conference on Machine Learning", "tokens": ["icml"], "month": 7},
+    {"key": "nips", "label": "NIPS", "name": "Conference on Neural Information Processing Systems", "tokens": ["nips", "neurips"], "month": 12},
 ]
 
 
@@ -39,6 +40,11 @@ class Conference:
     label: str
     name: str
     tokens: tuple[str, ...]
+    month: int = 1  # output CSV filename prefix: <month>_<key>.csv
+
+    @property
+    def primary_token(self) -> str:
+        return self.tokens[0]
 
 
 @dataclass
@@ -63,6 +69,7 @@ class ConferenceRegistry:
                     label=label,
                     name=entry.get("name", label),
                     tokens=tuple(t.lower() for t in tokens),
+                    month=int(entry.get("month", 1)),
                 )
             )
         return cls(conferences=conferences)
@@ -83,3 +90,10 @@ class ConferenceRegistry:
     @property
     def labels(self) -> list[str]:
         return [c.label for c in self.conferences]
+
+    def conference_for_token(self, token: str) -> Conference | None:
+        token = token.lower()
+        for c in self.conferences:
+            if token in c.tokens:
+                return c
+        return None
