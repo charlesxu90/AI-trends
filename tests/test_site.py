@@ -40,6 +40,17 @@ def test_build_paper_record_drops_empty_topic():
     assert rec["topics"] == []
 
 
+def test_build_paper_record_includes_citations_when_available():
+    row = {"title": "A", "topic": "graph", "abstract": "", "authors": "'X'", "pdf_link": ""}
+    rec = build_paper_record(row, "ICLR", 2025, citations={"A": 55})
+    assert rec["citations"] == 55
+
+
+def test_build_paper_record_omits_citations_when_missing():
+    rec = build_paper_record({"title": "B", "topic": "graph", "abstract": ""}, "ICLR", 2025, citations={"A": 55})
+    assert "citations" not in rec
+
+
 def _setup(tmp_path):
     config = tmp_path / "config"
     config.mkdir()

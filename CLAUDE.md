@@ -136,13 +136,18 @@ ai_trend/                   tested, deterministic Python package
   crawl.py                  config-driven OpenReview Scrapy wrapper (M5)
   curate_ai.py              headless AI curation via Anthropic API (M5)
   refresh.py                full-pipeline orchestrator (M5)
-  cli.py                    candidates|curate|assign|trends|export-site|crawl|process|refresh
+  sources.py                URL -> source detection (openreview|cvf) (M6)
+  openreview.py             fetch papers by venue id (api2, URL-driven) (M6)
+  cvf.py                    scrape CVPR/ICCV from openaccess.thecvf.com (M6)
+  citations.py              Semantic Scholar citation counts (cached) (M6)
+  cli.py                    candidates|curate|assign|trends|export-site|crawl|process|refresh|ingest-url|citations
 
 config/conferences.json                 tracked conferences (label, tokens, month)
 config/crawl.json                       OpenReview crawl jobs (venue/domain per cycle)
 .github/workflows/pages.yml             deploy docs/ to Pages on push
 .github/workflows/refresh.yml           monthly pipeline -> opens a PR (M5)
 .claude/skills/curate-topics/SKILL.md   the AI reasoning step (only non-deterministic part)
+.claude/skills/add-conference/SKILL.md  URL -> full pipeline (natural-language front door, M6)
 scripts/migrate_notebook_taxonomy.py    regenerate config/* from the notebook
 scripts/check_agreement.py              verify assignment vs committed labels
 tests/                      pytest suite (target >=80% coverage; currently ~94%)

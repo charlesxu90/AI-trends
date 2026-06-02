@@ -195,6 +195,107 @@ def cmd_refresh(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_ingest_url(args: argparse.Namespace) -> int:
+    from ai_trend.registry import ConferenceRegistry
+    from ai_trend.sources import SourceError, detect_source
+
+    registry = ConferenceRegistry.load(Path(args.config))
+    try:
+        spec = detect_source(args.url, registry)
+    except SourceError as exc:
+        _eprint(f"error: {exc}")
+        return 2
+
+    conf = registry.conference_for_token(spec.token)
+    out = Path(args.data_dir) / str(spec.year) / f"{conf.month}_{conf.key}.csv"
+    try:
+        if spec.source == "cvf":
+            from ai_trend.cvf import scrape_to_csv
+
+            n = scrape_to_csv(spec.label, spec.year, out)
+        else:
+            from ai_trend.openreview import fetch_to_csv
+
+            n = fetch_to_csv(spec.venueid, spec.label, spec.year, out)
+    except Exception as exc:  # network/parse failure: report cleanly, don't dump a traceback
+        _eprint(f"error: download failed for {spec.label} {spec.year} ({type(exc).__name__}: {exc}). "
+                f"The source may be slow/unreachable — try again.")
+        return 1
+    if n == 0:
+        _eprint(f"warning: 0 papers found for {spec.label} {spec.year} (check the URL/venue).")
+        return 1
+    _eprint(f"downloaded {n} papers ({spec.label} {spec.year}, {spec.source}) -> {out}")
+
+    if args.full:
+        from ai_trend.assign import assign_csv
+
+        taxonomy = Taxonomy.load(Path(args.config))
+        assign_csv(str(out), str(out) + "_topics.csv", taxonomy)
+        _eprint(f"assigned -> {out}_topics.csv (current taxonomy; run candidates+curate for new topics)")
+        _regenerate_trends_and_site(args, taxonomy, registry)
+    return 0
+
+
+def _regenerate_trends_and_site(args, taxonomy, registry) -> None:
+    import json as _json
+
+    from ai_trend.site import export_site
+    from ai_trend.trends import compute_all_trends, trend_to_dict
+
+    trends = compute_all_trends(taxonomy, args.data_dir)
+    tp = Path(args.data_dir) / "trends" / "trends.json"
+    tp.parent.mkdir(parents=True, exist_ok=True)
+    tp.write_text(_json.dumps([trend_to_dict(t, include_counts=True) for t in trends], ensure_ascii=False), encoding="utf-8")
+    manifest = export_site("docs/data", taxonomy=taxonomy, registry=registry, data_dir=args.data_dir)
+    _eprint(f"regenerated trends + site ({len(manifest['shards'])} shards)")
+
+
+def cmd_citations(args: argparse.Namespace) -> int:
+    import pandas as pd
+    import requests
+
+    from ai_trend.citations import fetch_citations, titles_for_topics
+
+    csv = Path(args.topics_csv)
+    if not csv.exists():
+        _eprint(f"error: topics CSV not found: {csv}")
+        return 2
+    df = pd.read_csv(csv)
+
+    if args.topics:
+        topic_set = {t.strip() for t in args.topics.split(",") if t.strip()}
+    else:
+        from ai_trend.registry import ConferenceRegistry
+        from ai_trend.trends import compute_all_trends, parse_conference
+
+        registry = ConferenceRegistry.load(Path(args.config))
+        conference = parse_conference(csv.name, registry.token_to_label)
+        try:
+            year = int(csv.parent.name)
+        except ValueError:
+            _eprint("error: cannot infer year from path; pass --topics explicitly")
+            return 2
+        taxonomy = Taxonomy.load(Path(args.config))
+        trend = next(
+            (t for t in compute_all_trends(taxonomy, args.data_dir)
+             if t.conference == conference and t.year == year),
+            None,
+        )
+        topic_set = set((trend.top + trend.emerging)) if trend else set()
+    if not topic_set:
+        _eprint("error: no topics to scope citations (no trend found); pass --topics")
+        return 2
+
+    titles = titles_for_topics(df, topic_set)
+    if args.limit:
+        titles = titles[: args.limit]
+    _eprint(f"citations: {len(titles)} papers in topics {sorted(topic_set)[:6]}...")
+    cache_path = str(csv) + ".citations.json"
+    fetch_citations(titles, cache_path, requests.Session(), throttle=args.throttle, log=_eprint)
+    _eprint(f"citations cached -> {cache_path} (re-run export-site to surface them)")
+    return 0
+
+
 def cmd_crawl(args: argparse.Namespace) -> int:
     from ai_trend.crawl import crawl, load_jobs
 
@@ -341,6 +442,20 @@ def build_parser() -> argparse.ArgumentParser:
     p_ref.add_argument("--model", default=None, help="Anthropic model for curation")
     p_ref.add_argument("--spacy-model", default=None, help="scispaCy model path or package name")
     p_ref.set_defaults(func=cmd_refresh)
+
+    p_url = sub.add_parser("ingest-url", help="download a conference from an OpenReview/thecvf URL")
+    p_url.add_argument("url", help="OpenReview group/venue URL or openaccess.thecvf.com URL")
+    p_url.add_argument("--data-dir", default="data")
+    p_url.add_argument("--full", action="store_true", help="also assign + trends + export (current taxonomy)")
+    p_url.set_defaults(func=cmd_ingest_url)
+
+    p_cit = sub.add_parser("citations", help="fetch Semantic Scholar citation counts (bounded, cached)")
+    p_cit.add_argument("topics_csv", help="a *_topics.csv file")
+    p_cit.add_argument("--topics", default=None, help="comma-separated topics to scope (default: trend top+emerging)")
+    p_cit.add_argument("--data-dir", default="data")
+    p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
+    p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")
+    p_cit.set_defaults(func=cmd_citations)
 
     p_crawl = sub.add_parser("crawl", help="run OpenReview crawl jobs from config/crawl.json")
     p_crawl.add_argument("--crawl-config", default="config/crawl.json")

@@ -235,6 +235,7 @@ function buildFilters() {
   confSel.addEventListener("change", () => { syncYearOptions(); applyFilters(); });
   $("#f-year").addEventListener("change", applyFilters);
   topicSel.addEventListener("change", applyFilters);
+  $("#f-sort").addEventListener("change", applyFilters);
   $("#f-search").addEventListener("input", debounce(applyFilters, 180));
   $("#more-btn").addEventListener("click", () => { state.shownCount += PAGE; paintPapers(); });
 }
@@ -281,6 +282,9 @@ async function applyFilters() {
     }
     return true;
   });
+  if ($("#f-sort").value === "citations") {
+    state.filtered.sort((a, b) => (b.citations ?? -1) - (a.citations ?? -1));
+  }
   state.shownCount = PAGE;
   paintPapers();
 }
@@ -303,10 +307,13 @@ function paperCard(p) {
   const titleNode = p.pdf
     ? el("a", { href: p.pdf, target: "_blank", rel: "noopener", textContent: p.title })
     : document.createTextNode(p.title);
+  const venueText = Number.isFinite(p.citations)
+    ? `${p.conference} ${p.year} · ${p.citations.toLocaleString()} cites`
+    : `${p.conference} ${p.year}`;
   return el("li", { className: "paper" }, [
     el("div", { className: "paper__top" }, [
       el("h3", { className: "paper__title" }, [titleNode]),
-      el("span", { className: "paper__venue", textContent: `${p.conference} ${p.year}` }),
+      el("span", { className: "paper__venue", textContent: venueText }),
     ]),
     authors ? el("p", { className: "paper__authors", textContent: authors }) : null,
     p.abstract ? el("p", { className: "paper__abstract", textContent: p.abstract }) : null,

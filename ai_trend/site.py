@@ -55,14 +55,19 @@ def _text(value: object) -> str:
 
 
 def build_paper_record(
-    row: dict, conference: str, year: int, abstract_chars: int = DEFAULT_ABSTRACT_CHARS
+    row: dict,
+    conference: str,
+    year: int,
+    abstract_chars: int = DEFAULT_ABSTRACT_CHARS,
+    citations: dict | None = None,
 ) -> dict:
     topics = [t for t in str(row.get("topic", "")).split(";") if t and t != "nan"]
     abstract = _text(row.get("abstract"))
     if len(abstract) > abstract_chars:
         abstract = abstract[:abstract_chars].rstrip() + "…"
-    return {
-        "title": _text(row.get("title")),
+    title = _text(row.get("title"))
+    record = {
+        "title": title,
         "authors": parse_authors(row.get("authors")),
         "topics": topics,
         "conference": conference,
@@ -70,6 +75,11 @@ def build_paper_record(
         "pdf": _text(row.get("pdf_link")),
         "abstract": abstract,
     }
+    if citations is not None:
+        cited = citations.get(title)
+        if cited is not None:
+            record["citations"] = cited
+    return record
 
 
 def export_site(
@@ -104,9 +114,13 @@ def export_site(
     seen_topics: set[str] = set()
     for conference in sorted(index):
         for year in sorted(index[conference]):
-            df = pd.read_csv(index[conference][year])
+            topics_path = index[conference][year]
+            df = pd.read_csv(topics_path)
+            # optional citations sidecar produced by `ai-trend citations`
+            cite_path = Path(str(topics_path) + ".citations.json")
+            citations = json.loads(cite_path.read_text(encoding="utf-8")) if cite_path.exists() else None
             records = [
-                build_paper_record(row, conference, year, abstract_chars)
+                build_paper_record(row, conference, year, abstract_chars, citations)
                 for row in df.to_dict("records")
             ]
             for record in records:
