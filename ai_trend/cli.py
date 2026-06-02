@@ -281,7 +281,14 @@ def cmd_citations(args: argparse.Namespace) -> int:
              if t.conference == conference and t.year == year),
             None,
         )
-        topic_set = set((trend.top + trend.emerging)) if trend else set()
+        if trend is None:
+            topic_set = set()
+        elif args.scope == "emerging":
+            topic_set = set(trend.emerging)
+        elif args.scope == "top":
+            topic_set = set(trend.top)
+        else:  # top-emerging
+            topic_set = set(trend.top + trend.emerging)
     if not topic_set:
         _eprint("error: no topics to scope citations (no trend found); pass --topics")
         return 2
@@ -293,6 +300,33 @@ def cmd_citations(args: argparse.Namespace) -> int:
     cache_path = str(csv) + ".citations.json"
     fetch_citations(titles, cache_path, requests.Session(), throttle=args.throttle, log=_eprint)
     _eprint(f"citations cached -> {cache_path} (re-run export-site to surface them)")
+    return 0
+
+
+def cmd_import_citations(args: argparse.Namespace) -> int:
+    import glob
+
+    from ai_trend.citations import merge_into_sidecar
+
+    paths: list[str] = []
+    for p in args.paths:
+        paths.extend(glob.glob(p) if any(c in p for c in "*?[") else [p])
+    if not paths:
+        # default: every *_emerging.xlsx under the data dir
+        paths = sorted(glob.glob(f"{args.data_dir}/*/*_emerging.xlsx"))
+    if not paths:
+        _eprint("no *_emerging.xlsx files found")
+        return 1
+
+    total = 0
+    for path in sorted(paths):
+        try:
+            sidecar, added = merge_into_sidecar(path)
+            _eprint(f"  {Path(path).name} -> {sidecar.name} (+{added})")
+            total += 1
+        except Exception as exc:
+            _eprint(f"  skipped {path}: {exc}")
+    _eprint(f"imported {total} citation file(s); re-run export-site to surface them")
     return 0
 
 
@@ -451,11 +485,18 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_cit = sub.add_parser("citations", help="fetch Semantic Scholar citation counts (bounded, cached)")
     p_cit.add_argument("topics_csv", help="a *_topics.csv file")
-    p_cit.add_argument("--topics", default=None, help="comma-separated topics to scope (default: trend top+emerging)")
+    p_cit.add_argument("--topics", default=None, help="comma-separated topics to scope (overrides --scope)")
+    p_cit.add_argument("--scope", choices=["emerging", "top", "top-emerging"], default="emerging",
+                       help="which trend topics to fetch citations for (default: emerging)")
     p_cit.add_argument("--data-dir", default="data")
     p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
     p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")
     p_cit.set_defaults(func=cmd_citations)
+
+    p_imp = sub.add_parser("import-citations", help="import pre-downloaded *_emerging.xlsx citations into sidecars")
+    p_imp.add_argument("paths", nargs="*", help="xlsx files/globs (default: data/*/*_emerging.xlsx)")
+    p_imp.add_argument("--data-dir", default="data")
+    p_imp.set_defaults(func=cmd_import_citations)
 
     p_crawl = sub.add_parser("crawl", help="run OpenReview crawl jobs from config/crawl.json")
     p_crawl.add_argument("--crawl-config", default="config/crawl.json")

@@ -72,6 +72,47 @@ def save_cache(path: Path | str, cache: dict) -> None:
     Path(path).write_text(json.dumps(cache, ensure_ascii=False, indent=0), encoding="utf-8")
 
 
+_EMERGING_SUFFIX = "_emerging.xlsx"
+
+
+def sidecar_for_xlsx(xlsx_path: Path | str) -> Path:
+    """``<csv>_topics.csv_emerging.xlsx`` -> ``<csv>_topics.csv.citations.json``."""
+    s = str(xlsx_path)
+    if not s.endswith(_EMERGING_SUFFIX):
+        raise ValueError(f"expected a *{_EMERGING_SUFFIX} file, got {s}")
+    return Path(s[: -len(_EMERGING_SUFFIX)] + ".citations.json")
+
+
+def import_emerging_xlsx(xlsx_path: Path | str, *, column: str = "ss_citations") -> dict[str, int]:
+    """Read pre-downloaded citations from a ``*_emerging.xlsx`` into {title: count}."""
+    import pandas as pd
+
+    df = pd.read_excel(xlsx_path)
+    if "title" not in df.columns or column not in df.columns:
+        raise ValueError(f"{xlsx_path} lacks 'title'/{column!r} columns")
+    out: dict[str, int] = {}
+    for title, value in zip(df["title"], df[column]):
+        if pd.isna(value) or not str(title).strip():
+            continue
+        out[str(title)] = int(value)
+    return out
+
+
+def merge_into_sidecar(xlsx_path: Path | str, *, column: str = "ss_citations") -> tuple[Path, int]:
+    """Import an xlsx and merge it into the matching citations sidecar.
+
+    Existing sidecar entries (e.g. fresher live fetches) are preserved; the xlsx
+    fills in titles not already present. Returns ``(sidecar_path, added_count)``.
+    """
+    sidecar = sidecar_for_xlsx(xlsx_path)
+    imported = import_emerging_xlsx(xlsx_path, column=column)
+    existing = load_cache(sidecar)
+    before = len(existing)
+    merged = {**imported, **existing}  # existing (live fetch) wins on overlap
+    save_cache(sidecar, merged)
+    return sidecar, len(merged) - before
+
+
 def titles_for_topics(df: "pd.DataFrame", topics: Iterable[str]) -> list[str]:
     """Titles of papers whose ``topic`` column matches any of ``topics``."""
     topic_set = {t for t in topics}
