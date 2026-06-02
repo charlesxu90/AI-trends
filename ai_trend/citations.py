@@ -13,6 +13,7 @@ top/emerging-topic papers) — see :func:`titles_for_topics`.
 from __future__ import annotations
 
 import json
+import os
 import re
 import time
 from pathlib import Path
@@ -26,6 +27,29 @@ S2_SEARCH = "https://api.semanticscholar.org/graph/v1/paper/search"
 DEFAULT_THROTTLE = 1.1  # seconds between calls (public tier ~1 req/s)
 DEFAULT_RETRIES = 4
 DEFAULT_BACKOFF = 2.0  # seconds, doubled each retry
+
+# Sentinel: the request itself failed (429/network), as opposed to a successful
+# lookup that found no title match. Callers must NOT cache this — it should be
+# retried — whereas a genuine no-match is cached as None (a verified negative).
+FETCH_FAILED = object()
+
+# Abort a fetch run after this many consecutive request failures: a sign S2 is
+# rate-limiting hard, so grinding through the rest just wastes time (and the run
+# is resumable — re-run when S2 is reachable or S2_API_KEY is set).
+MAX_CONSECUTIVE_FAILURES = 10
+
+
+def _s2_headers() -> dict[str, str]:
+    """Request headers, adding the S2 API key from ``S2_API_KEY`` when present.
+
+    The unauthenticated pool is shared and hard-429s under load; a free key
+    (https://www.semanticscholar.org/product/api) grants a dedicated rate limit.
+    """
+    headers = {"User-Agent": "ai-trend/0.1"}
+    key = os.environ.get("S2_API_KEY", "").strip()
+    if key:
+        headers["x-api-key"] = key
+    return headers
 
 
 TITLE_MATCH_JACCARD = 0.85
@@ -67,7 +91,7 @@ def _s2_request(
     for attempt in range(retries + 1):
         try:
             resp = session.get(S2_SEARCH, params=params, timeout=30,
-                               headers={"User-Agent": "ai-trend/0.1"})
+                               headers=_s2_headers())
             if resp.status_code == 429:
                 if attempt < retries:
                     sleep(backoff * (2 ** attempt))
@@ -111,12 +135,13 @@ def search_paper_verified(
 
     Scans the top ``limit`` results and returns the first whose title matches
     ``title`` (see :func:`titles_match`). Returns ``None`` if no result matches —
-    so an unverifiable/wrong hit is never written as a citation count.
+    so an unverifiable/wrong hit is never written as a citation count — or
+    :data:`FETCH_FAILED` if the request itself failed (429/network).
     """
     data = _s2_request(session, title, "title,citationCount,externalIds,year", limit,
                        retries=retries, backoff=backoff, sleep=sleep)
-    if not data:
-        return None
+    if data is None:
+        return FETCH_FAILED  # request failed — retry later, do not cache
     for result in data:
         if titles_match(title, result.get("title", "")):
             external = result.get("externalIds") or {}
@@ -255,9 +280,21 @@ def fetch_citations(
     arxiv = load_cache(apath)
     pending = [t for t in titles if t not in cache]
     log(f"citations: {len(pending)} to fetch ({len(titles) - len(pending)} cached)")
+    consecutive_failures = 0
     for i, title in enumerate(pending, 1):
         result = search_paper_verified(title, session, sleep=sleep)
-        cache[title] = result["citationCount"] if result else None  # None = unverified
+        if result is FETCH_FAILED:
+            # Request failed (429/network): leave uncached so it retries next run.
+            consecutive_failures += 1
+            if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                log(f"citations: aborting after {consecutive_failures} consecutive "
+                    f"failures (rate-limited?); {i - 1}/{len(pending)} attempted — re-run to resume")
+                break
+            if i < len(pending):
+                sleep(throttle)
+            continue
+        consecutive_failures = 0
+        cache[title] = result["citationCount"] if result else None  # None = verified no-match
         if result and result.get("arxiv"):
             arxiv[title] = result["arxiv"]
         if i % 25 == 0 or i == len(pending):
@@ -293,6 +330,8 @@ def verify_existing(
     changed = dropped = 0
     for i, title in enumerate(suspects, 1):
         result = search_paper_verified(title, session, sleep=sleep)
+        if result is FETCH_FAILED:
+            continue  # request failed — leave the existing count untouched
         new = result["citationCount"] if result else None
         if new is None:
             dropped += 1

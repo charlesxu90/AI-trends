@@ -5,11 +5,22 @@ from __future__ import annotations
 import pandas as pd
 
 from ai_trend.citations import (
+    _s2_headers,
     fetch_citations,
     load_cache,
     search_citation,
     titles_for_topics,
 )
+
+
+def test_s2_headers_omits_key_when_unset(monkeypatch):
+    monkeypatch.delenv("S2_API_KEY", raising=False)
+    assert "x-api-key" not in _s2_headers()
+
+
+def test_s2_headers_includes_key_when_set(monkeypatch):
+    monkeypatch.setenv("S2_API_KEY", "secret-key")
+    assert _s2_headers()["x-api-key"] == "secret-key"
 
 
 class _Resp:
@@ -134,6 +145,41 @@ def test_fetch_citations_is_resumable(tmp_path):
     fetch_citations(["A", "C"], cache, sess2, sleep=lambda *_: None)
     assert sess2.calls == 1
     assert load_cache(cache) == {"A": 1, "B": 2, "C": 3}
+
+
+def test_search_paper_verified_failed_request_returns_sentinel():
+    from ai_trend.citations import FETCH_FAILED, search_paper_verified
+
+    sess = _FakeSession([_Resp(429), _Resp(429)])  # retries exhausted
+    out = search_paper_verified("X", sess, retries=1, sleep=lambda *_: None)
+    assert out is FETCH_FAILED
+
+
+def test_fetch_citations_does_not_cache_failed_request(tmp_path):
+    """A 429/network failure must NOT be cached as None — else a re-run skips it
+    and the real count is lost forever."""
+    cache = tmp_path / "c.citations.json"
+    # A: request fails (5 attempts = retries 4 + 1), B: succeeds
+    sess = _FakeSession([_Resp(429)] * 5 + [_Resp(200, {"data": [{"title": "B", "citationCount": 2}]})])
+    fetch_citations(["A", "B"], cache, sess, sleep=lambda *_: None)
+    assert load_cache(cache) == {"B": 2}  # A absent -> still pending
+
+    # re-run: A now reachable, gets fetched (not skipped)
+    sess2 = _FakeSession([_Resp(200, {"data": [{"title": "A", "citationCount": 9}]})])
+    fetch_citations(["A", "B"], cache, sess2, sleep=lambda *_: None)
+    assert load_cache(cache) == {"A": 9, "B": 2}
+
+
+def test_fetch_citations_circuit_breaks_on_sustained_failures(tmp_path):
+    from ai_trend.citations import MAX_CONSECUTIVE_FAILURES
+
+    cache = tmp_path / "c.citations.json"
+    titles = [f"T{i}" for i in range(MAX_CONSECUTIVE_FAILURES + 5)]
+    sess = _FakeSession([_Resp(429)] * 200)  # everything 429s
+    fetch_citations(titles, cache, sess, sleep=lambda *_: None)
+    assert load_cache(cache) == {}  # nothing cached
+    # stopped after MAX_CONSECUTIVE_FAILURES failures (each = retries+1 calls), not all titles
+    assert sess.calls == MAX_CONSECUTIVE_FAILURES * 5
 
 
 # ---- title verification ----------------------------------------------------
