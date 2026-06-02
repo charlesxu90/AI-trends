@@ -80,7 +80,8 @@ em { font-style: italic; }
 @media (max-width: 820px) { .hero__inner { grid-template-columns: 1fr; gap: 1.8rem; } }
 .eyebrow { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.04em; color: var(--muted); text-transform: uppercase; margin: 0 0 1rem; }
 .hero__title { font-size: var(--text-hero); line-height: 1.02; letter-spacing: -0.03em; font-weight: 800; margin: 0 0 1rem; }
-.hero__title em { color: var(--accent); }
+.hero__title em { color: var(--accent); margin-right: 0.22em; }
+.hero__title .hero__hl { color: var(--cool); }
 .hero__lede { font-size: clamp(1rem, 0.95rem + 0.35vw, 1.2rem); max-width: 52ch; color: #2c291f; margin: 0; line-height: 1.5; }
 .hero__lede strong { color: var(--ink); }
 .hero__panel { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: clamp(1.3rem, 2.5vw, 2rem); }
