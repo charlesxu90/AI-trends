@@ -147,6 +147,38 @@ def test_fetch_citations_is_resumable(tmp_path):
     assert load_cache(cache) == {"A": 1, "B": 2, "C": 3}
 
 
+def test_search_openalex_verified_matches_title_and_returns_count():
+    from ai_trend.citations import search_openalex_verified
+
+    sess = _FakeSession([_Resp(200, {"results": [
+        {"title": "Some Unrelated Work", "cited_by_count": 9000},
+        {"title": "My Niche Paper", "cited_by_count": 7},
+    ]})])
+    out = search_openalex_verified("My Niche Paper", sess, sleep=lambda *_: None)
+    assert out["citationCount"] == 7
+
+
+def test_search_openalex_verified_failed_request_returns_sentinel():
+    from ai_trend.citations import FETCH_FAILED, search_openalex_verified
+
+    sess = _FakeSession([_Resp(429), _Resp(429)])
+    assert search_openalex_verified("X", sess, retries=1, sleep=lambda *_: None) is FETCH_FAILED
+
+
+def test_fetch_citations_uses_injected_searcher(tmp_path):
+    """fetch_citations honours a custom searcher (e.g. OpenAlex)."""
+    cache = tmp_path / "c.citations.json"
+    seen = []
+
+    def fake_searcher(title, session, sleep=None):
+        seen.append(title)
+        return {"citationCount": 11, "arxiv": None, "title": title}
+
+    fetch_citations(["A"], cache, _FakeSession([]), sleep=lambda *_: None, searcher=fake_searcher)
+    assert seen == ["A"]
+    assert load_cache(cache) == {"A": 11}
+
+
 def test_search_paper_verified_failed_request_returns_sentinel():
     from ai_trend.citations import FETCH_FAILED, search_paper_verified
 

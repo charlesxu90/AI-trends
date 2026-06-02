@@ -299,7 +299,21 @@ def cmd_citations(args: argparse.Namespace) -> int:
         titles = titles[: args.limit]
     _eprint(f"citations: {len(titles)} papers in topics {sorted(topic_set)[:6]}...")
     cache_path = str(csv) + ".citations.json"
-    fetch_citations(titles, cache_path, requests.Session(), throttle=args.throttle, log=_eprint)
+
+    if getattr(args, "source", "s2") == "openalex":
+        import os
+        from functools import partial
+
+        from ai_trend.citations import search_openalex_verified
+
+        searcher = partial(search_openalex_verified, mailto=os.environ.get("OPENALEX_MAILTO", ""))
+    else:
+        searcher = None  # default (Semantic Scholar)
+
+    kwargs = {"throttle": args.throttle, "log": _eprint}
+    if searcher is not None:
+        kwargs["searcher"] = searcher
+    fetch_citations(titles, cache_path, requests.Session(), **kwargs)
     _eprint(f"citations cached -> {cache_path} (re-run export-site to surface them)")
     return 0
 
@@ -585,6 +599,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_cit.add_argument("--data-dir", default="data")
     p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
     p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")
+    p_cit.add_argument("--source", choices=["s2", "openalex"], default="s2",
+                       help="citation source: s2 (Semantic Scholar) or openalex (key-free, no rate-limit wall)")
     p_cit.set_defaults(func=cmd_citations)
 
     p_prb = sub.add_parser("probe", help="check whether a conference-year's papers are published yet")

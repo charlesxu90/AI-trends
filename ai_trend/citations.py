@@ -122,6 +122,78 @@ def search_citation(
     return (data[0].get("citationCount") if data else None)
 
 
+OPENALEX_WORKS = "https://api.openalex.org/works"
+
+
+def _openalex_request(
+    session: "requests.Session",
+    title: str,
+    *,
+    mailto: str,
+    per_page: int,
+    retries: int,
+    backoff: float,
+    sleep,
+) -> list | None:
+    """GET the OpenAlex ``results`` list for a title search, or None on failure.
+
+    Commas/colons/pipes break OpenAlex filter syntax, so they're blanked (the
+    search is fuzzy; the caller verifies the title anyway).
+    """
+    cleaned = re.sub(r"[,:|]+", " ", str(title)).strip()
+    params = {"filter": f"title.search:{cleaned}", "per-page": per_page}
+    if mailto:
+        params["mailto"] = mailto  # OpenAlex "polite pool" — higher, more reliable limits
+    for attempt in range(retries + 1):
+        try:
+            resp = session.get(OPENALEX_WORKS, params=params, timeout=30,
+                               headers={"User-Agent": "ai-trend/0.1"})
+            if resp.status_code == 429:
+                if attempt < retries:
+                    sleep(backoff * (2 ** attempt))
+                    continue
+                return None
+            resp.raise_for_status()
+            return resp.json().get("results") or []
+        except Exception:
+            if attempt < retries:
+                sleep(backoff * (2 ** attempt))
+                continue
+            return None
+    return None
+
+
+def search_openalex_verified(
+    title: str,
+    session: "requests.Session",
+    *,
+    mailto: str = "",
+    limit: int = 5,
+    retries: int = DEFAULT_RETRIES,
+    backoff: float = DEFAULT_BACKOFF,
+    sleep=time.sleep,
+) -> dict | None:
+    """Citation count for the OpenAlex work whose title matches ``title``.
+
+    Key-free alternative to :func:`search_paper_verified` (Semantic Scholar's
+    public tier hard-429s). Returns ``None`` if no result matches, or
+    :data:`FETCH_FAILED` if the request itself failed.
+    """
+    results = _openalex_request(session, title, mailto=mailto, per_page=limit,
+                                retries=retries, backoff=backoff, sleep=sleep)
+    if results is None:
+        return FETCH_FAILED
+    for result in results:
+        candidate = result.get("title") or result.get("display_name") or ""
+        if titles_match(title, candidate):
+            return {
+                "citationCount": result.get("cited_by_count"),
+                "arxiv": None,
+                "title": candidate,
+            }
+    return None
+
+
 def search_paper_verified(
     title: str,
     session: "requests.Session",
@@ -270,10 +342,13 @@ def fetch_citations(
     throttle: float = DEFAULT_THROTTLE,
     sleep=time.sleep,
     log=lambda *_: None,
+    searcher=search_paper_verified,
 ) -> dict[str, int | None]:
     """Fetch citations for ``titles`` (resumable via cache), saving incrementally.
 
-    Titles already present in the cache are skipped. Returns the full cache.
+    Titles already present in the cache are skipped. ``searcher`` is the lookup
+    used per title (default Semantic Scholar; pass :func:`search_openalex_verified`
+    for the key-free OpenAlex source). Returns the full cache.
     """
     cache = load_cache(cache_path)
     apath = arxiv_cache_path(cache_path)
@@ -282,7 +357,7 @@ def fetch_citations(
     log(f"citations: {len(pending)} to fetch ({len(titles) - len(pending)} cached)")
     consecutive_failures = 0
     for i, title in enumerate(pending, 1):
-        result = search_paper_verified(title, session, sleep=sleep)
+        result = searcher(title, session, sleep=sleep)
         if result is FETCH_FAILED:
             # Request failed (429/network): leave uncached so it retries next run.
             consecutive_failures += 1
