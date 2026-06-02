@@ -101,17 +101,70 @@ def test_import_emerging_xlsx_and_merge(tmp_path):
 
 
 def test_fetch_citations_is_resumable(tmp_path):
-    cache = tmp_path / "c.json"
-    # first run: 2 titles
+    cache = tmp_path / "c.citations.json"
+    # first run: 2 titles (verified -> responses must carry matching titles)
     sess = _FakeSession([
-        _Resp(200, {"data": [{"citationCount": 1}]}),
-        _Resp(200, {"data": [{"citationCount": 2}]}),
+        _Resp(200, {"data": [{"title": "A", "citationCount": 1}]}),
+        _Resp(200, {"data": [{"title": "B", "citationCount": 2}]}),
     ])
     fetch_citations(["A", "B"], cache, sess, sleep=lambda *_: None)
     assert load_cache(cache) == {"A": 1, "B": 2}
 
     # second run: A cached (skipped), only C fetched
-    sess2 = _FakeSession([_Resp(200, {"data": [{"citationCount": 3}]})])
+    sess2 = _FakeSession([_Resp(200, {"data": [{"title": "C", "citationCount": 3}]})])
     fetch_citations(["A", "C"], cache, sess2, sleep=lambda *_: None)
     assert sess2.calls == 1
     assert load_cache(cache) == {"A": 1, "B": 2, "C": 3}
+
+
+# ---- title verification ----------------------------------------------------
+def test_titles_match():
+    from ai_trend.citations import titles_match
+
+    assert titles_match("Attention Is All You Need", "attention is all you need!")
+    assert titles_match("Deep Residual Learning for Image Recognition",
+                        "Deep Residual Learning for Image Recognition.")
+    assert not titles_match("Attention Is All You Need", "A Survey of Transformers")
+
+
+def test_search_paper_verified_skips_wrong_top_hit():
+    from ai_trend.citations import search_paper_verified
+
+    # top hit is a different (more-cited) paper; the real match is 2nd
+    sess = _FakeSession([_Resp(200, {"data": [
+        {"title": "A Famous Unrelated Survey", "citationCount": 9000},
+        {"title": "My Niche Paper", "citationCount": 7},
+    ]})])
+    out = search_paper_verified("My Niche Paper", sess, sleep=lambda *_: None)
+    assert out["citationCount"] == 7
+
+
+def test_search_paper_verified_rejects_when_no_match():
+    from ai_trend.citations import search_paper_verified
+
+    sess = _FakeSession([_Resp(200, {"data": [{"title": "Totally Different", "citationCount": 9000}]})])
+    assert search_paper_verified("My Paper", sess, sleep=lambda *_: None) is None
+
+
+def test_search_paper_verified_captures_arxiv():
+    from ai_trend.citations import search_paper_verified
+
+    sess = _FakeSession([_Resp(200, {"data": [
+        {"title": "My Paper", "citationCount": 5, "externalIds": {"ArXiv": "2401.00001"}},
+    ]})])
+    out = search_paper_verified("My Paper", sess, sleep=lambda *_: None)
+    assert out["arxiv"] == "2401.00001" and out["citationCount"] == 5
+
+
+def test_verify_existing_nulls_unverifiable_high_counts(tmp_path):
+    from ai_trend.citations import save_cache, verify_existing
+
+    cache = tmp_path / "x.citations.json"
+    save_cache(cache, {"Real Paper": 800, "Tiny": 3})  # 800 is suspect, 3 is below min
+    # the high-count entry resolves only to a different title -> must be nulled
+    sess = _FakeSession([_Resp(200, {"data": [{"title": "Some Other Paper", "citationCount": 9000}]})])
+    summary = verify_existing(cache, sess, min_count=150, sleep=lambda *_: None)
+    out = load_cache(cache)
+    assert out["Real Paper"] is None  # unverified -> dropped
+    assert out["Tiny"] == 3           # untouched (below threshold)
+    assert summary["checked"] == 1 and summary["unverified"] == 1

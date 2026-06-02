@@ -13,6 +13,7 @@ top/emerging-topic papers) — see :func:`titles_for_topics`.
 from __future__ import annotations
 
 import json
+import re
 import time
 from pathlib import Path
 from typing import TYPE_CHECKING, Iterable
@@ -27,20 +28,42 @@ DEFAULT_RETRIES = 4
 DEFAULT_BACKOFF = 2.0  # seconds, doubled each retry
 
 
-def search_citation(
-    title: str,
-    session: "requests.Session",
-    *,
-    retries: int = DEFAULT_RETRIES,
-    backoff: float = DEFAULT_BACKOFF,
-    sleep=time.sleep,
-) -> int | None:
-    """Return the citation count for the best title match, or ``None`` on failure.
+TITLE_MATCH_JACCARD = 0.85
 
-    ``None`` (lookup failed / no match) is deliberately distinct from ``0``
-    (paper found, zero citations).
+
+def _normalize_title(title: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", str(title).lower()).strip()
+
+
+def titles_match(query: str, candidate: str) -> bool:
+    """True if two titles refer to the same paper.
+
+    Guards against Semantic Scholar's relevance search returning a *different*,
+    often more-cited paper for a generic title (the cause of inflated counts).
+    Exact normalised match, else high token-set overlap (Jaccard).
     """
-    params = {"query": title.replace("-", " "), "fields": "title,citationCount", "limit": 1}
+    nq, nc = _normalize_title(query), _normalize_title(candidate)
+    if not nq or not nc:
+        return False
+    if nq == nc:
+        return True
+    tq, tc = set(nq.split()), set(nc.split())
+    union = tq | tc
+    return bool(union) and len(tq & tc) / len(union) >= TITLE_MATCH_JACCARD
+
+
+def _s2_request(
+    session: "requests.Session",
+    query: str,
+    fields: str,
+    limit: int,
+    *,
+    retries: int,
+    backoff: float,
+    sleep,
+) -> list | None:
+    """GET the S2 relevance-search ``data`` list (retry/backoff), or None on failure."""
+    params = {"query": query.replace("-", " "), "fields": fields, "limit": limit}
     for attempt in range(retries + 1):
         try:
             resp = session.get(S2_SEARCH, params=params, timeout=30,
@@ -51,16 +74,64 @@ def search_citation(
                     continue
                 return None
             resp.raise_for_status()
-            data = resp.json().get("data") or []
-            if not data:
-                return None
-            return data[0].get("citationCount")
-        except Exception:  # network/parse error -> retry, then give up to None
+            return resp.json().get("data") or []
+        except Exception:  # network/parse error
             if attempt < retries:
                 sleep(backoff * (2 ** attempt))
                 continue
             return None
     return None
+
+
+def search_citation(
+    title: str,
+    session: "requests.Session",
+    *,
+    retries: int = DEFAULT_RETRIES,
+    backoff: float = DEFAULT_BACKOFF,
+    sleep=time.sleep,
+) -> int | None:
+    """Raw top-hit citation count (no title verification). Prefer
+    :func:`search_paper_verified` for trustworthy counts."""
+    data = _s2_request(session, title, "title,citationCount", 1,
+                       retries=retries, backoff=backoff, sleep=sleep)
+    return (data[0].get("citationCount") if data else None)
+
+
+def search_paper_verified(
+    title: str,
+    session: "requests.Session",
+    *,
+    limit: int = 5,
+    retries: int = DEFAULT_RETRIES,
+    backoff: float = DEFAULT_BACKOFF,
+    sleep=time.sleep,
+) -> dict | None:
+    """Citation count + arXiv id for the result whose title actually matches.
+
+    Scans the top ``limit`` results and returns the first whose title matches
+    ``title`` (see :func:`titles_match`). Returns ``None`` if no result matches —
+    so an unverifiable/wrong hit is never written as a citation count.
+    """
+    data = _s2_request(session, title, "title,citationCount,externalIds,year", limit,
+                       retries=retries, backoff=backoff, sleep=sleep)
+    if not data:
+        return None
+    for result in data:
+        if titles_match(title, result.get("title", "")):
+            external = result.get("externalIds") or {}
+            return {
+                "citationCount": result.get("citationCount"),
+                "arxiv": external.get("ArXiv"),
+                "title": result.get("title"),
+            }
+    return None
+
+
+def arxiv_cache_path(citations_cache_path: Path | str) -> Path:
+    s = str(citations_cache_path)
+    return Path(s[: -len(".citations.json")] + ".arxiv.json" if s.endswith(".citations.json")
+                else s + ".arxiv.json")
 
 
 def load_cache(path: Path | str) -> dict[str, int | None]:
@@ -138,14 +209,62 @@ def fetch_citations(
     Titles already present in the cache are skipped. Returns the full cache.
     """
     cache = load_cache(cache_path)
+    apath = arxiv_cache_path(cache_path)
+    arxiv = load_cache(apath)
     pending = [t for t in titles if t not in cache]
     log(f"citations: {len(pending)} to fetch ({len(titles) - len(pending)} cached)")
     for i, title in enumerate(pending, 1):
-        cache[title] = search_citation(title, session, sleep=sleep)
+        result = search_paper_verified(title, session, sleep=sleep)
+        cache[title] = result["citationCount"] if result else None  # None = unverified
+        if result and result.get("arxiv"):
+            arxiv[title] = result["arxiv"]
         if i % 25 == 0 or i == len(pending):
             save_cache(cache_path, cache)
+            save_cache(apath, arxiv)
             log(f"citations: {i}/{len(pending)}")
         if i < len(pending):
             sleep(throttle)
     save_cache(cache_path, cache)
+    save_cache(apath, arxiv)
     return cache
+
+
+def verify_existing(
+    cache_path: Path | str,
+    session: "requests.Session",
+    *,
+    min_count: int = 150,
+    throttle: float = DEFAULT_THROTTLE,
+    sleep=time.sleep,
+    log=lambda *_: None,
+) -> dict:
+    """Re-verify cached counts above ``min_count`` (likely wrong title-search hits).
+
+    Replaces each with the title-verified count, or ``None`` if no result's title
+    matches. Also records any arXiv ids found. Returns a summary.
+    """
+    cache = load_cache(cache_path)
+    apath = arxiv_cache_path(cache_path)
+    arxiv = load_cache(apath)
+    suspects = [t for t, c in cache.items() if isinstance(c, int) and c > min_count]
+    log(f"verify: {len(suspects)} cached counts > {min_count}")
+    changed = dropped = 0
+    for i, title in enumerate(suspects, 1):
+        result = search_paper_verified(title, session, sleep=sleep)
+        new = result["citationCount"] if result else None
+        if new is None:
+            dropped += 1
+        if new != cache.get(title):
+            changed += 1
+        cache[title] = new
+        if result and result.get("arxiv"):
+            arxiv[title] = result["arxiv"]
+        if i % 10 == 0 or i == len(suspects):
+            save_cache(cache_path, cache)
+            save_cache(apath, arxiv)
+            log(f"verify: {i}/{len(suspects)}")
+        if i < len(suspects):
+            sleep(throttle)
+    save_cache(cache_path, cache)
+    save_cache(apath, arxiv)
+    return {"checked": len(suspects), "changed": changed, "unverified": dropped}
