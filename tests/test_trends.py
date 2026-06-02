@@ -8,6 +8,7 @@ import pandas as pd
 
 from ai_trend.taxonomy import Taxonomy
 from ai_trend.trends import (
+    compute_all_trends,
     compute_trends,
     count_file,
     discover_conference_years,
@@ -162,6 +163,28 @@ def test_discover_conference_years(tmp_path):
         pd.DataFrame({"topic": ["graph"]}).to_csv(tmp_path / rel, index=False)
     index = discover_conference_years(tmp_path)
     assert set(index["ICLR"]) == {2024, 2025}
+
+
+def test_compute_all_trends_compares_to_previous_occurrence(tmp_path):
+    """Biennial venues (year gap) compare to their previous occurrence, not year-1;
+    annual venues with consecutive years still compare to year-1."""
+    layout = {
+        # ICCV: biennial (2023, 2025) — 2025's baseline must be 2023, not 2024.
+        "2023/10_iccv.csv_topics.csv": ["graph", "graph", "llm"],
+        "2025/10_iccv.csv_topics.csv": ["graph", "llm", "llm"],
+        # ICLR: annual (2024, 2025) — unchanged year-1 baseline.
+        "2024/5_iclr.csv_topics.csv": ["graph"],
+        "2025/5_iclr.csv_topics.csv": ["graph", "llm"],
+    }
+    for rel, topics in layout.items():
+        (tmp_path / rel).parent.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame({"topic": topics}).to_csv(tmp_path / rel, index=False)
+
+    trends = {(t.conference, t.year): t for t in compute_all_trends(TAXONOMY, tmp_path)}
+
+    assert trends[("ICCV", 2025)].previous_year == 2023  # not 2024 (no data)
+    assert trends[("ICCV", 2023)].previous_year is None  # first occurrence
+    assert trends[("ICLR", 2025)].previous_year == 2024  # annual: still year-1
 
 
 def test_trend_to_dict_includes_counts_when_requested():

@@ -188,7 +188,7 @@ def compute_all_trends(
     min_prev: int = DEFAULT_MIN_PREV,
     min_count: int = DEFAULT_MIN_COUNT,
 ) -> list[Trend]:
-    """Compute trends for every conference-year, comparing to the prior year."""
+    """Compute trends for every conference-year, comparing to its previous occurrence."""
     index = discover_conference_years(data_dir)
     counts_cache: dict[Path, dict[str, int]] = {}
 
@@ -200,15 +200,22 @@ def compute_all_trends(
     results: list[Trend] = []
     for conference in sorted(index):
         years = index[conference]
-        for year in sorted(years):
-            previous = years.get(year - 1)
+        ordered_years = sorted(years)
+        for i, year in enumerate(ordered_years):
+            # Compare to the previous *occurrence* of this conference, not strictly
+            # year - 1. Biennial venues (e.g. ICCV runs in odd years) skip a calendar
+            # year, so year - 1 would never have data and they'd never get
+            # emerging/fading. For annual venues with consecutive years this is
+            # identical to year - 1.
+            prev_year = ordered_years[i - 1] if i > 0 else None
+            previous = years.get(prev_year) if prev_year is not None else None
             results.append(
                 compute_trends(
                     conference,
                     year,
                     counts_for(years[year]),
-                    counts_for(previous) if previous else None,
-                    previous_year=year - 1 if previous else None,
+                    counts_for(previous) if previous is not None else None,
+                    previous_year=prev_year,
                     top_n=top_n,
                     min_prev=min_prev,
                     min_count=min_count,
