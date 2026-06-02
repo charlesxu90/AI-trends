@@ -16,12 +16,18 @@
         <span class="brand__text">AI&nbsp;Trends<span class="brand__dim">/conferences</span></span>
       </a>
       <nav class="nav" aria-label="Sections">
-        <a href="#trends">Trends</a>
-        <a href="#browse">Browse</a>
+        <a href="#trends">Topic Trends</a>
+        <a href="#browse">Rising Stars</a>
         <a class="nav__ext" href="https://github.com/charlesxu90/AI-trends" rel="noopener">Source ↗</a>
       </nav>
     </div>
   </header>
+
+  <nav class="sidenav" aria-label="Quick navigation">
+    <a href="#top" data-target="top"><span class="sidenav__dot"></span><span class="sidenav__label">Top</span></a>
+    <a href="#trends" data-target="trends"><span class="sidenav__dot"></span><span class="sidenav__label">Topic Trends</span></a>
+    <a href="#browse" data-target="browse"><span class="sidenav__dot"></span><span class="sidenav__label">Rising Stars</span></a>
+  </nav>
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-h">
@@ -47,7 +53,7 @@
     <section class="section" id="trends" aria-labelledby="trends-h">
       <div class="wrap">
         <div class="section__head">
-          <h2 id="trends-h" class="section__title"><span class="section__num">01</span> Trends</h2>
+          <h2 id="trends-h" class="section__title"><span class="section__num">01</span> Topic Trends</h2>
           <p class="section__hint">Pick a venue and year. Click any topic to see its papers.</p>
         </div>
 
@@ -63,8 +69,8 @@
     <section class="section section--alt" id="browse" aria-labelledby="browse-h">
       <div class="wrap">
         <div class="section__head">
-          <h2 id="browse-h" class="section__title"><span class="section__num">02</span> Browse papers</h2>
-          <p class="section__hint">Filter by venue, year, and topic, or search titles, abstracts, and authors.</p>
+          <h2 id="browse-h" class="section__title"><span class="section__num">02</span> Rising Stars</h2>
+          <p class="section__hint">Papers gaining the most citations — recent and highly cited. Filter by venue, year, and topic, or search titles, abstracts, and authors.</p>
         </div>
 
         <form class="filters" id="filters" autocomplete="off" aria-label="Paper filters">
@@ -83,6 +89,7 @@
           <label class="field">
             <span class="field__label">Sort</span>
             <select id="f-sort" class="field__input">
+              <option value="rising">Rising (recent)</option>
               <option value="citations">Most cited</option>
               <option value="relevance">Relevance</option>
             </select>

@@ -61,6 +61,7 @@ def build_paper_record(
     abstract_chars: int = DEFAULT_ABSTRACT_CHARS,
     citations: dict | None = None,
     arxiv: dict | None = None,
+    deltas: dict | None = None,
 ) -> dict:
     topics = [t for t in str(row.get("topic", "")).split(";") if t and t != "nan"]
     abstract = _text(row.get("abstract"))
@@ -84,6 +85,10 @@ def build_paper_record(
         arxiv_id = arxiv.get(title)
         if arxiv_id:
             record["arxiv"] = arxiv_id
+    if deltas:
+        delta = deltas.get(title)
+        if delta is not None:
+            record["delta"] = delta
     return record
 
 
@@ -114,6 +119,10 @@ def export_site(
         json.dumps(trends_payload, ensure_ascii=False), encoding="utf-8"
     )
 
+    from ai_trend.citations import latest_deltas
+
+    deltas = latest_deltas()  # citation gains between the two most recent snapshots (empty if <2)
+
     index = discover_conference_years(data_dir, registry.token_to_label)
     shards: list[dict] = []
     seen_topics: set[str] = set()
@@ -127,7 +136,7 @@ def export_site(
             arxiv_path = Path(str(topics_path) + ".arxiv.json")
             arxiv = json.loads(arxiv_path.read_text(encoding="utf-8")) if arxiv_path.exists() else None
             records = [
-                build_paper_record(row, conference, year, abstract_chars, citations, arxiv)
+                build_paper_record(row, conference, year, abstract_chars, citations, arxiv, deltas)
                 for row in df.to_dict("records")
             ]
             for record in records:

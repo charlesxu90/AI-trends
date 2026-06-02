@@ -101,6 +101,17 @@ def refresh(
     summary["trends"] = len(trends)
     log(f"trends: {len(trends)} conference-year(s) -> {trends_path}")
 
+    # 5b. snapshot citation counts (for month-over-month "rising" velocity)
+    import datetime
+
+    from ai_trend.citations import snapshot_citations
+
+    try:
+        snap = snapshot_citations(datetime.date.today().isoformat(), data_dir=data_dir)
+        log(f"snapshot: citation counts -> {snap}")
+    except Exception as exc:  # best-effort
+        log(f"snapshot: skipped ({exc})")
+
     # 6. export static site
     from ai_trend.site import export_site
 

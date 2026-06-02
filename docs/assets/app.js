@@ -43,6 +43,7 @@ async function init() {
     buildFilters();
     selectLatestTrend();
     applyFilters(); // populate the browse list with the default venue/year
+    initSideNav();
   } catch (err) {
     $("#trend-panel").innerHTML = `<p class="empty">Could not load data (${err.message}).</p>`;
   }
@@ -282,7 +283,11 @@ async function applyFilters() {
     }
     return true;
   });
-  if ($("#f-sort").value === "citations") {
+  const sort = $("#f-sort").value;
+  if (sort === "rising") {
+    // citation velocity (gain since last snapshot) when available, else total citations
+    state.filtered.sort((a, b) => (b.delta ?? b.citations ?? -1) - (a.delta ?? a.citations ?? -1));
+  } else if (sort === "citations") {
     state.filtered.sort((a, b) => (b.citations ?? -1) - (a.citations ?? -1));
   }
   state.shownCount = PAGE;
@@ -345,6 +350,29 @@ function paperCard(p) {
       links,
     ]),
   ]);
+}
+
+/* ---------- side nav (scroll-spy) ---------- */
+function initSideNav() {
+  const links = [...document.querySelectorAll(".sidenav a")];
+  const byTarget = Object.fromEntries(links.map((a) => [a.dataset.target, a]));
+  const sections = [
+    ["top", document.querySelector(".hero")],
+    ["trends", document.getElementById("trends")],
+    ["browse", document.getElementById("browse")],
+  ].filter(([, el]) => el);
+  const obs = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        const id = sections.find(([, el]) => el === e.target)?.[0];
+        if (!id || !byTarget[id]) continue;
+        links.forEach((a) => a.classList.toggle("active", a === byTarget[id]));
+      }
+    },
+    { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+  );
+  sections.forEach(([, el]) => obs.observe(el));
 }
 
 /* ---------- util ---------- */

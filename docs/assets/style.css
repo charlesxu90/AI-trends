@@ -46,8 +46,6 @@ body {
 }
 
 .wrap { width: min(1240px, 92vw); margin-inline: auto; }
-/* the paper browser benefits from extra width for its multi-column grid */
-#browse .wrap { width: min(1600px, 96vw); }
 
 a { color: inherit; }
 em { font-style: italic; }
@@ -189,3 +187,14 @@ em { font-style: italic; }
 .site-foot__inner { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; color: var(--muted); font-size: 0.9rem; }
 .site-foot__inner p { margin: 0; max-width: 62ch; }
 .site-foot a { color: var(--ink); }
+
+/* ---------- side navigation (quick jump) ---------- */
+.sidenav { position: fixed; right: clamp(0.8rem, 2vw, 2rem); top: 50%; transform: translateY(-50%); z-index: 30; display: flex; flex-direction: column; gap: 0.9rem; }
+.sidenav a { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--muted); flex-direction: row-reverse; }
+.sidenav__dot { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--muted); background: transparent; transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), transform var(--dur) var(--ease); flex: none; }
+.sidenav__label { font-size: 0.78rem; font-weight: 600; opacity: 0; transform: translateX(6px); transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); white-space: nowrap; }
+.sidenav a:hover .sidenav__label, .sidenav a:focus-visible .sidenav__label { opacity: 1; transform: translateX(0); }
+.sidenav a:hover .sidenav__dot { border-color: var(--ink); }
+.sidenav a.active .sidenav__dot { background: var(--accent); border-color: var(--accent); transform: scale(1.25); }
+.sidenav a.active .sidenav__label { opacity: 1; transform: translateX(0); color: var(--ink); }
+@media (max-width: 1100px) { .sidenav { display: none; } }
