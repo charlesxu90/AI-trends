@@ -60,6 +60,7 @@ def build_paper_record(
     year: int,
     abstract_chars: int = DEFAULT_ABSTRACT_CHARS,
     citations: dict | None = None,
+    arxiv: dict | None = None,
 ) -> dict:
     topics = [t for t in str(row.get("topic", "")).split(";") if t and t != "nan"]
     abstract = _text(row.get("abstract"))
@@ -79,6 +80,10 @@ def build_paper_record(
         cited = citations.get(title)
         if cited is not None:
             record["citations"] = cited
+    if arxiv:
+        arxiv_id = arxiv.get(title)
+        if arxiv_id:
+            record["arxiv"] = arxiv_id
     return record
 
 
@@ -116,11 +121,13 @@ def export_site(
         for year in sorted(index[conference]):
             topics_path = index[conference][year]
             df = pd.read_csv(topics_path)
-            # optional citations sidecar produced by `ai-trend citations`
+            # optional sidecars produced by `ai-trend citations` / `verify-citations`
             cite_path = Path(str(topics_path) + ".citations.json")
             citations = json.loads(cite_path.read_text(encoding="utf-8")) if cite_path.exists() else None
+            arxiv_path = Path(str(topics_path) + ".arxiv.json")
+            arxiv = json.loads(arxiv_path.read_text(encoding="utf-8")) if arxiv_path.exists() else None
             records = [
-                build_paper_record(row, conference, year, abstract_chars, citations)
+                build_paper_record(row, conference, year, abstract_chars, citations, arxiv)
                 for row in df.to_dict("records")
             ]
             for record in records:

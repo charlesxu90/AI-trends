@@ -303,6 +303,33 @@ def cmd_citations(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_verify_citations(args: argparse.Namespace) -> int:
+    import glob
+
+    import requests
+
+    from ai_trend.citations import verify_existing
+
+    if args.topics_csv:
+        sidecars = [str(Path(args.topics_csv)) + ".citations.json"]
+    else:
+        sidecars = sorted(glob.glob(f"{args.data_dir}/*/*.citations.json"))
+    sidecars = [s for s in sidecars if Path(s).exists()]
+    if not sidecars:
+        _eprint("no citation sidecars found")
+        return 1
+
+    session = requests.Session()
+    totals = {"checked": 0, "changed": 0, "unverified": 0}
+    for sc in sidecars:
+        summary = verify_existing(sc, session, min_count=args.min, throttle=args.throttle, log=_eprint)
+        _eprint(f"  {Path(sc).name}: {summary}")
+        for k in totals:
+            totals[k] += summary[k]
+    _eprint(f"verify-citations: {totals}; re-run export-site to apply")
+    return 0
+
+
 def cmd_import_citations(args: argparse.Namespace) -> int:
     import glob
 
@@ -492,6 +519,13 @@ def build_parser() -> argparse.ArgumentParser:
     p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
     p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")
     p_cit.set_defaults(func=cmd_citations)
+
+    p_ver = sub.add_parser("verify-citations", help="re-verify high cached citation counts by title match")
+    p_ver.add_argument("topics_csv", nargs="?", default=None, help="a *_topics.csv (default: all sidecars)")
+    p_ver.add_argument("--min", type=int, default=150, help="re-verify counts above this")
+    p_ver.add_argument("--data-dir", default="data")
+    p_ver.add_argument("--throttle", type=float, default=1.1)
+    p_ver.set_defaults(func=cmd_verify_citations)
 
     p_imp = sub.add_parser("import-citations", help="import pre-downloaded *_emerging.xlsx citations into sidecars")
     p_imp.add_argument("paths", nargs="*", help="xlsx files/globs (default: data/*/*_emerging.xlsx)")
