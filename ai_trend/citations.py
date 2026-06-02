@@ -134,6 +134,48 @@ def arxiv_cache_path(citations_cache_path: Path | str) -> Path:
                 else s + ".arxiv.json")
 
 
+import glob as _glob
+
+# Tracked (not gitignored) so snapshots accumulate across CI refreshes.
+DEFAULT_HISTORY_DIR = Path(__file__).resolve().parent.parent / "citation-history"
+
+
+def collect_current_counts(data_dir: Path | str = "data") -> dict[str, int]:
+    """Flatten every paper's current (non-null) citation count across all sidecars."""
+    counts: dict[str, int] = {}
+    for f in _glob.glob(str(Path(data_dir) / "*" / "*.citations.json")):
+        for title, value in load_cache(f).items():
+            if isinstance(value, int):
+                counts[title] = value
+    return counts
+
+
+def snapshot_citations(
+    date_str: str, *, data_dir: Path | str = "data", history_dir: Path | str = DEFAULT_HISTORY_DIR
+) -> Path:
+    """Write a dated snapshot of current citation counts; returns its path."""
+    counts = collect_current_counts(data_dir)
+    history_dir = Path(history_dir)
+    history_dir.mkdir(parents=True, exist_ok=True)
+    out = history_dir / f"{date_str}.json"
+    out.write_text(json.dumps(counts, ensure_ascii=False), encoding="utf-8")
+    return out
+
+
+def latest_deltas(history_dir: Path | str = DEFAULT_HISTORY_DIR) -> dict[str, int]:
+    """Citation gain per paper between the two most recent snapshots (empty if <2)."""
+    files = sorted(_glob.glob(str(Path(history_dir) / "*.json")))
+    if len(files) < 2:
+        return {}
+    prev = load_cache(files[-2])
+    cur = load_cache(files[-1])
+    return {
+        t: cur[t] - prev[t]
+        for t in cur
+        if t in prev and isinstance(cur[t], int) and isinstance(prev[t], int)
+    }
+
+
 def load_cache(path: Path | str) -> dict[str, int | None]:
     path = Path(path)
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}

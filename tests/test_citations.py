@@ -71,6 +71,25 @@ def test_titles_for_topics_filters_by_topic():
     assert set(titles_for_topics(df, {"llm"})) == {"A", "C"}
 
 
+def test_snapshot_and_latest_deltas(tmp_path):
+    from ai_trend.citations import latest_deltas, save_cache, snapshot_citations
+
+    data = tmp_path / "data" / "2025"
+    data.mkdir(parents=True)
+    sidecar = data / "5_iclr.csv_topics.csv.citations.json"
+    hist = tmp_path / "hist"
+
+    save_cache(sidecar, {"A": 10, "B": 5})
+    snapshot_citations("2026-01-01", data_dir=tmp_path / "data", history_dir=hist)
+    assert latest_deltas(hist) == {}  # only one snapshot -> no delta
+
+    save_cache(sidecar, {"A": 18, "B": 5, "C": 3})  # A +8, B 0, C new
+    snapshot_citations("2026-02-01", data_dir=tmp_path / "data", history_dir=hist)
+    deltas = latest_deltas(hist)
+    assert deltas["A"] == 8 and deltas["B"] == 0
+    assert "C" not in deltas  # not present in the earlier snapshot
+
+
 def test_sidecar_for_xlsx_mapping():
     from ai_trend.citations import sidecar_for_xlsx
 

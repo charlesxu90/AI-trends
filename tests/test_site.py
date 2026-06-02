@@ -51,6 +51,11 @@ def test_build_paper_record_omits_citations_when_missing():
     assert "citations" not in rec
 
 
+def test_build_paper_record_includes_delta_when_available():
+    rec = build_paper_record({"title": "A", "topic": "graph", "abstract": ""}, "ICLR", 2025, deltas={"A": 12})
+    assert rec["delta"] == 12
+
+
 def _setup(tmp_path):
     config = tmp_path / "config"
     config.mkdir()
