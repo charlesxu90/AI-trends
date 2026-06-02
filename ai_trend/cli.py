@@ -303,6 +303,33 @@ def cmd_citations(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_import_citations(args: argparse.Namespace) -> int:
+    import glob
+
+    from ai_trend.citations import merge_into_sidecar
+
+    paths: list[str] = []
+    for p in args.paths:
+        paths.extend(glob.glob(p) if any(c in p for c in "*?[") else [p])
+    if not paths:
+        # default: every *_emerging.xlsx under the data dir
+        paths = sorted(glob.glob(f"{args.data_dir}/*/*_emerging.xlsx"))
+    if not paths:
+        _eprint("no *_emerging.xlsx files found")
+        return 1
+
+    total = 0
+    for path in sorted(paths):
+        try:
+            sidecar, added = merge_into_sidecar(path)
+            _eprint(f"  {Path(path).name} -> {sidecar.name} (+{added})")
+            total += 1
+        except Exception as exc:
+            _eprint(f"  skipped {path}: {exc}")
+    _eprint(f"imported {total} citation file(s); re-run export-site to surface them")
+    return 0
+
+
 def cmd_crawl(args: argparse.Namespace) -> int:
     from ai_trend.crawl import crawl, load_jobs
 
@@ -465,6 +492,11 @@ def build_parser() -> argparse.ArgumentParser:
     p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
     p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")
     p_cit.set_defaults(func=cmd_citations)
+
+    p_imp = sub.add_parser("import-citations", help="import pre-downloaded *_emerging.xlsx citations into sidecars")
+    p_imp.add_argument("paths", nargs="*", help="xlsx files/globs (default: data/*/*_emerging.xlsx)")
+    p_imp.add_argument("--data-dir", default="data")
+    p_imp.set_defaults(func=cmd_import_citations)
 
     p_crawl = sub.add_parser("crawl", help="run OpenReview crawl jobs from config/crawl.json")
     p_crawl.add_argument("--crawl-config", default="config/crawl.json")

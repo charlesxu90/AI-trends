@@ -71,6 +71,35 @@ def test_titles_for_topics_filters_by_topic():
     assert set(titles_for_topics(df, {"llm"})) == {"A", "C"}
 
 
+def test_sidecar_for_xlsx_mapping():
+    from ai_trend.citations import sidecar_for_xlsx
+
+    p = sidecar_for_xlsx("data/2024/6_cvpr.csv_topics.csv_emerging.xlsx")
+    assert p.name == "6_cvpr.csv_topics.csv.citations.json"
+
+
+def test_import_emerging_xlsx_and_merge(tmp_path):
+    from ai_trend.citations import import_emerging_xlsx, load_cache, merge_into_sidecar, save_cache
+
+    xlsx = tmp_path / "5_iclr.csv_topics.csv_emerging.xlsx"
+    pd.DataFrame({
+        "title": ["Paper A", "Paper B", "Paper C"],
+        "ss_citations": [42, 0, float("nan")],  # NaN row skipped
+    }).to_excel(xlsx, index=False)
+
+    imported = import_emerging_xlsx(xlsx)
+    assert imported == {"Paper A": 42, "Paper B": 0}
+
+    # a live-fetched value already in the sidecar must win on overlap
+    sidecar = tmp_path / "5_iclr.csv_topics.csv.citations.json"
+    save_cache(sidecar, {"Paper A": 99})
+    out, added = merge_into_sidecar(xlsx)
+    assert out == sidecar
+    merged = load_cache(sidecar)
+    assert merged["Paper A"] == 99  # existing (fresh) preserved
+    assert merged["Paper B"] == 0 and added == 1
+
+
 def test_fetch_citations_is_resumable(tmp_path):
     cache = tmp_path / "c.json"
     # first run: 2 titles
