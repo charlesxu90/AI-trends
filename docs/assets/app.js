@@ -300,16 +300,33 @@ function paintPapers() {
   $("#more-wrap").hidden = state.shownCount >= total;
 }
 
+// Prefer arXiv (precise) when the id is known; otherwise a Google Scholar title
+// search, which reliably finds the paper (incl. its arXiv version) for any title.
+function paperLink(p) {
+  if (p.arxiv) return `https://arxiv.org/abs/${p.arxiv}`;
+  return `https://scholar.google.com/scholar?q=${encodeURIComponent(p.title)}`;
+}
+
 function paperCard(p) {
   const authors = p.authors.length
     ? p.authors.slice(0, 6).join(", ") + (p.authors.length > 6 ? ", et al." : "")
     : "";
-  const titleNode = p.pdf
-    ? el("a", { href: p.pdf, target: "_blank", rel: "noopener", textContent: p.title })
-    : document.createTextNode(p.title);
+  const titleNode = el("a", {
+    href: paperLink(p), target: "_blank", rel: "noopener", textContent: p.title,
+    title: p.arxiv ? "View on arXiv" : "Find on Google Scholar",
+  });
   const venueText = Number.isFinite(p.citations)
     ? `${p.conference} ${p.year} · ${p.citations.toLocaleString()} cites`
     : `${p.conference} ${p.year}`;
+  const links = el("span", { className: "paper__links" }, [
+    el("a", {
+      className: "paper__link", href: paperLink(p), target: "_blank", rel: "noopener",
+      textContent: p.arxiv ? "arXiv ↗" : "Scholar ↗",
+    }),
+    p.pdf ? el("a", {
+      className: "paper__link", href: p.pdf, target: "_blank", rel: "noopener", textContent: "PDF ↗",
+    }) : null,
+  ]);
   return el("li", { className: "paper" }, [
     el("div", { className: "paper__top" }, [
       el("h3", { className: "paper__title" }, [titleNode]),
@@ -317,12 +334,15 @@ function paperCard(p) {
     ]),
     authors ? el("p", { className: "paper__authors", textContent: authors }) : null,
     p.abstract ? el("p", { className: "paper__abstract", textContent: p.abstract }) : null,
-    el("div", { className: "tags" }, p.topics.map((t) =>
-      el("button", {
-        className: "tag", type: "button", textContent: t, title: `Filter by ${t}`,
-        onclick: () => { ensureTopicOption(t); $("#f-topic").value = t; applyFilters(); },
-      })
-    )),
+    el("div", { className: "tags" }, [
+      ...p.topics.map((t) =>
+        el("button", {
+          className: "tag", type: "button", textContent: t, title: `Filter by ${t}`,
+          onclick: () => { ensureTopicOption(t); $("#f-topic").value = t; applyFilters(); },
+        })
+      ),
+      links,
+    ]),
   ]);
 }
 
