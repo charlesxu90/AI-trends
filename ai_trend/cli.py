@@ -310,7 +310,7 @@ def cmd_citations(args: argparse.Namespace) -> int:
     else:
         searcher = None  # default (Semantic Scholar)
 
-    kwargs = {"throttle": args.throttle, "log": _eprint}
+    kwargs = {"throttle": args.throttle, "log": _eprint, "progress": True}
     if searcher is not None:
         kwargs["searcher"] = searcher
     fetch_citations(titles, cache_path, requests.Session(), **kwargs)

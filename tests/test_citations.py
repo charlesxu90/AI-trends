@@ -165,6 +165,14 @@ def test_search_openalex_verified_failed_request_returns_sentinel():
     assert search_openalex_verified("X", sess, retries=1, sleep=lambda *_: None) is FETCH_FAILED
 
 
+def test_fetch_citations_with_progress_bar(tmp_path):
+    """progress=True renders a tqdm bar without changing results."""
+    cache = tmp_path / "c.citations.json"
+    sess = _FakeSession([_Resp(200, {"data": [{"title": "A", "citationCount": 5}]})])
+    fetch_citations(["A"], cache, sess, sleep=lambda *_: None, progress=True)
+    assert load_cache(cache) == {"A": 5}
+
+
 def test_fetch_citations_uses_injected_searcher(tmp_path):
     """fetch_citations honours a custom searcher (e.g. OpenAlex)."""
     cache = tmp_path / "c.citations.json"

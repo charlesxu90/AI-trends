@@ -334,6 +334,15 @@ def titles_for_topics(df: "pd.DataFrame", topics: Iterable[str]) -> list[str]:
     return out
 
 
+def _progress_bar(total: int):
+    """A tqdm bar over ``total`` items, or None if tqdm is unavailable."""
+    try:
+        from tqdm import tqdm
+    except ImportError:  # pragma: no cover - tqdm is a pinned dependency
+        return None
+    return tqdm(total=total, unit="paper", desc="citations", dynamic_ncols=True)
+
+
 def fetch_citations(
     titles: list[str],
     cache_path: Path | str,
@@ -343,12 +352,14 @@ def fetch_citations(
     sleep=time.sleep,
     log=lambda *_: None,
     searcher=search_paper_verified,
+    progress: bool = False,
 ) -> dict[str, int | None]:
     """Fetch citations for ``titles`` (resumable via cache), saving incrementally.
 
     Titles already present in the cache are skipped. ``searcher`` is the lookup
     used per title (default Semantic Scholar; pass :func:`search_openalex_verified`
-    for the key-free OpenAlex source). Returns the full cache.
+    for the key-free OpenAlex source). With ``progress=True`` a tqdm bar is shown.
+    Returns the full cache.
     """
     cache = load_cache(cache_path)
     apath = arxiv_cache_path(cache_path)
@@ -356,28 +367,36 @@ def fetch_citations(
     pending = [t for t in titles if t not in cache]
     log(f"citations: {len(pending)} to fetch ({len(titles) - len(pending)} cached)")
     consecutive_failures = 0
-    for i, title in enumerate(pending, 1):
-        result = searcher(title, session, sleep=sleep)
-        if result is FETCH_FAILED:
-            # Request failed (429/network): leave uncached so it retries next run.
-            consecutive_failures += 1
-            if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
-                log(f"citations: aborting after {consecutive_failures} consecutive "
-                    f"failures (rate-limited?); {i - 1}/{len(pending)} attempted — re-run to resume")
-                break
+    bar = _progress_bar(len(pending)) if progress else None
+    try:
+        for i, title in enumerate(pending, 1):
+            result = searcher(title, session, sleep=sleep)
+            if bar is not None:
+                bar.update(1)
+            if result is FETCH_FAILED:
+                # Request failed (429/network): leave uncached so it retries next run.
+                consecutive_failures += 1
+                if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                    log(f"citations: aborting after {consecutive_failures} consecutive "
+                        f"failures (rate-limited?); {i - 1}/{len(pending)} attempted — re-run to resume")
+                    break
+                if i < len(pending):
+                    sleep(throttle)
+                continue
+            consecutive_failures = 0
+            cache[title] = result["citationCount"] if result else None  # None = verified no-match
+            if result and result.get("arxiv"):
+                arxiv[title] = result["arxiv"]
+            if i % 25 == 0 or i == len(pending):
+                save_cache(cache_path, cache)
+                save_cache(apath, arxiv)
+                if not progress:  # the bar already conveys position
+                    log(f"citations: {i}/{len(pending)}")
             if i < len(pending):
                 sleep(throttle)
-            continue
-        consecutive_failures = 0
-        cache[title] = result["citationCount"] if result else None  # None = verified no-match
-        if result and result.get("arxiv"):
-            arxiv[title] = result["arxiv"]
-        if i % 25 == 0 or i == len(pending):
-            save_cache(cache_path, cache)
-            save_cache(apath, arxiv)
-            log(f"citations: {i}/{len(pending)}")
-        if i < len(pending):
-            sleep(throttle)
+    finally:
+        if bar is not None:
+            bar.close()
     save_cache(cache_path, cache)
     save_cache(apath, arxiv)
     return cache
