@@ -40,3 +40,32 @@ def test_unsupported_host_raises():
 def test_unknown_conference_raises():
     with pytest.raises(SourceError):
         detect_source("https://openaccess.thecvf.com/WACV2024", REG)  # not in registry
+
+
+def test_parse_sources_md(tmp_path):
+    from ai_trend.sources import parse_sources_md
+
+    md = tmp_path / "CONFERENCES.md"
+    md.write_text(
+        "| Year | Conf | Date | OpenReview | Other source |\n"
+        "|------|------|------|------------|--------------|\n"
+        "| 2025 | ICLR | 5/7/2025 | https://openreview.net/group?id=ICLR.cc/2025/Conference | |\n"
+        "| 2025 | CVPR | 6/17/2025 | | https://openaccess.thecvf.com/CVPR2025?day=all |\n"
+        "| 2025 | ICCV | 12/17/2025 | | |\n",
+        encoding="utf-8",
+    )
+    rows = parse_sources_md(md)
+    assert len(rows) == 3
+    assert rows[0].conf == "ICLR" and rows[0].url.startswith("https://openreview.net")
+    assert rows[1].url == "https://openaccess.thecvf.com/CVPR2025?day=all"  # falls back to 'other'
+    assert rows[2].url == ""  # ICCV row has no source yet (a gap)
+
+
+def test_parse_real_sources_file():
+    from ai_trend.sources import DEFAULT_SOURCES_MD, parse_sources_md
+
+    if not DEFAULT_SOURCES_MD.exists():
+        pytest.skip("CONFERENCES.md not present")
+    rows = parse_sources_md(DEFAULT_SOURCES_MD)
+    assert len(rows) >= 20
+    assert any(r.conf == "CVPR" and r.year == 2025 for r in rows)

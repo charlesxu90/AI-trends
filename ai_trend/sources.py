@@ -16,9 +16,12 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from ai_trend.registry import ConferenceRegistry
+
+DEFAULT_SOURCES_MD = Path(__file__).resolve().parent.parent / "CONFERENCES.md"
 
 # OpenReview group/venue id like "ICLR.cc/2025/Conference"
 _OR_VENUEID = re.compile(r"([A-Za-z]+)\.cc/(\d{4})/", re.IGNORECASE)
@@ -72,6 +75,41 @@ def detect_source(url: str, registry: ConferenceRegistry | None = None) -> Sourc
         return SourceSpec("cvf", conf.label, conf.primary_token, year)
 
     raise SourceError(f"unsupported host {host!r}; expected openreview.net or thecvf.com")
+
+
+@dataclass(frozen=True)
+class ConferenceSource:
+    year: int
+    conf: str
+    date: str
+    openreview: str
+    other: str
+
+    @property
+    def url(self) -> str:
+        """Preferred ingest URL: OpenReview if present, else the other source."""
+        return self.openreview or self.other
+
+
+def parse_sources_md(path: Path | str = DEFAULT_SOURCES_MD) -> list[ConferenceSource]:
+    """Parse the conference-sources markdown table into rows.
+
+    Reads only the data rows of the `| Year | Conf | Date | OpenReview | Other |`
+    table; header/separator and non-numeric-year lines are skipped.
+    """
+    rows: list[ConferenceSource] = []
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line.startswith("|"):
+            continue
+        cells = [c.strip() for c in line.strip("|").split("|")]
+        if len(cells) < 5 or not cells[0].isdigit():
+            continue
+        rows.append(ConferenceSource(
+            year=int(cells[0]), conf=cells[1], date=cells[2],
+            openreview=cells[3], other=cells[4],
+        ))
+    return rows
 
 
 def _openreview_venueid(parsed) -> str | None:

@@ -303,6 +303,40 @@ def cmd_citations(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_check_sources(args: argparse.Namespace) -> int:
+    from ai_trend.sources import DEFAULT_SOURCES_MD, parse_sources_md
+
+    path = Path(args.file) if args.file else DEFAULT_SOURCES_MD
+    if not path.exists():
+        _eprint(f"error: sources file not found: {path}")
+        return 2
+    rows = parse_sources_md(path)
+    gaps = [r for r in rows if not r.url]
+    _eprint(f"sources: {len(rows)} rows, {len(rows) - len(gaps)} with a URL, {len(gaps)} missing")
+    for r in gaps:
+        _eprint(f"  MISSING url: {r.year} {r.conf} ({r.date or 'no date'})")
+
+    if args.check:
+        import requests
+
+        session = requests.Session()
+        dead = 0
+        for r in rows:
+            if not r.url:
+                continue
+            try:
+                resp = session.get(r.url, headers={"User-Agent": "ai-trend/0.1"}, timeout=30)
+                ok = resp.status_code < 400
+            except Exception:
+                ok = False
+            if not ok:
+                dead += 1
+                _eprint(f"  UNREACHABLE: {r.year} {r.conf} -> {r.url}")
+        _eprint(f"link check: {dead} unreachable")
+        return 1 if dead else 0
+    return 0
+
+
 def cmd_snapshot_citations(args: argparse.Namespace) -> int:
     import datetime
 
@@ -535,6 +569,11 @@ def build_parser() -> argparse.ArgumentParser:
     p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
     p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")
     p_cit.set_defaults(func=cmd_citations)
+
+    p_src = sub.add_parser("check-sources", help="parse CONFERENCES.md; report gaps (and --check links)")
+    p_src.add_argument("--file", default=None, help="sources markdown (default: CONFERENCES.md)")
+    p_src.add_argument("--check", action="store_true", help="also verify each URL is reachable")
+    p_src.set_defaults(func=cmd_check_sources)
 
     p_snap = sub.add_parser("snapshot-citations", help="record a dated snapshot of citation counts (for velocity)")
     p_snap.add_argument("--data-dir", default="data")
