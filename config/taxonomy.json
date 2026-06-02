@@ -10,7 +10,9 @@
     "markov decision process",
     "markov decision processes",
     "bandits",
-    "decision transformer"
+    "decision transformer",
+    "diffusion policy",
+    "reward models"
   ],
   "offline reinforcement learning": [
     "offline reinforcement learning",
@@ -190,7 +192,8 @@
     "diffusion probabilistic model",
     "diffuse",
     "fusion models",
-    "denoising diffusion"
+    "denoising diffusion",
+    "guided diffusion"
   ],
   "curriculum learning": [
     "curriculum learning"
@@ -200,7 +203,11 @@
   ],
   "3d": [
     "3d",
-    "3d gaussian"
+    "3d gaussian",
+    "3d generation",
+    "dynamic 3d",
+    "surface reconstruction",
+    "inverse rendering"
   ],
   "self-supervision": [
     "self-supervision"
@@ -244,7 +251,9 @@
     "environment",
     "embodied",
     "robotics",
-    "robotic"
+    "robotic",
+    "language-action",
+    "structure-from-motion"
   ],
   "domain adaptation": [
     "domain adaptation",
@@ -560,7 +569,16 @@
     "mllm",
     "vlm",
     "multimodal models",
-    "multimodal llms"
+    "multimodal llms",
+    "multimodal large language model",
+    "lmm",
+    "multi-view diffusion",
+    "multi-view clustering",
+    "video models",
+    "video compression",
+    "video super-resolution",
+    "video synthesis",
+    "lvlm"
   ],
   "Code generation": [
     "code generation",
@@ -579,5 +597,62 @@
   "Agentic AI": [
     "agents",
     "multi-agent"
+  ],
+  "video": [
+    "video",
+    "video understanding",
+    "video analysis",
+    "video prediction",
+    "video segmentation",
+    "video captioning",
+    "video classification",
+    "video retrieval",
+    "video enhancement",
+    "video restoration",
+    "video object detection",
+    "video object segmentation",
+    "video question answering"
+  ],
+  "3d vision": [
+    "3d",
+    "head generation",
+    "head avatars",
+    "portrait animation"
+  ],
+  "long video generation": [
+    "long video generation",
+    "long videos"
+  ],
+  "remote sensing": [
+    "remote sensing",
+    "satellite imagery",
+    "aerial imagery",
+    "land cover classification"
+  ],
+  "tuning-free": [
+    "tuning-free"
+  ],
+  "region-aware": [
+    "region-aware"
+  ],
+  "agentic ai": [
+    "agentic",
+    "multi-agent systems",
+    "inference-time"
+  ],
+  "direct preference": [
+    "direct preference",
+    "direct preference optimization",
+    "preference optimization"
+  ],
+  "interpretation": [
+    "mechanistic"
+  ],
+  "watermarking": [
+    "watermarking",
+    "watermark"
+  ],
+  "contamination": [
+    "contamination"
   ]
 }

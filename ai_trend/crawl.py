@@ -38,6 +38,7 @@ class CrawlJob:
     domain: str | None = None
     offset: int = 0
     limit: int = DEFAULT_LIMIT
+    details: str | None = None  # per-job override (e.g. ICML needs ...%2Cwritable)
 
     def output_name(self) -> str:
         # e.g. iclr2025-poster-1000.json ; ingest globs "<token><year>*.json"
@@ -74,6 +75,7 @@ def load_jobs(config_path: Path | str) -> tuple[str, str, list[CrawlJob]]:
                 domain=j.get("domain"),
                 offset=int(j.get("offset", 0)),
                 limit=int(j.get("limit", DEFAULT_LIMIT)),
+                details=j.get("details"),
             )
         )
     return spider, details, jobs
@@ -82,8 +84,12 @@ def load_jobs(config_path: Path | str) -> tuple[str, str, list[CrawlJob]]:
 def build_command(
     job: CrawlJob, raw_dir: Path | str, *, spider: str = DEFAULT_SPIDER, details: str = "replyCount"
 ) -> list[str]:
-    """Build the ``scrapy crawl`` argv for one job (output path relative to raw_dir)."""
-    out = Path(raw_dir) / str(job.year) / job.output_name()
+    """Build the ``scrapy crawl`` argv for one job.
+
+    The output path is made absolute so it is independent of scrapy's working
+    directory (the spider runs with ``cwd=scrapy_dir``).
+    """
+    out = (Path(raw_dir) / str(job.year) / job.output_name()).resolve()
     cmd = [
         "scrapy", "crawl", spider,
         "-o", str(out),
@@ -91,7 +97,7 @@ def build_command(
         "-a", f"source={job.source}",
         "-a", f"type={job.type}",
         "-a", f"venue={job.venue}",
-        "-a", f"details={details}",
+        "-a", f"details={job.details or details}",
         "-a", f"offset={job.offset}",
         "-a", f"limit={job.limit}",
     ]
@@ -108,13 +114,20 @@ def crawl(
     scrapy_dir: Path | str = DEFAULT_SCRAPY_DIR,
     spider: str = DEFAULT_SPIDER,
     details: str = "replyCount",
+    only: set[str] | None = None,
     dry_run: bool = False,
 ) -> list[CrawlResult]:
-    """Run each crawl job best-effort; a failed job never aborts the rest."""
+    """Run each crawl job best-effort; a failed job never aborts the rest.
+
+    ``only`` restricts to jobs whose token is in the given set (case-insensitive).
+    """
     raw_dir = Path(raw_dir)
     raw_root = raw_dir.resolve()
+    only_lc = {t.lower() for t in only} if only else None
     results: list[CrawlResult] = []
     for job in jobs:
+        if only_lc is not None and job.token.lower() not in only_lc:
+            continue
         out = (raw_dir / str(job.year) / job.output_name()).resolve()
         if not str(out).startswith(str(raw_root) + "/") and out != raw_root:
             results.append(CrawlResult(job, ok=False, output=out, message="output path escapes raw_dir"))

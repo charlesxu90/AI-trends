@@ -206,8 +206,10 @@ def cmd_crawl(args: argparse.Namespace) -> int:
     if not jobs:
         _eprint("no crawl jobs defined; nothing to do")
         return 0
+    only = set(args.only.split(",")) if args.only else None
     results = crawl(
-        jobs, raw_dir=args.raw_dir, spider=spider, details=details, dry_run=args.dry_run
+        jobs, raw_dir=args.raw_dir, spider=spider, details=details,
+        only=only, dry_run=args.dry_run,
     )
     ok = sum(1 for r in results if r.ok)
     for r in results:
@@ -343,6 +345,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_crawl = sub.add_parser("crawl", help="run OpenReview crawl jobs from config/crawl.json")
     p_crawl.add_argument("--crawl-config", default="config/crawl.json")
     p_crawl.add_argument("--raw-dir", default="data/scrapy_crawl")
+    p_crawl.add_argument("--only", default=None, help="comma-separated tokens to crawl (e.g. icml)")
     p_crawl.add_argument("--dry-run", action="store_true", help="print commands, run nothing")
     p_crawl.set_defaults(func=cmd_crawl)
 

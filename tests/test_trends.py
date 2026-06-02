@@ -194,12 +194,14 @@ def test_reproduces_readme_2025_iclr():
         previous_year=2024,
     )
     assert trend.top == ["graph", "zero_few-shot", "llm", "generative model", "transformer"]
+    # emerging reflects the current unified taxonomy (134 topics); 'direct preference'
+    # was added with the 2025 CVPR/ICML keywords and now ranks here.
     assert trend.emerging == [
         "splatting",
+        "direct preference",
         "diffusion transformer",
         "state space model",
         "Flow matching",
-        "RAG",
     ]
     assert trend.fading == [
         "Deep Equilibrium Models",

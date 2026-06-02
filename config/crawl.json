@@ -1,13 +1,19 @@
 {
-  "_comment": "OpenReview crawl jobs (ICLR/ICML/NeurIPS). venue/domain strings are API-specific and MUST be updated each cycle (verify against api2.openreview.net). CVPR/ICCV are NOT on OpenReview and are crawled separately (CVF). Posters >1000 need extra jobs with higher offset. The jobs below are the known-good 2025 set kept as a working template.",
+  "_comment": "OpenReview crawl recipes ported from data/scrapy_crawl/run_scrapy_*.sh. venue/domain/details are API-specific and change per cycle; update or add jobs for new conference-years. Posters >1000 records need extra jobs with higher offset. NeurIPS opens in December. CVPR/ICCV are NOT on OpenReview (CVF source) and cannot be crawled here. Use `ai-trend crawl --only icml` to run a single venue.",
   "spider": "scrapy_openreview2",
-  "details": "replyCount",
+  "details": "replyCount%2Cpresentation",
   "jobs": [
     {"year": 2025, "source": "ICLR", "token": "iclr", "type": "oral", "venue": "ICLR%202025%20Oral", "domain": "ICLR.cc%2F2025%2FConference"},
     {"year": 2025, "source": "ICLR", "token": "iclr", "type": "spotlight", "venue": "ICLR%202025%20Spotlight", "domain": "ICLR.cc%2F2025%2FConference"},
     {"year": 2025, "source": "ICLR", "token": "iclr", "type": "poster", "venue": "ICLR%202025%20Poster", "domain": "ICLR.cc%2F2025%2FConference", "offset": 0},
     {"year": 2025, "source": "ICLR", "token": "iclr", "type": "poster", "venue": "ICLR%202025%20Poster", "domain": "ICLR.cc%2F2025%2FConference", "offset": 1000},
     {"year": 2025, "source": "ICLR", "token": "iclr", "type": "poster", "venue": "ICLR%202025%20Poster", "domain": "ICLR.cc%2F2025%2FConference", "offset": 2000},
-    {"year": 2025, "source": "ICML", "token": "icml", "type": "oral", "venue": "ICML%202025%20oral", "domain": "ICML.cc%2F2025%2FConference"}
+    {"year": 2025, "source": "ICLR", "token": "iclr", "type": "poster", "venue": "ICLR%202025%20Poster", "domain": "ICLR.cc%2F2025%2FConference", "offset": 3000},
+
+    {"year": 2025, "source": "ICML", "token": "icml", "type": "oral", "venue": "ICML%202025%20oral", "domain": "ICML.cc%2F2025%2FConference", "details": "replyCount%2Cpresentation%2Cwritable"},
+    {"year": 2025, "source": "ICML", "token": "icml", "type": "spotlight", "venue": "ICML%202025%20spotlightposter", "domain": "ICML.cc%2F2025%2FConference", "details": "replyCount%2Cpresentation%2Cwritable"},
+    {"year": 2025, "source": "ICML", "token": "icml", "type": "poster", "venue": "ICML%202025%20poster", "domain": "ICML.cc%2F2025%2FConference", "details": "replyCount%2Cpresentation%2Cwritable", "offset": 0},
+    {"year": 2025, "source": "ICML", "token": "icml", "type": "poster", "venue": "ICML%202025%20poster", "domain": "ICML.cc%2F2025%2FConference", "details": "replyCount%2Cpresentation%2Cwritable", "offset": 1000},
+    {"year": 2025, "source": "ICML", "token": "icml", "type": "poster", "venue": "ICML%202025%20poster", "domain": "ICML.cc%2F2025%2FConference", "details": "replyCount%2Cpresentation%2Cwritable", "offset": 2000}
   ]
 }

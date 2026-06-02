@@ -15,6 +15,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=7", "pytest-cov"]
+crawl = ["scrapy>=2.11"]       # `ai-trend crawl` (OpenReview spiders)
+curate = ["anthropic>=0.40"]   # `ai-trend refresh --curate` (headless AI curation)
 
 [project.scripts]
 ai-trend = "ai_trend.cli:main"
