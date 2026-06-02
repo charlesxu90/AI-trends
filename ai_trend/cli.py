@@ -175,7 +175,8 @@ def cmd_refresh(args: argparse.Namespace) -> int:
 
             client = make_client()
         except Exception as exc:  # missing SDK or key: degrade, don't abort the run
-            _eprint(f"warning: --curate requested but no Anthropic client ({exc}); skipping curation")
+            # log the exception *type* only — never the message (could echo the key)
+            _eprint(f"warning: --curate skipped: no Anthropic client ({type(exc).__name__})")
 
     summary = refresh(
         config_dir=Path(args.config),

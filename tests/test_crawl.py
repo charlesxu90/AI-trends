@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 
+import pytest
+
 from ai_trend.crawl import CrawlJob, build_command, crawl, load_jobs
 
 
@@ -38,3 +40,19 @@ def test_crawl_dry_run_runs_nothing(tmp_path):
     results = crawl(jobs, raw_dir=tmp_path, dry_run=True)
     assert len(results) == 1 and results[0].ok
     assert results[0].message.startswith("dry-run:")
+
+
+def test_load_jobs_rejects_unsafe_token(tmp_path):
+    cfg = tmp_path / "c.json"
+    cfg.write_text(json.dumps({"jobs": [
+        {"year": 2025, "source": "X", "token": "../evil", "type": "oral", "venue": "V"}]}),
+        encoding="utf-8")
+    with pytest.raises(ValueError):
+        load_jobs(cfg)
+
+
+def test_crawl_blocks_path_escape(tmp_path):
+    # defense-in-depth: a directly-built job whose path climbs out of raw_dir is blocked
+    job = CrawlJob(year=2025, source="X", token="../" * 12 + "tmp/evil", type="x", venue="V")
+    results = crawl([job], raw_dir=tmp_path / "raw", dry_run=False)
+    assert not results[0].ok and "escape" in results[0].message

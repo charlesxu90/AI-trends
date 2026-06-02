@@ -13,9 +13,14 @@ not invent them. CVPR / ICCV are not on OpenReview and are out of scope here.
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
+
+# Conference tokens become path segments; constrain them to a safe charset so a
+# config value can never escape the output directory.
+_SAFE_TOKEN = re.compile(r"^[a-z0-9_-]{1,32}$")
 
 DEFAULT_SPIDER = "scrapy_openreview2"
 DEFAULT_SCRAPY_DIR = Path(__file__).resolve().parent.parent / "data" / "scrapy_crawl"
@@ -52,19 +57,25 @@ def load_jobs(config_path: Path | str) -> tuple[str, str, list[CrawlJob]]:
     data = json.loads(Path(config_path).read_text(encoding="utf-8"))
     spider = data.get("spider", DEFAULT_SPIDER)
     details = data.get("details", "replyCount")
-    jobs = [
-        CrawlJob(
-            year=int(j["year"]),
-            source=j["source"],
-            token=j["token"],
-            type=j["type"],
-            venue=j["venue"],
-            domain=j.get("domain"),
-            offset=int(j.get("offset", 0)),
-            limit=int(j.get("limit", DEFAULT_LIMIT)),
+    jobs = []
+    for j in data.get("jobs", []):
+        token = str(j["token"]).lower()
+        job_type = str(j["type"])
+        for field, value in (("token", token), ("type", job_type)):
+            if not _SAFE_TOKEN.match(value):  # both become path segments in the filename
+                raise ValueError(f"unsafe crawl {field}: {value!r}")
+        jobs.append(
+            CrawlJob(
+                year=int(j["year"]),
+                source=j["source"],
+                token=token,
+                type=job_type,
+                venue=j["venue"],
+                domain=j.get("domain"),
+                offset=int(j.get("offset", 0)),
+                limit=int(j.get("limit", DEFAULT_LIMIT)),
+            )
         )
-        for j in data.get("jobs", [])
-    ]
     return spider, details, jobs
 
 
@@ -101,9 +112,13 @@ def crawl(
 ) -> list[CrawlResult]:
     """Run each crawl job best-effort; a failed job never aborts the rest."""
     raw_dir = Path(raw_dir)
+    raw_root = raw_dir.resolve()
     results: list[CrawlResult] = []
     for job in jobs:
-        out = raw_dir / str(job.year) / job.output_name()
+        out = (raw_dir / str(job.year) / job.output_name()).resolve()
+        if not str(out).startswith(str(raw_root) + "/") and out != raw_root:
+            results.append(CrawlResult(job, ok=False, output=out, message="output path escapes raw_dir"))
+            continue
         out.parent.mkdir(parents=True, exist_ok=True)
         cmd = build_command(job, raw_dir, spider=spider, details=details)
         if dry_run:
