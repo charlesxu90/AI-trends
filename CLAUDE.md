@@ -144,7 +144,7 @@ ai_trend/                   tested, deterministic Python package
 
 config/conferences.json                 tracked conferences (label, tokens, month)
 config/crawl.json                       OpenReview crawl jobs (venue/domain per cycle)
-.github/workflows/pages.yml             deploy docs/ to Pages on push
+(Pages: deploy-from-branch main /docs — auto-builds on push; no workflow needed)
 .github/workflows/refresh.yml           monthly pipeline -> opens a PR (M5)
 .claude/skills/curate-topics/SKILL.md   the AI reasoning step (only non-deterministic part)
 .claude/skills/add-conference/SKILL.md  URL -> full pipeline (natural-language front door, M6)
