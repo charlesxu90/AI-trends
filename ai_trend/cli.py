@@ -281,7 +281,14 @@ def cmd_citations(args: argparse.Namespace) -> int:
              if t.conference == conference and t.year == year),
             None,
         )
-        topic_set = set((trend.top + trend.emerging)) if trend else set()
+        if trend is None:
+            topic_set = set()
+        elif args.scope == "emerging":
+            topic_set = set(trend.emerging)
+        elif args.scope == "top":
+            topic_set = set(trend.top)
+        else:  # top-emerging
+            topic_set = set(trend.top + trend.emerging)
     if not topic_set:
         _eprint("error: no topics to scope citations (no trend found); pass --topics")
         return 2
@@ -451,7 +458,9 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_cit = sub.add_parser("citations", help="fetch Semantic Scholar citation counts (bounded, cached)")
     p_cit.add_argument("topics_csv", help="a *_topics.csv file")
-    p_cit.add_argument("--topics", default=None, help="comma-separated topics to scope (default: trend top+emerging)")
+    p_cit.add_argument("--topics", default=None, help="comma-separated topics to scope (overrides --scope)")
+    p_cit.add_argument("--scope", choices=["emerging", "top", "top-emerging"], default="emerging",
+                       help="which trend topics to fetch citations for (default: emerging)")
     p_cit.add_argument("--data-dir", default="data")
     p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
     p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")

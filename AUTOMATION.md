@@ -187,12 +187,15 @@ PYTHONNOUSERSITE=1 ./env/bin/ai-trend ingest-url "https://openaccess.thecvf.com/
 PYTHONNOUSERSITE=1 ./env/bin/ai-trend citations data/2025/7_icml.csv_topics.csv
 ```
 
-- Bounded to the conference-year's **top + emerging** topic papers (or `--topics`),
-  **cached** (`<csv>.citations.json`, resumable), with retry/backoff.
+- Scoped by `--scope {emerging,top,top-emerging}` (**default `emerging`** — the
+  emerging-topic papers, which is also the tractable subset; `top-emerging` is
+  ~10x larger) or an explicit `--topics`. **Cached** (`<csv>.citations.json`,
+  resumable), with retry/backoff.
 - Unauthenticated S2 is slow (~1 paper/sec, frequent 429s) — runs as a separate
   opt-in step. `0` (zero citations) is distinct from `null` (lookup failed).
 - `export-site` automatically surfaces cached citations: a count badge on paper
-  cards and a "Most cited" sort.
+  cards, and the browser **defaults to the "Most cited" sort** (papers without a
+  citation count sort last).
 
 ## Notes / known follow-ups
 
