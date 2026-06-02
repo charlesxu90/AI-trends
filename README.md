@@ -5,6 +5,13 @@ Conferences included: CVPR, ICCV, ICML, ICLR, NIPS.
 
 # 2025
 
+## 2025 CVPR
+| **Type**            | Topics |
+|---------------------|--------|
+| **Top 5 topics**    | '3d', '3d vision', 'video', 'generative model', 'multimodal' |
+| **Emerging topics** | 'state space model', 'long video generation', 'mixture-of-experts', 'diffusion transformer', 'world models' |
+| **Fading topics**   | 'offline reinforcement learning', 'imitation learning', 'self-supervision', 'chemical ai', 'Deep Equilibrium Models' |
+
 ## 2025 ICLR
 | **Type**            | Topics |
 |---------------------|--------|

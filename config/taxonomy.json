@@ -193,7 +193,8 @@
     "diffuse",
     "fusion models",
     "denoising diffusion",
-    "guided diffusion"
+    "guided diffusion",
+    "latent diffusion model"
   ],
   "curriculum learning": [
     "curriculum learning"
@@ -253,7 +254,8 @@
     "robotics",
     "robotic",
     "language-action",
-    "structure-from-motion"
+    "structure-from-motion",
+    "robotic manipulation"
   ],
   "domain adaptation": [
     "domain adaptation",
