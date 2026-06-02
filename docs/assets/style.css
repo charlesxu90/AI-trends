@@ -167,6 +167,9 @@ em { font-style: italic; }
 .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .tag { font-family: var(--mono); font-size: 0.72rem; padding: 0.2rem 0.55rem; border-radius: 999px; background: var(--paper-2); border: 1px solid var(--line-soft); cursor: pointer; transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
 .tag:hover { background: var(--ink); color: var(--paper); }
+.paper__links { margin-left: auto; display: inline-flex; gap: 0.7rem; align-items: center; }
+.paper__link { font-family: var(--mono); font-size: 0.72rem; font-weight: 600; color: var(--cool-ink); text-decoration: none; white-space: nowrap; }
+.paper__link:hover { color: var(--accent); text-decoration: underline; }
 
 .more { text-align: center; margin-top: 1.6rem; }
 .btn { font: inherit; font-weight: 700; cursor: pointer; padding: 0.7rem 1.6rem; border-radius: 999px; border: 1px solid var(--ink); background: transparent; color: var(--ink); transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
