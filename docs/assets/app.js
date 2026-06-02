@@ -300,11 +300,15 @@ function paintPapers() {
   $("#more-wrap").hidden = state.shownCount >= total;
 }
 
-// Prefer arXiv (precise) when the id is known; otherwise a Google Scholar title
-// search, which reliably finds the paper (incl. its arXiv version) for any title.
-function paperLink(p) {
-  if (p.arxiv) return `https://arxiv.org/abs/${p.arxiv}`;
-  return `https://scholar.google.com/scholar?q=${encodeURIComponent(p.title)}`;
+// Google Scholar title search — reliable for any paper (finds the arXiv version too).
+const scholarUrl = (p) => `https://scholar.google.com/scholar?q=${encodeURIComponent(p.title)}`;
+// arXiv abs page only when we actually have the id; otherwise omit it.
+const arxivUrl = (p) => (p.arxiv ? `https://arxiv.org/abs/${p.arxiv}` : null);
+// Title links to arXiv if known, else Scholar.
+const paperLink = (p) => arxivUrl(p) || scholarUrl(p);
+
+function _linkEl(href, text) {
+  return el("a", { className: "paper__link", href, target: "_blank", rel: "noopener", textContent: text });
 }
 
 function paperCard(p) {
@@ -318,14 +322,11 @@ function paperCard(p) {
   const venueText = Number.isFinite(p.citations)
     ? `${p.conference} ${p.year} · ${p.citations.toLocaleString()} cites`
     : `${p.conference} ${p.year}`;
+  // order: arXiv (only if id) · Scholar (always) · PDF (last, if present)
   const links = el("span", { className: "paper__links" }, [
-    el("a", {
-      className: "paper__link", href: paperLink(p), target: "_blank", rel: "noopener",
-      textContent: p.arxiv ? "arXiv ↗" : "Scholar ↗",
-    }),
-    p.pdf ? el("a", {
-      className: "paper__link", href: p.pdf, target: "_blank", rel: "noopener", textContent: "PDF ↗",
-    }) : null,
+    arxivUrl(p) ? _linkEl(arxivUrl(p), "arXiv ↗") : null,
+    _linkEl(scholarUrl(p), "Scholar ↗"),
+    p.pdf ? _linkEl(p.pdf, "PDF ↗") : null,
   ]);
   return el("li", { className: "paper" }, [
     el("div", { className: "paper__top" }, [
