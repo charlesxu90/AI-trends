@@ -158,6 +158,42 @@ Merging triggers the Pages deploy.
 Settings → Actions → General → "Allow GitHub Actions to create and approve pull
 requests". Keep `config/crawl.json` venue strings current.
 
+## URL-driven ingestion (Milestone 6)
+
+Add a conference-year from a single URL — driven in natural language via the
+**`add-conference`** Claude Code skill, or directly:
+
+```bash
+# OpenReview (auto-discovers venues by venue id — no hand-maintained venue strings):
+PYTHONNOUSERSITE=1 ./env/bin/ai-trend ingest-url "https://openreview.net/group?id=ICML.cc/2025/Conference"
+
+# thecvf (CVPR/ICCV):
+PYTHONNOUSERSITE=1 ./env/bin/ai-trend ingest-url "https://openaccess.thecvf.com/CVPR2024?day=all"
+
+# add --full to also assign + trends + export with the current taxonomy
+```
+
+- `ai_trend/sources.py` detects the source (host) and extracts conference+year,
+  resolved against the registry's `source` field (`openreview` | `cvf`).
+- `ai_trend/openreview.py` paginates api2 `/notes?content.venueid=<id>` and derives
+  `class` from each note's venue (oral/spotlight/poster).
+- `ai_trend/cvf.py` scrapes `openaccess.thecvf.com/<CONF><YEAR>?day=all`
+  (requests + BeautifulSoup; CVPR/ICCV have no abstracts).
+- Needs the `web` extra: `pip install -e '.[web]'` (requests + beautifulsoup4).
+
+### Citations (Semantic Scholar)
+
+```bash
+PYTHONNOUSERSITE=1 ./env/bin/ai-trend citations data/2025/7_icml.csv_topics.csv
+```
+
+- Bounded to the conference-year's **top + emerging** topic papers (or `--topics`),
+  **cached** (`<csv>.citations.json`, resumable), with retry/backoff.
+- Unauthenticated S2 is slow (~1 paper/sec, frequent 429s) — runs as a separate
+  opt-in step. `0` (zero citations) is distinct from `null` (lookup failed).
+- `export-site` automatically surfaces cached citations: a count badge on paper
+  cards and a "Most cited" sort.
+
 ## Notes / known follow-ups
 
 - 2021–2023 `*_topics.csv` have been re-assigned with the unified taxonomy (done in
