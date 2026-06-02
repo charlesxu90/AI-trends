@@ -77,6 +77,52 @@ def _setup(tmp_path):
     return config, data
 
 
+def test_export_site_recovers_citations_from_existing_shard(tmp_path):
+    """Citation sidecars live under gitignored data/; on a fresh checkout they are
+    absent. Re-export must NOT blank citations already published in the shard."""
+    config, data = _setup(tmp_path)
+    out = tmp_path / "site"
+    taxonomy = Taxonomy.load(config)
+    export_site(out, taxonomy=taxonomy, data_dir=data)
+
+    shard_path = out / "papers" / "ICLR_2025.json"
+    recs = json.loads(shard_path.read_text())
+    for r in recs:  # simulate a previously-published shard that carried citations
+        r["citations"] = 42 if r["title"] == "P2" else 7
+    shard_path.write_text(json.dumps(recs), encoding="utf-8")
+
+    # re-export with NO sidecar present (the gitignored-data scenario)
+    export_site(out, taxonomy=taxonomy, data_dir=data)
+
+    after = {r["title"]: r for r in json.loads(shard_path.read_text())}
+    assert after["P2"]["citations"] == 42  # recovered, not blanked
+    assert after["P3"]["citations"] == 7
+
+
+def test_export_site_sidecar_overrides_and_backfills(tmp_path):
+    """A present sidecar wins (fresh counts); the prior shard backfills titles the
+    sidecar omits."""
+    config, data = _setup(tmp_path)
+    out = tmp_path / "site"
+    taxonomy = Taxonomy.load(config)
+    export_site(out, taxonomy=taxonomy, data_dir=data)
+
+    shard_path = out / "papers" / "ICLR_2025.json"
+    recs = json.loads(shard_path.read_text())
+    for r in recs:
+        r["citations"] = 42 if r["title"] == "P2" else 7
+    shard_path.write_text(json.dumps(recs), encoding="utf-8")
+
+    side = data / "2025" / "5_iclr.csv_topics.csv.citations.json"
+    side.write_text(json.dumps({"P2": 99}), encoding="utf-8")  # fresh value for P2 only
+
+    export_site(out, taxonomy=taxonomy, data_dir=data)
+
+    after = {r["title"]: r for r in json.loads(shard_path.read_text())}
+    assert after["P2"]["citations"] == 99  # sidecar takes precedence
+    assert after["P3"]["citations"] == 7   # backfilled from prior shard
+
+
 def test_export_site_writes_manifest_trends_and_shards(tmp_path):
     config, data = _setup(tmp_path)
     out = tmp_path / "site"

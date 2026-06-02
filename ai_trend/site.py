@@ -92,6 +92,29 @@ def build_paper_record(
     return record
 
 
+def _recover_from_shard(shard_path: Path) -> tuple[dict, dict]:
+    """Recover ``{title: citations}`` and ``{title: arxiv}`` from a prior shard.
+
+    Citation/arxiv data is produced into sidecars under gitignored ``data/``. On a
+    fresh checkout (CI / the monthly cron) those sidecars are absent, but the
+    previously-exported shard still carries the values. Reading them back lets
+    re-export reuse already-published citations instead of blanking the site.
+    """
+    if not shard_path.exists():
+        return {}, {}
+    try:
+        records = json.loads(shard_path.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return {}, {}
+    cites = {
+        r["title"]: r["citations"]
+        for r in records
+        if r.get("title") and r.get("citations") is not None
+    }
+    arxiv = {r["title"]: r["arxiv"] for r in records if r.get("title") and r.get("arxiv")}
+    return cites, arxiv
+
+
 def export_site(
     out_dir: Path | str = DEFAULT_SITE_DATA_DIR,
     *,
@@ -130,18 +153,24 @@ def export_site(
         for year in sorted(index[conference]):
             topics_path = index[conference][year]
             df = pd.read_csv(topics_path)
+            rel = f"papers/{conference}_{year}.json"
             # optional sidecars produced by `ai-trend citations` / `verify-citations`
             cite_path = Path(str(topics_path) + ".citations.json")
-            citations = json.loads(cite_path.read_text(encoding="utf-8")) if cite_path.exists() else None
+            side_cites = json.loads(cite_path.read_text(encoding="utf-8")) if cite_path.exists() else {}
             arxiv_path = Path(str(topics_path) + ".arxiv.json")
-            arxiv = json.loads(arxiv_path.read_text(encoding="utf-8")) if arxiv_path.exists() else None
+            side_arxiv = json.loads(arxiv_path.read_text(encoding="utf-8")) if arxiv_path.exists() else {}
+            # Guard against blanking: backfill from the previously-exported shard
+            # (sidecars are gitignored and absent on fresh checkouts). A present
+            # sidecar wins — including explicit nulls from verify-citations.
+            prev_cites, prev_arxiv = _recover_from_shard(out_dir / rel)
+            citations = {**prev_cites, **side_cites} or None
+            arxiv = {**prev_arxiv, **side_arxiv} or None
             records = [
                 build_paper_record(row, conference, year, abstract_chars, citations, arxiv, deltas)
                 for row in df.to_dict("records")
             ]
             for record in records:
                 seen_topics.update(record["topics"])
-            rel = f"papers/{conference}_{year}.json"
             (out_dir / rel).write_text(
                 json.dumps(records, ensure_ascii=False), encoding="utf-8"
             )
