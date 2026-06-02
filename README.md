@@ -9,59 +9,66 @@ Conferences included: CVPR, ICCV, ICML, ICLR, NIPS.
 | **Type**            | Topics |
 |---------------------|--------|
 | **Top 5 topics**    | 'graph', 'zero_few-shot', 'llm', 'generative model', 'transformer' |
-| **Emerging topics** | 'splatting', 'diffusion transformer', 'state space model', 'Flow matching', 'RAG' |
+| **Emerging topics** | 'splatting', 'direct preference', 'diffusion transformer', 'state space model', 'Flow matching' |
 | **Fading topics**   | 'Deep Equilibrium Models', 'domain adaptation', 'Spiking Neural Networks', 'optical flow', 'neural collapse' |
+
+## 2025 ICML
+| **Type**            | Topics |
+|---------------------|--------|
+| **Top 5 topics**    | 'graph', 'zero_few-shot', 'llm', 'optimization', 'transformer' |
+| **Emerging topics** | 'Mathematical reasoning', 'agentic ai', 'diffusion transformer', 'camera', 'text-to-video' |
+| **Fading topics**   | 'Deep Equilibrium Models', 'text-to-3d generation', 'radiance field', 'neural collapse', 'music generation' |
 
 # 2024
 
 ## 2024 CVPR
 | **Type**            | Topics |
 |---------------------|--------|
-| **Top 5 topics**    | '3d', 'generative model', 'segmentation', 'multimodal', 'zero_few-shot' |
-| **Emerging topics** | 'multi-modal', 'guidance in generative model', 'text-to-3d generation', 'foundation models', 'text-to-video' |
+| **Top 5 topics**    | '3d', '3d vision', 'generative model', 'segmentation', 'video' |
+| **Emerging topics** | 'guidance in generative model', 'text-to-3d generation', 'foundation models', 'text-to-video', 'explainable AI' |
 | **Fading topics**   | 'curriculum learning', 'time series forecasting', 'text-video', 'self-supervision', 'meta-learning' |
 
 ## 2024 ICLR
 | **Type**            | Topics |
 |---------------------|--------|
 | **Top 5 topics**    | 'graph', 'zero_few-shot', 'llm', 'transformer', 'generative model' |
-| **Emerging topics** | 'optical flow', 'foundation models', 'RAG', 'Spiking Neural Networks', 'multi-modal' |
+| **Emerging topics** | 'optical flow', 'foundation models', 'RAG', 'Spiking Neural Networks', 'text-to-video' |
 | **Fading topics**   | 'self-supervision', 'enhancement', 'weakly-supervised', 'music generation', 'self-learning' |
 
 ## 2024 ICML
 | **Type**            | Topics |
 |---------------------|--------|
 | **Top 5 topics**    | 'graph', 'zero_few-shot', 'llm', 'optimization', 'transformer' |
-| **Emerging topics** | 'tokenize', 'memory-efficient LLM', 'multi-modal', 'mixture-of-experts', 'music generation' |
+| **Emerging topics** | 'tokenize', 'memory-efficient LLM', 'mixture-of-experts', 'music generation', 'multi-modal' |
 | **Fading topics**   | 'Concept Bottleneck Models', 'camera', 'curriculum learning', 'Flow', 'linear networks' |
 
 ## 2024 NIPS
 | **Type**            | Topics |
 |---------------------|--------|
 | **Top 5 topics**    | 'zero_few-shot', 'graph', 'llm', 'optimization', 'transformer' |
-| **Emerging topics** | 'splatting', 'diffusion transformer', 'Mathematical reasoning', 'state space model', 'text-to-video' |
-| **Fading topics**   | 'bayesian', 'self-learning', 'Non-parametric', 'contrastive learning', 'category discovery' |
+| **Emerging topics** | 'splatting', 'direct preference', 'diffusion transformer', 'Mathematical reasoning', 'state space model' |
+| **Fading topics**   | 'remote sensing', 'bayesian', 'self-learning', 'Non-parametric', 'contrastive learning' |
 
 # 2023
 
 ## 2023 CVPR
 | **Type**            | Topics |
 |---------------------|--------|
-| **Top 5 topics**    | 'segmentation', '3d', 'zero_few-shot', 'transformer', 'multimodal' |
+| **Top 5 topics**    | 'segmentation', '3d', '3d vision', 'video', 'zero_few-shot' |
 | **Emerging topics** | 'diffusion models', 'reinforcement learning', 'inference', 'high-fidelity', 'llm' |
 | **Fading topics**   | 'offline reinforcement learning', 'vae', 'low-rank', 'differential equation solving', 'watermark' |
 
 ## 2023 ICCV
 | **Type**            | Topics |
 |---------------------|--------|
-| **Top 5 topics**    | '3d', 'segmentation', 'transformer', 'zero_few-shot', 'adaptation' |
+| **Top 5 topics**    | '3d vision', '3d', 'segmentation', 'transformer', 'video' |
 
 ## 2023 ICLR
 | **Type**            | Topics |
 |---------------------|--------|
 | **Top 5 topics**    | 'zero_few-shot', 'graph', 'representation', 'transformer', 'optimization' |
-| **Emerging topics** | 'radiance field', 'diffusion models', 'biased', 'personalization', 'world models' |
-| **Fading topics**   | 'watermark', 'reward model', 'Deep Equilibrium Models', 'EEG', 'optical flow' |
+| **Emerging topics** | 'radiance field', 'diffusion models', 'biased', 'multi-modal', 'personalization' |
+| **Fading topics**   | 'watermark', 'reward model', 'Deep Equilibrium Models', 'watermarking', 'EEG' |
 
 ## 2023 ICML
 | **Type**            | Topics |
@@ -74,17 +81,17 @@ Conferences included: CVPR, ICCV, ICML, ICLR, NIPS.
 | **Type**            | Topics |
 |---------------------|--------|
 | **Top 5 topics**    | 'zero_few-shot', 'graph', 'optimization', 'llm', 'transformer' |
-| **Emerging topics** | 'diffusion models', 'multi-modal', 'foundation models', 'reward model', 'tokenize' |
-| **Fading topics**   | 'decision trees', 'vae', 'deformation', 'text-video', 'Spiking Neural Networks' |
+| **Emerging topics** | 'interpretation', 'diffusion models', 'foundation models', 'reward model', 'tokenize' |
+| **Fading topics**   | 'long video generation', 'tuning-free', 'decision trees', 'vae', 'deformation' |
 
 # 2022
 
 ## 2022 CVPR
 | **Type**            | Topics |
 |---------------------|--------|
-| **Top 5 topics**    | 'segmentation', 'transformer', 'zero_few-shot', '3d', 'graph' |
+| **Top 5 topics**    | 'segmentation', 'transformer', 'zero_few-shot', '3d', '3d vision' |
 | **Emerging topics** | 'federated learning', 'radiance field', 'llm', 'high-fidelity', 'transformer' |
-| **Fading topics**   | 'decision trees', 'monte carlo', 'time series forecasting', 'Membership Inference', 'optimal transport' |
+| **Fading topics**   | 'decision trees', 'monte carlo', 'time series forecasting', 'Membership Inference', 'agentic ai' |
 
 ## 2022 ICLR
 | **Type**            | Topics |
@@ -105,14 +112,14 @@ Conferences included: CVPR, ICCV, ICML, ICLR, NIPS.
 |---------------------|--------|
 | **Top 5 topics**    | 'zero_few-shot', 'graph', 'optimization', 'representation', 'reinforcement learning' |
 | **Emerging topics** | 'mixture-of-experts', 'distribution shifts', 'linear networks', 'radiance field', 'diffusion models' |
-| **Fading topics**   | 'music generation', 'curriculum learning', 'category discovery', 'tokenize', 'low-rank' |
+| **Fading topics**   | 'music generation', 'curriculum learning', 'contamination', 'category discovery', 'tokenize' |
 
 # 2021
 
 ## 2021 CVPR
 | **Type**            | Topics |
 |---------------------|--------|
-| **Top 5 topics**    | 'segmentation', '3d', 'zero_few-shot', 'adaptation', 'graph' |
+| **Top 5 topics**    | 'segmentation', '3d', '3d vision', 'zero_few-shot', 'video' |
 
 ## 2021 ICLR
 | **Type**            | Topics |

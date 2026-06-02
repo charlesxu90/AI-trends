@@ -25,6 +25,22 @@ def test_build_command_omits_domain_when_absent(tmp_path):
     assert "domain=" not in " ".join(build_command(job, tmp_path))
 
 
+def test_build_command_per_job_details_overrides_default(tmp_path):
+    job = CrawlJob(year=2025, source="ICML", token="icml", type="poster", venue="V",
+                   details="replyCount%2Cpresentation%2Cwritable")
+    assert "details=replyCount%2Cpresentation%2Cwritable" in " ".join(
+        build_command(job, tmp_path, details="replyCount"))
+
+
+def test_crawl_only_filters_by_token(tmp_path):
+    jobs = [
+        CrawlJob(year=2025, source="ICLR", token="iclr", type="oral", venue="V"),
+        CrawlJob(year=2025, source="ICML", token="icml", type="oral", venue="V"),
+    ]
+    results = crawl(jobs, raw_dir=tmp_path, only={"icml"}, dry_run=True)
+    assert len(results) == 1 and results[0].job.token == "icml"
+
+
 def test_load_jobs(tmp_path):
     cfg = tmp_path / "crawl.json"
     cfg.write_text(json.dumps({
