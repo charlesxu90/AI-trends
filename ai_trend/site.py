@@ -61,7 +61,6 @@ def build_paper_record(
     abstract_chars: int = DEFAULT_ABSTRACT_CHARS,
     citations: dict | None = None,
     arxiv: dict | None = None,
-    deltas: dict | None = None,
 ) -> dict:
     topics = [t for t in str(row.get("topic", "")).split(";") if t and t != "nan"]
     abstract = _text(row.get("abstract"))
@@ -85,10 +84,6 @@ def build_paper_record(
         arxiv_id = arxiv.get(title)
         if arxiv_id:
             record["arxiv"] = arxiv_id
-    if deltas:
-        delta = deltas.get(title)
-        if delta is not None:
-            record["delta"] = delta
     return record
 
 

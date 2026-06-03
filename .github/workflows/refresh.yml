@@ -99,6 +99,5 @@ jobs:
             config/**
             data/**
             docs/**
-            citation-history/**
             CONFERENCES.md
             README.md

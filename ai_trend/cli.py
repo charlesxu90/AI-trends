@@ -367,22 +367,6 @@ def cmd_check_sources(args: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_snapshot_citations(args: argparse.Namespace) -> int:
-    import datetime
-
-    from ai_trend.citations import DEFAULT_HISTORY_DIR, snapshot_citations
-
-    date_str = args.date or datetime.date.today().isoformat()
-    out = snapshot_citations(
-        date_str, data_dir=args.data_dir, history_dir=args.history_dir or DEFAULT_HISTORY_DIR
-    )
-    import json as _json
-
-    n = len(_json.loads(out.read_text(encoding="utf-8")))
-    _eprint(f"snapshot: {n} citation counts -> {out}")
-    return 0
-
-
 def cmd_verify_citations(args: argparse.Namespace) -> int:
     import glob
 
@@ -612,12 +596,6 @@ def build_parser() -> argparse.ArgumentParser:
     p_src.add_argument("--file", default=None, help="sources markdown (default: CONFERENCES.md)")
     p_src.add_argument("--check", action="store_true", help="also verify each URL is reachable")
     p_src.set_defaults(func=cmd_check_sources)
-
-    p_snap = sub.add_parser("snapshot-citations", help="record a dated snapshot of citation counts (for velocity)")
-    p_snap.add_argument("--data-dir", default="data")
-    p_snap.add_argument("--history-dir", default=None, help="snapshot store (default: citation-history/)")
-    p_snap.add_argument("--date", default=None, help="snapshot date (default: today)")
-    p_snap.set_defaults(func=cmd_snapshot_citations)
 
     p_ver = sub.add_parser("verify-citations", help="re-verify high cached citation counts by title match")
     p_ver.add_argument("topics_csv", nargs="?", default=None, help="a *_topics.csv (default: all sidecars)")

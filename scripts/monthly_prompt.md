@@ -15,8 +15,8 @@ Steps:
 2. Run the deterministic refresh to catch anything else and rebuild outputs:
    `ai-trend refresh --discover --spacy-model en_core_sci_lg` (add `--curate` only if
    ANTHROPIC_API_KEY is set in the environment).
-3. Recompute and snapshot: `ai-trend trends --include-counts -o data/trends/trends.json`,
-   `ai-trend snapshot-citations`, then `ai-trend export-site`.
+3. Recompute and rebuild: `ai-trend trends --include-counts -o data/trends/trends.json`,
+   then `ai-trend export-site`.
 4. `ai-trend check-sources --check` and fix any gaps/dead links in CONFERENCES.md.
 5. If anything changed, commit on a branch and open a PR with `gh pr create`
    summarizing what was added/updated. If nothing changed, do nothing.
