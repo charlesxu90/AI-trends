@@ -30,6 +30,7 @@ async function getJSON(path) {
 
 /* ---------- bootstrap ---------- */
 async function init() {
+  initNavToggle(); // header menu works regardless of data load
   try {
     const [manifest, trends] = await Promise.all([
       getJSON(DATA + "manifest.json"),
@@ -350,6 +351,21 @@ function paperCard(p) {
 }
 
 /* ---------- side nav (scroll-spy) ---------- */
+function initNavToggle() {
+  const inner = $(".site-head__inner");
+  const btn = $(".nav-toggle");
+  const nav = $("#site-nav");
+  if (!inner || !btn || !nav) return;
+  const setOpen = (open) => {
+    inner.classList.toggle("is-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+  };
+  btn.addEventListener("click", () => setOpen(btn.getAttribute("aria-expanded") !== "true"));
+  // collapse after choosing a destination, and on Escape
+  nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+}
+
 function initSideNav() {
   const links = [...document.querySelectorAll(".sidenav a")];
   const byTarget = Object.fromEntries(links.map((a) => [a.dataset.target, a]));

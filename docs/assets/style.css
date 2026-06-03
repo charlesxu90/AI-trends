@@ -72,17 +72,44 @@ em { font-style: italic; }
 .nav a:hover { color: var(--ink); }
 .nav__ext { color: var(--ink); }
 
-/* Narrow screens: stop the brand and nav from overlapping — drop the nav onto
-   its own line as a wrapped, tappable list. */
+/* Hamburger toggle — hidden on desktop, revealed on narrow screens. */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px; height: 42px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.nav-toggle__bar {
+  display: block; width: 20px; height: 2px; margin: 0 auto;
+  background: var(--ink);
+  transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+
+/* Narrow screens: brand + menu button on the bar; nav collapses into a
+   tappable dropdown list that the button opens/closes. */
 @media (max-width: 640px) {
-  .site-head__inner { flex-wrap: wrap; height: auto; padding-block: 0.55rem; row-gap: 0.45rem; }
+  .site-head__inner { flex-wrap: wrap; min-height: 64px; height: auto; }
+  .nav-toggle { display: flex; }
   .nav {
     flex-basis: 100%;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 0.35rem 1.25rem;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-bottom: 0.4rem;
   }
-  .nav a { padding: 0.3rem 0; }  /* larger tap target */
+  .site-head__inner.is-open .nav { display: flex; }
+  .nav a { padding: 0.75rem 0.2rem; border-top: 1px solid var(--line-soft); }
+  /* morph the bars into an X while open */
+  .site-head__inner.is-open .nav-toggle__bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .site-head__inner.is-open .nav-toggle__bar:nth-child(2) { opacity: 0; }
+  .site-head__inner.is-open .nav-toggle__bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 }
 
 /* ---------- hero ---------- */
