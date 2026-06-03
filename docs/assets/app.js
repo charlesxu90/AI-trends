@@ -284,10 +284,7 @@ async function applyFilters() {
     return true;
   });
   const sort = $("#f-sort").value;
-  if (sort === "rising") {
-    // citation velocity (gain since last snapshot) when available, else total citations
-    state.filtered.sort((a, b) => (b.delta ?? b.citations ?? -1) - (a.delta ?? a.citations ?? -1));
-  } else if (sort === "citations") {
+  if (sort === "citations") {
     state.filtered.sort((a, b) => (b.citations ?? -1) - (a.citations ?? -1));
   }
   state.shownCount = PAGE;

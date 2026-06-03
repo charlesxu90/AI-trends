@@ -89,10 +89,10 @@ jobs:
           title: "chore: monthly AI-trend data refresh"
           body: |
             Automated monthly refresh: crawl → **discover** (probe & ingest newly-available
-            conference-years) → process → assign → AI curate → trends → snapshot → export-site.
+            conference-years) → process → assign → AI curate → trends → export-site.
 
             Review the regenerated taxonomy (`config/`), labels (`data/**_topics.csv`),
-            citation snapshot (`citation-history/`), and site (`docs/`). Merge to publish
+            and site (`docs/`). Merge to publish
             (Pages redeploys from `main`/`docs`). Check the "Check conference source links"
             step log for gaps / dead links in `CONFERENCES.md`.
           add-paths: |

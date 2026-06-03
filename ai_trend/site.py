@@ -142,10 +142,6 @@ def export_site(
         json.dumps(trends_payload, ensure_ascii=False), encoding="utf-8"
     )
 
-    from ai_trend.citations import latest_deltas
-
-    deltas = latest_deltas()  # citation gains between the two most recent snapshots (empty if <2)
-
     index = discover_conference_years(data_dir, registry.token_to_label)
     shards: list[dict] = []
     seen_topics: set[str] = set()
@@ -166,7 +162,7 @@ def export_site(
             citations = {**prev_cites, **side_cites} or None
             arxiv = {**prev_arxiv, **side_arxiv} or None
             records = [
-                build_paper_record(row, conference, year, abstract_chars, citations, arxiv, deltas)
+                build_paper_record(row, conference, year, abstract_chars, citations, arxiv)
                 for row in df.to_dict("records")
             ]
             for record in records:
