@@ -161,7 +161,6 @@ data/{year}/{N}_{conf}.csv_topics.csv   labeled output (adds `topic` column)
 data/trends/trends.json                 computed trends (M2 output, gitignored)
 docs/                                   static GitHub Pages site (committed)
 docs/data/                              site JSON: manifest, trends, paper shards
-*.ipynb                                  original/legacy pipeline (still present)
 ```
 
 Pipeline: `candidates → /curate-topics skill → curate → assign → trends →
