@@ -1,4 +1,4 @@
-# <img src="assets/logo.png" alt="" height="38" align="middle"> AI Trends in Conferences
+# <img src="assets/logo.png" alt="" height="64" align="bottom"> AI Trends in Conferences
 
 **Live site → https://charlesxu90.github.io/AI-trends/**
 
