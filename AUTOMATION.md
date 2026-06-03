@@ -4,7 +4,7 @@ Milestone 1: automated topic assignment. Milestone 2: automated trend computatio
 
 
 
-Replaces the manual keyword→topic curation in `1.assign_topics.ipynb` with an
+Replaces the manual keyword→topic curation from the original notebook with an
 AI agent (Claude Code as the reasoning core) plus deterministic CLI tools. The
 curated taxonomy is preserved; assignment stays reproducible.
 
@@ -81,11 +81,11 @@ into `data/trends/trends.json` (structured) or README-style markdown.
 
 ## Provenance & verification
 
-- `scripts/migrate_notebook_taxonomy.py` regenerates `config/*.json` by executing
-  the notebook's dict-building cells (faithful, not retyped).
+- `config/*.json` was migrated faithfully from the original notebook's dicts
+  (executed, not retyped) and is now the single source of truth.
 - `scripts/check_agreement.py` diffs a fresh `topic` column against a committed
   `*_topics.csv`. The deterministic port reproduces the 2024 + 2025 labels at
-  **100%** (15,327 papers) — the conference-years the final notebook regenerated.
+  **100%** (15,327 papers) — the conference-years the original pipeline labelled.
 
 ## Tests
 

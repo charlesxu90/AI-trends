@@ -1,7 +1,7 @@
 """Deterministic topic assignment by substring matching.
 
 Ported verbatim (in semantics) from ``obtain_topic_for_text`` / ``assign_topics``
-in ``1.assign_topics.ipynb``. Faithfulness matters: the committed ``*_topics.csv``
+in the original notebook. Faithfulness matters: the committed ``*_topics.csv``
 files were produced by this exact logic, and Milestone 1 proves the port matches.
 
 Matching rules, preserved exactly from the notebook:

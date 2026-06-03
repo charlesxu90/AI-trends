@@ -1,6 +1,6 @@
 """Citation counts from Semantic Scholar (S2AG), hardened and cached.
 
-Ported from ``2.popular_topics.ipynb`` (which used the ``semanticscholar`` pkg).
+Ported from the original notebook (which used the ``semanticscholar`` pkg).
 This calls the public relevance-search endpoint directly with retry/backoff, a
 resumable on-disk cache, and an explicit distinction between "0 citations" and
 "lookup failed" (``None``).

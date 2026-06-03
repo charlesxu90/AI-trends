@@ -2,7 +2,7 @@
 
 CVPR/ICCV are not on OpenReview; their accepted-paper listings live at
 ``https://openaccess.thecvf.com/<CONF><YEAR>?day=all``. Ported and hardened from
-``0.process_6_CVPR.ipynb``: robust sibling navigation (``find_next_sibling``),
+the original CVPR-processing notebook: robust sibling navigation (``find_next_sibling``),
 PDF link picked by ``.pdf`` suffix (not "first anchor"), per-paper errors skipped
 rather than aborting the run.
 

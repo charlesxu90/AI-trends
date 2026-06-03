@@ -1,7 +1,7 @@
 """Candidate-keyword extraction via scispaCy NER.
 
 Ported from ``obtain_cadidate_keywords`` / ``count_keywords`` /
-``get_keyword_by_spacy`` in ``1.assign_topics.ipynb``. Given a list of (lowercased)
+``get_keyword_by_spacy`` in the original notebook. Given a list of (lowercased)
 paper titles, extract named entities, drop ones already known to the taxonomy or on
 the noise blocklist, and keep those occurring more than ``threshold`` times.
 

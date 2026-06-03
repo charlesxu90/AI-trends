@@ -1,6 +1,6 @@
 """Merge crawled OpenReview JSON into per-conference-year CSVs.
 
-Ported from ``0.process_scrapy.ipynb``. The spider writes one JSON file per
+Ported from the original crawl-processing notebook. The spider writes one JSON file per
 venue/type (e.g. ``2025/iclr2025-oral.json``), each already in the final record
 schema. This step concatenates a conference-year's JSON files into a single
 ``data/<year>/<month>_<key>.csv``, prefixes OpenReview PDF links, and de-dupes by

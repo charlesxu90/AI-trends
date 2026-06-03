@@ -1,7 +1,7 @@
 """Topic-frequency trends: top / emerging / fading per conference-year.
 
 Ported from ``calculate_topic_frequency_ratio`` and the per-conference trend cells
-in ``1.assign_topics.ipynb``. Definitions, preserved exactly (verified to reproduce
+in the original notebook. Definitions, preserved exactly (verified to reproduce
 the committed README tables):
 
 * **count** -- number of papers carrying a topic (a paper may carry several; the

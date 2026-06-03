@@ -152,7 +152,6 @@ config/crawl.json                       OpenReview crawl jobs (venue/domain per 
 CONFERENCES.md                          maintained table of per-conference-year source URLs + dates
 ai_trend/probe.py                       check if a conference-year's papers are published yet
 ai_trend/sources.py                     URL detect + CONFERENCES.md parser
-scripts/migrate_notebook_taxonomy.py    regenerate config/* from the notebook
 scripts/check_agreement.py              verify assignment vs committed labels
 tests/                      pytest suite (target >=80% coverage; currently ~94%)
 
@@ -177,7 +176,7 @@ Re-run `export-site` after any re-assign/trends change.
 
 ## Hard constraints (do not break)
 
-- **Faithful assignment semantics.** `assign.py` reproduces the notebook exactly:
+- **Faithful assignment semantics.** `assign.py` reproduces the original notebook exactly:
   search text is `f"{title.lower()} {abstract.lower()|None}"`; keywords are matched
   as **case-sensitive substrings** (so uppercase keywords never match — a
   deliberate, preserved quirk). Topics join with `;` in **taxonomy insertion

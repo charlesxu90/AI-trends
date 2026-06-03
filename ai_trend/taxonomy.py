@@ -1,8 +1,8 @@
 """The curated topic taxonomy and noise blocklist.
 
 Single source of truth lives in ``config/taxonomy.json`` (topic -> keyword list)
-and ``config/useless_keywords.json`` (noise keyword list), migrated out of the
-original notebook by ``scripts/migrate_notebook_taxonomy.py``.
+and ``config/useless_keywords.json`` (noise keyword list), migrated faithfully
+from the original notebook pipeline (since removed).
 
 Design notes faithful to the original notebook:
 
