@@ -72,6 +72,19 @@ em { font-style: italic; }
 .nav a:hover { color: var(--ink); }
 .nav__ext { color: var(--ink); }
 
+/* Narrow screens: stop the brand and nav from overlapping — drop the nav onto
+   its own line as a wrapped, tappable list. */
+@media (max-width: 640px) {
+  .site-head__inner { flex-wrap: wrap; height: auto; padding-block: 0.55rem; row-gap: 0.45rem; }
+  .nav {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.35rem 1.25rem;
+  }
+  .nav a { padding: 0.3rem 0; }  /* larger tap target */
+}
+
 /* ---------- hero ---------- */
 .hero { padding: clamp(2.2rem, 1.4rem + 2.5vw, 4rem) 0; border-bottom: 1px solid var(--line); }
 .hero__inner { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(2rem, 4vw, 4.5rem); align-items: center; }
