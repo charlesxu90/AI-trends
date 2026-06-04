@@ -538,6 +538,10 @@ def fetch_citations_multi(
     log(f"citations: {len(remaining)} to fetch via {[p.name for p in providers]} "
         f"({len(titles) - len(remaining)} cached)")
     blocked_until: dict[str, float] = {p.name: 0.0 for p in providers}
+    # providers that already verified no-match for a title — never re-query them
+    # (a no-match answer won't change), so revisits only retry the blocked sources.
+    no_match: dict[str, set] = {t: set() for t in remaining}
+    n_providers = len(providers)
     bar = _progress_bar(len(remaining)) if progress else None
     saved = 0
 
@@ -548,8 +552,7 @@ def fetch_citations_multi(
     try:
         while remaining:
             now = time_fn()
-            available = [p for p in providers if blocked_until[p.name] <= now]
-            if not available:  # every source cooling down — wait for the soonest
+            if all(blocked_until[p.name] > now for p in providers):  # every source cooling
                 nap = min(cap_sleep, max(1.0, min(blocked_until.values()) - now))
                 log(f"citations: all sources cooling down; sleeping {int(nap)}s "
                     f"({len(remaining)} remaining)")
@@ -559,26 +562,21 @@ def fetch_citations_multi(
             progressed = False
             for title in remaining:
                 now = time_fn()
-                usable = [p for p in providers if blocked_until[p.name] <= now]
-                if not usable:
-                    still.append(title)
-                    continue
+                usable = [p for p in providers
+                          if blocked_until[p.name] <= now and p.name not in no_match[title]]
                 count = None
-                blocked_this = False
-                tried = 0
                 pace = 0.0  # throttle of the source that resolved this title
                 for p in usable:
                     r = p.search(title, session, sleep=sleep)
-                    tried += 1
                     if _is_failed(r):
                         backoff = r.retry_after if r.retry_after is not None else p.cooldown
                         blocked_until[p.name] = time_fn() + backoff
-                        blocked_this = True
                         log(f"citations: {p.name} rate-limited; backing off {int(backoff)}s")
                         continue
                     pace = p.throttle
                     if r is None:
-                        continue  # this source has no match — try the next
+                        no_match[title].add(p.name)  # remember — don't re-query this source
+                        continue
                     count = r
                     break
                 if count is not None:
@@ -586,18 +584,19 @@ def fetch_citations_multi(
                     if count.get("arxiv"):
                         arxiv[title] = count["arxiv"]
                     progressed = True
-                elif not blocked_this and tried == len(providers):
-                    cache[title] = None  # unanimous verified no-match across all sources
+                elif len(no_match[title]) == n_providers:
+                    cache[title] = None  # every source verified no-match
                     progressed = True
                 else:
-                    still.append(title)  # blocked somewhere — revisit after cooldown
+                    still.append(title)  # blocked sources remain untried — revisit later
                 if title in cache:
                     saved += 1
                     if bar is not None:
                         bar.update(1)
                     if saved % 25 == 0:
                         _save()
-                sleep(pace)
+                if pace:
+                    sleep(pace)
             remaining = still
             if remaining and not progressed:
                 # nothing advanced and items remain → everything left is blocked
