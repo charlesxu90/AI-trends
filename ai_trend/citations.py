@@ -30,14 +30,34 @@ DEFAULT_THROTTLE = 1.1  # seconds between calls (public tier ~1 req/s)
 DEFAULT_RETRIES = 4
 DEFAULT_BACKOFF = 2.0  # seconds, doubled each retry
 
-# Sentinel: the request itself failed (429/network), as opposed to a successful
-# lookup that found no title match. Callers must NOT cache this — it should be
-# retried — whereas a genuine no-match is cached as None (a verified negative).
-FETCH_FAILED = object()
+# A failed lookup (429/network) — NOT a no-match. Callers must not cache it (a
+# genuine no-match is cached as None). ``retry_after`` carries the server's
+# Retry-After (seconds) when provided, so a source can be backed off for exactly
+# as long as it asks rather than a guessed interval.
+@dataclass(frozen=True)
+class _Failed:
+    retry_after: float | None = None
 
-# Abort a fetch run after this many consecutive request failures: a sign S2 is
-# rate-limiting hard, so grinding through the rest just wastes time (and the run
-# is resumable — re-run when S2 is reachable or S2_API_KEY is set).
+
+FETCH_FAILED = _Failed()  # generic failure, no Retry-After hint
+
+
+def _is_failed(result) -> bool:
+    return isinstance(result, _Failed)
+
+
+def _retry_after_seconds(resp) -> float | None:
+    headers = getattr(resp, "headers", None)
+    raw = headers.get("Retry-After") if hasattr(headers, "get") else None
+    try:
+        return float(raw) if raw is not None else None
+    except (TypeError, ValueError):
+        return None
+
+
+# Abort a single-source fetch run after this many consecutive request failures: a
+# sign the source is rate-limiting hard, so grinding through the rest just wastes
+# time (and the run is resumable).
 MAX_CONSECUTIVE_FAILURES = 10
 
 
@@ -87,8 +107,8 @@ def _s2_request(
     retries: int,
     backoff: float,
     sleep,
-) -> list | None:
-    """GET the S2 relevance-search ``data`` list (retry/backoff), or None on failure."""
+) -> "list | _Failed":
+    """GET the S2 relevance-search ``data`` list, or :class:`_Failed` on failure."""
     params = {"query": query.replace("-", " "), "fields": fields, "limit": limit}
     for attempt in range(retries + 1):
         try:
@@ -98,15 +118,16 @@ def _s2_request(
                 if attempt < retries:
                     sleep(backoff * (2 ** attempt))
                     continue
-                return None
+                ra = _retry_after_seconds(resp)
+                return _Failed(ra) if ra is not None else FETCH_FAILED
             resp.raise_for_status()
             return resp.json().get("data") or []
         except Exception:  # network/parse error
             if attempt < retries:
                 sleep(backoff * (2 ** attempt))
                 continue
-            return None
-    return None
+            return FETCH_FAILED
+    return FETCH_FAILED
 
 
 def search_citation(
@@ -121,7 +142,9 @@ def search_citation(
     :func:`search_paper_verified` for trustworthy counts."""
     data = _s2_request(session, title, "title,citationCount", 1,
                        retries=retries, backoff=backoff, sleep=sleep)
-    return (data[0].get("citationCount") if data else None)
+    if _is_failed(data) or not data:
+        return None
+    return data[0].get("citationCount")
 
 
 OPENALEX_WORKS = "https://api.openalex.org/works"
@@ -154,15 +177,16 @@ def _openalex_request(
                 if attempt < retries:
                     sleep(backoff * (2 ** attempt))
                     continue
-                return None
+                ra = _retry_after_seconds(resp)
+                return _Failed(ra) if ra is not None else FETCH_FAILED
             resp.raise_for_status()
             return resp.json().get("results") or []
         except Exception:
             if attempt < retries:
                 sleep(backoff * (2 ** attempt))
                 continue
-            return None
-    return None
+            return FETCH_FAILED
+    return FETCH_FAILED
 
 
 def search_openalex_verified(
@@ -183,8 +207,8 @@ def search_openalex_verified(
     """
     results = _openalex_request(session, title, mailto=mailto, per_page=limit,
                                 retries=retries, backoff=backoff, sleep=sleep)
-    if results is None:
-        return FETCH_FAILED
+    if _is_failed(results):
+        return results
     for result in results:
         candidate = result.get("title") or result.get("display_name") or ""
         if titles_match(title, candidate):
@@ -214,8 +238,8 @@ def search_paper_verified(
     """
     data = _s2_request(session, title, "title,citationCount,externalIds,year", limit,
                        retries=retries, backoff=backoff, sleep=sleep)
-    if data is None:
-        return FETCH_FAILED  # request failed — retry later, do not cache
+    if _is_failed(data):
+        return data  # request failed — retry later, do not cache
     for result in data:
         if titles_match(title, result.get("title", "")):
             external = result.get("externalIds") or {}
@@ -256,15 +280,16 @@ def _crossref_request(
                 if attempt < retries:
                     sleep(backoff * (2 ** attempt))
                     continue
-                return None
+                ra = _retry_after_seconds(resp)
+                return _Failed(ra) if ra is not None else FETCH_FAILED
             resp.raise_for_status()
             return resp.json().get("message", {}).get("items") or []
         except Exception:
             if attempt < retries:
                 sleep(backoff * (2 ** attempt))
                 continue
-            return None
-    return None
+            return FETCH_FAILED
+    return FETCH_FAILED
 
 
 def search_crossref_verified(
@@ -288,8 +313,8 @@ def search_crossref_verified(
     """
     items = _crossref_request(session, title, mailto=mailto, rows=limit,
                               retries=retries, backoff=backoff, sleep=sleep)
-    if items is None:
-        return FETCH_FAILED
+    if _is_failed(items):
+        return items
     nq = _normalize_title(title)
     for item in items:
         cand = (item.get("title") or [""])[0]
@@ -408,7 +433,7 @@ def fetch_citations(
             result = searcher(title, session, sleep=sleep)
             if bar is not None:
                 bar.update(1)
-            if result is FETCH_FAILED:
+            if _is_failed(result):
                 # Request failed (429/network): leave uncached so it retries next run.
                 consecutive_failures += 1
                 if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
@@ -441,39 +466,45 @@ def fetch_citations(
 
 @dataclass(frozen=True)
 class Provider:
-    """A title→citation lookup, plus the cooldown to apply when it rate-limits."""
+    """A title→citation lookup with the pacing/backoff constraints of its source."""
     name: str
-    search: Callable  # (title, session, *, sleep) -> dict | None | FETCH_FAILED
-    cooldown: float  # seconds to skip this provider after a FETCH_FAILED
+    search: Callable  # (title, session, *, sleep) -> dict | None | _Failed
+    throttle: float   # min seconds between calls to this source (its allowed rate)
+    cooldown: float   # default backoff after a rate-limit, when no Retry-After given
 
 
-# Default cooldown per source, tuned to how each behaves when its budget is spent.
-_PROVIDER_COOLDOWN = {"openalex": 3600.0, "s2": 600.0, "crossref": 300.0}
+# Per-source constraints (https URLs' published / observed limits):
+#   openalex  — key-free budget is ~1k requests then a multi-hour reset; it sends a
+#               precise Retry-After, so honour that and use a long default fallback.
+#   s2        — shared public pool ~1 req/s; fluctuates, so retry after minutes.
+#   crossref  — polite pool is fast (~tens/s) and rarely caps; short backoff.
+_PROVIDER_SPEC = {
+    "openalex": {"throttle": 0.15, "cooldown": 21600.0},  # 6h fallback if no Retry-After
+    "s2": {"throttle": 1.0, "cooldown": 300.0},
+    "crossref": {"throttle": 0.1, "cooldown": 120.0},
+}
 
 
 def build_providers(names: list[str], *, mailto: str = "") -> list[Provider]:
     """Build a fallback chain from source keys (order = priority).
 
     Each provider fails fast (``retries=1``) so a rate-limited source hands off to
-    the next quickly instead of burning ~30s on exponential backoff.
+    the next quickly instead of burning ~30s on exponential backoff; per-source
+    throttle/cooldown come from :data:`_PROVIDER_SPEC`.
     """
     fast = {"retries": 1, "backoff": 1.0}
-    factory = {
-        "openalex": lambda: Provider(
-            "openalex", partial(search_openalex_verified, mailto=mailto, **fast),
-            _PROVIDER_COOLDOWN["openalex"]),
-        "s2": lambda: Provider("s2", partial(search_paper_verified, **fast),
-                               _PROVIDER_COOLDOWN["s2"]),
-        "crossref": lambda: Provider(
-            "crossref", partial(search_crossref_verified, mailto=mailto, **fast),
-            _PROVIDER_COOLDOWN["crossref"]),
+    fn = {
+        "openalex": partial(search_openalex_verified, mailto=mailto, **fast),
+        "s2": partial(search_paper_verified, **fast),
+        "crossref": partial(search_crossref_verified, mailto=mailto, **fast),
     }
     out: list[Provider] = []
     for n in names:
         n = n.strip()
-        if n not in factory:
-            raise ValueError(f"unknown citation source: {n!r} (choose from {sorted(factory)})")
-        out.append(factory[n]())
+        if n not in fn:
+            raise ValueError(f"unknown citation source: {n!r} (choose from {sorted(fn)})")
+        spec = _PROVIDER_SPEC[n]
+        out.append(Provider(n, fn[n], spec["throttle"], spec["cooldown"]))
     return out
 
 
@@ -483,7 +514,6 @@ def fetch_citations_multi(
     session: "requests.Session",
     providers: list[Provider],
     *,
-    throttle: float = 0.2,
     cap_sleep: float = 3600.0,
     sleep=time.sleep,
     time_fn=time.monotonic,
@@ -493,11 +523,13 @@ def fetch_citations_multi(
     """Fetch citations trying several sources with fallback (resumable, incremental).
 
     For each title the providers are tried in priority order; the first verified
-    hit wins. A provider that rate-limits (``FETCH_FAILED``) is skipped for its
-    ``cooldown`` so the others keep going — "as one sleeps, the other downloads".
+    hit wins. A provider that rate-limits is skipped for the server's ``Retry-After``
+    (or its default ``cooldown``) so the others keep going — "as one sleeps, the
+    other downloads". Pacing between calls uses the *resolving* source's throttle.
     A title is cached as ``None`` only when *every* provider was reachable and all
     returned no-match. When all providers are cooling down, sleeps until the
-    soonest is free. Counts from different sources are interchangeable here.
+    soonest is free (capped at ``cap_sleep`` so a multi-hour OpenAlex reset is
+    re-checked periodically). Counts from different sources are interchangeable.
     """
     cache = load_cache(cache_path)
     apath = arxiv_cache_path(cache_path)
@@ -534,14 +566,17 @@ def fetch_citations_multi(
                 count = None
                 blocked_this = False
                 tried = 0
+                pace = 0.0  # throttle of the source that resolved this title
                 for p in usable:
                     r = p.search(title, session, sleep=sleep)
                     tried += 1
-                    if r is FETCH_FAILED:
-                        blocked_until[p.name] = time_fn() + p.cooldown
+                    if _is_failed(r):
+                        backoff = r.retry_after if r.retry_after is not None else p.cooldown
+                        blocked_until[p.name] = time_fn() + backoff
                         blocked_this = True
-                        log(f"citations: {p.name} rate-limited; backing off {int(p.cooldown)}s")
+                        log(f"citations: {p.name} rate-limited; backing off {int(backoff)}s")
                         continue
+                    pace = p.throttle
                     if r is None:
                         continue  # this source has no match — try the next
                     count = r
@@ -562,7 +597,7 @@ def fetch_citations_multi(
                         bar.update(1)
                     if saved % 25 == 0:
                         _save()
-                sleep(throttle)
+                sleep(pace)
             remaining = still
             if remaining and not progressed:
                 # nothing advanced and items remain → everything left is blocked

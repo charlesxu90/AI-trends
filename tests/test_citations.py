@@ -24,9 +24,10 @@ def test_s2_headers_includes_key_when_set(monkeypatch):
 
 
 class _Resp:
-    def __init__(self, status, payload=None):
+    def __init__(self, status, payload=None, headers=None):
         self.status_code = status
         self._payload = payload or {}
+        self.headers = headers or {}
 
     def json(self):
         return self._payload
@@ -317,7 +318,7 @@ def _provider(name, cooldown, results):
         state["i"] += 1
         return r
 
-    return Provider(name, fn, cooldown)
+    return Provider(name, fn, 0.0, cooldown)
 
 
 def test_fetch_citations_multi_falls_back_to_next_source(tmp_path):
@@ -327,7 +328,7 @@ def test_fetch_citations_multi_falls_back_to_next_source(tmp_path):
     a = _provider("a", 100, [FETCH_FAILED])          # always rate-limited
     b = _provider("b", 100, [{"citationCount": 7, "arxiv": None}])
     fetch_citations_multi(["P"], cache, None, [a, b],
-                          throttle=0, sleep=lambda *_: None)
+                          sleep=lambda *_: None)
     assert load_cache(cache) == {"P": 7}  # fell back to b
 
 
@@ -338,7 +339,7 @@ def test_fetch_citations_multi_caches_none_on_unanimous_no_match(tmp_path):
     a = _provider("a", 100, [None])
     b = _provider("b", 100, [None])
     fetch_citations_multi(["P"], cache, None, [a, b],
-                          throttle=0, sleep=lambda *_: None)
+                          sleep=lambda *_: None)
     assert load_cache(cache) == {"P": None}
 
 
@@ -351,7 +352,37 @@ def test_fetch_citations_multi_sleeps_when_all_blocked_then_resumes(tmp_path):
     a = _provider("a", 100, [FETCH_FAILED, {"citationCount": 1, "arxiv": None}])
     b = _provider("b", 50, [FETCH_FAILED, {"citationCount": 9, "arxiv": None}])
     fetch_citations_multi(["P"], cache, None, [a, b],
-                          throttle=0, sleep=clock.sleep, time_fn=clock.time)
+                          sleep=clock.sleep, time_fn=clock.time)
     # after both blocked, it slept until b (shorter cooldown) freed, then got b's count
     assert load_cache(cache) == {"P": 9}
     assert clock.t >= 50  # it actually slept through the cooldown
+
+
+# ---- source-aware constraints (Retry-After + per-source backoff) ------------
+def test_failed_request_carries_retry_after_header():
+    from ai_trend.citations import _is_failed, search_paper_verified
+
+    sess = _FakeSession([_Resp(429, headers={"Retry-After": "123"})])
+    r = search_paper_verified("X", sess, retries=0, sleep=lambda *_: None)
+    assert _is_failed(r) and r.retry_after == 123.0
+
+
+def test_fetch_citations_multi_honours_retry_after_over_cooldown(tmp_path):
+    """A server Retry-After takes precedence over the provider's default cooldown."""
+    from ai_trend.citations import Provider, _Failed, fetch_citations_multi, load_cache
+
+    cache = tmp_path / "c.citations.json"
+    clock = _Clock()
+    state = {"i": 0}
+
+    def fn(title, session, sleep=None):
+        state["i"] += 1
+        if state["i"] == 1:
+            return _Failed(retry_after=40)  # ask to wait 40s, not the 9999 cooldown
+        return {"citationCount": 5, "arxiv": None}
+
+    p = Provider("a", fn, throttle=0.0, cooldown=9999)
+    fetch_citations_multi(["P"], cache, None, [p],
+                          sleep=clock.sleep, time_fn=clock.time)
+    assert load_cache(cache) == {"P": 5}
+    assert 40 <= clock.t < 9999  # slept the Retry-After, not the long default cooldown

@@ -321,7 +321,7 @@ def cmd_citations(args: argparse.Namespace) -> int:
 
         providers = build_providers(sources, mailto=mailto)
         fetch_citations_multi(titles, cache_path, requests.Session(), providers,
-                              throttle=args.throttle, log=_eprint, progress=True)
+                              log=_eprint, progress=True)
     _eprint(f"citations cached -> {cache_path} (re-run export-site to surface them)")
     return 0
 
