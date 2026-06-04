@@ -486,15 +486,17 @@ class Provider:
 #              public 429 is a *transient* shared-pool collision, so retry through
 #              it a few times with exponential backoff.
 #
-# S2 unauthenticated policy (per Semantic Scholar): ≤1 RPS per IP on a global shared
-# pool, requests must be STRICTLY SERIAL (parallel unauth requests get blocked
-# almost immediately), use adaptive exponential backoff on 429, and cache. We honor
-# all of these: a single serial runner, 1.1s throttle (<1 RPS), exponential backoff
-# in _s2_request, Retry-After honored, and a resumable on-disk cache. A free API key
-# (S2_API_KEY) lifts us out of the shared pool to a dedicated 1 RPS.
+# S2 policy: the introductory limit is 1 request/second on ALL endpoints (this holds
+# even WITH a key — the key just moves you off the contended shared pool to a
+# dedicated 1 RPS). Requests must be STRICTLY SERIAL (parallel requests get blocked),
+# use exponential backoff on 429, and cache. We honor all of these: a single serial
+# runner; 1.1s throttle between calls; retry backoff base 1.1s so even the first
+# retry gap is ≥1s (every consecutive S2 call is ≥1.1s apart → <1 RPS); Retry-After
+# honored; resumable on-disk cache.
+S2_THROTTLE = 1.1   # seconds between S2 calls — keep ≥1.0 to respect the 1 RPS cap
 _PROVIDER_SPEC = {
     "openalex": {"throttle": 0.15, "cooldown": 21600.0, "retries": 1},  # 6h fallback if no Retry-After
-    "s2": {"throttle": 1.1, "cooldown": 30.0, "retries": 4},            # serial, ~1 RPS, exp-backoff
+    "s2": {"throttle": S2_THROTTLE, "cooldown": 30.0, "retries": 4, "backoff": S2_THROTTLE},
     "crossref": {"throttle": 0.1, "cooldown": 120.0, "retries": 1},
 }
 
@@ -507,9 +509,9 @@ def build_providers(names: list[str], *, mailto: str = "") -> list[Provider]:
     S2 retries through its transient shared-pool 429s at ~1 req/s.
     """
     fn = {
-        "openalex": lambda r: partial(search_openalex_verified, mailto=mailto, retries=r, backoff=1.0),
-        "s2": lambda r: partial(search_paper_verified, retries=r, backoff=1.0),
-        "crossref": lambda r: partial(search_crossref_verified, mailto=mailto, retries=r, backoff=1.0),
+        "openalex": lambda r, b: partial(search_openalex_verified, mailto=mailto, retries=r, backoff=b),
+        "s2": lambda r, b: partial(search_paper_verified, retries=r, backoff=b),
+        "crossref": lambda r, b: partial(search_crossref_verified, mailto=mailto, retries=r, backoff=b),
     }
     out: list[Provider] = []
     for n in names:
@@ -517,7 +519,8 @@ def build_providers(names: list[str], *, mailto: str = "") -> list[Provider]:
         if n not in fn:
             raise ValueError(f"unknown citation source: {n!r} (choose from {sorted(fn)})")
         spec = _PROVIDER_SPEC[n]
-        out.append(Provider(n, fn[n](spec["retries"]), spec["throttle"], spec["cooldown"]))
+        out.append(Provider(n, fn[n](spec["retries"], spec.get("backoff", 1.0)),
+                            spec["throttle"], spec["cooldown"]))
     return out
 
 
