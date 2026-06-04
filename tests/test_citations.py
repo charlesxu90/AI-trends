@@ -254,3 +254,104 @@ def test_verify_existing_nulls_unverifiable_high_counts(tmp_path):
     assert out["Real Paper"] is None  # unverified -> dropped
     assert out["Tiny"] == 3           # untouched (below threshold)
     assert summary["checked"] == 1 and summary["unverified"] == 1
+
+
+# ---- Crossref source --------------------------------------------------------
+def test_search_crossref_verified_exact_match():
+    from ai_trend.citations import search_crossref_verified
+
+    sess = _FakeSession([_Resp(200, {"message": {"items": [
+        {"title": ["My Exact Paper Title"], "is-referenced-by-count": 12},
+    ]}})])
+    out = search_crossref_verified("My Exact Paper Title", sess, sleep=lambda *_: None)
+    assert out["citationCount"] == 12
+
+
+def test_search_crossref_verified_rejects_reordered_near_title():
+    """Strict exact-normalised match: a word-reordered near-title must NOT match
+    (token-set Jaccard would wrongly accept it)."""
+    from ai_trend.citations import search_crossref_verified
+
+    sess = _FakeSession([_Resp(200, {"message": {"items": [
+        {"title": ["Is Attention All You Need?"], "is-referenced-by-count": 46},
+    ]}})])
+    assert search_crossref_verified("Attention Is All You Need", sess, sleep=lambda *_: None) is None
+
+
+def test_search_crossref_failed_request_returns_sentinel():
+    from ai_trend.citations import FETCH_FAILED, search_crossref_verified
+
+    sess = _FakeSession([_Resp(429), _Resp(429)])
+    assert search_crossref_verified("X", sess, retries=1, sleep=lambda *_: None) is FETCH_FAILED
+
+
+def test_build_providers_unknown_source_raises():
+    from ai_trend.citations import build_providers
+
+    try:
+        build_providers(["openalex", "bogus"])
+        assert False, "expected ValueError"
+    except ValueError:
+        pass
+
+
+# ---- multi-source fallback --------------------------------------------------
+class _Clock:
+    def __init__(self):
+        self.t = 0.0
+
+    def time(self):
+        return self.t
+
+    def sleep(self, s):
+        self.t += s
+
+
+def _provider(name, cooldown, results):
+    from ai_trend.citations import Provider
+
+    state = {"i": 0}
+
+    def fn(title, session, sleep=None):
+        r = results[min(state["i"], len(results) - 1)]
+        state["i"] += 1
+        return r
+
+    return Provider(name, fn, cooldown)
+
+
+def test_fetch_citations_multi_falls_back_to_next_source(tmp_path):
+    from ai_trend.citations import FETCH_FAILED, fetch_citations_multi, load_cache
+
+    cache = tmp_path / "c.citations.json"
+    a = _provider("a", 100, [FETCH_FAILED])          # always rate-limited
+    b = _provider("b", 100, [{"citationCount": 7, "arxiv": None}])
+    fetch_citations_multi(["P"], cache, None, [a, b],
+                          throttle=0, sleep=lambda *_: None)
+    assert load_cache(cache) == {"P": 7}  # fell back to b
+
+
+def test_fetch_citations_multi_caches_none_on_unanimous_no_match(tmp_path):
+    from ai_trend.citations import fetch_citations_multi, load_cache
+
+    cache = tmp_path / "c.citations.json"
+    a = _provider("a", 100, [None])
+    b = _provider("b", 100, [None])
+    fetch_citations_multi(["P"], cache, None, [a, b],
+                          throttle=0, sleep=lambda *_: None)
+    assert load_cache(cache) == {"P": None}
+
+
+def test_fetch_citations_multi_sleeps_when_all_blocked_then_resumes(tmp_path):
+    from ai_trend.citations import FETCH_FAILED, fetch_citations_multi, load_cache
+
+    cache = tmp_path / "c.citations.json"
+    clock = _Clock()
+    # both fail first, then succeed once their cooldown elapses
+    a = _provider("a", 100, [FETCH_FAILED, {"citationCount": 1, "arxiv": None}])
+    b = _provider("b", 50, [FETCH_FAILED, {"citationCount": 9, "arxiv": None}])
+    fetch_citations_multi(["P"], cache, None, [a, b],
+                          throttle=0, sleep=clock.sleep, time_fn=clock.time)
+    # after both blocked, it slept until b (shorter cooldown) freed, then got b's count
+    assert load_cache(cache) == {"P": 9}
+    assert clock.t >= 50  # it actually slept through the cooldown

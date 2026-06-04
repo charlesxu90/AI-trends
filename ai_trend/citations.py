@@ -16,8 +16,10 @@ import json
 import os
 import re
 import time
+from dataclasses import dataclass
+from functools import partial
 from pathlib import Path
-from typing import TYPE_CHECKING, Iterable
+from typing import TYPE_CHECKING, Callable, Iterable
 
 if TYPE_CHECKING:  # pragma: no cover - typing only
     import pandas as pd
@@ -225,6 +227,81 @@ def search_paper_verified(
     return None
 
 
+CROSSREF_WORKS = "https://api.crossref.org/works"
+
+
+def _crossref_request(
+    session: "requests.Session",
+    title: str,
+    *,
+    mailto: str,
+    rows: int,
+    retries: int,
+    backoff: float,
+    sleep,
+) -> list | None:
+    """GET Crossref ``message.items`` for a bibliographic title query, or None."""
+    params = {
+        "query.bibliographic": str(title),
+        "rows": rows,
+        "select": "title,is-referenced-by-count",
+    }
+    if mailto:
+        params["mailto"] = mailto  # Crossref polite pool
+    for attempt in range(retries + 1):
+        try:
+            resp = session.get(CROSSREF_WORKS, params=params, timeout=30,
+                               headers={"User-Agent": "ai-trend/0.1"})
+            if resp.status_code == 429:
+                if attempt < retries:
+                    sleep(backoff * (2 ** attempt))
+                    continue
+                return None
+            resp.raise_for_status()
+            return resp.json().get("message", {}).get("items") or []
+        except Exception:
+            if attempt < retries:
+                sleep(backoff * (2 ** attempt))
+                continue
+            return None
+    return None
+
+
+def search_crossref_verified(
+    title: str,
+    session: "requests.Session",
+    *,
+    mailto: str = "",
+    limit: int = 5,
+    retries: int = DEFAULT_RETRIES,
+    backoff: float = DEFAULT_BACKOFF,
+    sleep=time.sleep,
+) -> dict | None:
+    """Citation count (``is-referenced-by-count``) for the Crossref work whose title
+    matches ``title``.
+
+    Crossref relevance search is order-insensitive and happily returns near-titles
+    (e.g. "Is Attention All You Need?" for "Attention Is All You Need"), which the
+    token-set Jaccard in :func:`titles_match` would wrongly accept — so this requires
+    an **exact normalised** title match. Returns ``None`` (no match) or
+    :data:`FETCH_FAILED` (request failed).
+    """
+    items = _crossref_request(session, title, mailto=mailto, rows=limit,
+                              retries=retries, backoff=backoff, sleep=sleep)
+    if items is None:
+        return FETCH_FAILED
+    nq = _normalize_title(title)
+    for item in items:
+        cand = (item.get("title") or [""])[0]
+        if _normalize_title(cand) == nq:  # strict: exact normalised, not Jaccard
+            return {
+                "citationCount": item.get("is-referenced-by-count"),
+                "arxiv": None,
+                "title": cand,
+            }
+    return None
+
+
 def arxiv_cache_path(citations_cache_path: Path | str) -> Path:
     s = str(citations_cache_path)
     return Path(s[: -len(".citations.json")] + ".arxiv.json" if s.endswith(".citations.json")
@@ -357,6 +434,150 @@ def fetch_citations(
             bar.close()
     save_cache(cache_path, cache)
     save_cache(apath, arxiv)
+    return cache
+
+
+# ---- multi-source fallback ---------------------------------------------------
+
+@dataclass(frozen=True)
+class Provider:
+    """A title→citation lookup, plus the cooldown to apply when it rate-limits."""
+    name: str
+    search: Callable  # (title, session, *, sleep) -> dict | None | FETCH_FAILED
+    cooldown: float  # seconds to skip this provider after a FETCH_FAILED
+
+
+# Default cooldown per source, tuned to how each behaves when its budget is spent.
+_PROVIDER_COOLDOWN = {"openalex": 3600.0, "s2": 600.0, "crossref": 300.0}
+
+
+def build_providers(names: list[str], *, mailto: str = "") -> list[Provider]:
+    """Build a fallback chain from source keys (order = priority).
+
+    Each provider fails fast (``retries=1``) so a rate-limited source hands off to
+    the next quickly instead of burning ~30s on exponential backoff.
+    """
+    fast = {"retries": 1, "backoff": 1.0}
+    factory = {
+        "openalex": lambda: Provider(
+            "openalex", partial(search_openalex_verified, mailto=mailto, **fast),
+            _PROVIDER_COOLDOWN["openalex"]),
+        "s2": lambda: Provider("s2", partial(search_paper_verified, **fast),
+                               _PROVIDER_COOLDOWN["s2"]),
+        "crossref": lambda: Provider(
+            "crossref", partial(search_crossref_verified, mailto=mailto, **fast),
+            _PROVIDER_COOLDOWN["crossref"]),
+    }
+    out: list[Provider] = []
+    for n in names:
+        n = n.strip()
+        if n not in factory:
+            raise ValueError(f"unknown citation source: {n!r} (choose from {sorted(factory)})")
+        out.append(factory[n]())
+    return out
+
+
+def fetch_citations_multi(
+    titles: list[str],
+    cache_path: Path | str,
+    session: "requests.Session",
+    providers: list[Provider],
+    *,
+    throttle: float = 0.2,
+    cap_sleep: float = 3600.0,
+    sleep=time.sleep,
+    time_fn=time.monotonic,
+    log=lambda *_: None,
+    progress: bool = False,
+) -> dict[str, int | None]:
+    """Fetch citations trying several sources with fallback (resumable, incremental).
+
+    For each title the providers are tried in priority order; the first verified
+    hit wins. A provider that rate-limits (``FETCH_FAILED``) is skipped for its
+    ``cooldown`` so the others keep going — "as one sleeps, the other downloads".
+    A title is cached as ``None`` only when *every* provider was reachable and all
+    returned no-match. When all providers are cooling down, sleeps until the
+    soonest is free. Counts from different sources are interchangeable here.
+    """
+    cache = load_cache(cache_path)
+    apath = arxiv_cache_path(cache_path)
+    arxiv = load_cache(apath)
+    remaining = [t for t in titles if t not in cache]
+    log(f"citations: {len(remaining)} to fetch via {[p.name for p in providers]} "
+        f"({len(titles) - len(remaining)} cached)")
+    blocked_until: dict[str, float] = {p.name: 0.0 for p in providers}
+    bar = _progress_bar(len(remaining)) if progress else None
+    saved = 0
+
+    def _save():
+        save_cache(cache_path, cache)
+        save_cache(apath, arxiv)
+
+    try:
+        while remaining:
+            now = time_fn()
+            available = [p for p in providers if blocked_until[p.name] <= now]
+            if not available:  # every source cooling down — wait for the soonest
+                nap = min(cap_sleep, max(1.0, min(blocked_until.values()) - now))
+                log(f"citations: all sources cooling down; sleeping {int(nap)}s "
+                    f"({len(remaining)} remaining)")
+                sleep(nap)
+                continue
+            still: list[str] = []
+            progressed = False
+            for title in remaining:
+                now = time_fn()
+                usable = [p for p in providers if blocked_until[p.name] <= now]
+                if not usable:
+                    still.append(title)
+                    continue
+                count = None
+                blocked_this = False
+                tried = 0
+                for p in usable:
+                    r = p.search(title, session, sleep=sleep)
+                    tried += 1
+                    if r is FETCH_FAILED:
+                        blocked_until[p.name] = time_fn() + p.cooldown
+                        blocked_this = True
+                        log(f"citations: {p.name} rate-limited; backing off {int(p.cooldown)}s")
+                        continue
+                    if r is None:
+                        continue  # this source has no match — try the next
+                    count = r
+                    break
+                if count is not None:
+                    cache[title] = count["citationCount"]
+                    if count.get("arxiv"):
+                        arxiv[title] = count["arxiv"]
+                    progressed = True
+                elif not blocked_this and tried == len(providers):
+                    cache[title] = None  # unanimous verified no-match across all sources
+                    progressed = True
+                else:
+                    still.append(title)  # blocked somewhere — revisit after cooldown
+                if title in cache:
+                    saved += 1
+                    if bar is not None:
+                        bar.update(1)
+                    if saved % 25 == 0:
+                        _save()
+                sleep(throttle)
+            remaining = still
+            if remaining and not progressed:
+                # nothing advanced and items remain → everything left is blocked
+                now = time_fn()
+                waits = [b - now for b in blocked_until.values() if b > now]
+                if not waits:
+                    break  # no cooldowns pending but stuck — avoid spinning
+                nap = min(cap_sleep, max(1.0, min(waits)))
+                log(f"citations: all sources cooling down; sleeping {int(nap)}s "
+                    f"({len(remaining)} remaining)")
+                sleep(nap)
+    finally:
+        if bar is not None:
+            bar.close()
+    _save()
     return cache
 
 

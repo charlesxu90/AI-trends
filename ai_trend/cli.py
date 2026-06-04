@@ -300,20 +300,28 @@ def cmd_citations(args: argparse.Namespace) -> int:
     _eprint(f"citations: {len(titles)} papers in topics {sorted(topic_set)[:6]}...")
     cache_path = str(csv) + ".citations.json"
 
-    if getattr(args, "source", "s2") == "openalex":
-        import os
-        from functools import partial
+    import os
 
-        from ai_trend.citations import search_openalex_verified
+    sources = [s.strip() for s in getattr(args, "source", "openalex").split(",") if s.strip()]
+    mailto = os.environ.get("OPENALEX_MAILTO", "")
 
-        searcher = partial(search_openalex_verified, mailto=os.environ.get("OPENALEX_MAILTO", ""))
+    if len(sources) == 1 and sources[0] in ("s2", "openalex"):
+        # single source — simple path
+        kwargs = {"throttle": args.throttle, "log": _eprint, "progress": True}
+        if sources[0] == "openalex":
+            from functools import partial
+
+            from ai_trend.citations import search_openalex_verified
+
+            kwargs["searcher"] = partial(search_openalex_verified, mailto=mailto)
+        fetch_citations(titles, cache_path, requests.Session(), **kwargs)
     else:
-        searcher = None  # default (Semantic Scholar)
+        # multi-source fallback chain (as one rate-limits, the next takes over)
+        from ai_trend.citations import build_providers, fetch_citations_multi
 
-    kwargs = {"throttle": args.throttle, "log": _eprint, "progress": True}
-    if searcher is not None:
-        kwargs["searcher"] = searcher
-    fetch_citations(titles, cache_path, requests.Session(), **kwargs)
+        providers = build_providers(sources, mailto=mailto)
+        fetch_citations_multi(titles, cache_path, requests.Session(), providers,
+                              throttle=args.throttle, log=_eprint, progress=True)
     _eprint(f"citations cached -> {cache_path} (re-run export-site to surface them)")
     return 0
 
@@ -583,8 +591,9 @@ def build_parser() -> argparse.ArgumentParser:
     p_cit.add_argument("--data-dir", default="data")
     p_cit.add_argument("--limit", type=int, default=None, help="cap number of papers")
     p_cit.add_argument("--throttle", type=float, default=1.1, help="seconds between API calls")
-    p_cit.add_argument("--source", choices=["s2", "openalex"], default="s2",
-                       help="citation source: s2 (Semantic Scholar) or openalex (key-free, no rate-limit wall)")
+    p_cit.add_argument("--source", default="openalex,s2,crossref",
+                       help="citation source(s), comma-separated fallback chain in priority order "
+                            "(openalex, s2, crossref). When one rate-limits, the next is used.")
     p_cit.set_defaults(func=cmd_citations)
 
     p_prb = sub.add_parser("probe", help="check whether a conference-year's papers are published yet")
