@@ -478,25 +478,35 @@ class Provider:
 #               precise Retry-After, so honour that and use a long default fallback.
 #   s2        — shared public pool ~1 req/s; fluctuates, so retry after minutes.
 #   crossref  — polite pool is fast (~tens/s) and rarely caps; short backoff.
+#   retries  — attempts per title before giving up. OpenAlex/Crossref fail fast
+#              (their 429 = real budget exhaustion, hand off immediately); S2's
+#              public 429 is a *transient* shared-pool collision, so retry through
+#              it a few times with exponential backoff.
+#
+# S2 unauthenticated policy (per Semantic Scholar): ≤1 RPS per IP on a global shared
+# pool, requests must be STRICTLY SERIAL (parallel unauth requests get blocked
+# almost immediately), use adaptive exponential backoff on 429, and cache. We honor
+# all of these: a single serial runner, 1.1s throttle (<1 RPS), exponential backoff
+# in _s2_request, Retry-After honored, and a resumable on-disk cache. A free API key
+# (S2_API_KEY) lifts us out of the shared pool to a dedicated 1 RPS.
 _PROVIDER_SPEC = {
-    "openalex": {"throttle": 0.15, "cooldown": 21600.0},  # 6h fallback if no Retry-After
-    "s2": {"throttle": 1.0, "cooldown": 300.0},
-    "crossref": {"throttle": 0.1, "cooldown": 120.0},
+    "openalex": {"throttle": 0.15, "cooldown": 21600.0, "retries": 1},  # 6h fallback if no Retry-After
+    "s2": {"throttle": 1.1, "cooldown": 30.0, "retries": 4},            # serial, ~1 RPS, exp-backoff
+    "crossref": {"throttle": 0.1, "cooldown": 120.0, "retries": 1},
 }
 
 
 def build_providers(names: list[str], *, mailto: str = "") -> list[Provider]:
     """Build a fallback chain from source keys (order = priority).
 
-    Each provider fails fast (``retries=1``) so a rate-limited source hands off to
-    the next quickly instead of burning ~30s on exponential backoff; per-source
-    throttle/cooldown come from :data:`_PROVIDER_SPEC`.
+    Per-source throttle/cooldown/retries come from :data:`_PROVIDER_SPEC`, tuned to
+    each source's policy: OpenAlex/Crossref hand off fast on a real rate-limit, while
+    S2 retries through its transient shared-pool 429s at ~1 req/s.
     """
-    fast = {"retries": 1, "backoff": 1.0}
     fn = {
-        "openalex": partial(search_openalex_verified, mailto=mailto, **fast),
-        "s2": partial(search_paper_verified, **fast),
-        "crossref": partial(search_crossref_verified, mailto=mailto, **fast),
+        "openalex": lambda r: partial(search_openalex_verified, mailto=mailto, retries=r, backoff=1.0),
+        "s2": lambda r: partial(search_paper_verified, retries=r, backoff=1.0),
+        "crossref": lambda r: partial(search_crossref_verified, mailto=mailto, retries=r, backoff=1.0),
     }
     out: list[Provider] = []
     for n in names:
@@ -504,7 +514,7 @@ def build_providers(names: list[str], *, mailto: str = "") -> list[Provider]:
         if n not in fn:
             raise ValueError(f"unknown citation source: {n!r} (choose from {sorted(fn)})")
         spec = _PROVIDER_SPEC[n]
-        out.append(Provider(n, fn[n], spec["throttle"], spec["cooldown"]))
+        out.append(Provider(n, fn[n](spec["retries"]), spec["throttle"], spec["cooldown"]))
     return out
 
 
