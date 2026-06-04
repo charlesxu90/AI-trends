@@ -169,6 +169,9 @@ def _openalex_request(
     params = {"filter": f"title.search:{cleaned}", "per-page": per_page}
     if mailto:
         params["mailto"] = mailto  # OpenAlex "polite pool" — higher, more reliable limits
+    api_key = os.environ.get("OPENALEX_API_KEY", "").strip()
+    if api_key:
+        params["api_key"] = api_key  # dedicated budget, separate from the shared IP pool
     for attempt in range(retries + 1):
         try:
             resp = session.get(OPENALEX_WORKS, params=params, timeout=30,

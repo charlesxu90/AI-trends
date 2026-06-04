@@ -386,3 +386,33 @@ def test_fetch_citations_multi_honours_retry_after_over_cooldown(tmp_path):
                           sleep=clock.sleep, time_fn=clock.time)
     assert load_cache(cache) == {"P": 5}
     assert 40 <= clock.t < 9999  # slept the Retry-After, not the long default cooldown
+
+
+# ---- OpenAlex API key -------------------------------------------------------
+class _CapSession:
+    """Captures the params of the last GET; returns a fixed response."""
+    def __init__(self, resp):
+        self.resp = resp
+        self.last_params = None
+
+    def get(self, url, **kw):
+        self.last_params = kw.get("params")
+        return self.resp
+
+
+def test_openalex_sends_api_key_when_env_set(monkeypatch):
+    from ai_trend.citations import search_openalex_verified
+
+    monkeypatch.setenv("OPENALEX_API_KEY", "k123")
+    sess = _CapSession(_Resp(200, {"results": [{"title": "P", "cited_by_count": 3}]}))
+    search_openalex_verified("P", sess, sleep=lambda *_: None)
+    assert sess.last_params.get("api_key") == "k123"
+
+
+def test_openalex_omits_api_key_when_env_unset(monkeypatch):
+    from ai_trend.citations import search_openalex_verified
+
+    monkeypatch.delenv("OPENALEX_API_KEY", raising=False)
+    sess = _CapSession(_Resp(200, {"results": []}))
+    search_openalex_verified("P", sess, sleep=lambda *_: None)
+    assert "api_key" not in (sess.last_params or {})
