@@ -219,6 +219,8 @@ def cmd_ingest_url(args: argparse.Namespace) -> int:
 
             n = fetch_to_csv(spec.year, out)
         elif spec.source == "aaai":
+            import os
+
             from ai_trend.aaai import fetch_to_csv
 
             n = fetch_to_csv(spec.year, out, mailto=os.environ.get("OPENALEX_MAILTO", ""))
