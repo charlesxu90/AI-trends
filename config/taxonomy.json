@@ -12,7 +12,8 @@
     "bandits",
     "decision transformer",
     "diffusion policy",
-    "reward models"
+    "reward models",
+    "grpo"
   ],
   "offline reinforcement learning": [
     "offline reinforcement learning",
@@ -37,7 +38,11 @@
     "graph representations",
     "graph networks",
     "random graph",
-    "graph transformer"
+    "graph transformer",
+    "heterogeneous graph",
+    "guided graph",
+    "temporal graph",
+    "graph-level"
   ],
   "optimization": [
     "optimization",
@@ -49,7 +54,9 @@
     "zero-shot",
     "weak",
     "few-shot learning",
-    "self-supervised"
+    "self-supervised",
+    "context learning",
+    "few-"
   ],
   "transformer": [
     "transformer",
@@ -63,7 +70,8 @@
     "long-context",
     " long context",
     "long range",
-    "window"
+    "window",
+    "fusion transformer"
   ],
   "representation": [
     "representation",
@@ -96,7 +104,8 @@
   "contrastive learning": [
     "contrastive",
     "contrastive learning",
-    "contrastive representation"
+    "contrastive representation",
+    "graph contrastive learning"
   ],
   "inference": [
     "inference"
@@ -132,7 +141,8 @@
   ],
   "federated learning": [
     "federated learning",
-    "decentralized"
+    "decentralized",
+    "federated graph"
   ],
   "distillation": [
     "distillation",
@@ -144,7 +154,11 @@
     "multi-agent reinforcement learning",
     "markov game",
     "markov games",
-    "cooperative multi-agent"
+    "cooperative multi-agent",
+    "multi-agent path",
+    "multi-agent system",
+    "multi-agent framework",
+    "multi-agent collaboration"
   ],
   "segmentation": [
     "segmentation",
@@ -194,7 +208,10 @@
     "fusion models",
     "denoising diffusion",
     "guided diffusion",
-    "latent diffusion model"
+    "latent diffusion model",
+    "conditional diffusion",
+    "conditional diffusion model",
+    "image diffusion model"
   ],
   "curriculum learning": [
     "curriculum learning"
@@ -237,11 +254,18 @@
   "enhancement": [
     "image enhancement",
     "image restoration",
-    "video enhancement"
+    "video enhancement",
+    "low-light image",
+    "underwater image enhancement"
   ],
   "reasoning": [
     "reasoning",
-    "math"
+    "math",
+    "chain-of-thought reasoning",
+    "reasoning models",
+    "reasoner",
+    "spatial reasoning",
+    "reasoning framework"
   ],
   "weakly-supervised": [
     "weakly-supervised",
@@ -255,14 +279,19 @@
     "robotic",
     "language-action",
     "structure-from-motion",
-    "robotic manipulation"
+    "robotic manipulation",
+    "vision-language-action",
+    "vision-language-action model",
+    "dexterous"
   ],
   "domain adaptation": [
     "domain adaptation",
-    "source-free"
+    "source-free",
+    "multi-domain"
   ],
   "foundation models": [
-    "foundation model"
+    "foundation model",
+    "vision foundation model"
   ],
   "monocular depth estimation": [
     "monocular depth"
@@ -306,18 +335,21 @@
   ],
   "differential equation solving": [
     "differential equation",
-    "physics-informed"
+    "physics-informed",
+    "equation"
   ],
   "time series forecasting": [
     "time series forecasting",
     "time series",
     "long-term forecasting",
     "time-series forecasting",
-    "multivariate time series"
+    "multivariate time series",
+    "multivariate time series forecasting"
   ],
   "privacy": [
     "privacy",
-    "auditing"
+    "auditing",
+    "privacy-preserving"
   ],
   "explainable AI": [
     "interpretation",
@@ -335,7 +367,8 @@
   ],
   "symbolic AI": [
     "symbol",
-    "symbolic"
+    "symbolic",
+    "neuro-symbolic"
   ],
   "watermark": [
     "watermark"
@@ -345,7 +378,8 @@
     "model merge"
   ],
   "reward model": [
-    "reward model"
+    "reward model",
+    "reward modeling"
   ],
   "adaptation": [
     "adaptive",
@@ -358,7 +392,8 @@
   "text-guided": [
     "text-guided",
     "language-guided",
-    "guided "
+    "guided ",
+    "text-driven"
   ],
   "high-fidelity": [
     "high-fidelity"
@@ -436,7 +471,8 @@
   "biased": [
     "biased",
     "debiase",
-    "unbiased"
+    "unbiased",
+    "debiased"
   ],
   "music generation": [
     "music generation",
@@ -447,10 +483,12 @@
   ],
   "RAG": [
     "retrieval-augmented",
-    "retrieval-augmented generation"
+    "retrieval-augmented generation",
+    "retriever"
   ],
   "memory-efficient LLM": [
-    "memory-efficient"
+    "memory-efficient",
+    "kv cache"
   ],
   "optimal transport": [
     "optimal transport"
@@ -486,7 +524,10 @@
   ],
   "llm agent": [
     "llm agent",
-    "llm-based"
+    "llm-based",
+    "llm-based agent",
+    "gui agent",
+    "gui agents"
   ],
   "neural collapse": [
     "neural collapse"
@@ -497,11 +538,13 @@
   ],
   "cooperate": [
     "cooperate",
-    "cooperative"
+    "cooperative",
+    "cooper"
   ],
   "tokenize": [
     "tokenize",
-    "tokenization"
+    "tokenization",
+    "tokenizer"
   ],
   "Consistency Model": [
     "consistency model"
@@ -656,5 +699,21 @@
   ],
   "contamination": [
     "contamination"
+  ],
+  "alignment": [
+    "align",
+    "misalignment"
+  ],
+  "dialogue": [
+    "conversational",
+    "conversations",
+    "dialogues"
+  ],
+  "recommendation": [
+    "recommendations",
+    "item",
+    "recommender system",
+    "multimodal recommendation",
+    "session-based recommendation"
   ]
 }
