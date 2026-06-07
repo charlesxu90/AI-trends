@@ -35,7 +35,7 @@ class SourceError(ValueError):
 
 @dataclass(frozen=True)
 class SourceSpec:
-    source: str  # "openreview" | "cvf"
+    source: str  # "openreview" | "cvf" | "acl" | "aaai"
     label: str  # canonical conference label, e.g. "ICLR"
     token: str  # filename token, e.g. "iclr"
     year: int
@@ -54,8 +54,31 @@ def _resolve(label_guess: str, year: int, registry: ConferenceRegistry):
 def detect_source(url: str, registry: ConferenceRegistry | None = None) -> SourceSpec:
     """Map a conference URL to a :class:`SourceSpec`."""
     registry = registry or ConferenceRegistry.load()
-    parsed = urlparse(url.strip())
+    text = url.strip()
+    parsed = urlparse(text)
     host = parsed.netloc.lower()
+
+    # Bare "<conf> <year>" spec (no host) — the entry point for sources without a
+    # year-bearing listing URL (e.g. AAAI via OpenAlex). Also works for any venue.
+    if not host:
+        m = re.match(r"^([A-Za-z]+)[\s/_-]+(\d{4})$", text)
+        if not m:
+            raise SourceError(
+                f"unrecognised input {text!r}; expected a conference URL or '<conf> <year>'"
+            )
+        conf, year = _resolve(m.group(1), int(m.group(2)), registry)
+        venueid = None
+        if conf.source == "openreview":
+            group = conf.openreview_group or f"{conf.label}.cc"
+            venueid = f"{group}/{year}/Conference"
+        return SourceSpec(conf.source, conf.label, conf.primary_token, year, venueid=venueid)
+
+    if "aclanthology.org" in host:
+        m = re.search(r"(20\d{2})", parsed.path)
+        if not m:
+            raise SourceError("could not find a year (e.g. acl-2024) in the aclanthology URL")
+        conf, year = _resolve("acl", int(m.group(1)), registry)
+        return SourceSpec(conf.source, conf.label, conf.primary_token, year)
 
     if "openreview.net" in host:
         venueid = _openreview_venueid(parsed)
@@ -74,7 +97,10 @@ def detect_source(url: str, registry: ConferenceRegistry | None = None) -> Sourc
         conf, year = _resolve(m.group(1), int(m.group(2)), registry)
         return SourceSpec("cvf", conf.label, conf.primary_token, year)
 
-    raise SourceError(f"unsupported host {host!r}; expected openreview.net or thecvf.com")
+    raise SourceError(
+        f"unsupported host {host!r}; expected openreview.net, thecvf.com, "
+        "aclanthology.org, or a bare '<conf> <year>' spec"
+    )
 
 
 @dataclass(frozen=True)

@@ -6,6 +6,8 @@ probe its expected source URL to see if papers are live before ingesting.
 - OpenReview venues (ICLR/ICML/NeurIPS): query api2 by ``content.venueid`` and read
   the result count.
 - CVF venues (CVPR/ICCV): fetch the ``?day=all`` listing and count entries.
+- ACL: fetch the Anthology ``<year>.acl.xml`` and count main-conference papers.
+- AAAI: query OpenAlex for the proceedings source + year and read the count.
 
 Deterministic (constructs the known URL patterns); the *date* discovery for
 upcoming conferences is the web-search step in the ``track-conferences`` skill.
@@ -23,6 +25,7 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 
 API2_BASE = "https://api2.openreview.net"
 CVF_BASE = "https://openaccess.thecvf.com"
+OPENALEX_WORKS = "https://api.openalex.org/works"
 
 
 @dataclass
@@ -39,6 +42,10 @@ def candidate(conference: Conference, year: int) -> tuple[str, str]:
     """Return ``(ingest_url, source)`` for a conference-year's expected source."""
     if conference.source == "cvf":
         return (f"{CVF_BASE}/{conference.label}{year}?day=all", "cvf")
+    if conference.source == "acl":
+        return (f"https://aclanthology.org/events/acl-{year}/", "acl")
+    if conference.source == "aaai":
+        return (f"aaai {year}", "aaai")  # bare spec; OpenAlex-backed (no listing URL)
     group = conference.openreview_group or f"{conference.label}.cc"
     return (f"https://openreview.net/group?id={group}/{year}/Conference", "openreview")
 
@@ -57,6 +64,17 @@ def probe(
             group = conference.openreview_group or f"{conference.label}.cc"
             api = f"{API2_BASE}/notes?content.venueid={group}/{year}/Conference&limit=1"
             count = int(sess.get(api, headers={"User-Agent": "ai-trend/0.1"}, timeout=30).json().get("count", 0))
+        elif source == "acl":
+            from ai_trend.acl import fetch_acl
+
+            count = len(fetch_acl(year, session=sess))
+        elif source == "aaai":
+            from ai_trend.aaai import AAAI_SOURCE_ID
+
+            api = (f"{OPENALEX_WORKS}?filter=publication_year:{year},"
+                   f"primary_location.source.id:{AAAI_SOURCE_ID}&per-page=1")
+            count = int((sess.get(api, headers={"User-Agent": "ai-trend/0.1"}, timeout=30)
+                         .json().get("meta", {}) or {}).get("count", 0))
         else:  # cvf
             from ai_trend.cvf import parse_listing
 

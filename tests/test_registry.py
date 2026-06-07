@@ -13,9 +13,17 @@ from ai_trend.registry import (
 )
 
 
-def test_load_real_config_has_five_conferences():
+def test_load_real_config_has_expected_conferences():
     reg = ConferenceRegistry.load(DEFAULT_CONFIG_DIR)
-    assert set(reg.labels) == {"ICLR", "CVPR", "ICCV", "ICML", "NIPS"}
+    assert set(reg.labels) == {"ICLR", "CVPR", "ICCV", "ICML", "NIPS", "AAAI", "ACL"}
+
+
+def test_aaai_acl_registered_with_sources():
+    reg = ConferenceRegistry.load(DEFAULT_CONFIG_DIR)
+    aaai = reg.conference_for_token("aaai")
+    acl = reg.conference_for_token("acl")
+    assert aaai is not None and aaai.source == "aaai" and aaai.month == 2
+    assert acl is not None and acl.source == "acl" and acl.month == 8
 
 
 def test_token_to_label_lowercases_and_includes_aliases():

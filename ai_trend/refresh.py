@@ -154,6 +154,16 @@ def _discover_and_ingest(registry, data_dir: Path | str, log: Callable[[str], No
             try:
                 if conf.source == "cvf":
                     n = scrape_to_csv(conf.label, year, out)
+                elif conf.source == "acl":
+                    from ai_trend.acl import fetch_to_csv as fetch_acl_csv
+
+                    n = fetch_acl_csv(year, out)
+                elif conf.source == "aaai":
+                    import os
+
+                    from ai_trend.aaai import fetch_to_csv as fetch_aaai_csv
+
+                    n = fetch_aaai_csv(year, out, mailto=os.environ.get("OPENALEX_MAILTO", ""))
                 else:
                     group = conf.openreview_group or f"{conf.label}.cc"
                     n = fetch_to_csv(f"{group}/{year}/Conference", conf.label, year, out)

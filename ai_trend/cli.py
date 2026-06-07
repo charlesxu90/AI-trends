@@ -214,6 +214,14 @@ def cmd_ingest_url(args: argparse.Namespace) -> int:
             from ai_trend.cvf import scrape_to_csv
 
             n = scrape_to_csv(spec.label, spec.year, out)
+        elif spec.source == "acl":
+            from ai_trend.acl import fetch_to_csv
+
+            n = fetch_to_csv(spec.year, out)
+        elif spec.source == "aaai":
+            from ai_trend.aaai import fetch_to_csv
+
+            n = fetch_to_csv(spec.year, out, mailto=os.environ.get("OPENALEX_MAILTO", ""))
         else:
             from ai_trend.openreview import fetch_to_csv
 
@@ -577,8 +585,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_ref.add_argument("--spacy-model", default=None, help="scispaCy model path or package name")
     p_ref.set_defaults(func=cmd_refresh)
 
-    p_url = sub.add_parser("ingest-url", help="download a conference from an OpenReview/thecvf URL")
-    p_url.add_argument("url", help="OpenReview group/venue URL or openaccess.thecvf.com URL")
+    p_url = sub.add_parser("ingest-url", help="download a conference from a URL or '<conf> <year>' spec")
+    p_url.add_argument("url", help="OpenReview/thecvf/aclanthology URL, or a bare spec like 'aaai 2024'")
     p_url.add_argument("--data-dir", default="data")
     p_url.add_argument("--full", action="store_true", help="also assign + trends + export (current taxonomy)")
     p_url.set_defaults(func=cmd_ingest_url)

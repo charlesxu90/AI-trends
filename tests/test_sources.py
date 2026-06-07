@@ -32,6 +32,37 @@ def test_thecvf_iccv_content_path():
     assert s.source == "cvf" and s.label == "ICCV" and s.year == 2023
 
 
+def test_aclanthology_event_url():
+    s = detect_source("https://aclanthology.org/events/acl-2024/", REG)
+    assert (s.source, s.label, s.token, s.year) == ("acl", "ACL", "acl", 2024)
+
+
+def test_aclanthology_volume_url():
+    s = detect_source("https://aclanthology.org/volumes/2023.acl-long/", REG)
+    assert s.source == "acl" and s.year == 2023
+
+
+def test_bare_spec_aaai():
+    s = detect_source("aaai 2024", REG)
+    assert (s.source, s.label, s.token, s.year) == ("aaai", "AAAI", "aaai", 2024)
+    assert s.venueid is None
+
+
+def test_bare_spec_openreview_synthesizes_venueid():
+    s = detect_source("icml/2025", REG)
+    assert s.source == "openreview" and s.venueid == "ICML.cc/2025/Conference"
+
+
+def test_bare_spec_unknown_conf_raises():
+    with pytest.raises(SourceError):
+        detect_source("wacv 2024", REG)
+
+
+def test_garbage_input_raises():
+    with pytest.raises(SourceError):
+        detect_source("not a url or spec", REG)
+
+
 def test_unsupported_host_raises():
     with pytest.raises(SourceError):
         detect_source("https://example.com/CVPR2024", REG)

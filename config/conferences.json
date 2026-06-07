@@ -4,6 +4,8 @@
     {"key": "cvpr", "label": "CVPR", "name": "Conference on Computer Vision and Pattern Recognition", "tokens": ["cvpr"], "month": 6, "source": "cvf"},
     {"key": "iccv", "label": "ICCV", "name": "International Conference on Computer Vision", "tokens": ["iccv"], "month": 10, "source": "cvf"},
     {"key": "icml", "label": "ICML", "name": "International Conference on Machine Learning", "tokens": ["icml"], "month": 7, "source": "openreview", "openreview_group": "ICML.cc"},
-    {"key": "nips", "label": "NIPS", "name": "Conference on Neural Information Processing Systems", "tokens": ["nips", "neurips"], "month": 12, "source": "openreview", "openreview_group": "NeurIPS.cc"}
+    {"key": "nips", "label": "NIPS", "name": "Conference on Neural Information Processing Systems", "tokens": ["nips", "neurips"], "month": 12, "source": "openreview", "openreview_group": "NeurIPS.cc"},
+    {"key": "aaai", "label": "AAAI", "name": "AAAI Conference on Artificial Intelligence", "tokens": ["aaai"], "month": 2, "source": "aaai"},
+    {"key": "acl", "label": "ACL", "name": "Annual Meeting of the Association for Computational Linguistics", "tokens": ["acl"], "month": 8, "source": "acl"}
   ]
 }
