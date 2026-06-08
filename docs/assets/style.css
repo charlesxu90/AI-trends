@@ -134,7 +134,7 @@ em { font-style: italic; }
 .section__head { margin-bottom: clamp(1.6rem, 3vw, 2.8rem); }
 .section__title { font-size: var(--text-h2); letter-spacing: -0.03em; font-weight: 800; margin: 0 0 0.4rem; display: flex; align-items: baseline; gap: 0.7ch; }
 .section__num { font-family: var(--mono); font-size: 0.5em; color: var(--accent); font-weight: 700; }
-.section__hint { color: var(--muted); margin: 0; max-width: 60ch; }
+.section__hint { color: var(--muted); margin: 0; max-width: 60ch; line-height: 1.5; text-wrap: pretty; }
 
 /* ---------- picker (pills) ---------- */
 .picker { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2.2rem; }
