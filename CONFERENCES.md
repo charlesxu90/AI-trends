@@ -12,6 +12,7 @@ conference-years as they post, and re-check existing links.
 
 | Year | Conf | Date | OpenReview | Other source |
 |------|------|------|------------|--------------|
+| 2026 | ACL | 7/2/2026 | | https://aclanthology.org/events/acl-2026/ |
 | 2026 | ICLR | 4/23/2026 | https://openreview.net/group?id=ICLR.cc/2026/Conference | |
 | 2026 | CVPR | 6/10/2026 | | https://openaccess.thecvf.com/CVPR2026?day=all |
 | 2025 | ICCV | 10/19/2025 | | https://openaccess.thecvf.com/ICCV2025?day=all |

@@ -186,7 +186,9 @@
     "video transformer",
     "video generation",
     "multimodal large language",
-    "multimodal model"
+    "multimodal model",
+    "multimodal retrieval",
+    "multimodal reasoning"
   ],
   "imitation learning": [
     "imitation learning"
@@ -265,7 +267,9 @@
     "reasoning models",
     "reasoner",
     "spatial reasoning",
-    "reasoning framework"
+    "reasoning framework",
+    "reasoning model",
+    "logical reasoning"
   ],
   "weakly-supervised": [
     "weakly-supervised",
@@ -412,7 +416,8 @@
   "personalization": [
     "personal",
     "personalized",
-    "personalization"
+    "personalization",
+    "persona"
   ],
   "autonomous driving": [
     "autonomous driving",
@@ -488,7 +493,8 @@
   ],
   "memory-efficient LLM": [
     "memory-efficient",
-    "kv cache"
+    "kv cache",
+    "kv cache compression"
   ],
   "optimal transport": [
     "optimal transport"
@@ -512,7 +518,8 @@
   ],
   "Factual": [
     "factual",
-    "counterfactual"
+    "counterfactual",
+    "fact-checking"
   ],
   "diffusion transformer": [
     "diffusion transformer"
@@ -527,7 +534,9 @@
     "llm-based",
     "llm-based agent",
     "gui agent",
-    "gui agents"
+    "gui agents",
+    "web agent",
+    "web agents"
   ],
   "neural collapse": [
     "neural collapse"
@@ -623,7 +632,8 @@
     "video compression",
     "video super-resolution",
     "video synthesis",
-    "lvlm"
+    "lvlm",
+    "lvlms"
   ],
   "Code generation": [
     "code generation",
@@ -707,7 +717,9 @@
   "dialogue": [
     "conversational",
     "conversations",
-    "dialogues"
+    "dialogues",
+    "dialogue system",
+    "dialogue systems"
   ],
   "recommendation": [
     "recommendations",
@@ -715,5 +727,23 @@
     "recommender system",
     "multimodal recommendation",
     "session-based recommendation"
+  ],
+  "causal": [
+    "causal"
+  ],
+  "diffusion language model": [
+    "diffusion language"
+  ],
+  "deep research": [
+    "deep research"
+  ],
+  "rlvr": [
+    "rlvr"
+  ],
+  "llm safety": [
+    "llm safety",
+    "hijack",
+    "hijacking",
+    "safeguarding"
   ]
 }
