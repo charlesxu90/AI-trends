@@ -10,6 +10,7 @@ Examples
 - https://api2.openreview.net/notes?content.venueid=ICML.cc/2025/Conference -> openreview, ICML 2025
 - https://openaccess.thecvf.com/CVPR2024?day=all            -> cvf, CVPR 2024
 - https://openaccess.thecvf.com/ICCV2023                    -> cvf, ICCV 2023
+- https://proceedings.mlr.press/v306/                       -> pmlr, ICML 2026 (venue read from the volume)
 """
 
 from __future__ import annotations
@@ -35,11 +36,12 @@ class SourceError(ValueError):
 
 @dataclass(frozen=True)
 class SourceSpec:
-    source: str  # "openreview" | "cvf" | "acl" | "aaai"
+    source: str  # "openreview" | "cvf" | "acl" | "aaai" | "pmlr"
     label: str  # canonical conference label, e.g. "ICLR"
     token: str  # filename token, e.g. "iclr"
     year: int
     venueid: str | None = None  # OpenReview content.venueid (e.g. ICLR.cc/2025/Conference)
+    volume: str | None = None  # PMLR volume number (e.g. "306")
 
 
 def _resolve(label_guess: str, year: int, registry: ConferenceRegistry):
@@ -90,6 +92,18 @@ def detect_source(url: str, registry: ConferenceRegistry | None = None) -> Sourc
         conf, year = _resolve(m.group(1), int(m.group(2)), registry)
         return SourceSpec("openreview", conf.label, conf.primary_token, year, venueid=venueid)
 
+    if "proceedings.mlr.press" in host:
+        from ai_trend import pmlr
+
+        try:
+            volume = pmlr.volume_from_url(text)
+        except ValueError as exc:
+            raise SourceError(str(exc)) from exc
+        # the URL has no venue/year; the volume's _config.yml does (one small request)
+        shortname, year = pmlr.volume_info(volume)
+        conf, year = _resolve(shortname, year, registry)
+        return SourceSpec("pmlr", conf.label, conf.primary_token, year, volume=volume)
+
     if "thecvf.com" in host:
         m = _CVF_SLUG.search(parsed.path)
         if not m:
@@ -99,7 +113,7 @@ def detect_source(url: str, registry: ConferenceRegistry | None = None) -> Sourc
 
     raise SourceError(
         f"unsupported host {host!r}; expected openreview.net, thecvf.com, "
-        "aclanthology.org, or a bare '<conf> <year>' spec"
+        "aclanthology.org, proceedings.mlr.press, or a bare '<conf> <year>' spec"
     )
 
 

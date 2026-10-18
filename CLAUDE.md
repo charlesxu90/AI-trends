@@ -123,6 +123,10 @@ config/                     single source of truth (version-controlled)
   taxonomy.json             topic -> [keywords]
   useless_keywords.json     noise blocklist
   other_keywords.json       real-but-unmapped keywords (ledger)
+  ontology.json             method tree (16 contribution-centred domains -> families -> tasks
+                            + example methods), cross-cutting tag facets, labelling heuristics
+                            leaves carry `keywords` for matching corpus papers ('^kw' = title only)
+  method_refs.json          landmark method -> {title, year, url} (arXiv/DOI) shown per task
 
 ai_trend/                   tested, deterministic Python package
   taxonomy.py               load / validate / immutably-merge config
@@ -132,6 +136,8 @@ ai_trend/                   tested, deterministic Python package
   trends.py                 top/emerging/fading per conference-year + markdown render
   registry.py               configurable conference registry (M3)
   site.py                   export static-site JSON for GitHub Pages (M4)
+  ontology.py               load/validate the method tree; exported to docs/data/ontology.json
+  method_papers.py          keyword-match papers to tree tasks; per-year top-cited picks (export-site)
   ingest.py                 merge crawled JSON -> per-conference CSV (M5)
   crawl.py                  config-driven OpenReview Scrapy wrapper (M5)
   curate_ai.py              headless AI curation via Anthropic API (M5)
@@ -139,6 +145,7 @@ ai_trend/                   tested, deterministic Python package
   sources.py                URL -> source detection (openreview|cvf) (M6)
   openreview.py             fetch papers by venue id (api2, URL-driven) (M6)
   cvf.py                    scrape CVPR/ICCV from openaccess.thecvf.com (M6)
+  pmlr.py                   ICML (etc.) from PMLR volumes via the mlresearch/v<N> GitHub repo
   citations.py              Semantic Scholar citation counts (cached) (M6)
   cli.py                    candidates|curate|assign|trends|export-site|crawl|process|refresh|ingest-url|citations
 
@@ -170,7 +177,8 @@ export-site`. Only the skill reasons; everything else is pure and reproducible.
 Static, no framework. `ai-trend export-site` writes `docs/data/` (manifest +
 trends + per-conference-year paper shards, abstracts truncated). `docs/index.html`
 + `docs/assets/{app.js,style.css}` render a trends dashboard and a drill-down
-paper browser. `docs/` (incl. generated `docs/data/`, ~23 MB) is committed so
+paper browser. `docs/methods.html` + `docs/assets/methods.js` render the method tree
+(Method Tree page) from `docs/data/ontology.json`. `docs/` (incl. generated `docs/data/`, ~23 MB) is committed so
 Pages can serve it. Enable: Settings → Pages → branch `main`, folder `/docs`.
 Re-run `export-site` after any re-assign/trends change.
 
