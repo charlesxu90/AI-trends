@@ -6,12 +6,15 @@ the pipeline ingests from: each row's URL feeds `ai-trend ingest-url <URL>`
 conference-years as they post, and re-check existing links.
 
 - **OpenReview** column: ICLR / ICML / NeurIPS (api2 venue groups).
-- **Other source** column: CVPR / ICCV via CVF open-access (`thecvf.com`), or
-  secondary links.
+- **Other source** column: CVPR / ICCV via CVF open-access (`thecvf.com`), ICML
+  via PMLR (`proceedings.mlr.press/vNNN`, used since OpenReview's API began
+  challenging scripted requests in 2026), or secondary links.
 - **Date**: accepted-papers availability / conference date (MM/DD/YYYY).
 
 | Year | Conf | Date | OpenReview | Other source |
 |------|------|------|------------|--------------|
+| 2026 | NIPS | 12/6/2026 | | |
+| 2026 | ICML | 7/6/2026 | | https://proceedings.mlr.press/v306/ |
 | 2026 | ACL | 7/2/2026 | | https://aclanthology.org/events/acl-2026/ |
 | 2026 | ICLR | 4/23/2026 | https://openreview.net/group?id=ICLR.cc/2026/Conference | |
 | 2026 | CVPR | 6/10/2026 | | https://openaccess.thecvf.com/CVPR2026?day=all |
