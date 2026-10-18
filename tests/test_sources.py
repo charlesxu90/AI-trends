@@ -100,3 +100,14 @@ def test_parse_real_sources_file():
     rows = parse_sources_md(DEFAULT_SOURCES_MD)
     assert len(rows) >= 20
     assert any(r.conf == "CVPR" and r.year == 2025 for r in rows)
+
+
+def test_pmlr_volume_url_resolves_venue_from_volume_config(monkeypatch):
+    monkeypatch.setattr("ai_trend.pmlr.volume_info", lambda volume, **_: ("ICML", 2026))
+    s = detect_source("https://proceedings.mlr.press/v306/", REG)
+    assert (s.source, s.label, s.year, s.volume) == ("pmlr", "ICML", 2026, "306")
+
+
+def test_pmlr_url_without_volume_raises():
+    with pytest.raises(SourceError, match="volume"):
+        detect_source("https://proceedings.mlr.press/", REG)

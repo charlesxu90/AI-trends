@@ -8,6 +8,8 @@ exports:
   demand when the user drills into a topic/year (keeps the initial payload small).
 * ``manifest.json`` -- conferences, available shards, years, and the topics that
   actually occur (drives the site's filters).
+* ``ontology.json`` -- the method tree from ``config/ontology.json`` plus landmark
+  method refs and, per leaf, the top matching corpus papers (Method Tree page).
 
 Conference identity and year come from the **file location** via the registry
 (not the unreliable in-file ``source``/``year`` columns).
@@ -20,6 +22,8 @@ import json
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+from ai_trend.method_papers import compile_matcher, match_leaves, site_ontology
+from ai_trend.ontology import load_method_refs, load_ontology, write_ontology
 from ai_trend.registry import ConferenceRegistry
 from ai_trend.taxonomy import Taxonomy
 from ai_trend.trends import (
@@ -120,6 +124,8 @@ def export_site(
     min_prev: int = DEFAULT_MIN_PREV,
     min_count: int = DEFAULT_MIN_COUNT,
     abstract_chars: int = DEFAULT_ABSTRACT_CHARS,
+    ontology: dict | None = None,
+    method_refs: dict | None = None,
 ) -> dict:
     """Write the site's JSON data files and return the manifest."""
     import pandas as pd
@@ -136,6 +142,10 @@ def export_site(
     (out_dir / "trends.json").write_text(
         json.dumps(trends_payload, ensure_ascii=False), encoding="utf-8"
     )
+
+    ontology = ontology if ontology is not None else load_ontology()
+    matcher = compile_matcher(ontology["domains"])
+    matched: list[tuple[dict, dict]] = []  # (record, leaf hits) for the method tree
 
     index = discover_conference_years(data_dir, registry.token_to_label)
     shards: list[dict] = []
@@ -156,12 +166,16 @@ def export_site(
             prev_cites, prev_arxiv = _recover_from_shard(out_dir / rel)
             citations = {**prev_cites, **side_cites} or None
             arxiv = {**prev_arxiv, **side_arxiv} or None
+            rows = df.to_dict("records")
             records = [
                 build_paper_record(row, conference, year, abstract_chars, citations, arxiv)
-                for row in df.to_dict("records")
+                for row in rows
             ]
-            for record in records:
+            for row, record in zip(rows, records):
                 seen_topics.update(record["topics"])
+                hits = match_leaves(matcher, record["title"], _text(row.get("abstract")))
+                if hits:
+                    matched.append((record, hits))
             (out_dir / rel).write_text(
                 json.dumps(records, ensure_ascii=False), encoding="utf-8"
             )
@@ -178,4 +192,6 @@ def export_site(
     (out_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False), encoding="utf-8"
     )
+    refs = method_refs if method_refs is not None else load_method_refs()
+    write_ontology(out_dir, site_ontology(ontology, refs, matched))
     return manifest

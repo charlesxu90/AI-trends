@@ -218,6 +218,10 @@ def cmd_ingest_url(args: argparse.Namespace) -> int:
             from ai_trend.acl import fetch_to_csv
 
             n = fetch_to_csv(spec.year, out)
+        elif spec.source == "pmlr":
+            from ai_trend.pmlr import fetch_to_csv
+
+            n = fetch_to_csv(spec.volume, spec.label, spec.year, out)
         elif spec.source == "aaai":
             import os
 

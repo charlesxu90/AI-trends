@@ -13,7 +13,11 @@
     "decision transformer",
     "diffusion policy",
     "reward models",
-    "grpo"
+    "grpo",
+    "on-policy",
+    "self-play",
+    "reinforcement learning framework",
+    "reinforcement fine-tuning"
   ],
   "offline reinforcement learning": [
     "offline reinforcement learning",
@@ -42,11 +46,16 @@
     "heterogeneous graph",
     "guided graph",
     "temporal graph",
-    "graph-level"
+    "graph-level",
+    "graph anomaly"
   ],
   "optimization": [
     "optimization",
-    "constrain"
+    "constrain",
+    "adam",
+    "muon",
+    "optimization modeling",
+    "preconditioning"
   ],
   "zero_few-shot": [
     "low",
@@ -71,7 +80,9 @@
     " long context",
     "long range",
     "window",
-    "fusion transformer"
+    "fusion transformer",
+    "linear attention",
+    "attention sink"
   ],
   "representation": [
     "representation",
@@ -133,7 +144,9 @@
     "active learning"
   ],
   "flow": [
-    "flow"
+    "flow",
+    "flow model",
+    "flow models"
   ],
   "augmentation": [
     "augmentation",
@@ -147,7 +160,9 @@
   "distillation": [
     "distillation",
     "knowledge distillation",
-    "distil"
+    "distil",
+    "self-distillation",
+    "condensation"
   ],
   "multi-agent": [
     "multi-agent",
@@ -158,7 +173,8 @@
     "multi-agent path",
     "multi-agent system",
     "multi-agent framework",
-    "multi-agent collaboration"
+    "multi-agent collaboration",
+    "marl"
   ],
   "segmentation": [
     "segmentation",
@@ -188,7 +204,9 @@
     "multimodal large language",
     "multimodal model",
     "multimodal retrieval",
-    "multimodal reasoning"
+    "multimodal reasoning",
+    "vision–language",
+    "multimodal learning"
   ],
   "imitation learning": [
     "imitation learning"
@@ -213,7 +231,9 @@
     "latent diffusion model",
     "conditional diffusion",
     "conditional diffusion model",
-    "image diffusion model"
+    "image diffusion model",
+    "diffusion sampling",
+    "diffusion bridge"
   ],
   "curriculum learning": [
     "curriculum learning"
@@ -230,7 +250,8 @@
     "inverse rendering"
   ],
   "self-supervision": [
-    "self-supervision"
+    "self-supervision",
+    "jepa"
   ],
   "llm": [
     "prompt",
@@ -239,7 +260,9 @@
     "llms",
     "lms",
     "chain-of-thought",
-    "rlhf"
+    "rlhf",
+    "llm training",
+    "small language"
   ],
   "motion": [
     "motion"
@@ -269,7 +292,8 @@
     "spatial reasoning",
     "reasoning framework",
     "reasoning model",
-    "logical reasoning"
+    "logical reasoning",
+    "visual reasoning"
   ],
   "weakly-supervised": [
     "weakly-supervised",
@@ -286,7 +310,12 @@
     "robotic manipulation",
     "vision-language-action",
     "vision-language-action model",
-    "dexterous"
+    "dexterous",
+    "action models",
+    "vla",
+    "vision-language-action models",
+    "latent action",
+    "action generation"
   ],
   "domain adaptation": [
     "domain adaptation",
@@ -331,7 +360,8 @@
     "decision processes"
   ],
   "world models": [
-    "world model"
+    "world model",
+    "world modeling"
   ],
   "monte carlo": [
     "monte carlo",
@@ -360,10 +390,13 @@
     "interpretability",
     "interpreting",
     "interpret",
-    "explaining"
+    "explaining",
+    "shapley value"
   ],
   "chemical ai": [
-    "molecular"
+    "molecular",
+    "protein design",
+    "de novo"
   ],
   "search": [
     "search",
@@ -372,7 +405,8 @@
   "symbolic AI": [
     "symbol",
     "symbolic",
-    "neuro-symbolic"
+    "neuro-symbolic",
+    "symbolic regression"
   ],
   "watermark": [
     "watermark"
@@ -383,7 +417,9 @@
   ],
   "reward model": [
     "reward model",
-    "reward modeling"
+    "reward modeling",
+    "process reward",
+    "hacking"
   ],
   "adaptation": [
     "adaptive",
@@ -424,7 +460,8 @@
     "autonomous"
   ],
   "token": [
-    "token"
+    "token",
+    "visual token"
   ],
   "streaming": [
     "streaming",
@@ -494,7 +531,9 @@
   "memory-efficient LLM": [
     "memory-efficient",
     "kv cache",
-    "kv cache compression"
+    "kv cache compression",
+    "evict",
+    "eviction"
   ],
   "optimal transport": [
     "optimal transport"
@@ -510,7 +549,8 @@
     "black-box"
   ],
   "Spiking Neural Networks": [
-    "spiking neural networks"
+    "spiking neural networks",
+    "snn"
   ],
   "Non-parametric": [
     "nonparametric",
@@ -536,7 +576,9 @@
     "gui agent",
     "gui agents",
     "web agent",
-    "web agents"
+    "web agents",
+    "language agents",
+    "tool-augmented"
   ],
   "neural collapse": [
     "neural collapse"
@@ -548,7 +590,8 @@
   "cooperate": [
     "cooperate",
     "cooperative",
-    "cooper"
+    "cooper",
+    "cooperation"
   ],
   "tokenize": [
     "tokenize",
@@ -556,7 +599,8 @@
     "tokenizer"
   ],
   "Consistency Model": [
-    "consistency model"
+    "consistency model",
+    "few-step"
   ],
   "Deep Equilibrium Models": [
     "deep equilibrium models",
@@ -617,7 +661,8 @@
     "dpo"
   ],
   "Flow matching": [
-    "flow matching"
+    "flow matching",
+    "discrete flow"
   ],
   "multi-modal": [
     "mllm",
@@ -643,7 +688,8 @@
     "code generation model"
   ],
   "Mathematical reasoning": [
-    "mathematical reasoning"
+    "mathematical reasoning",
+    "formalization"
   ],
   "Flow": [
     "rectified flow",
@@ -693,7 +739,11 @@
   "agentic ai": [
     "agentic",
     "multi-agent systems",
-    "inference-time"
+    "inference-time",
+    "orchestration",
+    "agentic reasoning",
+    "agentic system",
+    "agentic reinforcement learning"
   ],
   "direct preference": [
     "direct preference",
@@ -705,14 +755,16 @@
   ],
   "watermarking": [
     "watermarking",
-    "watermark"
+    "watermark",
+    "watermarks"
   ],
   "contamination": [
     "contamination"
   ],
   "alignment": [
     "align",
-    "misalignment"
+    "misalignment",
+    "pluralistic"
   ],
   "dialogue": [
     "conversational",
@@ -732,18 +784,27 @@
     "causal"
   ],
   "diffusion language model": [
-    "diffusion language"
+    "diffusion language",
+    "diffusion llm"
   ],
   "deep research": [
     "deep research"
   ],
   "rlvr": [
-    "rlvr"
+    "rlvr",
+    "verifiable"
   ],
   "llm safety": [
     "llm safety",
     "hijack",
     "hijacking",
     "safeguarding"
+  ],
+  "llm-as-a-judge": [
+    "llm-as-a-judge"
+  ],
+  "genomics": [
+    "genomic",
+    "rna-seq"
   ]
 }

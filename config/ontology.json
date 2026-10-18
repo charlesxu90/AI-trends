@@ -1,0 +1,603 @@
+{
+  "version": "0.2",
+  "domains": [
+    {"code": "PRED", "name": "Prediction & inference",
+     "summary": "Inferring unknown labels, values, states, relationships, or future outcomes from observed inputs.",
+     "children": [
+      {"name": "Classification", "children": [
+        {"name": "Binary & multi-label classification", "examples": ["ML-GCN", "ASL", "CheXNet"], "keywords": ["multi-label classification", "multi-label image", "multi-label learning", "multilabel classification"]},
+        {"name": "Multiclass & hierarchical classification", "examples": ["ResNet", "ViT", "ConvNeXt"], "keywords": ["hierarchical classification", "image classification", "hierarchical label"]},
+        {"name": "Long-tailed & imbalanced classification", "examples": ["LDAM", "Decoupling (cRT)", "Logit Adjustment"], "keywords": ["long-tailed", "long-tail recognition", "class imbalance", "class-imbalanced", "imbalanced classification"]},
+        {"name": "Open-set classification", "examples": ["OpenMax"], "keywords": ["open-set recognition", "open set recognition", "open-set classification"]},
+        {"name": "Tabular classification & regression", "examples": ["XGBoost", "FT-Transformer", "TabPFN"], "keywords": ["tabular data", "tabular learning", "tabular classification", "tabular deep learning"]}
+      ]},
+      {"name": "Regression & value estimation", "children": [
+        {"name": "Scalar & vector regression"},
+        {"name": "Quality, preference & affinity estimation", "examples": ["MUSIQ"], "keywords": ["image quality assessment", "video quality assessment", "quality assessment", "binding affinity"]},
+        {"name": "Distributional & probabilistic regression", "examples": ["Mixture Density Networks"], "keywords": ["probabilistic regression", "distributional regression", "quantile regression", "heteroscedastic regression"]}
+      ]},
+      {"name": "Structured prediction", "children": [
+        {"name": "Sequence labeling & information extraction", "examples": ["BiLSTM-CRF", "SpanBERT"], "keywords": ["named entity recognition", "information extraction", "relation extraction", "event extraction", "sequence labeling"]},
+        {"name": "Parsing & tree prediction", "examples": ["Biaffine Parser"], "keywords": ["dependency parsing", "constituency parsing", "syntactic parsing"]},
+        {"name": "Node classification", "examples": ["GCN", "GAT", "GraphSAGE"], "keywords": ["node classification"]},
+        {"name": "Link prediction & KG completion", "examples": ["TransE", "RotatE", "SEAL"], "keywords": ["link prediction", "knowledge graph completion", "knowledge graph embedding"]},
+        {"name": "Graph-level property prediction", "examples": ["GIN", "Graphormer"], "keywords": ["graph classification", "graph property prediction", "graph-level"]},
+        {"name": "Scene graph generation", "examples": ["Neural Motifs"], "keywords": ["scene graph generation", "scene graph"]},
+        {"name": "Structured outputs with constraints", "keywords": ["structured prediction", "structured output"]}
+      ]},
+      {"name": "Forecasting", "children": [
+        {"name": "Time-series & spatiotemporal forecasting", "examples": ["PatchTST", "TimesNet", "DCRNN", "Graph WaveNet"], "keywords": ["time series forecasting", "time-series forecasting", "traffic forecasting", "spatio-temporal forecasting", "spatiotemporal forecasting"]},
+        {"name": "Long-horizon & probabilistic forecasting", "examples": ["Informer", "DeepAR"], "keywords": ["long-term forecasting", "long-term time series", "probabilistic forecasting", "long-horizon forecasting"]},
+        {"name": "Event, trajectory & demand forecasting", "examples": ["Social-LSTM", "Wayformer"], "keywords": ["trajectory prediction", "motion forecasting", "trajectory forecasting", "demand forecasting", "event prediction", "temporal point process"]}
+      ]},
+      {"name": "State & latent-variable inference", "children": [
+        {"name": "State estimation & filtering", "examples": ["Deep Kalman Filter", "KalmanNet"], "keywords": ["state estimation", "kalman filter", "particle filter"]},
+        {"name": "Parameter & simulation-based inference", "examples": ["Neural Posterior Estimation"], "keywords": ["simulation-based inference", "likelihood-free inference", "posterior estimation", "parameter inference"]},
+        {"name": "Latent-variable models & system identification", "examples": ["SINDy"], "keywords": ["system identification", "latent dynamics", "equation discovery"]},
+        {"name": "Variational inference", "examples": ["Stochastic VI", "Normalizing-flow VI"], "keywords": ["variational inference", "evidence lower bound"]},
+        {"name": "MCMC & Langevin sampling", "examples": ["HMC", "SGLD"], "keywords": ["markov chain monte carlo", "mcmc", "langevin dynamics", "hamiltonian monte carlo"]},
+        {"name": "Gaussian processes", "examples": ["Sparse GP (SVGP)", "Deep Kernel Learning"], "keywords": ["gaussian process"]}
+      ]},
+      {"name": "Geometric & scientific prediction", "children": [
+        {"name": "3D structure & conformation prediction", "examples": ["AlphaFold 2", "ESMFold", "DiffDock"], "keywords": ["protein structure prediction", "molecular docking", "conformation generation", "conformer generation", "protein folding"]},
+        {"name": "Molecular, material & physical-property prediction", "examples": ["SchNet", "GemNet", "CGCNN", "M3GNet"], "keywords": ["molecular property prediction", "property prediction", "materials property", "crystal property"]},
+        {"name": "Machine-learned force fields", "examples": ["NequIP", "MACE"], "keywords": ["interatomic potential", "force field", "machine learning potential", "molecular dynamics"]},
+        {"name": "Retrosynthesis & reaction prediction", "examples": ["Molecular Transformer", "LocalRetro"], "keywords": ["retrosynthesis", "reaction prediction", "retrosynthetic"]},
+        {"name": "Weather, climate & physical-field prediction", "examples": ["FourCastNet", "GraphCast", "Pangu-Weather"], "keywords": ["weather forecasting", "weather prediction", "climate modeling", "climate modelling", "nowcasting", "climate emulation"]},
+        {"name": "Neural operators & PDE solving", "examples": ["FNO", "DeepONet", "PINNs"], "keywords": ["neural operator", "partial differential equation", "pde solver", "physics-informed", "pinn"]},
+        {"name": "Learned physical simulation", "examples": ["GNS", "MeshGraphNets"], "keywords": ["physics simulation", "physical simulation", "fluid simulation", "learned simulator", "mesh-based simulation"]},
+        {"name": "Genomics & single-cell modeling", "examples": ["scVI", "scGPT"], "keywords": ["single-cell", "single cell", "genomic", "gene expression", "dna sequence"]},
+        {"name": "Brain & physiological signal decoding", "examples": ["EEGNet"], "keywords": ["eeg", "fmri", "brain decoding", "brain-computer interface", "ecg", "neural decoding"]},
+        {"name": "Clinical & EHR prediction", "examples": ["BEHRT"], "keywords": ["electronic health record", "ehr", "clinical prediction", "patient outcome"]}
+      ]},
+      {"name": "Uncertainty-aware prediction", "children": [
+        {"name": "Uncertainty estimation", "examples": ["Deep Ensembles", "MC Dropout", "Evidential DL"], "keywords": ["uncertainty estimation", "uncertainty quantification", "predictive uncertainty", "epistemic uncertainty"]},
+        {"name": "Bayesian deep learning", "examples": ["Bayes by Backprop", "Laplace Redux"], "keywords": ["bayesian neural network", "bayesian deep learning", "laplace approximation"]},
+        {"name": "Calibration & confidence estimation", "examples": ["Temperature Scaling", "Focal Loss calibration"], "keywords": ["confidence calibration", "model calibration", "expected calibration error", "miscalibration", "calibration error"]},
+        {"name": "Selective prediction & abstention", "examples": ["SelectiveNet"], "keywords": ["selective prediction", "selective classification", "abstention", "reject option", "learning to reject"]},
+        {"name": "Conformal prediction", "examples": ["Split Conformal", "APS"], "keywords": ["conformal prediction", "conformal"]},
+        {"name": "OOD & failure detection", "examples": ["MSP", "ODIN", "Energy Score"], "keywords": ["out-of-distribution detection", "ood detection", "failure detection", "misclassification detection"]}
+      ]}
+    ]},
+    {"code": "GEN", "name": "Generation & synthesis",
+     "summary": "Creating new content, samples, designs, or structured objects.",
+     "children": [
+      {"name": "Text & language generation", "children": [
+        {"name": "Conditional & controllable text generation", "examples": ["CTRL", "PPLM"], "keywords": ["controllable text generation", "controlled text generation", "constrained decoding"]},
+        {"name": "Machine translation", "examples": ["Transformer (NMT)", "NLLB"], "keywords": ["machine translation", "neural machine translation", "multilingual translation"]},
+        {"name": "Summarization", "examples": ["PEGASUS", "BART"], "keywords": ["summarization"]},
+        {"name": "Dialogue systems", "examples": ["DialoGPT", "BlenderBot"], "keywords": ["dialogue system", "dialogue generation", "conversational agent", "chatbot", "open-domain dialogue", "task-oriented dialogue", "dialog system"]},
+        {"name": "Long-form & structured text generation", "examples": ["STORM"], "keywords": ["long-form generation", "long-form text generation", "story generation", "long text generation"]},
+        {"name": "Non-autoregressive & diffusion language models", "examples": ["MDLM", "LLaDA"], "keywords": ["diffusion language model", "discrete diffusion", "masked diffusion model", "non-autoregressive"]}
+      ]},
+      {"name": "Image generation & editing", "children": [
+        {"name": "Text-to-image", "examples": ["Latent Diffusion", "Imagen", "DiT"], "keywords": ["text-to-image"]},
+        {"name": "Image-to-image translation", "examples": ["pix2pix", "CycleGAN"], "keywords": ["image-to-image translation", "image translation", "unpaired translation"]},
+        {"name": "Controllable generation", "examples": ["ControlNet", "T2I-Adapter", "GLIGEN"], "keywords": ["controllable generation", "controllable image generation", "conditional control", "spatial control", "layout-to-image"]},
+        {"name": "Inpainting & outpainting", "examples": ["LaMa", "RePaint"], "keywords": ["inpainting", "outpainting", "image completion"]},
+        {"name": "Image editing & manipulation", "examples": ["Prompt-to-Prompt", "InstructPix2Pix"], "keywords": ["image editing", "image manipulation", "text-guided editing", "text-driven editing"]},
+        {"name": "Personalization & subject-driven generation", "examples": ["DreamBooth", "Textual Inversion", "IP-Adapter"], "keywords": ["subject-driven", "personalized text-to-image", "personalization", "customized generation", "identity-preserving"]}
+      ]},
+      {"name": "Video & motion generation", "children": [
+        {"name": "Text-to-video", "examples": ["Video Diffusion Models", "CogVideoX"], "keywords": ["text-to-video", "video generation", "video diffusion"]},
+        {"name": "Image-to-video & animation", "examples": ["AnimateDiff", "Stable Video Diffusion"], "keywords": ["image-to-video", "image animation"]},
+        {"name": "Long video generation", "examples": ["Phenaki", "StreamingT2V"], "keywords": ["long video generation", "long-video generation", "minute-long"]},
+        {"name": "Video prediction & continuation", "examples": ["PredRNN", "SimVP"], "keywords": ["video prediction", "future frame prediction", "video forecasting"]},
+        {"name": "Video editing", "examples": ["Tune-A-Video", "TokenFlow"], "keywords": ["video editing"]},
+        {"name": "Human & talking-head animation", "examples": ["SadTalker", "Animate Anyone"], "keywords": ["talking head", "talking face", "human animation", "human image animation", "lip sync", "portrait animation"]},
+        {"name": "Motion, pose & trajectory synthesis", "examples": ["MDM", "T2M-GPT"], "keywords": ["motion generation", "motion synthesis", "text-to-motion", "dance generation", "human motion generation"]}
+      ]},
+      {"name": "Audio & speech generation", "children": [
+        {"name": "Speech synthesis & voice conversion", "examples": ["Tacotron 2", "VALL-E"], "keywords": ["text-to-speech", "speech synthesis", "voice conversion", "tts"]},
+        {"name": "Music & sound generation", "examples": ["Jukebox", "MusicLM", "AudioLDM"], "keywords": ["music generation", "audio generation", "text-to-audio", "sound generation", "music synthesis"]},
+        {"name": "Audio-driven synthesis", "examples": ["Wav2Lip"], "keywords": ["audio-driven", "speech-driven", "audio-conditioned"]}
+      ]},
+      {"name": "3D & 4D content generation", "children": [
+        {"name": "Text-to-3D", "examples": ["DreamFusion (SDS)", "Magic3D", "MVDream"], "keywords": ["text-to-3d", "score distillation"]},
+        {"name": "Shape, mesh & point-cloud generation", "examples": ["Point-E", "GET3D"], "keywords": ["3d shape generation", "shape generation", "mesh generation", "point cloud generation", "3d generative model", "3d generation"]},
+        {"name": "Scene & layout generation", "examples": ["ATISS", "LayoutGPT"], "keywords": ["scene generation", "layout generation", "scene synthesis", "indoor scene"]},
+        {"name": "3D-aware image generation", "examples": ["GIRAFFE", "EG3D"], "keywords": ["3d-aware"]},
+        {"name": "3D avatar generation", "examples": ["AvatarCLIP", "DreamAvatar"], "keywords": ["avatar generation", "3d avatar", "avatar creation", "text-to-avatar"]},
+        {"name": "Dynamic 4D scene & asset generation", "examples": ["MAV3D", "4DGen"], "keywords": ["4d generation", "text-to-4d", "dynamic 3d generation", "4d content"]}
+      ]},
+      {"name": "Scientific & engineering design", "children": [
+        {"name": "Molecule generation & drug design", "examples": ["JT-VAE", "EDM (molecules)"], "keywords": ["molecule generation", "molecular generation", "drug design", "drug discovery", "de novo design", "structure-based drug design", "molecular design"]},
+        {"name": "Protein, peptide, RNA & DNA design", "examples": ["ProteinMPNN", "RFdiffusion"], "keywords": ["protein design", "protein generation", "antibody design", "peptide design", "rna design", "inverse folding"]},
+        {"name": "Materials, circuit & component design", "examples": ["CDVAE", "MatterGen"], "keywords": ["crystal generation", "materials design", "material generation", "inverse design", "circuit design"]},
+        {"name": "Code & program generation", "examples": ["Codex", "AlphaCode", "StarCoder"], "keywords": ["code generation", "program synthesis", "code llm", "code language model"]}
+      ]},
+      {"name": "Data synthesis", "children": [
+        {"name": "Synthetic datasets & rare-case generation", "examples": ["DatasetGAN"], "keywords": ["synthetic data", "synthetic dataset", "data synthesis", "synthetic training data"]},
+        {"name": "Generative data augmentation", "examples": ["DA-Fusion"], "keywords": ["generative data augmentation", "diffusion-based augmentation", "generated data augmentation"]}
+      ]},
+      {"name": "Generative modeling advances", "children": [
+        {"name": "Diffusion & score-based models", "examples": ["DDPM", "Score SDE", "EDM"], "keywords": ["diffusion model", "score-based", "denoising diffusion", "score matching"]},
+        {"name": "Flow matching & rectified flow", "examples": ["Flow Matching", "Rectified Flow"], "keywords": ["flow matching", "rectified flow", "stochastic interpolant"]},
+        {"name": "Autoregressive & masked generation", "examples": ["VQ-VAE-2", "MaskGIT", "VAR"], "keywords": ["autoregressive image generation", "masked generative", "autoregressive generation", "visual autoregressive"]},
+        {"name": "GANs", "examples": ["StyleGAN", "BigGAN"], "keywords": ["generative adversarial network", "gan"]},
+        {"name": "VAEs & normalizing flows", "examples": ["VAE", "Glow"], "keywords": ["variational autoencoder", "normalizing flow", "vae"]},
+        {"name": "Energy-based models", "examples": ["IGEBM", "JEM"], "keywords": ["energy-based model", "energy based model"]},
+        {"name": "Sampling acceleration & distillation", "examples": ["DDIM", "DPM-Solver", "Consistency Models"], "keywords": ["fast sampling", "sampling acceleration", "few-step", "one-step generation", "diffusion distillation", "consistency model", "accelerating diffusion"]},
+        {"name": "Guidance, controllability & fidelity–diversity", "examples": ["Classifier Guidance", "Classifier-Free Guidance"], "keywords": ["classifier-free guidance", "guidance scale", "diffusion guidance", "classifier guidance"]},
+        {"name": "Amortized samplers", "examples": ["GFlowNets", "Diffusion samplers"], "keywords": ["gflownet", "generative flow network", "amortized sampler", "boltzmann generator", "neural sampler"]}
+      ]}
+    ]},
+    {"code": "REPR", "name": "Representation, embedding & feature learning",
+     "summary": "Learning useful encodings, abstractions, or latent spaces, often to support downstream tasks.",
+     "children": [
+      {"name": "Representation learning", "children": [
+        {"name": "Contrastive learning", "examples": ["SimCLR", "MoCo", "BYOL"], "keywords": ["contrastive learning", "contrastive representation"]},
+        {"name": "Masked modeling", "examples": ["BERT", "MAE", "BEiT"], "keywords": ["masked image modeling", "masked autoencoder", "masked language model", "masked modeling"]},
+        {"name": "Self-distillation", "examples": ["DINO", "iBOT", "DINOv2"], "keywords": ["self-distillation"]},
+        {"name": "Joint-embedding predictive learning", "examples": ["I-JEPA", "V-JEPA"], "keywords": ["joint-embedding predictive", "jepa"]},
+        {"name": "Disentangled & compositional representations", "examples": ["β-VAE", "FactorVAE"], "keywords": ["disentangled representation", "disentanglement", "compositional representation"]},
+        {"name": "Object-centric representations", "examples": ["Slot Attention", "MONet"], "keywords": ["object-centric", "slot attention", "unsupervised object discovery"]},
+        {"name": "Graph representation learning", "examples": ["node2vec", "GraphCL"], "keywords": ["graph representation learning", "graph contrastive", "node embedding", "graph self-supervised", "graph pre-training"]}
+      ]},
+      {"name": "Pretraining & foundation representations", "children": [
+        {"name": "Language model pretraining", "examples": ["GPT-3", "LLaMA"], "keywords": ["language model pretraining", "language model pre-training", "llm pretraining", "llm pre-training"]},
+        {"name": "Vision & multimodal pretraining", "examples": ["BEiT-3", "EVA", "SatMAE", "Prithvi"], "keywords": ["vision foundation model", "visual pretraining", "visual pre-training", "vision-language pretraining", "vision-language pre-training", "multimodal pretraining"]},
+        {"name": "Scientific & biological pretraining", "examples": ["ESM-2", "DNABERT"], "keywords": ["protein language model", "molecular pretraining", "molecular pre-training", "genomic foundation model", "dna language model"]},
+        {"name": "Domain-adaptive & continual pretraining", "examples": ["DAPT / TAPT"], "keywords": ["continual pretraining", "continual pre-training", "domain-adaptive pretraining", "domain-adaptive pre-training"]},
+        {"name": "Long-context modeling", "examples": ["RoPE", "ALiBi", "YaRN"], "keywords": ["long-context", "long context", "context window", "length extrapolation", "positional encoding", "position embedding"]}
+      ]},
+      {"name": "Embedding & similarity", "children": [
+        {"name": "Semantic & instance embeddings", "examples": ["Triplet Loss", "Sentence-BERT"], "keywords": ["sentence embedding", "text embedding", "embedding model", "instance embedding"]},
+        {"name": "Retrieval-oriented representations & hashing", "examples": ["HashNet"], "keywords": ["hashing", "learning to hash"]},
+        {"name": "Metric & hyperbolic spaces", "examples": ["Poincaré Embeddings"], "keywords": ["hyperbolic", "deep metric learning", "metric learning"]}
+      ]},
+      {"name": "Cross-modal representation", "children": [
+        {"name": "Image-, audio- & video-language alignment", "examples": ["CLIP", "ALIGN", "SigLIP"], "keywords": ["image-text contrastive", "vision-language alignment", "image-text alignment", "audio-text", "video-text alignment", "language-image pre-training"]},
+        {"name": "Shared latent spaces & modality bridging", "examples": ["ImageBind", "AV-HuBERT"], "keywords": ["shared embedding space", "joint embedding space", "modality gap", "modality alignment", "cross-modal alignment"]}
+      ]},
+      {"name": "Geometric & equivariant representations", "children": [
+        {"name": "Rotation, translation & permutation equivariance", "examples": ["EGNN", "SE(3)-Transformer"], "keywords": ["equivariant", "equivariance", "se(3)", "e(3)"]},
+        {"name": "3D geometric features & point-cloud learning", "examples": ["PointNet++", "DGCNN", "Point Transformer"], "keywords": ["point cloud learning", "point cloud analysis", "point cloud representation", "point cloud classification", "point cloud understanding", "3d descriptor"]}
+      ]},
+      {"name": "Tokenization & compression", "children": [
+        {"name": "Visual & audio tokenizers", "examples": ["VQ-GAN", "MAGVIT", "SoundStream"], "keywords": ["visual tokenizer", "image tokenizer", "video tokenizer", "audio codec", "vector quantization", "vq-vae"]},
+        {"name": "Neural compression", "examples": ["Hyperprior (Ballé)"], "keywords": ["image compression", "neural compression", "learned compression", "video compression"]}
+      ]},
+      {"name": "Representation analysis & adaptation", "children": [
+        {"name": "Probing & representation similarity", "examples": ["Linear Probes", "CKA"], "keywords": ["probing", "representation similarity", "linear probe"]},
+        {"name": "Representation editing", "examples": ["RepE", "ReFT"], "keywords": ["representation engineering", "representation editing", "activation steering", "steering vector"]}
+      ]}
+    ]},
+    {"code": "RECOG", "name": "Recognition, detection & localization",
+     "summary": "Identifying, finding, or localizing entities or events in inputs.",
+     "children": [
+      {"name": "Object & entity detection", "children": [
+        {"name": "2D object detection", "examples": ["Faster R-CNN", "YOLO", "DETR"], "keywords": ["object detection", "object detector"]},
+        {"name": "3D object detection", "examples": ["PointPillars", "BEVFormer"], "keywords": ["3d object detection", "3d detection", "lidar detection", "bird's-eye-view", "bev"]},
+        {"name": "Open-vocabulary & zero-shot detection", "examples": ["GLIP", "OWL-ViT", "Grounding DINO"], "keywords": ["open-vocabulary detection", "open-vocabulary object detection", "open-set detection", "zero-shot detection", "open-world detection", "open-set object detection"]},
+        {"name": "Small & dense object detection", "keywords": ["small object detection", "tiny object detection", "dense object detection"]}
+      ]},
+      {"name": "Localization", "children": [
+        {"name": "Keypoint, landmark & pose localization", "examples": ["OpenPose", "HRNet", "ViTPose"], "keywords": ["human pose estimation", "hand pose estimation", "keypoint detection", "landmark detection", "2d pose estimation", "whole-body pose"]},
+        {"name": "Spatial grounding & referring expressions", "examples": ["MDETR", "Kosmos-2"], "keywords": ["visual grounding", "referring expression comprehension", "phrase grounding"]},
+        {"name": "Temporal action localization", "examples": ["BMN", "ActionFormer"], "keywords": ["temporal action localization", "temporal action detection", "action localization", "action proposal"]},
+        {"name": "Video temporal grounding", "examples": ["Moment-DETR", "UniVTG"], "keywords": ["temporal grounding", "moment retrieval", "video grounding", "highlight detection"]}
+      ]},
+      {"name": "Recognition", "children": [
+        {"name": "Action & activity recognition", "examples": ["I3D", "SlowFast", "VideoMAE"], "keywords": ["action recognition", "activity recognition", "video recognition", "video classification"]},
+        {"name": "Face & identity recognition", "examples": ["FaceNet", "ArcFace"], "keywords": ["face recognition", "face verification", "identity recognition", "face identification"]},
+        {"name": "Fine-grained recognition", "examples": ["Bilinear CNN", "TransFG"], "keywords": ["fine-grained recognition", "fine-grained classification", "fine-grained visual", "fine-grained image"]},
+        {"name": "Scene & gesture recognition", "keywords": ["scene recognition", "gesture recognition", "sign language recognition", "scene classification"]},
+        {"name": "Speech recognition", "examples": ["wav2vec 2.0", "Whisper"], "keywords": ["speech recognition", "asr"]},
+        {"name": "Audio event recognition", "examples": ["PANNs", "AST"], "keywords": ["audio classification", "sound event", "audio tagging", "audio event"]},
+        {"name": "Text & document recognition (OCR)", "examples": ["LayoutLM", "Donut"], "keywords": ["text recognition", "ocr", "document understanding", "scene text", "handwriting recognition", "document image"]}
+      ]},
+      {"name": "Tracking", "children": [
+        {"name": "Multi-object & 3D tracking", "examples": ["SORT", "ByteTrack", "CenterPoint"], "keywords": ["multi-object tracking", "multiple object tracking", "3d tracking", "3d object tracking"]},
+        {"name": "Single-object tracking", "examples": ["SiamFC", "OSTrack"], "keywords": ["visual object tracking", "single object tracking", "object tracking"]},
+        {"name": "Re-identification & identity association", "examples": ["FairMOT"], "keywords": ["re-identification", "reid", "person search", "data association"]}
+      ]},
+      {"name": "Anomaly & novelty detection", "children": [
+        {"name": "Visual, temporal & behavioral anomalies", "examples": ["Deep SVDD", "PatchCore"], "keywords": ["anomaly detection", "anomaly localization", "anomaly segmentation", "outlier detection", "defect detection"]},
+        {"name": "Novel class & rare-event discovery", "examples": ["RankStats", "GCD"], "keywords": ["novel class discovery", "category discovery", "new class discovery", "novel category"]}
+      ]}
+    ]},
+    {"code": "SEG", "name": "Segmentation & partitioning",
+     "summary": "Assigning elements or regions to coherent groups or labels.",
+     "children": [
+      {"name": "Image & video segmentation", "children": [
+        {"name": "Semantic segmentation", "examples": ["FCN", "DeepLab", "SegFormer"], "keywords": ["semantic segmentation"]},
+        {"name": "Instance & panoptic segmentation", "examples": ["Mask R-CNN", "Mask2Former"], "keywords": ["instance segmentation", "panoptic segmentation"]},
+        {"name": "Interactive, promptable & open-vocabulary segmentation", "examples": ["SAM", "SAM 2", "X-Decoder"], "keywords": ["open-vocabulary segmentation", "open-vocabulary semantic segmentation", "interactive segmentation", "promptable segmentation", "segment anything"]},
+        {"name": "Referring & reasoning segmentation", "examples": ["LAVT", "LISA"], "keywords": ["referring segmentation", "referring image segmentation", "referring expression segmentation", "reasoning segmentation", "referring video object segmentation"]},
+        {"name": "Video & temporal segmentation", "examples": ["STM", "XMem"], "keywords": ["video object segmentation", "video segmentation", "video instance segmentation", "temporal action segmentation", "video semantic segmentation"]}
+      ]},
+      {"name": "3D segmentation", "children": [
+        {"name": "Point-cloud, mesh & voxel segmentation", "examples": ["MinkowskiNet"], "keywords": ["point cloud segmentation", "3d semantic segmentation", "3d instance segmentation", "lidar segmentation", "3d segmentation", "mesh segmentation"]},
+        {"name": "Part segmentation & scene parsing", "examples": ["OpenScene", "PartSLIP"], "keywords": ["part segmentation", "scene parsing", "3d scene understanding", "open-vocabulary 3d"]}
+      ]},
+      {"name": "Medical & scientific segmentation", "children": [
+        {"name": "Organ, tissue & volumetric segmentation", "examples": ["U-Net", "nnU-Net", "MedSAM"], "keywords": ["medical image segmentation", "organ segmentation", "tumor segmentation", "volumetric segmentation", "lesion segmentation"]},
+        {"name": "Cell & microscopy segmentation", "examples": ["Cellpose", "StarDist"], "keywords": ["cell segmentation", "microscopy", "nuclei segmentation", "nucleus segmentation"]}
+      ]},
+      {"name": "Clustering & partitioning", "children": [
+        {"name": "Data, graph & community clustering", "examples": ["DEC"], "keywords": ["deep clustering", "graph clustering", "community detection", "image clustering"]},
+        {"name": "Subspace, spectral & differentiable clustering", "examples": ["SpectralNet"], "keywords": ["subspace clustering", "spectral clustering", "differentiable clustering", "multi-view clustering"]}
+      ]},
+      {"name": "Weakly, semi- & unsupervised segmentation", "children": [
+        {"name": "Weakly-supervised segmentation", "examples": ["CAM", "IRNet"], "keywords": ["weakly supervised semantic segmentation", "weakly-supervised semantic segmentation", "weakly supervised segmentation", "weakly-supervised segmentation", "class activation map", "weakly supervised object localization"]},
+        {"name": "Unsupervised segmentation", "examples": ["STEGO", "CutLER"], "keywords": ["unsupervised semantic segmentation", "unsupervised segmentation", "unsupervised instance segmentation"]}
+      ]}
+    ]},
+    {"code": "RECON", "name": "Reconstruction, restoration & inverse problems",
+     "summary": "Recovering missing, degraded, hidden, or latent content from measurements.",
+     "children": [
+      {"name": "2D image reconstruction", "children": [
+        {"name": "Super-resolution", "examples": ["SRCNN", "SwinIR", "Real-ESRGAN"], "keywords": ["super-resolution", "super resolution"]},
+        {"name": "Denoising & deblurring", "examples": ["DnCNN", "Restormer", "NAFNet"], "keywords": ["image denoising", "video denoising", "deblurring", "deraining", "dehazing", "motion blur"]},
+        {"name": "Low-light & image enhancement", "examples": ["Zero-DCE", "Retinexformer"], "keywords": ["low-light", "image enhancement", "underwater image", "exposure correction"]},
+        {"name": "All-in-one restoration", "examples": ["AirNet", "PromptIR"], "keywords": ["all-in-one", "universal image restoration", "blind image restoration", "image restoration"]},
+        {"name": "Compressed sensing", "examples": ["ISTA-Net"], "keywords": ["compressed sensing", "compressive sensing", "snapshot compressive imaging"]}
+      ]},
+      {"name": "3D reconstruction", "children": [
+        {"name": "Monocular depth estimation", "examples": ["MiDaS", "Depth Anything", "Marigold"], "keywords": ["depth estimation", "monocular depth"]},
+        {"name": "Stereo matching", "examples": ["PSMNet", "RAFT-Stereo"], "keywords": ["stereo matching", "stereo depth"]},
+        {"name": "Multi-view stereo", "examples": ["MVSNet", "CasMVSNet"], "keywords": ["multi-view stereo", "mvs"]},
+        {"name": "Structure-from-motion & camera pose", "examples": ["COLMAP", "DUSt3R", "VGGT"], "keywords": ["structure-from-motion", "structure from motion", "camera pose estimation", "camera pose", "bundle adjustment", "visual localization"]},
+        {"name": "Visual SLAM & localization", "examples": ["ORB-SLAM", "DROID-SLAM"], "keywords": ["slam", "visual odometry", "simultaneous localization and mapping"]},
+        {"name": "Neural radiance fields (NeRF)", "examples": ["NeRF", "Mip-NeRF", "Instant-NGP"], "keywords": ["neural radiance field", "nerf"]},
+        {"name": "Gaussian splatting", "examples": ["3D Gaussian Splatting", "2DGS"], "keywords": ["gaussian splatting", "3d gaussian"]},
+        {"name": "Shape, surface & mesh reconstruction", "examples": ["DeepSDF", "Occupancy Networks", "NeuS"], "keywords": ["surface reconstruction", "mesh reconstruction", "3d reconstruction", "implicit surface", "signed distance function", "shape reconstruction"]},
+        {"name": "Point cloud completion", "examples": ["PCN", "PoinTr"], "keywords": ["point cloud completion", "shape completion", "point cloud upsampling"]}
+      ]},
+      {"name": "4D & dynamic reconstruction", "children": [
+        {"name": "Dynamic & motion-aware scene reconstruction", "examples": ["D-NeRF", "4D Gaussian Splatting"], "keywords": ["dynamic scene", "dynamic nerf", "4d reconstruction", "dynamic gaussian", "non-rigid reconstruction"]},
+        {"name": "Human & avatar reconstruction", "examples": ["HMR", "SMPLify", "PIFu", "HumanNeRF"], "keywords": ["human mesh recovery", "human reconstruction", "clothed human", "3d human pose and shape", "avatar reconstruction", "smpl"]},
+        {"name": "Hand-object reconstruction", "examples": ["HOnnotate", "gSDF"], "keywords": ["hand-object", "hand object interaction", "hand reconstruction", "hand mesh"]}
+      ]},
+      {"name": "Cross-modal reconstruction", "children": [
+        {"name": "Image-to-3D", "examples": ["Zero-1-to-3", "LRM"], "keywords": ["image-to-3d", "single-image 3d", "single image 3d", "single-view reconstruction", "single-view 3d"]},
+        {"name": "Brain-to-image decoding", "examples": ["MindEye"], "keywords": ["fmri-to-image", "brain-to-image", "image reconstruction from fmri", "eeg-to-image"]},
+        {"name": "Audio-to-motion & modality completion", "keywords": ["modality completion", "missing modality", "audio-to-motion"]}
+      ]},
+      {"name": "Scientific inverse problems", "children": [
+        {"name": "Tomography & microscopy reconstruction", "examples": ["Learned Primal-Dual"], "keywords": ["computed tomography", "ct reconstruction", "tomography", "mri reconstruction", "accelerated mri", "sparse-view ct"]},
+        {"name": "Inverse rendering & relighting", "examples": ["NeRD", "NeRFactor"], "keywords": ["inverse rendering", "relighting", "intrinsic decomposition", "material estimation", "brdf"]},
+        {"name": "Reconstruction with physical & measurement constraints", "examples": ["Diffusion Posterior Sampling"], "keywords": ["inverse problem", "posterior sampling", "plug-and-play"]}
+      ]}
+    ]},
+    {"code": "OPT", "name": "Optimization, search & design",
+     "summary": "Finding improved solutions under objectives, constraints, or preferences.",
+     "children": [
+      {"name": "Continuous & discrete optimization", "children": [
+        {"name": "Stochastic & nonconvex optimization", "examples": ["SVRG", "Sharpness-Aware Minimization"], "keywords": ["nonconvex optimization", "non-convex optimization", "stochastic optimization", "variance reduction", "sharpness-aware", "stochastic gradient"]},
+        {"name": "Derivative-free & zeroth-order optimization", "examples": ["CMA-ES", "Evolution Strategies"], "keywords": ["zeroth-order", "derivative-free", "evolution strategy", "evolution strategies", "evolutionary algorithm", "genetic algorithm"]},
+        {"name": "Constrained, multi-objective & robust optimization", "examples": ["MGDA"], "keywords": ["multi-objective optimization", "multi-objective", "constrained optimization", "robust optimization", "pareto"]},
+        {"name": "Minimax & bilevel optimization", "examples": ["Extragradient", "Implicit Differentiation"], "keywords": ["minimax", "min-max", "bilevel optimization", "bilevel", "saddle point", "variational inequality"]},
+        {"name": "Optimal transport", "examples": ["Sinkhorn", "Wasserstein GAN"], "keywords": ["optimal transport", "wasserstein", "sinkhorn"]}
+      ]},
+      {"name": "Black-box & expensive optimization", "children": [
+        {"name": "Bayesian optimization & surrogate-assisted search", "examples": ["GP-UCB", "Expected Improvement"], "keywords": ["bayesian optimization", "black-box optimization", "surrogate model", "acquisition function"]},
+        {"name": "Experimental design", "examples": ["Deep Adaptive Design"], "keywords": ["experimental design", "design of experiments"]}
+      ]},
+      {"name": "Neural architecture & model optimization", "children": [
+        {"name": "Neural architecture search", "examples": ["DARTS", "ENAS"], "keywords": ["neural architecture search", "architecture search"]},
+        {"name": "Hyperparameter & training optimization", "examples": ["Hyperband", "Population-Based Training"], "keywords": ["hyperparameter optimization", "hyperparameter tuning", "automl", "hyperparameter search"]}
+      ]},
+      {"name": "Planning & search", "children": [
+        {"name": "Heuristic & tree search", "examples": ["AlphaGo", "AlphaZero"], "keywords": ["monte carlo tree search", "mcts", "tree search", "heuristic search", "beam search"]},
+        {"name": "Program search", "examples": ["FunSearch"], "keywords": ["program search", "evolutionary search", "algorithm discovery"]},
+        {"name": "Combinatorial optimization, scheduling & routing", "examples": ["Pointer Networks", "Attention Model (TSP)"], "keywords": ["combinatorial optimization", "vehicle routing", "traveling salesman", "travelling salesman", "tsp", "job shop"]},
+        {"name": "Constraint & SAT solving", "examples": ["NeuroSAT"], "keywords": ["sat solver", "satisfiability", "constraint satisfaction", "mixed integer", "milp", "integer programming"]}
+      ]},
+      {"name": "Scientific & engineering optimization", "children": [
+        {"name": "Molecular & protein sequence optimization", "examples": ["LaMBO"], "keywords": ["sequence optimization", "protein engineering", "directed evolution", "molecular optimization", "protein optimization"]},
+        {"name": "Shape, topology, materials & control design", "keywords": ["topology optimization", "shape optimization", "design optimization"]}
+      ]},
+      {"name": "Preference & reward optimization", "children": [
+        {"name": "RLHF & reward modeling", "examples": ["InstructGPT", "PPO-RLHF"], "keywords": ["rlhf", "reinforcement learning from human feedback", "reward model", "reward modeling", "human feedback"]},
+        {"name": "Direct preference optimization", "examples": ["DPO", "KTO", "SimPO"], "keywords": ["direct preference optimization", "preference optimization", "dpo", "preference alignment"]},
+        {"name": "RL with verifiable rewards", "examples": ["GRPO", "DeepSeek-R1"], "keywords": ["verifiable reward", "rlvr", "grpo", "reinforcement learning with verifiable"]}
+      ]}
+    ]},
+    {"code": "CTRL", "name": "Decision-making, control & agency",
+     "summary": "Selecting actions over time to achieve goals, often with feedback.",
+     "children": [
+      {"name": "Reinforcement learning", "children": [
+        {"name": "Value-based, policy-gradient & actor-critic", "examples": ["DQN", "PPO", "SAC"], "keywords": ["policy gradient", "actor-critic", "q-learning", "value-based", "deep reinforcement learning", "off-policy", "on-policy"]},
+        {"name": "Offline & batch RL", "examples": ["CQL", "IQL", "Decision Transformer"], "keywords": ["offline reinforcement learning", "offline rl", "batch reinforcement learning"]},
+        {"name": "Model-based RL & world models", "examples": ["Dreamer", "MuZero"], "keywords": ["model-based reinforcement learning", "model-based rl", "world model"]},
+        {"name": "Multi-agent RL", "examples": ["QMIX", "MAPPO"], "keywords": ["multi-agent reinforcement learning", "marl", "cooperative multi-agent"]},
+        {"name": "Hierarchical RL", "examples": ["Option-Critic", "HIRO"], "keywords": ["hierarchical reinforcement learning", "hierarchical rl", "options framework", "skill discovery"]},
+        {"name": "Exploration & intrinsic motivation", "examples": ["RND", "ICM"], "keywords": ["intrinsic motivation", "curiosity-driven", "intrinsic reward", "exploration bonus", "efficient exploration"]},
+        {"name": "Safe & constrained RL", "examples": ["CPO", "Lagrangian PPO"], "keywords": ["safe reinforcement learning", "safe rl", "constrained reinforcement learning", "constrained mdp", "safe exploration"]}
+      ]},
+      {"name": "Control", "children": [
+        {"name": "Model predictive, adaptive & robust control", "examples": ["MPPI"], "keywords": ["model predictive control", "mpc", "robust control", "adaptive control", "optimal control"]},
+        {"name": "Learning-based control & dynamics learning", "examples": ["PILCO", "PETS"], "keywords": ["learning-based control", "learned dynamics", "dynamics learning", "koopman"]}
+      ]},
+      {"name": "Planning under uncertainty", "children": [
+        {"name": "POMDPs & risk-sensitive planning", "examples": ["POMCP", "DESPOT"], "keywords": ["pomdp", "partially observable", "risk-sensitive", "risk-averse"]},
+        {"name": "Long-horizon task & motion planning", "examples": ["SayCan", "LLM+P"], "keywords": ["task planning", "motion planning", "task and motion planning", "long-horizon planning"]}
+      ]},
+      {"name": "Embodied & robotic intelligence", "children": [
+        {"name": "Manipulation & vision-language-action models", "examples": ["RT-2", "OpenVLA"], "keywords": ["robot manipulation", "robotic manipulation", "vision-language-action", "manipulation policy", "grasping", "dexterous"]},
+        {"name": "Navigation", "examples": ["VLN-BERT", "Habitat"], "keywords": ["vision-and-language navigation", "embodied navigation", "object navigation", "visual navigation", "robot navigation"]},
+        {"name": "Locomotion & sim-to-real", "examples": ["Domain Randomization", "RMA"], "keywords": ["locomotion", "sim-to-real", "sim2real", "legged robot", "humanoid"]},
+        {"name": "Imitation & demonstration learning", "examples": ["DAgger", "Diffusion Policy"], "keywords": ["imitation learning", "behavior cloning", "behavioral cloning", "learning from demonstration"]},
+        {"name": "Inverse RL & adversarial imitation", "examples": ["MaxEnt IRL", "GAIL"], "keywords": ["inverse reinforcement learning", "adversarial imitation", "reward learning"]},
+        {"name": "End-to-end driving & motion planning", "examples": ["TransFuser", "UniAD", "ChauffeurNet", "PlanT"], "keywords": ["autonomous driving", "end-to-end driving", "self-driving", "driving policy"]}
+      ]},
+      {"name": "Agent systems", "children": [
+        {"name": "Tool use & workflow orchestration", "examples": ["ReAct", "Toolformer"], "keywords": ["tool use", "tool learning", "function calling", "tool-augmented", "workflow orchestration"]},
+        {"name": "Multi-agent coordination", "examples": ["CAMEL", "AutoGen"], "keywords": ["multi-agent collaboration", "multi-agent system", "multi-agent debate", "multi-agent framework", "llm-based multi-agent"]},
+        {"name": "Memory & reflection", "examples": ["Generative Agents", "MemGPT", "Reflexion"], "keywords": ["agent memory", "long-term memory", "self-reflection", "memory mechanism", "verbal reinforcement"]},
+        {"name": "Task decomposition & autonomous execution", "examples": ["Voyager", "Self-Refine"], "keywords": ["task decomposition", "autonomous agent", "embodied agent", "open-ended agent", "agentic"]},
+        {"name": "Web & GUI agents", "examples": ["WebArena", "SeeAct"], "keywords": ["web agent", "gui agent", "web navigation", "computer use", "mobile agent", "os agent"]},
+        {"name": "Coding & software agents", "examples": ["SWE-agent"], "keywords": ["software engineering agent", "coding agent", "swe-bench", "repository-level", "issue resolution"]},
+        {"name": "Deep research agents", "examples": ["Search-R1"], "keywords": ["deep research", "search agent", "agentic search", "research agent", "agentic retrieval"]}
+      ]},
+      {"name": "Bandits & online learning", "children": [
+        {"name": "Multi-armed & contextual bandits", "examples": ["UCB", "Thompson Sampling", "LinUCB"], "keywords": ["multi-armed bandit", "contextual bandit", "bandit", "thompson sampling"]},
+        {"name": "Online convex optimization", "examples": ["Online Gradient Descent", "Hedge"], "keywords": ["online convex optimization", "online learning", "online gradient descent", "no-regret"]}
+      ]},
+      {"name": "Decision support", "children": [
+        {"name": "Resource allocation", "keywords": ["resource allocation"]},
+        {"name": "Human-AI collaboration & interactive decisions", "examples": ["Learning to Defer"], "keywords": ["human-ai collaboration", "learning to defer", "human-ai teaming", "human-ai interaction"]}
+      ]}
+    ]},
+    {"code": "RETR", "name": "Retrieval, matching & recommendation",
+     "summary": "Finding relevant items, aligning candidates, or ranking options.",
+     "children": [
+      {"name": "Information retrieval", "children": [
+        {"name": "Dense, sparse & hybrid retrieval", "examples": ["DPR", "ColBERT", "SPLADE", "Contriever"], "keywords": ["dense retrieval", "information retrieval", "passage retrieval", "document retrieval", "sparse retrieval", "text retrieval"]},
+        {"name": "Reranking & query expansion", "examples": ["monoBERT", "RankGPT", "HyDE"], "keywords": ["reranking", "re-ranking", "query expansion", "query rewriting"]}
+      ]},
+      {"name": "Matching & alignment", "children": [
+        {"name": "Entity resolution & record linkage", "examples": ["Ditto"], "keywords": ["entity resolution", "entity matching", "record linkage", "entity alignment"]},
+        {"name": "Image feature matching", "examples": ["SuperGlue", "LoFTR", "LightGlue"], "keywords": ["feature matching", "keypoint matching", "local feature", "image matching"]},
+        {"name": "Optical flow & dense correspondence", "examples": ["FlowNet", "RAFT"], "keywords": ["optical flow", "dense correspondence", "scene flow", "correspondence estimation"]},
+        {"name": "Point cloud registration", "examples": ["ICP", "GeoTransformer"], "keywords": ["point cloud registration", "image registration", "3d registration", "shape matching"]},
+        {"name": "Cross-modal matching", "examples": ["VSE++"], "keywords": ["cross-modal retrieval", "image-text retrieval", "text-video retrieval", "video-text retrieval", "image-text matching", "composed image retrieval", "text-to-image retrieval"]},
+        {"name": "Sequence & graph alignment", "examples": ["Graph Matching Networks"], "keywords": ["graph matching", "sequence alignment", "network alignment", "graph alignment"]}
+      ]},
+      {"name": "Recommendation", "children": [
+        {"name": "Personalized ranking & collaborative filtering", "examples": ["Matrix Factorization", "LightGCN"], "keywords": ["collaborative filtering", "recommender system", "recommendation system", "recommendation"]},
+        {"name": "Session & sequential recommendation", "examples": ["SASRec", "BERT4Rec"], "keywords": ["sequential recommendation", "session-based recommendation", "next-item"]},
+        {"name": "Learning to rank", "examples": ["RankNet", "LambdaMART"], "keywords": ["learning to rank", "ranking model", "listwise", "pairwise ranking"]}
+      ]},
+      {"name": "Memory & knowledge access", "children": [
+        {"name": "Retrieval-augmented generation (RAG)", "examples": ["REALM", "RAG", "Self-RAG"], "keywords": ["retrieval-augmented", "retrieval augmented", "rag"]},
+        {"name": "Evidence retrieval & fact verification", "keywords": ["fact verification", "fact-checking", "fact checking", "claim verification", "evidence retrieval"]},
+        {"name": "Long-context memory", "examples": ["Memorizing Transformers"], "keywords": ["memory-augmented", "external memory", "memory bank"]}
+      ]},
+      {"name": "Search over learned spaces", "children": [
+        {"name": "Nearest-neighbor search & vector indexing", "examples": ["HNSW", "FAISS", "ScaNN"], "keywords": ["nearest neighbor search", "approximate nearest neighbor", "vector search", "vector database", "similarity search"]}
+      ]}
+    ]},
+    {"code": "REASON", "name": "Understanding, reasoning & explanation",
+     "summary": "Inferring meaning, deriving conclusions, or exposing why a model behaves as it does.",
+     "children": [
+      {"name": "Language & semantic understanding", "children": [
+        {"name": "Question answering & reading comprehension", "examples": ["BiDAF", "T5", "Med-PaLM"], "keywords": ["question answering", "reading comprehension", "open-domain qa", "multi-hop"]},
+        {"name": "Entailment & semantic parsing", "keywords": ["natural language inference", "textual entailment", "semantic parsing", "text-to-sql"]},
+        {"name": "Intent, sentiment & discourse analysis", "keywords": ["sentiment analysis", "intent detection", "discourse", "emotion recognition", "stance detection", "aspect-based"]},
+        {"name": "Vision-language understanding & VQA", "examples": ["Flamingo", "BLIP-2", "LLaVA"], "keywords": ["visual question answering", "vqa", "multimodal large language model", "vision-language model", "mllm", "large vision-language model", "lvlm", "multimodal llm"]},
+        {"name": "Video understanding", "examples": ["Video-LLaVA", "VideoChat"], "keywords": ["video understanding", "video question answering", "video llm", "video-language model", "long video understanding", "video large language model"]}
+      ]},
+      {"name": "Reasoning", "children": [
+        {"name": "Multi-step & compositional reasoning", "examples": ["Chain-of-Thought", "Self-Consistency", "Tree of Thoughts"], "keywords": ["chain-of-thought", "chain of thought", "multi-step reasoning", "compositional reasoning", "reasoning chain"]},
+        {"name": "Mathematical reasoning", "examples": ["Minerva", "Process Reward Models"], "keywords": ["mathematical reasoning", "math reasoning", "math word problem", "mathematical problem"]},
+        {"name": "Logical, symbolic & formal reasoning", "examples": ["GPT-f", "LeanDojo"], "keywords": ["theorem proving", "theorem prover", "logical reasoning", "symbolic reasoning", "autoformalization", "formal mathematics"]},
+        {"name": "Causal & commonsense reasoning", "examples": ["COMET"], "keywords": ["commonsense reasoning", "commonsense", "causal reasoning", "physical reasoning"]}
+      ]},
+      {"name": "Knowledge-based methods", "children": [
+        {"name": "Knowledge graphs & neuro-symbolic systems", "examples": ["DeepProbLog", "Neural Theorem Provers"], "keywords": ["neuro-symbolic", "neurosymbolic", "knowledge graph", "logic programming", "probabilistic logic"]},
+        {"name": "Knowledge integration & constraint-grounded inference", "examples": ["K-BERT"], "keywords": ["knowledge-enhanced", "knowledge injection", "knowledge integration", "knowledge-grounded", "knowledge-aware"]}
+      ]},
+      {"name": "Explainability & interpretability", "children": [
+        {"name": "Feature attribution", "examples": ["Grad-CAM", "Integrated Gradients", "SHAP"], "keywords": ["feature attribution", "saliency map", "attribution method", "shapley value", "explainable ai", "xai"]},
+        {"name": "Concept-based explanations", "examples": ["TCAV", "Concept Bottleneck Models"], "keywords": ["concept bottleneck", "concept-based explanation", "concept activation", "concept-based"]},
+        {"name": "Mechanistic interpretability", "examples": ["Circuits", "Sparse Autoencoders"], "keywords": ["mechanistic interpretability", "sparse autoencoder", "circuit discovery", "superposition", "logit lens"]},
+        {"name": "Counterfactual explanations", "examples": ["DiCE"], "keywords": ["counterfactual explanation", "algorithmic recourse"]},
+        {"name": "Training-data attribution", "examples": ["Influence Functions", "TRAK"], "keywords": ["data attribution", "influence function", "training data attribution", "data valuation"]}
+      ]},
+      {"name": "Causal discovery & inference", "children": [
+        {"name": "Causal structure learning", "examples": ["PC Algorithm", "NOTEARS"], "keywords": ["causal discovery", "structure learning", "causal structure", "causal graph", "dag learning"]},
+        {"name": "Treatment-effect estimation", "examples": ["TARNet", "Double ML"], "keywords": ["treatment effect", "causal effect", "causal inference", "uplift"]},
+        {"name": "Invariant & causal representation learning", "examples": ["IRM", "iVAE", "CausalVAE"], "keywords": ["causal representation learning", "invariant risk minimization", "invariant representation", "identifiability", "nonlinear ica"]}
+      ]}
+    ]},
+    {"code": "ADAPT", "name": "Adaptation, transfer & generalization",
+     "summary": "Making models work in new domains, tasks, or conditions, or with limited data.",
+     "children": [
+      {"name": "Transfer learning", "children": [
+        {"name": "Domain adaptation", "examples": ["DANN", "CyCADA"], "keywords": ["domain adaptation"]},
+        {"name": "Domain generalization", "examples": ["MixStyle", "SWAD"], "keywords": ["domain generalization"]},
+        {"name": "Few-shot & zero-shot learning", "examples": ["DeViSE", "CLIP zero-shot"], "keywords": ["few-shot learning", "zero-shot learning", "few-shot classification", "zero-shot classification", "generalized zero-shot"]}
+      ]},
+      {"name": "Prompting & parameter-efficient adaptation", "children": [
+        {"name": "Prompt & prefix tuning", "examples": ["Prefix-Tuning", "Prompt Tuning"], "keywords": ["prompt tuning", "prefix tuning", "prefix-tuning", "soft prompt", "prompt learning"]},
+        {"name": "Prompt learning for vision-language models", "examples": ["CoOp", "CoCoOp"], "keywords": ["vision-language prompt", "visual prompt tuning", "clip adaptation", "prompt learning for vision-language"]},
+        {"name": "Adapters & LoRA", "examples": ["Adapters", "LoRA", "QLoRA"], "keywords": ["lora", "low-rank adaptation", "adapter", "parameter-efficient fine-tuning", "parameter-efficient", "peft"]},
+        {"name": "In-context learning methods", "keywords": ["in-context learning", "in-context examples", "demonstration selection", "few-shot prompting", "many-shot"]}
+      ]},
+      {"name": "Meta-learning", "children": [
+        {"name": "Few-shot adaptation & learning-to-learn", "examples": ["MAML", "Prototypical Networks", "Reptile"], "keywords": ["meta-learning", "meta learning", "learning to learn"]}
+      ]},
+      {"name": "Continual & lifelong learning", "children": [
+        {"name": "Incremental tasks & classes with replay", "examples": ["iCaRL", "GEM"], "keywords": ["class-incremental", "incremental learning", "experience replay", "rehearsal", "task-incremental", "continual learning"]},
+        {"name": "Catastrophic forgetting mitigation", "examples": ["EWC", "LwF"], "keywords": ["catastrophic forgetting", "forgetting", "lifelong learning"]}
+      ]},
+      {"name": "Test-time adaptation", "children": [
+        {"name": "Online & source-free adaptation", "examples": ["TENT", "MEMO", "SHOT"], "keywords": ["test-time adaptation", "source-free", "test-time training"]}
+      ]},
+      {"name": "Compositional & out-of-distribution generalization", "children": [
+        {"name": "Compositional generalization", "keywords": ["compositional generalization", "systematic generalization"]},
+        {"name": "Out-of-distribution generalization", "keywords": ["out-of-distribution generalization", "ood generalization", "distribution shift"]}
+      ]}
+    ]},
+    {"code": "TRUST", "name": "Robustness, safety, privacy & trustworthiness",
+     "summary": "Improving reliability, security, or responsible use.",
+     "children": [
+      {"name": "Robustness", "children": [
+        {"name": "Adversarial attacks", "examples": ["FGSM", "PGD", "C&W"], "keywords": ["adversarial attack", "adversarial example", "adversarial perturbation", "transferable attack"]},
+        {"name": "Adversarial defense & certified robustness", "examples": ["TRADES", "Randomized Smoothing"], "keywords": ["adversarial robustness", "adversarial training", "certified robustness", "adversarial defense", "randomized smoothing", "certified defense"]},
+        {"name": "Corruption robustness", "examples": ["AugMix"], "keywords": ["corruption robustness", "common corruptions", "natural corruptions"]},
+        {"name": "Distribution shift & spurious-correlation mitigation", "examples": ["GroupDRO", "JTT"], "keywords": ["spurious correlation", "group robustness", "shortcut learning", "worst-group"]}
+      ]},
+      {"name": "Safety & alignment", "children": [
+        {"name": "Harmful-output mitigation & policy compliance", "examples": ["Constitutional AI", "Llama Guard"], "keywords": ["harmful content", "safety alignment", "harmlessness", "refusal", "content moderation", "guardrail"]},
+        {"name": "Jailbreaks & red-teaming", "examples": ["GCG", "Red Teaming LMs"], "keywords": ["jailbreak", "red teaming", "red-teaming", "adversarial prompt"]},
+        {"name": "Concept erasure in generative models", "examples": ["ESD", "Safe Latent Diffusion"], "keywords": ["concept erasure", "erasing concepts", "unsafe content", "nsfw"]},
+        {"name": "Value alignment", "keywords": ["value alignment", "ai alignment", "human values", "pluralistic alignment"]}
+      ]},
+      {"name": "Privacy-preserving learning", "children": [
+        {"name": "Differential privacy", "examples": ["DP-SGD", "PATE"], "keywords": ["differential privacy", "differentially private"]},
+        {"name": "Federated learning", "examples": ["FedAvg", "FedProx", "SCAFFOLD"], "keywords": ["federated learning"]},
+        {"name": "Personalized federated learning", "examples": ["Per-FedAvg", "FedRep"], "keywords": ["personalized federated"]},
+        {"name": "Private inference & data minimization", "examples": ["CryptoNets"], "keywords": ["private inference", "homomorphic encryption", "secure multi-party", "secure inference"]},
+        {"name": "Membership inference & data extraction", "examples": ["Shadow Models", "LiRA"], "keywords": ["membership inference", "data extraction", "training data extraction", "privacy attack", "privacy leakage", "model inversion"]}
+      ]},
+      {"name": "Security", "children": [
+        {"name": "Poisoning & backdoor defense", "examples": ["BadNets", "Neural Cleanse"], "keywords": ["backdoor", "data poisoning", "poisoning attack", "trojan"]},
+        {"name": "Model extraction & prompt-injection defense", "examples": ["Knockoff Nets", "StruQ"], "keywords": ["prompt injection", "model extraction", "model stealing"]},
+        {"name": "Watermarking", "examples": ["LLM Green-list Watermark", "Tree-Ring"], "keywords": ["watermark", "watermarking", "fingerprinting"]},
+        {"name": "Deepfake & AI-generated content detection", "examples": ["FaceForensics++", "DIRE"], "keywords": ["deepfake", "face forgery", "ai-generated image detection", "generated image detection", "fake image detection", "machine-generated text detection", "forgery detection"]}
+      ]},
+      {"name": "Fairness & bias", "children": [
+        {"name": "Group & individual fairness", "examples": ["Equalized Odds", "Fair Representations"], "keywords": ["fairness", "fair classification", "demographic parity", "equalized odds", "group fairness", "individual fairness"]},
+        {"name": "Bias measurement, mitigation & auditing", "examples": ["StereoSet", "Debiasing"], "keywords": ["social bias", "gender bias", "stereotype", "debiasing", "bias mitigation"]}
+      ]},
+      {"name": "Reliability & verification", "children": [
+        {"name": "Formal verification & guarantees", "examples": ["Reluplex", "α,β-CROWN"], "keywords": ["neural network verification", "formal verification", "verified robustness", "bound propagation"]},
+        {"name": "Hallucination detection & mitigation", "examples": ["SelfCheckGPT", "Semantic Entropy"], "keywords": ["hallucination", "factuality", "hallucination detection"]},
+        {"name": "Monitoring & failure prediction", "keywords": ["failure prediction", "performance prediction", "model monitoring", "error detection"]}
+      ]}
+    ]},
+    {"code": "EFF", "name": "Efficiency, scaling & systems",
+     "summary": "Reducing cost, latency, or memory, or improving throughput.",
+     "children": [
+      {"name": "Model efficiency", "children": [
+        {"name": "Knowledge distillation", "examples": ["Hinton KD", "DistilBERT"], "keywords": ["knowledge distillation", "teacher-student"]},
+        {"name": "Pruning", "examples": ["Lottery Ticket", "SparseGPT", "Wanda"], "keywords": ["network pruning", "model pruning", "structured pruning", "unstructured pruning", "weight pruning", "lottery ticket", "pruning"]},
+        {"name": "Quantization", "examples": ["GPTQ", "AWQ"], "keywords": ["quantization", "low-bit", "binarization", "binary neural network"]},
+        {"name": "Sparse & conditional computation (MoE)", "examples": ["Switch Transformer", "Mixtral"], "keywords": ["mixture of experts", "mixture-of-experts", "moe", "sparse expert", "expert routing"]},
+        {"name": "Efficient architectures", "examples": ["MobileNet", "EfficientNet", "Mamba"], "keywords": ["efficient architecture", "lightweight network", "state space model", "mamba", "linear-time"]},
+        {"name": "Spiking & neuromorphic networks", "examples": ["Spikformer", "SEW-ResNet"], "keywords": ["spiking neural network", "spiking", "neuromorphic"]}
+      ]},
+      {"name": "Inference efficiency", "children": [
+        {"name": "Speculative decoding", "examples": ["Speculative Sampling", "Medusa"], "keywords": ["speculative decoding", "speculative sampling", "draft model"]},
+        {"name": "KV caching & cache compression", "examples": ["StreamingLLM", "H2O"], "keywords": ["kv cache", "key-value cache", "kv-cache", "cache compression"]},
+        {"name": "Efficient attention", "examples": ["FlashAttention", "Linear Attention"], "keywords": ["efficient attention", "linear attention", "sparse attention", "flashattention", "flash attention", "sub-quadratic"]},
+        {"name": "Token pruning & merging", "examples": ["DynamicViT", "ToMe"], "keywords": ["token pruning", "token merging", "token reduction", "token compression"]}
+      ]},
+      {"name": "Training efficiency", "children": [
+        {"name": "Optimizers", "examples": ["Adam", "AdamW", "Shampoo", "Muon"], "keywords": ["optimizer", "adam", "adaptive gradient", "second-order optimization", "preconditioning"]},
+        {"name": "Learning-rate schedules", "examples": ["Cosine Annealing", "Warmup", "WSD"], "keywords": ["learning rate schedule", "learning-rate schedule", "learning rate warmup", "step size schedule"]},
+        {"name": "Distributed & parallel training", "examples": ["ZeRO", "Megatron-LM", "LARS"], "keywords": ["distributed training", "data parallel", "model parallel", "pipeline parallel", "large-batch training", "communication-efficient"]},
+        {"name": "Compute & memory reduction", "examples": ["Gradient Checkpointing", "Mixed Precision"], "keywords": ["memory-efficient training", "memory efficient", "activation checkpointing", "mixed precision", "low-precision training"]}
+      ]},
+      {"name": "AI systems & infrastructure", "children": [
+        {"name": "Serving & low-latency inference", "examples": ["vLLM (PagedAttention)", "Orca"], "keywords": ["llm serving", "inference serving", "serving system", "model serving", "inference system"]},
+        {"name": "Compiler & kernel optimization", "examples": ["TVM", "Triton"], "keywords": ["compiler", "kernel optimization", "gpu kernel", "tensor program"]},
+        {"name": "Hardware-aware algorithms & deployment", "examples": ["Once-for-All", "MCUNet"], "keywords": ["hardware-aware", "on-device", "edge device", "microcontroller", "tinyml", "edge deployment"]}
+      ]},
+      {"name": "Scaling behavior", "children": [
+        {"name": "Scaling laws & compute allocation", "examples": ["Kaplan scaling", "Chinchilla"], "keywords": ["scaling law", "compute-optimal", "neural scaling"]},
+        {"name": "Test-time compute & inference-time scaling", "examples": ["Best-of-N", "s1"], "keywords": ["test-time compute", "test-time scaling", "inference-time scaling", "inference-time compute", "best-of-n"]}
+      ]}
+    ]},
+    {"code": "EVAL", "name": "Evaluation, benchmarking & methodology",
+     "summary": "Contributions whose main purpose is to measure, compare, validate, or characterize AI.",
+     "children": [
+      {"name": "Datasets & benchmarks", "children": [
+        {"name": "New tasks, datasets & benchmark suites", "examples": ["ImageNet", "VQA", "MMLU", "SWE-bench"], "keywords": ["^benchmark", "^dataset"]},
+        {"name": "Data quality, contamination & leakage-resistant splits", "examples": ["Min-K% Prob"], "keywords": ["data contamination", "benchmark contamination", "test set contamination", "data leakage", "pretraining data detection"]}
+      ]},
+      {"name": "Evaluation methods & metrics", "children": [
+        {"name": "Metrics & protocols", "examples": ["FID", "LPIPS", "BLEU"], "keywords": ["evaluation metric", "^metric", "automatic evaluation", "evaluation protocol"]},
+        {"name": "Human evaluation & LLM-as-a-judge", "examples": ["MT-Bench", "Chatbot Arena"], "keywords": ["llm-as-a-judge", "llm as a judge", "human evaluation", "llm judge"]},
+        {"name": "Robust & holistic evaluation", "examples": ["HELM"], "keywords": ["holistic evaluation", "comprehensive evaluation", "evaluation framework"]}
+      ]},
+      {"name": "Empirical analysis", "children": [
+        {"name": "Ablations, scaling studies & failure analysis", "keywords": ["empirical study", "^an empirical", "failure analysis", "systematic study", "^rethinking"]},
+        {"name": "Training dynamics", "examples": ["Edge of Stability", "Grokking"], "keywords": ["training dynamics", "edge of stability", "grokking", "loss landscape", "learning dynamics"]},
+        {"name": "Reproducibility & replication", "keywords": ["reproducibility", "replication study", "reproducible"]}
+      ]},
+      {"name": "Theoretical contributions", "children": [
+        {"name": "Generalization theory & bounds", "examples": ["PAC-Bayes bounds", "Double Descent"], "keywords": ["generalization bound", "pac-bayes", "pac-bayesian", "double descent", "benign overfitting", "generalization error"]},
+        {"name": "Deep learning & optimization theory", "examples": ["Neural Tangent Kernel", "Mean-Field Theory"], "keywords": ["neural tangent kernel", "mean-field", "overparameterized", "over-parameterized", "infinite width", "convergence analysis"]},
+        {"name": "Implicit bias & neural collapse", "examples": ["Implicit bias of GD", "Neural Collapse"], "keywords": ["implicit bias", "implicit regularization", "neural collapse", "simplicity bias"]},
+        {"name": "Theory of in-context learning", "examples": ["ICL as Gradient Descent"], "keywords": ["in-context learning theory", "theory of in-context learning", "transformers learn in-context", "provable in-context"]},
+        {"name": "Complexity analysis", "keywords": ["^computational complexity", "sample complexity", "query complexity", "^np-hard"]}
+      ]},
+      {"name": "Model auditing", "children": [
+        {"name": "Capability & risk assessment", "keywords": ["dangerous capabilities", "capability evaluation", "risk assessment", "frontier model"]},
+        {"name": "Bias, robustness & calibration audits", "keywords": ["audit", "auditing"]}
+      ]}
+    ]},
+    {"code": "DATA", "name": "Data, supervision & learning paradigms",
+     "summary": "When the central novelty is how learning signals or training data are obtained or used, rather than the downstream task.",
+     "children": [
+      {"name": "Supervision regimes", "children": [
+        {"name": "Semi-supervised learning", "examples": ["Mean Teacher", "FixMatch"], "keywords": ["semi-supervised", "semi supervised"]},
+        {"name": "Weakly-supervised learning", "examples": ["Multiple Instance Learning"], "keywords": ["weakly supervised", "weakly-supervised", "weak supervision", "multiple instance learning", "partial label"]},
+        {"name": "Learning with noisy labels", "examples": ["Co-teaching", "DivideMix"], "keywords": ["noisy label", "label noise", "learning with noisy"]}
+      ]},
+      {"name": "Label & data acquisition", "children": [
+        {"name": "Active learning & human-in-the-loop annotation", "examples": ["Core-Set", "BADGE"], "keywords": ["active learning", "annotation budget"]},
+        {"name": "Pseudo-labeling & self-training", "examples": ["Noisy Student"], "keywords": ["pseudo-label", "pseudo-labeling", "pseudo label", "self-training", "self training"]},
+        {"name": "Data programming & weak labels", "examples": ["Snorkel"], "keywords": ["data programming", "labeling function", "programmatic weak supervision"]}
+      ]},
+      {"name": "Training paradigms", "children": [
+        {"name": "Curriculum learning", "examples": ["Curriculum Learning (Bengio)"], "keywords": ["curriculum learning", "curriculum"]},
+        {"name": "Multi-task learning & co-training", "examples": ["GradNorm", "Co-training"], "keywords": ["multi-task learning", "multitask learning", "co-training", "task balancing"]},
+        {"name": "Instruction tuning", "examples": ["FLAN", "Self-Instruct"], "keywords": ["instruction tuning", "instruction-tuning", "instruction following", "instruction-following", "supervised fine-tuning", "instruction data"]}
+      ]},
+      {"name": "Data-centric AI", "children": [
+        {"name": "Data curation, selection & deduplication", "examples": ["The Pile", "DoReMi", "SemDeDup", "Data Pruning"], "keywords": ["data curation", "data selection", "data filtering", "deduplication", "data mixture", "data quality"]},
+        {"name": "Dataset distillation", "examples": ["Dataset Distillation", "Dataset Condensation"], "keywords": ["dataset distillation", "dataset condensation", "data distillation"]},
+        {"name": "Data augmentation", "examples": ["Mixup", "CutMix", "RandAugment"], "keywords": ["data augmentation", "mixup", "cutmix"]},
+        {"name": "Dataset documentation & provenance", "examples": ["Datasheets for Datasets"], "keywords": ["dataset documentation", "data provenance", "datasheet", "data card"]}
+      ]}
+    ]},
+    {"code": "COMP", "name": "Model composition & reuse",
+     "summary": "Combining, reusing, or modifying existing models or components to produce capabilities.",
+     "children": [
+      {"name": "Model composition", "children": [
+        {"name": "Ensembles", "examples": ["Snapshot Ensembles"], "keywords": ["ensemble", "ensembling"]},
+        {"name": "Model merging", "examples": ["Model Soups", "Task Arithmetic", "TIES-Merging"], "keywords": ["model merging", "merging models", "weight averaging", "task vector", "task arithmetic", "model soup"]},
+        {"name": "Modular networks", "examples": ["Neural Module Networks"], "keywords": ["modular network", "modular neural", "neural module", "modularity"]}
+      ]},
+      {"name": "Knowledge transfer between models", "children": [
+        {"name": "Feature & weight transfer", "examples": ["Net2Net"], "keywords": ["weight transfer", "model growth", "model reuse"]},
+        {"name": "Cross-model alignment", "examples": ["Git Re-Basin"], "keywords": ["model stitching", "permutation symmetry", "linear mode connectivity", "representational alignment"]}
+      ]},
+      {"name": "Model editing", "children": [
+        {"name": "Factual & behavioral editing", "examples": ["ROME", "MEMIT"], "keywords": ["model editing", "knowledge editing", "editing factual", "factual association"]},
+        {"name": "Machine unlearning", "examples": ["SISA", "Gradient Ascent unlearning"], "keywords": ["machine unlearning", "unlearning"]},
+        {"name": "Targeted capability modification", "keywords": ["capability removal", "targeted intervention", "behavior steering"]}
+      ]},
+      {"name": "Tool-augmented & hybrid systems", "children": [
+        {"name": "Programmatic & neural-symbolic composition", "examples": ["VisProg", "ViperGPT"], "keywords": ["visual programming", "program-of-thought", "code as policies", "programmatic"]},
+        {"name": "Foundation models with external tools & simulators", "examples": ["HuggingGPT"], "keywords": ["external tools", "llm with tools", "tool integration"]}
+      ]},
+      {"name": "Foundation-model reuse", "children": [
+        {"name": "Repurposing & composing pretrained modules", "examples": ["Frozen", "LiT"], "keywords": ["repurposing", "repurpose", "frozen language model", "frozen large language model"]}
+      ]}
+    ]}
+  ],
+  "facets": [
+    {"name": "Modality / data type", "tags": ["text", "image", "video", "audio", "2D", "3D", "4D", "point-cloud", "mesh", "graph", "tabular", "time-series", "multimodal", "language", "code", "molecule", "protein", "DNA/RNA", "scientific-field", "robot-sensor"]},
+    {"name": "Learning / inference paradigm", "tags": ["supervised", "self-supervised", "unsupervised", "semi-supervised", "weakly-supervised", "contrastive", "generative", "diffusion", "autoregressive", "flow", "Bayesian", "reinforcement-learning", "imitation-learning", "federated", "continual"]},
+    {"name": "Model family / mechanism", "tags": ["CNN", "Transformer", "GNN", "MLP", "state-space-model", "diffusion-model", "NeRF", "Gaussian-splatting", "foundation-model", "LLM", "VLM", "world-model", "neuro-symbolic", "MCP/tool-using-agent"]},
+    {"name": "Contribution form", "tags": ["new-architecture", "new-objective", "new-algorithm", "training-recipe", "inference-method", "dataset", "benchmark", "metric", "theory", "analysis", "system", "application", "survey"]},
+    {"name": "Application domain", "tags": ["health/medicine", "biology", "chemistry", "materials", "physics", "climate", "agriculture", "robotics", "autonomous-driving", "manufacturing", "security", "education", "finance", "social-science", "creative-media", "general-purpose"]},
+    {"name": "Deployment / constraints", "tags": ["real-time", "edge", "low-resource", "privacy-sensitive", "safety-critical", "human-in-the-loop", "data-scarce", "compute-efficient", "open-world"]}
+  ],
+  "heuristics": [
+    "Ask \"What is the paper's central verb?\" Predict, generate, represent, detect, segment, reconstruct, optimize, control, retrieve, reason, adapt, secure, accelerate, evaluate, or compose.",
+    "Classify by the central technical contribution, not the headline application. An AI drug-design paper may be generation, optimization, prediction, or a benchmark depending on its actual novelty.",
+    "Separate task from technique. \"Diffusion\" is usually a model family tag; \"3D shape generation\" is the task. \"LoRA\" is an adaptation mechanism; the adapted task remains prediction, generation, etc.",
+    "Allow multi-label classification. Pick one primary node and up to two secondary nodes; use cross-cutting tags for the rest.",
+    "Keep the application domain (healthcare, robotics, biology, climate, …) as a tag rather than duplicating the tree per field.",
+    "Add branches only when they improve retrieval. Prefer a stable, understandable top level over a deep tree that is hard to maintain.",
+    "Record confidence. If an abstract is vague, mark the label as uncertain and revisit when reading the paper."
+  ]
+}
