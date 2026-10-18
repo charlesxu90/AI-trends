@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Method Tree · AI Trends in Conferences</title>
+  <meta name="description" content="A hierarchical map of AI methods organised by central contribution — prediction, generation, representation, detection, segmentation, reconstruction, optimization, and more." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preload" href="data/ontology.json" as="fetch" crossorigin />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap site-head__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="assets/logo.png" width="32" height="32" alt="" aria-hidden="true" />
+        <span class="brand__text">AI&nbsp;Trends<span class="brand__dim">/conferences</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Sections">
+        <a href="index.html#trends">Topic Trends</a>
+        <a href="index.html#browse">Rising Stars</a>
+        <a href="methods.html" aria-current="page">Method Tree</a>
+        <a class="nav__ext" href="https://github.com/charlesxu90/AI-trends" rel="noopener">Source ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section" aria-label="Method tree">
+      <div class="wrap">
+        <div class="tree-view" id="tree-view" aria-live="polite">
+          <p class="loading">Loading method tree…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="guide" aria-labelledby="guide-h">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="guide-h" class="section__title">How to classify a paper</h2>
+          <p class="section__hint">Pick one primary node from the tree and up to two secondary nodes. Then add cross-cutting tags for modality, paradigm, model family, contribution form, application domain, and deployment constraints.</p>
+        </div>
+        <div class="guide">
+          <div>
+            <h3 class="col__h">Heuristics</h3>
+            <ol class="guide__list" id="guide-heuristics"></ol>
+          </div>
+          <div>
+            <h3 class="col__h">Cross-cutting tags</h3>
+            <div class="facets" id="guide-facets"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap site-foot__inner">
+      <p>The ontology is curated in <code>config/ontology.json</code>. A method can touch several areas; it is filed under its central contribution.</p>
+      <p class="site-foot__meta">
+        <a href="https://github.com/charlesxu90/AI-trends" rel="noopener">charlesxu90/AI-trends</a>
+        · MIT License
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/methods.js" defer></script>
+</body>
+</html>

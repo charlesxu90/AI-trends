@@ -137,3 +137,22 @@ def test_export_site_writes_manifest_trends_and_shards(tmp_path):
     shard = json.loads((out / "papers" / "ICLR_2025.json").read_text())
     assert len(shard) == 2
     assert shard[0]["conference"] == "ICLR" and shard[0]["year"] == 2025
+
+
+def test_export_site_writes_ontology(tmp_path):
+    config, data = _setup(tmp_path)
+    out = tmp_path / "site"
+    onto = {"domains": [{"name": "Graphs", "children": [
+                {"name": "Graph learning", "keywords": ["b"], "examples": ["LDM"]}]}],
+            "facets": [], "heuristics": []}
+    refs = {"LDM": {"title": "High-Resolution Image Synthesis", "year": 2022}}
+
+    export_site(out, taxonomy=Taxonomy.load(config), data_dir=data, ontology=onto, method_refs=refs)
+
+    site = json.loads((out / "ontology.json").read_text())
+    assert site["methods"] == refs
+    leaf = site["domains"][0]["children"][0]
+    # keyword "b" matches only P2's full abstract ("b")
+    assert leaf["paper_count"] == 1 and site["domains"][0]["paper_count"] == 1
+    assert leaf["papers"] == [{"year": 2025, "papers": [
+        {"name": "P2", "title": "P2", "conference": "ICLR", "url": "y"}]}]

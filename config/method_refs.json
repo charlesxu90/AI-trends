@@ -1,0 +1,3268 @@
+{
+ "ML-GCN": {
+  "title": "Multi-Label Image Recognition with Graph Convolutional Networks",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1904.03582"
+ },
+ "ASL": {
+  "title": "Asymmetric Loss For Multi-Label Classification",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2009.14119"
+ },
+ "CheXNet": {
+  "title": "CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1711.05225"
+ },
+ "ResNet": {
+  "title": "Deep Residual Learning for Image Recognition",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1512.03385"
+ },
+ "ViT": {
+  "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2010.11929"
+ },
+ "ConvNeXt": {
+  "title": "A ConvNet for the 2020s",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2201.03545"
+ },
+ "LDAM": {
+  "title": "Learning Imbalanced Datasets with Label-Distribution-Aware Margin Loss",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1906.07413"
+ },
+ "Decoupling (cRT)": {
+  "title": "Decoupling Representation and Classifier for Long-Tailed Recognition",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1910.09217"
+ },
+ "Logit Adjustment": {
+  "title": "Long-tail learning via logit adjustment",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2007.07314"
+ },
+ "OpenMax": {
+  "title": "Towards Open Set Deep Networks",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1511.06233"
+ },
+ "XGBoost": {
+  "title": "XGBoost: A Scalable Tree Boosting System",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1603.02754"
+ },
+ "FT-Transformer": {
+  "title": "Revisiting Deep Learning Models for Tabular Data",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.11959"
+ },
+ "TabPFN": {
+  "title": "TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2207.01848"
+ },
+ "MUSIQ": {
+  "title": "MUSIQ: Multi-scale Image Quality Transformer",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2108.05997"
+ },
+ "Mixture Density Networks": {
+  "title": "Mixture Density Networks",
+  "year": 1994
+ },
+ "BiLSTM-CRF": {
+  "title": "Bidirectional LSTM-CRF Models for Sequence Tagging",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1508.01991"
+ },
+ "SpanBERT": {
+  "title": "SpanBERT: Improving Pre-training by Representing and Predicting Spans",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1907.10529"
+ },
+ "Biaffine Parser": {
+  "title": "Deep Biaffine Attention for Neural Dependency Parsing",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1611.01734"
+ },
+ "GCN": {
+  "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1609.02907"
+ },
+ "GAT": {
+  "title": "Graph Attention Networks",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1710.10903"
+ },
+ "GraphSAGE": {
+  "title": "Inductive Representation Learning on Large Graphs",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1706.02216"
+ },
+ "TransE": {
+  "title": "Translating Embeddings for Modeling Multi-relational Data",
+  "year": 2013
+ },
+ "RotatE": {
+  "title": "RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1902.10197"
+ },
+ "SEAL": {
+  "title": "Link Prediction Based on Graph Neural Networks",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1802.09691"
+ },
+ "GIN": {
+  "title": "How Powerful are Graph Neural Networks?",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1810.00826"
+ },
+ "Graphormer": {
+  "title": "Do Transformers Really Perform Bad for Graph Representation?",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.05234"
+ },
+ "Neural Motifs": {
+  "title": "Neural Motifs: Scene Graph Parsing with Global Context",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1711.06640"
+ },
+ "PatchTST": {
+  "title": "A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.14730"
+ },
+ "TimesNet": {
+  "title": "TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.02186"
+ },
+ "DCRNN": {
+  "title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1707.01926"
+ },
+ "Graph WaveNet": {
+  "title": "Graph WaveNet for Deep Spatial-Temporal Graph Modeling",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1906.00121"
+ },
+ "Informer": {
+  "title": "Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2012.07436"
+ },
+ "DeepAR": {
+  "title": "DeepAR: Probabilistic Forecasting with Autoregressive Recurrent Networks",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1704.04110"
+ },
+ "Social-LSTM": {
+  "title": "Social LSTM: Human Trajectory Prediction in Crowded Spaces",
+  "year": 2016,
+  "url": "https://doi.org/10.1109/cvpr.2016.110"
+ },
+ "Wayformer": {
+  "title": "Wayformer: Motion Forecasting via Simple & Efficient Attention Networks",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2207.05844"
+ },
+ "Deep Kalman Filter": {
+  "title": "Deep Kalman Filters",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1511.05121"
+ },
+ "KalmanNet": {
+  "title": "KalmanNet: Neural Network Aided Kalman Filtering for Partially Known Dynamics",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2107.10043"
+ },
+ "Neural Posterior Estimation": {
+  "title": "Fast ε-free Inference of Simulation Models with Bayesian Conditional Density Estimation",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1605.06376"
+ },
+ "SINDy": {
+  "title": "Discovering governing equations from data by sparse identification of nonlinear dynamical systems",
+  "year": 2016,
+  "url": "https://doi.org/10.1073/pnas.1517384113"
+ },
+ "Stochastic VI": {
+  "title": "Stochastic Variational Inference",
+  "year": 2013,
+  "url": "https://arxiv.org/abs/1206.7051"
+ },
+ "Normalizing-flow VI": {
+  "title": "Variational Inference with Normalizing Flows",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1505.05770"
+ },
+ "HMC": {
+  "title": "MCMC using Hamiltonian dynamics",
+  "year": 2011,
+  "url": "https://arxiv.org/abs/1206.1901"
+ },
+ "SGLD": {
+  "title": "Bayesian Learning via Stochastic Gradient Langevin Dynamics",
+  "year": 2011
+ },
+ "Sparse GP (SVGP)": {
+  "title": "Gaussian Processes for Big Data",
+  "year": 2013,
+  "url": "https://arxiv.org/abs/1309.6835"
+ },
+ "Deep Kernel Learning": {
+  "title": "Deep Kernel Learning",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1511.02222"
+ },
+ "AlphaFold 2": {
+  "title": "Highly accurate protein structure prediction with AlphaFold",
+  "year": 2021,
+  "url": "https://doi.org/10.1038/s41586-021-03819-2"
+ },
+ "ESMFold": {
+  "title": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
+  "year": 2023,
+  "url": "https://doi.org/10.1101/2022.07.20.500902"
+ },
+ "DiffDock": {
+  "title": "DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.01776"
+ },
+ "SchNet": {
+  "title": "SchNet: A continuous-filter convolutional neural network for modeling quantum interactions",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1706.08566"
+ },
+ "GemNet": {
+  "title": "GemNet: Universal Directional Graph Neural Networks for Molecules",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.08903"
+ },
+ "CGCNN": {
+  "title": "Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1710.10324"
+ },
+ "M3GNet": {
+  "title": "A universal graph deep learning interatomic potential for the periodic table",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2202.02450"
+ },
+ "NequIP": {
+  "title": "E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2101.03164"
+ },
+ "MACE": {
+  "title": "MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2206.07697"
+ },
+ "Molecular Transformer": {
+  "title": "Molecular Transformer: A Model for Uncertainty-Calibrated Chemical Reaction Prediction",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1811.02633"
+ },
+ "LocalRetro": {
+  "title": "Deep Retrosynthetic Reaction Prediction using Local Reactivity and Global Attention",
+  "year": 2021,
+  "url": "https://doi.org/10.1021/jacsau.1c00246"
+ },
+ "FourCastNet": {
+  "title": "FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2202.11214"
+ },
+ "GraphCast": {
+  "title": "Learning skillful medium-range global weather forecasting",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.12794"
+ },
+ "Pangu-Weather": {
+  "title": "Accurate medium-range global weather forecasting with 3D neural networks",
+  "year": 2023,
+  "url": "https://doi.org/10.1038/s41586-023-06185-3"
+ },
+ "FNO": {
+  "title": "Fourier Neural Operator for Parametric Partial Differential Equations",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2010.08895"
+ },
+ "DeepONet": {
+  "title": "Learning nonlinear operators via DeepONet based on the universal approximation theorem of operators",
+  "year": 2021,
+  "url": "https://doi.org/10.1038/s42256-021-00302-5"
+ },
+ "PINNs": {
+  "title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+  "year": 2019,
+  "url": "https://doi.org/10.1016/j.jcp.2018.10.045"
+ },
+ "GNS": {
+  "title": "Learning to Simulate Complex Physics with Graph Networks",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.09405"
+ },
+ "MeshGraphNets": {
+  "title": "Learning Mesh-Based Simulation with Graph Networks",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2010.03409"
+ },
+ "scVI": {
+  "title": "Deep generative modeling for single-cell transcriptomics",
+  "year": 2018,
+  "url": "https://doi.org/10.1038/s41592-018-0229-2"
+ },
+ "scGPT": {
+  "title": "scGPT: toward building a foundation model for single-cell multi-omics using generative AI",
+  "year": 2024,
+  "url": "https://doi.org/10.1101/2023.04.30.538439"
+ },
+ "EEGNet": {
+  "title": "EEGNet: A Compact Convolutional Neural Network for EEG-based Brain-Computer Interfaces",
+  "year": 2018,
+  "url": "https://doi.org/10.1088/1741-2552/aace8c"
+ },
+ "BEHRT": {
+  "title": "BEHRT: Transformer for Electronic Health Records",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1907.09538"
+ },
+ "Deep Ensembles": {
+  "title": "Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1612.01474"
+ },
+ "MC Dropout": {
+  "title": "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1506.02142"
+ },
+ "Evidential DL": {
+  "title": "Evidential Deep Learning to Quantify Classification Uncertainty",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1806.01768"
+ },
+ "Bayes by Backprop": {
+  "title": "Weight Uncertainty in Neural Networks",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1505.05424"
+ },
+ "Laplace Redux": {
+  "title": "Laplace Redux -- Effortless Bayesian Deep Learning",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.14806"
+ },
+ "Temperature Scaling": {
+  "title": "On Calibration of Modern Neural Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1706.04599"
+ },
+ "Focal Loss calibration": {
+  "title": "Calibrating Deep Neural Networks using Focal Loss",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.09437"
+ },
+ "SelectiveNet": {
+  "title": "SelectiveNet: A Deep Neural Network with an Integrated Reject Option",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1901.09192"
+ },
+ "Split Conformal": {
+  "title": "Distribution-Free Predictive Inference For Regression",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1604.04173"
+ },
+ "APS": {
+  "title": "Classification with Valid and Adaptive Coverage",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2006.02544"
+ },
+ "MSP": {
+  "title": "A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1610.02136"
+ },
+ "ODIN": {
+  "title": "Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1706.02690"
+ },
+ "Energy Score": {
+  "title": "Energy-based Out-of-distribution Detection",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2010.03759"
+ },
+ "CTRL": {
+  "title": "CTRL: A Conditional Transformer Language Model for Controllable Generation",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1909.05858"
+ },
+ "PPLM": {
+  "title": "Plug and Play Language Models: A Simple Approach to Controlled Text Generation",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1912.02164"
+ },
+ "Transformer (NMT)": {
+  "title": "Attention Is All You Need",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1706.03762"
+ },
+ "NLLB": {
+  "title": "No Language Left Behind: Scaling Human-Centered Machine Translation",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2207.04672"
+ },
+ "PEGASUS": {
+  "title": "PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1912.08777"
+ },
+ "BART": {
+  "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1910.13461"
+ },
+ "DialoGPT": {
+  "title": "DialoGPT: Large-Scale Generative Pre-training for Conversational Response Generation",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1911.00536"
+ },
+ "BlenderBot": {
+  "title": "Recipes for building an open-domain chatbot",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2004.13637"
+ },
+ "STORM": {
+  "title": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2402.14207"
+ },
+ "MDLM": {
+  "title": "Simple and Effective Masked Diffusion Language Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2406.07524"
+ },
+ "LLaDA": {
+  "title": "Large Language Diffusion Models",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2502.09992"
+ },
+ "Latent Diffusion": {
+  "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2112.10752"
+ },
+ "Imagen": {
+  "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2205.11487"
+ },
+ "DiT": {
+  "title": "Scalable Diffusion Models with Transformers",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.09748"
+ },
+ "pix2pix": {
+  "title": "Image-to-Image Translation with Conditional Adversarial Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1611.07004"
+ },
+ "CycleGAN": {
+  "title": "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.10593"
+ },
+ "ControlNet": {
+  "title": "Adding Conditional Control to Text-to-Image Diffusion Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2302.05543"
+ },
+ "T2I-Adapter": {
+  "title": "T2I-Adapter: Learning Adapters to Dig out More Controllable Ability for Text-to-Image Diffusion Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2302.08453"
+ },
+ "GLIGEN": {
+  "title": "GLIGEN: Open-Set Grounded Text-to-Image Generation",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.07093"
+ },
+ "LaMa": {
+  "title": "Resolution-robust Large Mask Inpainting with Fourier Convolutions",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2109.07161"
+ },
+ "RePaint": {
+  "title": "RePaint: Inpainting using Denoising Diffusion Probabilistic Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2201.09865"
+ },
+ "Prompt-to-Prompt": {
+  "title": "Prompt-to-Prompt Image Editing with Cross Attention Control",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2208.01626"
+ },
+ "InstructPix2Pix": {
+  "title": "InstructPix2Pix: Learning to Follow Image Editing Instructions",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.09800"
+ },
+ "DreamBooth": {
+  "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2208.12242"
+ },
+ "Textual Inversion": {
+  "title": "An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2208.01618"
+ },
+ "IP-Adapter": {
+  "title": "IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2308.06721"
+ },
+ "Video Diffusion Models": {
+  "title": "Video Diffusion Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2204.03458"
+ },
+ "CogVideoX": {
+  "title": "CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2408.06072"
+ },
+ "AnimateDiff": {
+  "title": "AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2307.04725"
+ },
+ "Stable Video Diffusion": {
+  "title": "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2311.15127"
+ },
+ "Phenaki": {
+  "title": "Phenaki: Variable Length Video Generation From Open Domain Textual Description",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.02399"
+ },
+ "StreamingT2V": {
+  "title": "StreamingT2V: Consistent, Dynamic, and Extendable Long Video Generation from Text",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2403.14773"
+ },
+ "PredRNN": {
+  "title": "PredRNN: Recurrent Neural Networks for Predictive Learning using Spatiotemporal LSTMs",
+  "year": 2017
+ },
+ "SimVP": {
+  "title": "SimVP: Simpler yet Better Video Prediction",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2206.05099"
+ },
+ "Tune-A-Video": {
+  "title": "Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.11565"
+ },
+ "TokenFlow": {
+  "title": "TokenFlow: Consistent Diffusion Features for Consistent Video Editing",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2307.10373"
+ },
+ "SadTalker": {
+  "title": "SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.12194"
+ },
+ "Animate Anyone": {
+  "title": "Animate Anyone: Consistent and Controllable Image-to-Video Synthesis for Character Animation",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2311.17117"
+ },
+ "MDM": {
+  "title": "Human Motion Diffusion Model",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2209.14916"
+ },
+ "T2M-GPT": {
+  "title": "T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.06052"
+ },
+ "Tacotron 2": {
+  "title": "Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1712.05884"
+ },
+ "VALL-E": {
+  "title": "Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.02111"
+ },
+ "Jukebox": {
+  "title": "Jukebox: A Generative Model for Music",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2005.00341"
+ },
+ "MusicLM": {
+  "title": "MusicLM: Generating Music From Text",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.11325"
+ },
+ "AudioLDM": {
+  "title": "AudioLDM: Text-to-Audio Generation with Latent Diffusion Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.12503"
+ },
+ "Wav2Lip": {
+  "title": "A Lip Sync Expert Is All You Need for Speech to Lip Generation In The Wild",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2008.10010"
+ },
+ "DreamFusion (SDS)": {
+  "title": "DreamFusion: Text-to-3D using 2D Diffusion",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2209.14988"
+ },
+ "Magic3D": {
+  "title": "Magic3D: High-Resolution Text-to-3D Content Creation",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.10440"
+ },
+ "MVDream": {
+  "title": "MVDream: Multi-view Diffusion for 3D Generation",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2308.16512"
+ },
+ "Point-E": {
+  "title": "Point-E: A System for Generating 3D Point Clouds from Complex Prompts",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2212.08751"
+ },
+ "GET3D": {
+  "title": "GET3D: A Generative Model of High Quality 3D Textured Shapes Learned from Images",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2209.11163"
+ },
+ "ATISS": {
+  "title": "ATISS: Autoregressive Transformers for Indoor Scene Synthesis",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2110.03675"
+ },
+ "LayoutGPT": {
+  "title": "LayoutGPT: Compositional Visual Planning and Generation with Large Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.15393"
+ },
+ "GIRAFFE": {
+  "title": "GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2011.12100"
+ },
+ "EG3D": {
+  "title": "Efficient Geometry-aware 3D Generative Adversarial Networks",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2112.07945"
+ },
+ "AvatarCLIP": {
+  "title": "AvatarCLIP: Zero-Shot Text-Driven Generation and Animation of 3D Avatars",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2205.08535"
+ },
+ "DreamAvatar": {
+  "title": "DreamAvatar: Text-and-Shape Guided 3D Human Avatar Generation via Diffusion Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2304.00916"
+ },
+ "MAV3D": {
+  "title": "Text-To-4D Dynamic Scene Generation",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.11280"
+ },
+ "4DGen": {
+  "title": "4DGen: Grounded 4D Content Generation with Spatial-temporal Consistency",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2312.17225"
+ },
+ "JT-VAE": {
+  "title": "Junction Tree Variational Autoencoder for Molecular Graph Generation",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1802.04364"
+ },
+ "EDM (molecules)": {
+  "title": "Equivariant Diffusion for Molecule Generation in 3D",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.17003"
+ },
+ "ProteinMPNN": {
+  "title": "Robust deep learning-based protein sequence design using ProteinMPNN",
+  "year": 2022,
+  "url": "https://doi.org/10.1101/2022.06.03.494563"
+ },
+ "RFdiffusion": {
+  "title": "De novo design of protein structure and function with RFdiffusion",
+  "year": 2023,
+  "url": "https://doi.org/10.1038/s41586-023-06415-8"
+ },
+ "CDVAE": {
+  "title": "Crystal Diffusion Variational Autoencoder for Periodic Material Generation",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2110.06197"
+ },
+ "MatterGen": {
+  "title": "A generative model for inorganic materials design",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2312.03687"
+ },
+ "Codex": {
+  "title": "Evaluating Large Language Models Trained on Code",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2107.03374"
+ },
+ "AlphaCode": {
+  "title": "Competition-Level Code Generation with AlphaCode",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.07814"
+ },
+ "StarCoder": {
+  "title": "StarCoder: may the source be with you!",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.06161"
+ },
+ "DatasetGAN": {
+  "title": "DatasetGAN: Efficient Labeled Data Factory with Minimal Human Effort",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.06490"
+ },
+ "DA-Fusion": {
+  "title": "Effective Data Augmentation With Diffusion Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2302.07944"
+ },
+ "DDPM": {
+  "title": "Denoising Diffusion Probabilistic Models",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2006.11239"
+ },
+ "Score SDE": {
+  "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2011.13456"
+ },
+ "EDM": {
+  "title": "Elucidating the Design Space of Diffusion-Based Generative Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2206.00364"
+ },
+ "Flow Matching": {
+  "title": "Flow Matching for Generative Modeling",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.02747"
+ },
+ "Rectified Flow": {
+  "title": "Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2209.03003"
+ },
+ "VQ-VAE-2": {
+  "title": "Generating Diverse High-Fidelity Images with VQ-VAE-2",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1906.00446"
+ },
+ "MaskGIT": {
+  "title": "MaskGIT: Masked Generative Image Transformer",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2202.04200"
+ },
+ "VAR": {
+  "title": "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2404.02905"
+ },
+ "StyleGAN": {
+  "title": "A Style-Based Generator Architecture for Generative Adversarial Networks",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1812.04948"
+ },
+ "BigGAN": {
+  "title": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1809.11096"
+ },
+ "VAE": {
+  "title": "Auto-Encoding Variational Bayes",
+  "year": 2014,
+  "url": "https://arxiv.org/abs/1312.6114"
+ },
+ "Glow": {
+  "title": "Glow: Generative Flow with Invertible 1x1 Convolutions",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1807.03039"
+ },
+ "IGEBM": {
+  "title": "Implicit Generation and Modeling with Energy Based Models",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1903.08689"
+ },
+ "JEM": {
+  "title": "Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1912.03263"
+ },
+ "DDIM": {
+  "title": "Denoising Diffusion Implicit Models",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2010.02502"
+ },
+ "DPM-Solver": {
+  "title": "DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2206.00927"
+ },
+ "Consistency Models": {
+  "title": "Consistency Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.01469"
+ },
+ "Classifier Guidance": {
+  "title": "Diffusion Models Beat GANs on Image Synthesis",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2105.05233"
+ },
+ "Classifier-Free Guidance": {
+  "title": "Classifier-Free Diffusion Guidance",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2207.12598"
+ },
+ "GFlowNets": {
+  "title": "Flow Network based Generative Models for Non-Iterative Diverse Candidate Generation",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.04399"
+ },
+ "Diffusion samplers": {
+  "title": "Path Integral Sampler: a stochastic control approach for sampling",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2111.15141"
+ },
+ "SimCLR": {
+  "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.05709"
+ },
+ "MoCo": {
+  "title": "Momentum Contrast for Unsupervised Visual Representation Learning",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1911.05722"
+ },
+ "BYOL": {
+  "title": "Bootstrap your own latent: A new approach to self-supervised Learning",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2006.07733"
+ },
+ "BERT": {
+  "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1810.04805"
+ },
+ "MAE": {
+  "title": "Masked Autoencoders Are Scalable Vision Learners",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2111.06377"
+ },
+ "BEiT": {
+  "title": "BEiT: BERT Pre-Training of Image Transformers",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2106.08254"
+ },
+ "DINO": {
+  "title": "Emerging Properties in Self-Supervised Vision Transformers",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.14294"
+ },
+ "iBOT": {
+  "title": "iBOT: Image BERT Pre-Training with Online Tokenizer",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2111.07832"
+ },
+ "DINOv2": {
+  "title": "DINOv2: Learning Robust Visual Features without Supervision",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2304.07193"
+ },
+ "I-JEPA": {
+  "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.08243"
+ },
+ "V-JEPA": {
+  "title": "Revisiting Feature Prediction for Learning Visual Representations from Video",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2404.08471"
+ },
+ "β-VAE": {
+  "title": "beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework",
+  "year": 2017
+ },
+ "FactorVAE": {
+  "title": "Disentangling by Factorising",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1802.05983"
+ },
+ "Slot Attention": {
+  "title": "Object-Centric Learning with Slot Attention",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2006.15055"
+ },
+ "MONet": {
+  "title": "MONet: Unsupervised Scene Decomposition and Representation",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1901.11390"
+ },
+ "node2vec": {
+  "title": "node2vec: Scalable Feature Learning for Networks",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1607.00653"
+ },
+ "GraphCL": {
+  "title": "Graph Contrastive Learning with Augmentations",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2010.13902"
+ },
+ "GPT-3": {
+  "title": "Language Models are Few-Shot Learners",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2005.14165"
+ },
+ "LLaMA": {
+  "title": "LLaMA: Open and Efficient Foundation Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2302.13971"
+ },
+ "BEiT-3": {
+  "title": "Image as a Foreign Language: BEiT Pretraining for All Vision and Vision-Language Tasks",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2208.10442"
+ },
+ "EVA": {
+  "title": "EVA: Exploring the Limits of Masked Visual Representation Learning at Scale",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.07636"
+ },
+ "SatMAE": {
+  "title": "SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2207.08051"
+ },
+ "Prithvi": {
+  "title": "Foundation Models for Generalist Geospatial Artificial Intelligence",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2310.18660"
+ },
+ "ESM-2": {
+  "title": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
+  "year": 2023,
+  "url": "https://doi.org/10.1101/2022.07.20.500902"
+ },
+ "DNABERT": {
+  "title": "DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome",
+  "year": 2021,
+  "url": "https://doi.org/10.1101/2020.09.17.301879"
+ },
+ "DAPT / TAPT": {
+  "title": "Don't Stop Pretraining: Adapt Language Models to Domains and Tasks",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2004.10964"
+ },
+ "RoPE": {
+  "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.09864"
+ },
+ "ALiBi": {
+  "title": "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2108.12409"
+ },
+ "YaRN": {
+  "title": "YaRN: Efficient Context Window Extension of Large Language Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2309.00071"
+ },
+ "Triplet Loss": {
+  "title": "Deep Metric Learning Using Triplet Network",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1412.6622"
+ },
+ "Sentence-BERT": {
+  "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1908.10084"
+ },
+ "HashNet": {
+  "title": "HashNet: Deep Learning to Hash by Continuation",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1702.00758"
+ },
+ "Poincaré Embeddings": {
+  "title": "Poincaré Embeddings for Learning Hierarchical Representations",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1705.08039"
+ },
+ "CLIP": {
+  "title": "Learning Transferable Visual Models From Natural Language Supervision",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2103.00020"
+ },
+ "ALIGN": {
+  "title": "Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2102.05918"
+ },
+ "SigLIP": {
+  "title": "Sigmoid Loss for Language Image Pre-Training",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.15343"
+ },
+ "ImageBind": {
+  "title": "ImageBind: One Embedding Space To Bind Them All",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.05665"
+ },
+ "AV-HuBERT": {
+  "title": "Learning Audio-Visual Speech Representation by Masked Multimodal Cluster Prediction",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2201.02184"
+ },
+ "EGNN": {
+  "title": "E(n) Equivariant Graph Neural Networks",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2102.09844"
+ },
+ "SE(3)-Transformer": {
+  "title": "SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2006.10503"
+ },
+ "PointNet++": {
+  "title": "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1706.02413"
+ },
+ "DGCNN": {
+  "title": "Dynamic Graph CNN for Learning on Point Clouds",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1801.07829"
+ },
+ "Point Transformer": {
+  "title": "Point Transformer",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2012.09164"
+ },
+ "VQ-GAN": {
+  "title": "Taming Transformers for High-Resolution Image Synthesis",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2012.09841"
+ },
+ "MAGVIT": {
+  "title": "MAGVIT: Masked Generative Video Transformer",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.05199"
+ },
+ "SoundStream": {
+  "title": "SoundStream: An End-to-End Neural Audio Codec",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2107.03312"
+ },
+ "Hyperprior (Ballé)": {
+  "title": "Variational image compression with a scale hyperprior",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1802.01436"
+ },
+ "Linear Probes": {
+  "title": "Understanding intermediate layers using linear classifier probes",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1610.01644"
+ },
+ "CKA": {
+  "title": "Similarity of Neural Network Representations Revisited",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1905.00414"
+ },
+ "RepE": {
+  "title": "Representation Engineering: A Top-Down Approach to AI Transparency",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2310.01405"
+ },
+ "ReFT": {
+  "title": "ReFT: Representation Finetuning for Language Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2404.03592"
+ },
+ "Faster R-CNN": {
+  "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1506.01497"
+ },
+ "YOLO": {
+  "title": "You Only Look Once: Unified, Real-Time Object Detection",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1506.02640"
+ },
+ "DETR": {
+  "title": "End-to-End Object Detection with Transformers",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2005.12872"
+ },
+ "PointPillars": {
+  "title": "PointPillars: Fast Encoders for Object Detection from Point Clouds",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1812.05784"
+ },
+ "BEVFormer": {
+  "title": "BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.17270"
+ },
+ "GLIP": {
+  "title": "Grounded Language-Image Pre-training",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2112.03857"
+ },
+ "OWL-ViT": {
+  "title": "Simple Open-Vocabulary Object Detection with Vision Transformers",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2205.06230"
+ },
+ "Grounding DINO": {
+  "title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2303.05499"
+ },
+ "OpenPose": {
+  "title": "Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1611.08050"
+ },
+ "HRNet": {
+  "title": "Deep High-Resolution Representation Learning for Human Pose Estimation",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1902.09212"
+ },
+ "ViTPose": {
+  "title": "ViTPose: Simple Vision Transformer Baselines for Human Pose Estimation",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2204.12484"
+ },
+ "MDETR": {
+  "title": "MDETR -- Modulated Detection for End-to-End Multi-Modal Understanding",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.12763"
+ },
+ "Kosmos-2": {
+  "title": "Kosmos-2: Grounding Multimodal Large Language Models to the World",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2306.14824"
+ },
+ "BMN": {
+  "title": "BMN: Boundary-Matching Network for Temporal Action Proposal Generation",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1907.09702"
+ },
+ "ActionFormer": {
+  "title": "ActionFormer: Localizing Moments of Actions with Transformers",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2202.07925"
+ },
+ "Moment-DETR": {
+  "title": "QVHighlights: Detecting Moments and Highlights in Videos via Natural Language Queries",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2107.09609"
+ },
+ "UniVTG": {
+  "title": "UniVTG: Towards Unified Video-Language Temporal Grounding",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2307.16715"
+ },
+ "I3D": {
+  "title": "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1705.07750"
+ },
+ "SlowFast": {
+  "title": "SlowFast Networks for Video Recognition",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1812.03982"
+ },
+ "VideoMAE": {
+  "title": "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.12602"
+ },
+ "FaceNet": {
+  "title": "FaceNet: A Unified Embedding for Face Recognition and Clustering",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1503.03832"
+ },
+ "ArcFace": {
+  "title": "ArcFace: Additive Angular Margin Loss for Deep Face Recognition",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1801.07698"
+ },
+ "Bilinear CNN": {
+  "title": "Bilinear CNN Models for Fine-grained Visual Recognition",
+  "year": 2015,
+  "url": "https://doi.org/10.1109/iccv.2015.170"
+ },
+ "TransFG": {
+  "title": "TransFG: A Transformer Architecture for Fine-grained Recognition",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2103.07976"
+ },
+ "wav2vec 2.0": {
+  "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2006.11477"
+ },
+ "Whisper": {
+  "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.04356"
+ },
+ "PANNs": {
+  "title": "PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1912.10211"
+ },
+ "AST": {
+  "title": "AST: Audio Spectrogram Transformer",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.01778"
+ },
+ "LayoutLM": {
+  "title": "LayoutLM: Pre-training of Text and Layout for Document Image Understanding",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1912.13318"
+ },
+ "Donut": {
+  "title": "OCR-free Document Understanding Transformer",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2111.15664"
+ },
+ "SORT": {
+  "title": "Simple Online and Realtime Tracking",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1602.00763"
+ },
+ "ByteTrack": {
+  "title": "ByteTrack: Multi-Object Tracking by Associating Every Detection Box",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2110.06864"
+ },
+ "CenterPoint": {
+  "title": "Center-based 3D Object Detection and Tracking",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2006.11275"
+ },
+ "SiamFC": {
+  "title": "Fully-Convolutional Siamese Networks for Object Tracking",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1606.09549"
+ },
+ "OSTrack": {
+  "title": "Joint Feature Learning and Relation Modeling for Tracking: A One-Stream Framework",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.11991"
+ },
+ "FairMOT": {
+  "title": "FairMOT: On the Fairness of Detection and Re-Identification in Multiple Object Tracking",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2004.01888"
+ },
+ "Deep SVDD": {
+  "title": "Deep One-Class Classification",
+  "year": 2018,
+  "url": "https://proceedings.mlr.press/v80/ruff18a.html"
+ },
+ "PatchCore": {
+  "title": "Towards Total Recall in Industrial Anomaly Detection",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2106.08265"
+ },
+ "RankStats": {
+  "title": "Automatically Discovering and Learning New Visual Categories with Ranking Statistics",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.05714"
+ },
+ "GCD": {
+  "title": "Generalized Category Discovery",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2201.02609"
+ },
+ "FCN": {
+  "title": "Fully Convolutional Networks for Semantic Segmentation",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1411.4038"
+ },
+ "DeepLab": {
+  "title": "DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1606.00915"
+ },
+ "SegFormer": {
+  "title": "SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2105.15203"
+ },
+ "Mask R-CNN": {
+  "title": "Mask R-CNN",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.06870"
+ },
+ "Mask2Former": {
+  "title": "Masked-attention Mask Transformer for Universal Image Segmentation",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2112.01527"
+ },
+ "SAM": {
+  "title": "Segment Anything",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2304.02643"
+ },
+ "SAM 2": {
+  "title": "SAM 2: Segment Anything in Images and Videos",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2408.00714"
+ },
+ "X-Decoder": {
+  "title": "Generalized Decoding for Pixel, Image, and Language",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.11270"
+ },
+ "LAVT": {
+  "title": "LAVT: Language-Aware Vision Transformer for Referring Image Segmentation",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2112.02244"
+ },
+ "LISA": {
+  "title": "LISA: Reasoning Segmentation via Large Language Model",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2308.00692"
+ },
+ "STM": {
+  "title": "Video Object Segmentation using Space-Time Memory Networks",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1904.00607"
+ },
+ "XMem": {
+  "title": "XMem: Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2207.07115"
+ },
+ "MinkowskiNet": {
+  "title": "4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural Networks",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1904.08755"
+ },
+ "OpenScene": {
+  "title": "OpenScene: 3D Scene Understanding with Open Vocabularies",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.15654"
+ },
+ "PartSLIP": {
+  "title": "PartSLIP: Low-Shot Part Segmentation for 3D Point Clouds via Pretrained Image-Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.01558"
+ },
+ "U-Net": {
+  "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1505.04597"
+ },
+ "nnU-Net": {
+  "title": "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation",
+  "year": 2021,
+  "url": "https://doi.org/10.1038/s41592-020-01008-z"
+ },
+ "MedSAM": {
+  "title": "Segment anything in medical images",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2304.12306"
+ },
+ "Cellpose": {
+  "title": "Cellpose: a generalist algorithm for cellular segmentation",
+  "year": 2021,
+  "url": "https://doi.org/10.1101/2020.02.02.931238"
+ },
+ "StarDist": {
+  "title": "Cell Detection with Star-convex Polygons",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1806.03535"
+ },
+ "DEC": {
+  "title": "Unsupervised Deep Embedding for Clustering Analysis",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1511.06335"
+ },
+ "SpectralNet": {
+  "title": "SpectralNet: Spectral Clustering using Deep Neural Networks",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1801.01587"
+ },
+ "CAM": {
+  "title": "Learning Deep Features for Discriminative Localization",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1512.04150"
+ },
+ "IRNet": {
+  "title": "Weakly Supervised Learning of Instance Segmentation with Inter-pixel Relations",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1904.05044"
+ },
+ "STEGO": {
+  "title": "Unsupervised Semantic Segmentation by Distilling Feature Correspondences",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.08414"
+ },
+ "CutLER": {
+  "title": "Cut and Learn for Unsupervised Object Detection and Instance Segmentation",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.11320"
+ },
+ "SRCNN": {
+  "title": "Image Super-Resolution Using Deep Convolutional Networks",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1501.00092"
+ },
+ "SwinIR": {
+  "title": "SwinIR: Image Restoration Using Swin Transformer",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2108.10257"
+ },
+ "Real-ESRGAN": {
+  "title": "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2107.10833"
+ },
+ "DnCNN": {
+  "title": "Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1608.03981"
+ },
+ "Restormer": {
+  "title": "Restormer: Efficient Transformer for High-Resolution Image Restoration",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2111.09881"
+ },
+ "NAFNet": {
+  "title": "Simple Baselines for Image Restoration",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2204.04676"
+ },
+ "Zero-DCE": {
+  "title": "Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2001.06826"
+ },
+ "Retinexformer": {
+  "title": "Retinexformer: One-stage Retinex-based Transformer for Low-light Image Enhancement",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.06705"
+ },
+ "AirNet": {
+  "title": "All-In-One Image Restoration for Unknown Corruption",
+  "year": 2022,
+  "url": "https://doi.org/10.1109/cvpr52688.2022.01693"
+ },
+ "PromptIR": {
+  "title": "PromptIR: Prompting for All-in-One Blind Image Restoration",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2306.13090"
+ },
+ "ISTA-Net": {
+  "title": "ISTA-Net: Interpretable Optimization-Inspired Deep Network for Image Compressive Sensing",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1706.07929"
+ },
+ "MiDaS": {
+  "title": "Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/1907.01341"
+ },
+ "Depth Anything": {
+  "title": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2401.10891"
+ },
+ "Marigold": {
+  "title": "Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2312.02145"
+ },
+ "PSMNet": {
+  "title": "Pyramid Stereo Matching Network",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1803.08669"
+ },
+ "RAFT-Stereo": {
+  "title": "RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2109.07547"
+ },
+ "MVSNet": {
+  "title": "MVSNet: Depth Inference for Unstructured Multi-view Stereo",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1804.02505"
+ },
+ "CasMVSNet": {
+  "title": "Cascade Cost Volume for High-Resolution Multi-View Stereo and Stereo Matching",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1912.06378"
+ },
+ "COLMAP": {
+  "title": "Structure-from-Motion Revisited",
+  "year": 2016,
+  "url": "https://doi.org/10.1109/cvpr.2016.445"
+ },
+ "DUSt3R": {
+  "title": "DUSt3R: Geometric 3D Vision Made Easy",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2312.14132"
+ },
+ "VGGT": {
+  "title": "VGGT: Visual Geometry Grounded Transformer",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2503.11651"
+ },
+ "ORB-SLAM": {
+  "title": "ORB-SLAM: a Versatile and Accurate Monocular SLAM System",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1502.00956"
+ },
+ "DROID-SLAM": {
+  "title": "DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2108.10869"
+ },
+ "NeRF": {
+  "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2003.08934"
+ },
+ "Mip-NeRF": {
+  "title": "Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2103.13415"
+ },
+ "Instant-NGP": {
+  "title": "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2201.05989"
+ },
+ "3D Gaussian Splatting": {
+  "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2308.04079"
+ },
+ "2DGS": {
+  "title": "2D Gaussian Splatting for Geometrically Accurate Radiance Fields",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2403.17888"
+ },
+ "DeepSDF": {
+  "title": "DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1901.05103"
+ },
+ "Occupancy Networks": {
+  "title": "Occupancy Networks: Learning 3D Reconstruction in Function Space",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1812.03828"
+ },
+ "NeuS": {
+  "title": "NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.10689"
+ },
+ "PCN": {
+  "title": "PCN: Point Completion Network",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1808.00671"
+ },
+ "PoinTr": {
+  "title": "PoinTr: Diverse Point Cloud Completion with Geometry-Aware Transformers",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2108.08839"
+ },
+ "D-NeRF": {
+  "title": "D-NeRF: Neural Radiance Fields for Dynamic Scenes",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2011.13961"
+ },
+ "4D Gaussian Splatting": {
+  "title": "4D Gaussian Splatting for Real-Time Dynamic Scene Rendering",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2310.08528"
+ },
+ "HMR": {
+  "title": "End-to-end Recovery of Human Shape and Pose",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1712.06584"
+ },
+ "SMPLify": {
+  "title": "Keep it SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1607.08128"
+ },
+ "PIFu": {
+  "title": "PIFu: Pixel-Aligned Implicit Function for High-Resolution Clothed Human Digitization",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1905.05172"
+ },
+ "HumanNeRF": {
+  "title": "HumanNeRF: Free-viewpoint Rendering of Moving People from Monocular Video",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2201.04127"
+ },
+ "HOnnotate": {
+  "title": "HOnnotate: A method for 3D Annotation of Hand and Object Poses",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1907.01481"
+ },
+ "gSDF": {
+  "title": "gSDF: Geometry-Driven Signed Distance Functions for 3D Hand-Object Reconstruction",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2304.11970"
+ },
+ "Zero-1-to-3": {
+  "title": "Zero-1-to-3: Zero-shot One Image to 3D Object",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.11328"
+ },
+ "LRM": {
+  "title": "LRM: Large Reconstruction Model for Single Image to 3D",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2311.04400"
+ },
+ "MindEye": {
+  "title": "Reconstructing the Mind's Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.18274"
+ },
+ "Learned Primal-Dual": {
+  "title": "Learned Primal-dual Reconstruction",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1707.06474"
+ },
+ "NeRD": {
+  "title": "NeRD: Neural Reflectance Decomposition from Image Collections",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2012.03918"
+ },
+ "NeRFactor": {
+  "title": "NeRFactor: Neural Factorization of Shape and Reflectance Under an Unknown Illumination",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.01970"
+ },
+ "Diffusion Posterior Sampling": {
+  "title": "Diffusion Posterior Sampling for General Noisy Inverse Problems",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2209.14687"
+ },
+ "SVRG": {
+  "title": "Accelerating Stochastic Gradient Descent using Predictive Variance Reduction",
+  "year": 2013
+ },
+ "Sharpness-Aware Minimization": {
+  "title": "Sharpness-Aware Minimization for Efficiently Improving Generalization",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2010.01412"
+ },
+ "CMA-ES": {
+  "title": "The CMA Evolution Strategy: A Tutorial",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1604.00772"
+ },
+ "Evolution Strategies": {
+  "title": "Evolution Strategies as a Scalable Alternative to Reinforcement Learning",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.03864"
+ },
+ "MGDA": {
+  "title": "Multi-Task Learning as Multi-Objective Optimization",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1810.04650"
+ },
+ "Extragradient": {
+  "title": "A Variational Inequality Perspective on Generative Adversarial Networks",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1802.10551"
+ },
+ "Implicit Differentiation": {
+  "title": "Optimizing Millions of Hyperparameters by Implicit Differentiation",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1911.02590"
+ },
+ "Sinkhorn": {
+  "title": "Sinkhorn Distances: Lightspeed Computation of Optimal Transport",
+  "year": 2013,
+  "url": "https://arxiv.org/abs/1306.0895"
+ },
+ "Wasserstein GAN": {
+  "title": "Wasserstein GAN",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1701.07875"
+ },
+ "GP-UCB": {
+  "title": "Gaussian Process Optimization in the Bandit Setting: No Regret and Experimental Design",
+  "year": 2010,
+  "url": "https://arxiv.org/abs/0912.3995"
+ },
+ "Expected Improvement": {
+  "title": "Efficient Global Optimization of Expensive Black-Box Functions",
+  "year": 1998,
+  "url": "https://doi.org/10.1023/A:1008306431147"
+ },
+ "Deep Adaptive Design": {
+  "title": "Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2103.02438"
+ },
+ "DARTS": {
+  "title": "DARTS: Differentiable Architecture Search",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1806.09055"
+ },
+ "ENAS": {
+  "title": "Efficient Neural Architecture Search via Parameter Sharing",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1802.03268"
+ },
+ "Hyperband": {
+  "title": "Hyperband: A Novel Bandit-Based Approach to Hyperparameter Optimization",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1603.06560"
+ },
+ "Population-Based Training": {
+  "title": "Population Based Training of Neural Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1711.09846"
+ },
+ "AlphaGo": {
+  "title": "Mastering the game of Go with deep neural networks and tree search",
+  "year": 2016,
+  "url": "https://doi.org/10.1038/nature16961"
+ },
+ "AlphaZero": {
+  "title": "A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play",
+  "year": 2018,
+  "url": "https://doi.org/10.1126/science.aar6404"
+ },
+ "FunSearch": {
+  "title": "Mathematical discoveries from program search with large language models",
+  "year": 2024,
+  "url": "https://doi.org/10.1038/s41586-023-06924-6"
+ },
+ "Pointer Networks": {
+  "title": "Pointer Networks",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1506.03134"
+ },
+ "Attention Model (TSP)": {
+  "title": "Attention, Learn to Solve Routing Problems!",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1803.08475"
+ },
+ "NeuroSAT": {
+  "title": "Learning a SAT Solver from Single-Bit Supervision",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1802.03685"
+ },
+ "LaMBO": {
+  "title": "Accelerating Bayesian Optimization for Biological Sequence Design with Denoising Autoencoders",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.12742"
+ },
+ "InstructGPT": {
+  "title": "Training language models to follow instructions with human feedback",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.02155"
+ },
+ "PPO-RLHF": {
+  "title": "Fine-Tuning Language Models from Human Preferences",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1909.08593"
+ },
+ "DPO": {
+  "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.18290"
+ },
+ "KTO": {
+  "title": "KTO: Model Alignment as Prospect Theoretic Optimization",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2402.01306"
+ },
+ "SimPO": {
+  "title": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2405.14734"
+ },
+ "GRPO": {
+  "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2402.03300"
+ },
+ "DeepSeek-R1": {
+  "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2501.12948"
+ },
+ "DQN": {
+  "title": "Human-level control through deep reinforcement learning",
+  "year": 2015,
+  "url": "https://doi.org/10.1038/nature14236"
+ },
+ "PPO": {
+  "title": "Proximal Policy Optimization Algorithms",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1707.06347"
+ },
+ "SAC": {
+  "title": "Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1801.01290"
+ },
+ "CQL": {
+  "title": "Conservative Q-Learning for Offline Reinforcement Learning",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2006.04779"
+ },
+ "IQL": {
+  "title": "Offline Reinforcement Learning with Implicit Q-Learning",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2110.06169"
+ },
+ "Decision Transformer": {
+  "title": "Decision Transformer: Reinforcement Learning via Sequence Modeling",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.01345"
+ },
+ "Dreamer": {
+  "title": "Dream to Control: Learning Behaviors by Latent Imagination",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1912.01603"
+ },
+ "MuZero": {
+  "title": "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1911.08265"
+ },
+ "QMIX": {
+  "title": "QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1803.11485"
+ },
+ "MAPPO": {
+  "title": "The Surprising Effectiveness of PPO in Cooperative Multi-Agent Games",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2103.01955"
+ },
+ "Option-Critic": {
+  "title": "The Option-Critic Architecture",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1609.05140"
+ },
+ "HIRO": {
+  "title": "Data-Efficient Hierarchical Reinforcement Learning",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1805.08296"
+ },
+ "RND": {
+  "title": "Exploration by Random Network Distillation",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1810.12894"
+ },
+ "ICM": {
+  "title": "Curiosity-driven Exploration by Self-supervised Prediction",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1705.05363"
+ },
+ "CPO": {
+  "title": "Constrained Policy Optimization",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1705.10528"
+ },
+ "Lagrangian PPO": {
+  "title": "Benchmarking Safe Exploration in Deep Reinforcement Learning",
+  "year": 2019,
+  "url": "https://cdn.openai.com/safexp-short.pdf"
+ },
+ "MPPI": {
+  "title": "Information Theoretic MPC for Model-Based Reinforcement Learning",
+  "year": 2017,
+  "url": "https://doi.org/10.1109/icra.2017.7989202"
+ },
+ "PILCO": {
+  "title": "PILCO: A Model-Based and Data-Efficient Approach to Policy Search",
+  "year": 2011
+ },
+ "PETS": {
+  "title": "Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1805.12114"
+ },
+ "POMCP": {
+  "title": "Monte-Carlo Planning in Large POMDPs",
+  "year": 2010
+ },
+ "DESPOT": {
+  "title": "DESPOT: Online POMDP Planning with Regularization",
+  "year": 2013,
+  "url": "https://arxiv.org/abs/1609.03250"
+ },
+ "SayCan": {
+  "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2204.01691"
+ },
+ "LLM+P": {
+  "title": "LLM+P: Empowering Large Language Models with Optimal Planning Proficiency",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2304.11477"
+ },
+ "RT-2": {
+  "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2307.15818"
+ },
+ "OpenVLA": {
+  "title": "OpenVLA: An Open-Source Vision-Language-Action Model",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2406.09246"
+ },
+ "VLN-BERT": {
+  "title": "Improving Vision-and-Language Navigation with Image-Text Pairs from the Web",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2004.14973"
+ },
+ "Habitat": {
+  "title": "Habitat: A Platform for Embodied AI Research",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1904.01201"
+ },
+ "Domain Randomization": {
+  "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.06907"
+ },
+ "RMA": {
+  "title": "RMA: Rapid Motor Adaptation for Legged Robots",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2107.04034"
+ },
+ "DAgger": {
+  "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+  "year": 2011,
+  "url": "https://arxiv.org/abs/1011.0686"
+ },
+ "Diffusion Policy": {
+  "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.04137"
+ },
+ "MaxEnt IRL": {
+  "title": "Maximum Entropy Inverse Reinforcement Learning",
+  "year": 2008
+ },
+ "GAIL": {
+  "title": "Generative Adversarial Imitation Learning",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1606.03476"
+ },
+ "TransFuser": {
+  "title": "Multi-Modal Fusion Transformer for End-to-End Autonomous Driving",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.09224"
+ },
+ "UniAD": {
+  "title": "Planning-oriented Autonomous Driving",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.10156"
+ },
+ "ChauffeurNet": {
+  "title": "ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the Worst",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1812.03079"
+ },
+ "PlanT": {
+  "title": "PlanT: Explainable Planning Transformers via Object-Level Representations",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2210.14222"
+ },
+ "ReAct": {
+  "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.03629"
+ },
+ "Toolformer": {
+  "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2302.04761"
+ },
+ "CAMEL": {
+  "title": "CAMEL: Communicative Agents for \"Mind\" Exploration of Large Language Model Society",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.17760"
+ },
+ "AutoGen": {
+  "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2308.08155"
+ },
+ "Generative Agents": {
+  "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2304.03442"
+ },
+ "MemGPT": {
+  "title": "MemGPT: Towards LLMs as Operating Systems",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2310.08560"
+ },
+ "Reflexion": {
+  "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.11366"
+ },
+ "Voyager": {
+  "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.16291"
+ },
+ "Self-Refine": {
+  "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.17651"
+ },
+ "WebArena": {
+  "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2307.13854"
+ },
+ "SeeAct": {
+  "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2401.01614"
+ },
+ "SWE-agent": {
+  "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2405.15793"
+ },
+ "Search-R1": {
+  "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2503.09516"
+ },
+ "UCB": {
+  "title": "Finite-time Analysis of the Multiarmed Bandit Problem",
+  "year": 2002,
+  "url": "https://doi.org/10.1023/a:1013689704352"
+ },
+ "Thompson Sampling": {
+  "title": "On the Likelihood that One Unknown Probability Exceeds Another in View of the Evidence of Two Samples",
+  "year": 1933,
+  "url": "https://doi.org/10.2307/2332286"
+ },
+ "LinUCB": {
+  "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation",
+  "year": 2010,
+  "url": "https://arxiv.org/abs/1003.0146"
+ },
+ "Online Gradient Descent": {
+  "title": "Online Convex Programming and Generalized Infinitesimal Gradient Ascent",
+  "year": 2003
+ },
+ "Hedge": {
+  "title": "A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting",
+  "year": 1997,
+  "url": "https://doi.org/10.1006/jcss.1997.1504"
+ },
+ "Learning to Defer": {
+  "title": "Predict Responsibly: Improving Fairness and Accuracy by Learning to Defer",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1711.06664"
+ },
+ "DPR": {
+  "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2004.04906"
+ },
+ "ColBERT": {
+  "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2004.12832"
+ },
+ "SPLADE": {
+  "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2107.05720"
+ },
+ "Contriever": {
+  "title": "Unsupervised Dense Information Retrieval with Contrastive Learning",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2112.09118"
+ },
+ "monoBERT": {
+  "title": "Passage Re-ranking with BERT",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1901.04085"
+ },
+ "RankGPT": {
+  "title": "Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2304.09542"
+ },
+ "HyDE": {
+  "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.10496"
+ },
+ "Ditto": {
+  "title": "Deep Entity Matching with Pre-Trained Language Models",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2004.00584"
+ },
+ "SuperGlue": {
+  "title": "SuperGlue: Learning Feature Matching with Graph Neural Networks",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1911.11763"
+ },
+ "LoFTR": {
+  "title": "LoFTR: Detector-Free Local Feature Matching with Transformers",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.00680"
+ },
+ "LightGlue": {
+  "title": "LightGlue: Local Feature Matching at Light Speed",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2306.13643"
+ },
+ "FlowNet": {
+  "title": "FlowNet: Learning Optical Flow with Convolutional Networks",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1504.06852"
+ },
+ "RAFT": {
+  "title": "RAFT: Recurrent All-Pairs Field Transforms for Optical Flow",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2003.12039"
+ },
+ "ICP": {
+  "title": "A Method for Registration of 3-D Shapes",
+  "year": 1992,
+  "url": "https://doi.org/10.1109/34.121791"
+ },
+ "GeoTransformer": {
+  "title": "Geometric Transformer for Fast and Robust Point Cloud Registration",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2202.06688"
+ },
+ "VSE++": {
+  "title": "VSE++: Improving Visual-Semantic Embeddings with Hard Negatives",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1707.05612"
+ },
+ "Graph Matching Networks": {
+  "title": "Graph Matching Networks for Learning the Similarity of Graph Structured Objects",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1904.12787"
+ },
+ "Matrix Factorization": {
+  "title": "Matrix Factorization Techniques for Recommender Systems",
+  "year": 2009,
+  "url": "https://doi.org/10.1109/mc.2009.263"
+ },
+ "LightGCN": {
+  "title": "LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.02126"
+ },
+ "SASRec": {
+  "title": "Self-Attentive Sequential Recommendation",
+  "year": 2018,
+  "url": "https://doi.org/10.1109/icdm.2018.00035"
+ },
+ "BERT4Rec": {
+  "title": "BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1904.06690"
+ },
+ "RankNet": {
+  "title": "Learning to Rank using Gradient Descent",
+  "year": 2005,
+  "url": "https://doi.org/10.1145/1102351.1102363"
+ },
+ "LambdaMART": {
+  "title": "From RankNet to LambdaRank to LambdaMART: An Overview",
+  "year": 2010
+ },
+ "REALM": {
+  "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.08909"
+ },
+ "RAG": {
+  "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2005.11401"
+ },
+ "Self-RAG": {
+  "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2310.11511"
+ },
+ "Memorizing Transformers": {
+  "title": "Memorizing Transformers",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.08913"
+ },
+ "HNSW": {
+  "title": "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1603.09320"
+ },
+ "FAISS": {
+  "title": "Billion-scale similarity search with GPUs",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1702.08734"
+ },
+ "ScaNN": {
+  "title": "Accelerating Large-Scale Inference with Anisotropic Vector Quantization",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1908.10396"
+ },
+ "BiDAF": {
+  "title": "Bidirectional Attention Flow for Machine Comprehension",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1611.01603"
+ },
+ "T5": {
+  "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1910.10683"
+ },
+ "Med-PaLM": {
+  "title": "Large language models encode clinical knowledge",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.13138"
+ },
+ "Flamingo": {
+  "title": "Flamingo: a Visual Language Model for Few-Shot Learning",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2204.14198"
+ },
+ "BLIP-2": {
+  "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.12597"
+ },
+ "LLaVA": {
+  "title": "Visual Instruction Tuning",
+  "year": 2023,
+  "url": "https://doi.org/10.52202/075280-1516"
+ },
+ "Video-LLaVA": {
+  "title": "Video-LLaVA: Learning United Visual Representation by Alignment Before Projection",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2311.10122"
+ },
+ "VideoChat": {
+  "title": "VideoChat: Chat-Centric Video Understanding",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.06355"
+ },
+ "Chain-of-Thought": {
+  "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2201.11903"
+ },
+ "Self-Consistency": {
+  "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2203.11171"
+ },
+ "Tree of Thoughts": {
+  "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.10601"
+ },
+ "Minerva": {
+  "title": "Solving Quantitative Reasoning Problems with Language Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2206.14858"
+ },
+ "Process Reward Models": {
+  "title": "Let's Verify Step by Step",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.20050"
+ },
+ "GPT-f": {
+  "title": "Generative Language Modeling for Automated Theorem Proving",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2009.03393"
+ },
+ "LeanDojo": {
+  "title": "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2306.15626"
+ },
+ "COMET": {
+  "title": "COMET: Commonsense Transformers for Automatic Knowledge Graph Construction",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1906.05317"
+ },
+ "DeepProbLog": {
+  "title": "DeepProbLog: Neural Probabilistic Logic Programming",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1805.10872"
+ },
+ "Neural Theorem Provers": {
+  "title": "End-to-end Differentiable Proving",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1705.11040"
+ },
+ "K-BERT": {
+  "title": "K-BERT: Enabling Language Representation with Knowledge Graph",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1909.07606"
+ },
+ "Grad-CAM": {
+  "title": "Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1610.02391"
+ },
+ "Integrated Gradients": {
+  "title": "Axiomatic Attribution for Deep Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.01365"
+ },
+ "SHAP": {
+  "title": "A Unified Approach to Interpreting Model Predictions",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1705.07874"
+ },
+ "TCAV": {
+  "title": "Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV)",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1711.11279"
+ },
+ "Concept Bottleneck Models": {
+  "title": "Concept Bottleneck Models",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2007.04612"
+ },
+ "Circuits": {
+  "title": "Zoom In: An Introduction to Circuits",
+  "year": 2020,
+  "url": "https://doi.org/10.23915/distill.00024.001"
+ },
+ "Sparse Autoencoders": {
+  "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2309.08600"
+ },
+ "DiCE": {
+  "title": "Explaining Machine Learning Classifiers through Diverse Counterfactual Explanations",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1905.07697"
+ },
+ "Influence Functions": {
+  "title": "Understanding Black-box Predictions via Influence Functions",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.04730"
+ },
+ "TRAK": {
+  "title": "TRAK: Attributing Model Behavior at Scale",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.14186"
+ },
+ "PC Algorithm": {
+  "title": "Causation, Prediction, and Search",
+  "year": 2000
+ },
+ "NOTEARS": {
+  "title": "DAGs with NO TEARS: Continuous Optimization for Structure Learning",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1803.01422"
+ },
+ "TARNet": {
+  "title": "Estimating individual treatment effect: generalization bounds and algorithms",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1606.03976"
+ },
+ "Double ML": {
+  "title": "Double/Debiased Machine Learning for Treatment and Structural Parameters",
+  "year": 2018,
+  "url": "https://doi.org/10.3386/w23564"
+ },
+ "IRM": {
+  "title": "Invariant Risk Minimization",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1907.02893"
+ },
+ "iVAE": {
+  "title": "Variational Autoencoders and Nonlinear ICA: A Unifying Framework",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1907.04809"
+ },
+ "CausalVAE": {
+  "title": "CausalVAE: Disentangled Representation Learning via Neural Structural Causal Models",
+  "year": 2021,
+  "url": "https://doi.org/10.1109/cvpr46437.2021.00947"
+ },
+ "DANN": {
+  "title": "Domain-Adversarial Training of Neural Networks",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1505.07818"
+ },
+ "CyCADA": {
+  "title": "CyCADA: Cycle-Consistent Adversarial Domain Adaptation",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1711.03213"
+ },
+ "MixStyle": {
+  "title": "Domain Generalization with MixStyle",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.02008"
+ },
+ "SWAD": {
+  "title": "SWAD: Domain Generalization by Seeking Flat Minima",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2102.08604"
+ },
+ "DeViSE": {
+  "title": "DeViSE: A Deep Visual-Semantic Embedding Model",
+  "year": 2013
+ },
+ "CLIP zero-shot": {
+  "title": "Learning Transferable Visual Models From Natural Language Supervision",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2103.00020"
+ },
+ "Prefix-Tuning": {
+  "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2101.00190"
+ },
+ "Prompt Tuning": {
+  "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2104.08691"
+ },
+ "CoOp": {
+  "title": "Learning to Prompt for Vision-Language Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2109.01134"
+ },
+ "CoCoOp": {
+  "title": "Conditional Prompt Learning for Vision-Language Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.05557"
+ },
+ "Adapters": {
+  "title": "Parameter-Efficient Transfer Learning for NLP",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1902.00751"
+ },
+ "LoRA": {
+  "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2106.09685"
+ },
+ "QLoRA": {
+  "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.14314"
+ },
+ "MAML": {
+  "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.03400"
+ },
+ "Prototypical Networks": {
+  "title": "Prototypical Networks for Few-shot Learning",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.05175"
+ },
+ "Reptile": {
+  "title": "On First-Order Meta-Learning Algorithms",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1803.02999"
+ },
+ "iCaRL": {
+  "title": "iCaRL: Incremental Classifier and Representation Learning",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1611.07725"
+ },
+ "GEM": {
+  "title": "Gradient Episodic Memory for Continual Learning",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1706.08840"
+ },
+ "EWC": {
+  "title": "Overcoming catastrophic forgetting in neural networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1612.00796"
+ },
+ "LwF": {
+  "title": "Learning without Forgetting",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1606.09282"
+ },
+ "TENT": {
+  "title": "Tent: Fully Test-time Adaptation by Entropy Minimization",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2006.10726"
+ },
+ "MEMO": {
+  "title": "MEMO: Test Time Robustness via Adaptation and Augmentation",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2110.09506"
+ },
+ "SHOT": {
+  "title": "Do We Really Need to Access the Source Data? Source Hypothesis Transfer for Unsupervised Domain Adaptation",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.08546"
+ },
+ "FGSM": {
+  "title": "Explaining and Harnessing Adversarial Examples",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1412.6572"
+ },
+ "PGD": {
+  "title": "Towards Deep Learning Models Resistant to Adversarial Attacks",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1706.06083"
+ },
+ "C&W": {
+  "title": "Towards Evaluating the Robustness of Neural Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1608.04644"
+ },
+ "TRADES": {
+  "title": "Theoretically Principled Trade-off between Robustness and Accuracy",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1901.08573"
+ },
+ "Randomized Smoothing": {
+  "title": "Certified Adversarial Robustness via Randomized Smoothing",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1902.02918"
+ },
+ "AugMix": {
+  "title": "AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1912.02781"
+ },
+ "GroupDRO": {
+  "title": "Distributionally Robust Neural Networks for Group Shifts: On the Importance of Regularization for Worst-Case Generalization",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1911.08731"
+ },
+ "JTT": {
+  "title": "Just Train Twice: Improving Group Robustness without Training Group Information",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2107.09044"
+ },
+ "Constitutional AI": {
+  "title": "Constitutional AI: Harmlessness from AI Feedback",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2212.08073"
+ },
+ "Llama Guard": {
+  "title": "Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2312.06674"
+ },
+ "GCG": {
+  "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2307.15043"
+ },
+ "Red Teaming LMs": {
+  "title": "Red Teaming Language Models with Language Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2202.03286"
+ },
+ "ESD": {
+  "title": "Erasing Concepts from Diffusion Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.07345"
+ },
+ "Safe Latent Diffusion": {
+  "title": "Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.05105"
+ },
+ "DP-SGD": {
+  "title": "Deep Learning with Differential Privacy",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1607.00133"
+ },
+ "PATE": {
+  "title": "Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1610.05755"
+ },
+ "FedAvg": {
+  "title": "Communication-Efficient Learning of Deep Networks from Decentralized Data",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1602.05629"
+ },
+ "FedProx": {
+  "title": "Federated Optimization in Heterogeneous Networks",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1812.06127"
+ },
+ "SCAFFOLD": {
+  "title": "SCAFFOLD: Stochastic Controlled Averaging for Federated Learning",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1910.06378"
+ },
+ "Per-FedAvg": {
+  "title": "Personalized Federated Learning with Theoretical Guarantees: A Model-Agnostic Meta-Learning Approach",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.07948"
+ },
+ "FedRep": {
+  "title": "Exploiting Shared Representations for Personalized Federated Learning",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2102.07078"
+ },
+ "CryptoNets": {
+  "title": "CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy",
+  "year": 2016,
+  "url": "https://proceedings.mlr.press/v48/gilad-bachrach16.html"
+ },
+ "Shadow Models": {
+  "title": "Membership Inference Attacks against Machine Learning Models",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1610.05820"
+ },
+ "LiRA": {
+  "title": "Membership Inference Attacks From First Principles",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2112.03570"
+ },
+ "BadNets": {
+  "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1708.06733"
+ },
+ "Neural Cleanse": {
+  "title": "Neural Cleanse: Identifying and Mitigating Backdoor Attacks in Neural Networks",
+  "year": 2019,
+  "url": "https://doi.org/10.1109/sp.2019.00031"
+ },
+ "Knockoff Nets": {
+  "title": "Knockoff Nets: Stealing Functionality of Black-Box Models",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1812.02766"
+ },
+ "StruQ": {
+  "title": "StruQ: Defending Against Prompt Injection with Structured Queries",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2402.06363"
+ },
+ "LLM Green-list Watermark": {
+  "title": "A Watermark for Large Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.10226"
+ },
+ "Tree-Ring": {
+  "title": "Tree-Ring Watermarks: Fingerprints for Diffusion Images that are Invisible and Robust",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.20030"
+ },
+ "FaceForensics++": {
+  "title": "FaceForensics++: Learning to Detect Manipulated Facial Images",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1901.08971"
+ },
+ "DIRE": {
+  "title": "DIRE for Diffusion-Generated Image Detection",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.09295"
+ },
+ "Equalized Odds": {
+  "title": "Equality of Opportunity in Supervised Learning",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1610.02413"
+ },
+ "Fair Representations": {
+  "title": "Learning Fair Representations",
+  "year": 2013,
+  "url": "https://proceedings.mlr.press/v28/zemel13.html"
+ },
+ "StereoSet": {
+  "title": "StereoSet: Measuring stereotypical bias in pretrained language models",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2004.09456"
+ },
+ "Debiasing": {
+  "title": "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1607.06520"
+ },
+ "Reluplex": {
+  "title": "Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1702.01135"
+ },
+ "α,β-CROWN": {
+  "title": "Beta-CROWN: Efficient Bound Propagation with Per-neuron Split Constraints for Complete and Incomplete Neural Network Robustness Verification",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2103.06624"
+ },
+ "SelfCheckGPT": {
+  "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.08896"
+ },
+ "Semantic Entropy": {
+  "title": "Detecting hallucinations in large language models using semantic entropy",
+  "year": 2024,
+  "url": "https://doi.org/10.1038/s41586-024-07421-0"
+ },
+ "Hinton KD": {
+  "title": "Distilling the Knowledge in a Neural Network",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1503.02531"
+ },
+ "DistilBERT": {
+  "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1910.01108"
+ },
+ "Lottery Ticket": {
+  "title": "The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1803.03635"
+ },
+ "SparseGPT": {
+  "title": "SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2301.00774"
+ },
+ "Wanda": {
+  "title": "A Simple and Effective Pruning Approach for Large Language Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2306.11695"
+ },
+ "GPTQ": {
+  "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.17323"
+ },
+ "AWQ": {
+  "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2306.00978"
+ },
+ "Switch Transformer": {
+  "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2101.03961"
+ },
+ "Mixtral": {
+  "title": "Mixtral of Experts",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2401.04088"
+ },
+ "MobileNet": {
+  "title": "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1704.04861"
+ },
+ "EfficientNet": {
+  "title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1905.11946"
+ },
+ "Mamba": {
+  "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2312.00752"
+ },
+ "Spikformer": {
+  "title": "Spikformer: When Spiking Neural Network Meets Transformer",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2209.15425"
+ },
+ "SEW-ResNet": {
+  "title": "Deep Residual Learning in Spiking Neural Networks",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2102.04159"
+ },
+ "Speculative Sampling": {
+  "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2302.01318"
+ },
+ "Medusa": {
+  "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2401.10774"
+ },
+ "StreamingLLM": {
+  "title": "Efficient Streaming Language Models with Attention Sinks",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2309.17453"
+ },
+ "H2O": {
+  "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+  "year": 2023,
+  "url": "https://doi.org/10.52202/075280-1506"
+ },
+ "FlashAttention": {
+  "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2205.14135"
+ },
+ "Linear Attention": {
+  "title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2006.16236"
+ },
+ "DynamicViT": {
+  "title": "DynamicViT: Efficient Vision Transformers with Dynamic Token Sparsification",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.02034"
+ },
+ "ToMe": {
+  "title": "Token Merging: Your ViT But Faster",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.09461"
+ },
+ "Adam": {
+  "title": "Adam: A Method for Stochastic Optimization",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1412.6980"
+ },
+ "AdamW": {
+  "title": "Decoupled Weight Decay Regularization",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1711.05101"
+ },
+ "Shampoo": {
+  "title": "Shampoo: Preconditioned Stochastic Tensor Optimization",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1802.09568"
+ },
+ "Muon": {
+  "title": "Muon is Scalable for LLM Training",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2502.16982"
+ },
+ "Cosine Annealing": {
+  "title": "SGDR: Stochastic Gradient Descent with Warm Restarts",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1608.03983"
+ },
+ "Warmup": {
+  "title": "Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1706.02677"
+ },
+ "WSD": {
+  "title": "MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2404.06395"
+ },
+ "ZeRO": {
+  "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1910.02054"
+ },
+ "Megatron-LM": {
+  "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1909.08053"
+ },
+ "LARS": {
+  "title": "Large Batch Training of Convolutional Networks",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1708.03888"
+ },
+ "Gradient Checkpointing": {
+  "title": "Training Deep Nets with Sublinear Memory Cost",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1604.06174"
+ },
+ "Mixed Precision": {
+  "title": "Mixed Precision Training",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1710.03740"
+ },
+ "vLLM (PagedAttention)": {
+  "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2309.06180"
+ },
+ "Orca": {
+  "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+  "year": 2022
+ },
+ "TVM": {
+  "title": "TVM: An Automated End-to-End Optimizing Compiler for Deep Learning",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1802.04799"
+ },
+ "Triton": {
+  "title": "Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations",
+  "year": 2019,
+  "url": "https://doi.org/10.1145/3315508.3329973"
+ },
+ "Once-for-All": {
+  "title": "Once-for-All: Train One Network and Specialize it for Efficient Deployment",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1908.09791"
+ },
+ "MCUNet": {
+  "title": "MCUNet: Tiny Deep Learning on IoT Devices",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2007.10319"
+ },
+ "Kaplan scaling": {
+  "title": "Scaling Laws for Neural Language Models",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2001.08361"
+ },
+ "Chinchilla": {
+  "title": "Training Compute-Optimal Large Language Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.15556"
+ },
+ "Best-of-N": {
+  "title": "Training Verifiers to Solve Math Word Problems",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2110.14168"
+ },
+ "s1": {
+  "title": "s1: Simple test-time scaling",
+  "year": 2025,
+  "url": "https://arxiv.org/abs/2501.19393"
+ },
+ "ImageNet": {
+  "title": "ImageNet: A Large-Scale Hierarchical Image Database",
+  "year": 2009,
+  "url": "https://doi.org/10.1109/cvpr.2009.5206848"
+ },
+ "VQA": {
+  "title": "VQA: Visual Question Answering",
+  "year": 2015,
+  "url": "https://arxiv.org/abs/1505.00468"
+ },
+ "MMLU": {
+  "title": "Measuring Massive Multitask Language Understanding",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2009.03300"
+ },
+ "SWE-bench": {
+  "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2310.06770"
+ },
+ "Min-K% Prob": {
+  "title": "Detecting Pretraining Data from Large Language Models",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2310.16789"
+ },
+ "FID": {
+  "title": "GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1706.08500"
+ },
+ "LPIPS": {
+  "title": "The Unreasonable Effectiveness of Deep Features as a Perceptual Metric",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1801.03924"
+ },
+ "BLEU": {
+  "title": "BLEU: a Method for Automatic Evaluation of Machine Translation",
+  "year": 2002,
+  "url": "https://aclanthology.org/P02-1040/"
+ },
+ "MT-Bench": {
+  "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2306.05685"
+ },
+ "Chatbot Arena": {
+  "title": "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
+  "year": 2024,
+  "url": "https://arxiv.org/abs/2403.04132"
+ },
+ "HELM": {
+  "title": "Holistic Evaluation of Language Models",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2211.09110"
+ },
+ "Edge of Stability": {
+  "title": "Gradient Descent on Neural Networks Typically Occurs at the Edge of Stability",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2103.00065"
+ },
+ "Grokking": {
+  "title": "Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2201.02177"
+ },
+ "PAC-Bayes bounds": {
+  "title": "Computing Nonvacuous Generalization Bounds for Deep (Stochastic) Neural Networks with Many More Parameters than Training Data",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.11008"
+ },
+ "Double Descent": {
+  "title": "Reconciling modern machine learning practice and the bias-variance trade-off",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1812.11118"
+ },
+ "Neural Tangent Kernel": {
+  "title": "Neural Tangent Kernel: Convergence and Generalization in Neural Networks",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1806.07572"
+ },
+ "Mean-Field Theory": {
+  "title": "A Mean Field View of the Landscape of Two-Layers Neural Networks",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1804.06561"
+ },
+ "Implicit bias of GD": {
+  "title": "The Implicit Bias of Gradient Descent on Separable Data",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1710.10345"
+ },
+ "Neural Collapse": {
+  "title": "Prevalence of Neural Collapse during the terminal phase of deep learning training",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2008.08186"
+ },
+ "ICL as Gradient Descent": {
+  "title": "Transformers learn in-context by gradient descent",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.07677"
+ },
+ "Mean Teacher": {
+  "title": "Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1703.01780"
+ },
+ "FixMatch": {
+  "title": "FixMatch: Simplifying Semi-Supervised Learning with Consistency and Confidence",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2001.07685"
+ },
+ "Multiple Instance Learning": {
+  "title": "Attention-based Deep Multiple Instance Learning",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1802.04712"
+ },
+ "Co-teaching": {
+  "title": "Co-teaching: Robust Training of Deep Neural Networks with Extremely Noisy Labels",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1804.06872"
+ },
+ "DivideMix": {
+  "title": "DivideMix: Learning with Noisy Labels as Semi-supervised Learning",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2002.07394"
+ },
+ "Core-Set": {
+  "title": "Active Learning for Convolutional Neural Networks: A Core-Set Approach",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1708.00489"
+ },
+ "BADGE": {
+  "title": "Deep Batch Active Learning by Diverse, Uncertain Gradient Lower Bounds",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1906.03671"
+ },
+ "Noisy Student": {
+  "title": "Self-training with Noisy Student improves ImageNet classification",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1911.04252"
+ },
+ "Snorkel": {
+  "title": "Snorkel: Rapid Training Data Creation with Weak Supervision",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1711.10160"
+ },
+ "Curriculum Learning (Bengio)": {
+  "title": "Curriculum Learning",
+  "year": 2009,
+  "url": "https://doi.org/10.1145/1553374.1553380"
+ },
+ "GradNorm": {
+  "title": "GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1711.02257"
+ },
+ "Co-training": {
+  "title": "Combining Labeled and Unlabeled Data with Co-Training",
+  "year": 1998,
+  "url": "https://doi.org/10.1145/279943.279962"
+ },
+ "FLAN": {
+  "title": "Finetuned Language Models Are Zero-Shot Learners",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2109.01652"
+ },
+ "Self-Instruct": {
+  "title": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.10560"
+ },
+ "The Pile": {
+  "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/2101.00027"
+ },
+ "DoReMi": {
+  "title": "DoReMi: Optimizing Data Mixtures Speeds Up Language Model Pretraining",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2305.10429"
+ },
+ "SemDeDup": {
+  "title": "SemDeDup: Data-efficient learning at web-scale through semantic deduplication",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.09540"
+ },
+ "Data Pruning": {
+  "title": "Beyond neural scaling laws: beating power law scaling via data pruning",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2206.14486"
+ },
+ "Dataset Distillation": {
+  "title": "Dataset Distillation",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1811.10959"
+ },
+ "Dataset Condensation": {
+  "title": "Dataset Condensation with Gradient Matching",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2006.05929"
+ },
+ "Mixup": {
+  "title": "mixup: Beyond Empirical Risk Minimization",
+  "year": 2018,
+  "url": "https://arxiv.org/abs/1710.09412"
+ },
+ "CutMix": {
+  "title": "CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features",
+  "year": 2019,
+  "url": "https://arxiv.org/abs/1905.04899"
+ },
+ "RandAugment": {
+  "title": "RandAugment: Practical automated data augmentation with a reduced search space",
+  "year": 2020,
+  "url": "https://arxiv.org/abs/1909.13719"
+ },
+ "Datasheets for Datasets": {
+  "title": "Datasheets for Datasets",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/1803.09010"
+ },
+ "Snapshot Ensembles": {
+  "title": "Snapshot Ensembles: Train 1, get M for free",
+  "year": 2017,
+  "url": "https://arxiv.org/abs/1704.00109"
+ },
+ "Model Soups": {
+  "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2203.05482"
+ },
+ "Task Arithmetic": {
+  "title": "Editing Models with Task Arithmetic",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2212.04089"
+ },
+ "TIES-Merging": {
+  "title": "TIES-Merging: Resolving Interference When Merging Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2306.01708"
+ },
+ "Neural Module Networks": {
+  "title": "Neural Module Networks",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1511.02799"
+ },
+ "Net2Net": {
+  "title": "Net2Net: Accelerating Learning via Knowledge Transfer",
+  "year": 2016,
+  "url": "https://arxiv.org/abs/1511.05641"
+ },
+ "Git Re-Basin": {
+  "title": "Git Re-Basin: Merging Models modulo Permutation Symmetries",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2209.04836"
+ },
+ "ROME": {
+  "title": "Locating and Editing Factual Associations in GPT",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2202.05262"
+ },
+ "MEMIT": {
+  "title": "Mass-Editing Memory in a Transformer",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.07229"
+ },
+ "SISA": {
+  "title": "Machine Unlearning",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/1912.03817"
+ },
+ "Gradient Ascent unlearning": {
+  "title": "Knowledge Unlearning for Mitigating Privacy Risks in Language Models",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2210.01504"
+ },
+ "VisProg": {
+  "title": "Visual Programming: Compositional visual reasoning without training",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2211.11559"
+ },
+ "ViperGPT": {
+  "title": "ViperGPT: Visual Inference via Python Execution for Reasoning",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.08128"
+ },
+ "HuggingGPT": {
+  "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+  "year": 2023,
+  "url": "https://arxiv.org/abs/2303.17580"
+ },
+ "Frozen": {
+  "title": "Multimodal Few-Shot Learning with Frozen Language Models",
+  "year": 2021,
+  "url": "https://arxiv.org/abs/2106.13884"
+ },
+ "LiT": {
+  "title": "LiT: Zero-Shot Transfer with Locked-image text Tuning",
+  "year": 2022,
+  "url": "https://arxiv.org/abs/2111.07991"
+ }
+}
