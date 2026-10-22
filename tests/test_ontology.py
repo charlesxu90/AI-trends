@@ -7,9 +7,11 @@ import json
 import pytest
 
 from ai_trend.ontology import (
+    DEFAULT_APPLICATIONS_PATH,
     OntologyError,
     load_method_refs,
     load_ontology,
+    used_refs,
     validate_ontology,
     write_ontology,
 )
@@ -180,3 +182,24 @@ def test_repo_method_refs_cover_every_example():
             yield from examples(node.get("children", []))
 
     assert sorted(set(examples(onto["domains"])) - set(refs)) == []
+
+
+def test_used_refs_keeps_only_refs_named_by_examples():
+    refs = {"LDM": {"title": "A", "year": 2022}, "Other": {"title": "B", "year": 2020}}
+    tree = _tree()
+    tree["domains"][0]["children"][0]["children"][0]["examples"] = ["LDM", "Unreferenced"]
+    assert used_refs(validate_ontology(tree), refs) == {"LDM": {"title": "A", "year": 2022}}
+
+
+def test_write_ontology_accepts_a_filename(tmp_path):
+    out = write_ontology(tmp_path, {"domains": []}, filename="applications.json")
+    assert out == tmp_path / "applications.json"
+
+
+def test_repo_application_tree_is_valid_and_refs_covered():
+    apps, refs = load_ontology(DEFAULT_APPLICATIONS_PATH), load_method_refs()
+    assert len(apps["domains"]) >= 8
+    assert {"NLP", "VIS", "ROB", "SCI"} <= {d.get("code") for d in apps["domains"]}
+    names = [e for d in apps["domains"] for f in d["children"] for leaf in f["children"]
+             for e in leaf.get("examples", [])]
+    assert sorted(set(names) - set(refs)) == []

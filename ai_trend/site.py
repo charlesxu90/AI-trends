@@ -10,6 +10,8 @@ exports:
   actually occur (drives the site's filters).
 * ``ontology.json`` -- the method tree from ``config/ontology.json`` plus landmark
   method refs and, per leaf, the top matching corpus papers (Method Tree page).
+* ``applications.json`` -- the same for the application tree
+  (``config/applications.json``; Application Tree page).
 
 Conference identity and year come from the **file location** via the registry
 (not the unreliable in-file ``source``/``year`` columns).
@@ -23,7 +25,15 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ai_trend.method_papers import compile_matcher, match_leaves, site_ontology
-from ai_trend.ontology import load_method_refs, load_ontology, write_ontology
+from ai_trend.ontology import (
+    APPLICATIONS_FILENAME,
+    DEFAULT_APPLICATIONS_PATH,
+    ONTOLOGY_FILENAME,
+    load_method_refs,
+    load_ontology,
+    used_refs,
+    write_ontology,
+)
 from ai_trend.registry import ConferenceRegistry
 from ai_trend.taxonomy import Taxonomy
 from ai_trend.trends import (
@@ -125,6 +135,7 @@ def export_site(
     min_count: int = DEFAULT_MIN_COUNT,
     abstract_chars: int = DEFAULT_ABSTRACT_CHARS,
     ontology: dict | None = None,
+    applications: dict | None = None,
     method_refs: dict | None = None,
 ) -> dict:
     """Write the site's JSON data files and return the manifest."""
@@ -143,9 +154,13 @@ def export_site(
         json.dumps(trends_payload, ensure_ascii=False), encoding="utf-8"
     )
 
-    ontology = ontology if ontology is not None else load_ontology()
-    matcher = compile_matcher(ontology["domains"])
-    matched: list[tuple[dict, dict]] = []  # (record, leaf hits) for the method tree
+    # (site filename, tree, keyword matcher, [(record, leaf hits)]) per tree page
+    trees = [
+        (ONTOLOGY_FILENAME, ontology if ontology is not None else load_ontology()),
+        (APPLICATIONS_FILENAME, applications if applications is not None
+         else load_ontology(DEFAULT_APPLICATIONS_PATH)),
+    ]
+    trees = [(name, tree, compile_matcher(tree["domains"]), []) for name, tree in trees]
 
     index = discover_conference_years(data_dir, registry.token_to_label)
     shards: list[dict] = []
@@ -173,9 +188,11 @@ def export_site(
             ]
             for row, record in zip(rows, records):
                 seen_topics.update(record["topics"])
-                hits = match_leaves(matcher, record["title"], _text(row.get("abstract")))
-                if hits:
-                    matched.append((record, hits))
+                abstract = _text(row.get("abstract"))
+                for _, _, matcher, matched in trees:
+                    hits = match_leaves(matcher, record["title"], abstract)
+                    if hits:
+                        matched.append((record, hits))
             (out_dir / rel).write_text(
                 json.dumps(records, ensure_ascii=False), encoding="utf-8"
             )
@@ -193,5 +210,6 @@ def export_site(
         json.dumps(manifest, ensure_ascii=False), encoding="utf-8"
     )
     refs = method_refs if method_refs is not None else load_method_refs()
-    write_ontology(out_dir, site_ontology(ontology, refs, matched))
+    for name, tree, _, matched in trees:
+        write_ontology(out_dir, site_ontology(tree, used_refs(tree, refs), matched), name)
     return manifest

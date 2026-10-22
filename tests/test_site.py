@@ -156,3 +156,21 @@ def test_export_site_writes_ontology(tmp_path):
     assert leaf["paper_count"] == 1 and site["domains"][0]["paper_count"] == 1
     assert leaf["papers"] == [{"year": 2025, "papers": [
         {"name": "P2", "title": "P2", "conference": "ICLR", "url": "y"}]}]
+
+
+def test_export_site_writes_application_tree_with_only_its_refs(tmp_path):
+    config, data = _setup(tmp_path)
+    out = tmp_path / "site"
+    onto = {"domains": [{"name": "M", "children": [{"name": "m", "keywords": ["b"], "examples": ["LDM"]}]}],
+            "facets": [], "heuristics": []}
+    apps = {"domains": [{"name": "A", "children": [{"name": "a", "keywords": ["c"], "examples": ["SAM"]}]}],
+            "facets": [], "heuristics": []}
+    refs = {"LDM": {"title": "L", "year": 2022}, "SAM": {"title": "S", "year": 2023}}
+
+    export_site(out, taxonomy=Taxonomy.load(config), data_dir=data, ontology=onto,
+                applications=apps, method_refs=refs)
+
+    site = json.loads((out / "applications.json").read_text())
+    assert site["methods"] == {"SAM": {"title": "S", "year": 2023}}
+    leaf = site["domains"][0]["children"][0]
+    assert leaf["paper_count"] == 1 and leaf["papers"][0]["papers"][0]["title"] == "P3"  # abstract "c"

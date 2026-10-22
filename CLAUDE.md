@@ -127,6 +127,7 @@ config/                     single source of truth (version-controlled)
                             + example methods), cross-cutting tag facets, labelling heuristics
                             leaves carry `keywords` for matching corpus papers ('^kw' = title only)
   method_refs.json          landmark method -> {title, year, url} (arXiv/DOI) shown per task
+  applications.json         application tree (theme -> area -> application), same schema + keywords
 
 ai_trend/                   tested, deterministic Python package
   taxonomy.py               load / validate / immutably-merge config
@@ -178,7 +179,8 @@ Static, no framework. `ai-trend export-site` writes `docs/data/` (manifest +
 trends + per-conference-year paper shards, abstracts truncated). `docs/index.html`
 + `docs/assets/{app.js,style.css}` render a trends dashboard and a drill-down
 paper browser. `docs/methods.html` + `docs/assets/methods.js` render the method tree
-(Method Tree page) from `docs/data/ontology.json`. `docs/` (incl. generated `docs/data/`, ~23 MB) is committed so
+(Method Tree page) from `docs/data/ontology.json`; `docs/applications.html` reuses
+`methods.js` (via `<body data-tree=...>`) for the Application Tree from `docs/data/applications.json`. `docs/` (incl. generated `docs/data/`, ~23 MB) is committed so
 Pages can serve it. Enable: Settings → Pages → branch `main`, folder `/docs`.
 Re-run `export-site` after any re-assign/trends change.
 
