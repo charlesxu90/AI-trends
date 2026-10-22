@@ -1,0 +1,217 @@
+{
+  "version": "0.1",
+  "domains": [
+    {"code": "NLP", "name": "Natural Language Processing",
+     "summary": "Applications that read, write, translate, or reason over human language.",
+     "children": [
+      {"name": "Text generation & transformation", "children": [
+        {"name": "Machine translation", "examples": ["Transformer (NMT)", "NLLB"], "keywords": ["machine translation", "neural machine translation", "multilingual translation", "speech translation"]},
+        {"name": "Summarization", "examples": ["PEGASUS", "BART"], "keywords": ["summarization"]},
+        {"name": "Dialogue & chatbots", "examples": ["DialoGPT", "BlenderBot"], "keywords": ["dialogue system", "dialogue generation", "chatbot", "conversational agent", "open-domain dialogue", "task-oriented dialogue", "dialog system"]},
+        {"name": "Creative & long-form writing", "examples": ["STORM"], "keywords": ["story generation", "creative writing", "long-form generation", "long-form text generation", "poetry generation"]},
+        {"name": "Text simplification & paraphrasing", "keywords": ["text simplification", "paraphrase generation", "paraphrasing", "style transfer of text", "text style transfer"]}
+      ]},
+      {"name": "Language understanding", "children": [
+        {"name": "Question answering", "examples": ["BiDAF", "T5"], "keywords": ["question answering", "reading comprehension", "open-domain qa", "multi-hop"]},
+        {"name": "Information extraction", "examples": ["BiLSTM-CRF", "SpanBERT"], "keywords": ["named entity recognition", "information extraction", "relation extraction", "event extraction"]},
+        {"name": "Sentiment, emotion & stance", "keywords": ["sentiment analysis", "emotion recognition", "stance detection", "aspect-based sentiment"]},
+        {"name": "Text classification & NLI", "keywords": ["text classification", "natural language inference", "textual entailment"]},
+        {"name": "Semantic parsing & text-to-SQL", "keywords": ["semantic parsing", "text-to-sql"]}
+      ]},
+      {"name": "Code & mathematics", "children": [
+        {"name": "Code generation", "examples": ["Codex", "AlphaCode", "StarCoder"], "keywords": ["code generation", "program synthesis", "code llm", "code language model", "code completion"]},
+        {"name": "Program repair & software engineering", "examples": ["SWE-agent"], "keywords": ["program repair", "bug fixing", "software engineering", "swe-bench", "vulnerability detection"]},
+        {"name": "Math problem solving", "examples": ["Minerva", "Process Reward Models"], "keywords": ["mathematical reasoning", "math reasoning", "math word problem", "mathematical problem"]},
+        {"name": "Theorem proving", "examples": ["GPT-f", "LeanDojo"], "keywords": ["theorem proving", "theorem prover", "autoformalization", "formal mathematics"]}
+      ]},
+      {"name": "Knowledge & search", "children": [
+        {"name": "Retrieval-augmented QA", "examples": ["REALM", "RAG", "Self-RAG"], "keywords": ["retrieval-augmented", "retrieval augmented", "rag"]},
+        {"name": "Web & document search", "examples": ["DPR", "ColBERT", "SPLADE"], "keywords": ["dense retrieval", "passage retrieval", "document retrieval", "information retrieval", "web search"]},
+        {"name": "Fact-checking", "keywords": ["fact verification", "fact-checking", "fact checking", "claim verification"]}
+      ]}
+    ]},
+    {"code": "VIS", "name": "Computer Vision",
+     "summary": "Applications that perceive, edit, or synthesize images, video, and 3D/4D content.",
+     "children": [
+      {"name": "Image recognition & analysis", "children": [
+        {"name": "Image classification", "examples": ["ResNet", "ViT", "ConvNeXt"], "keywords": ["image classification", "image recognition"]},
+        {"name": "Object detection", "examples": ["Faster R-CNN", "YOLO", "DETR"], "keywords": ["object detection", "object detector"]},
+        {"name": "Image segmentation", "examples": ["FCN", "Mask R-CNN", "SAM"], "keywords": ["image segmentation", "semantic segmentation", "instance segmentation", "panoptic segmentation", "segment anything"]},
+        {"name": "Human pose & body analysis", "examples": ["OpenPose", "ViTPose", "HMR"], "keywords": ["human pose estimation", "pose estimation", "human mesh recovery", "hand pose estimation"]},
+        {"name": "Face analysis", "examples": ["FaceNet", "ArcFace"], "keywords": ["face recognition", "face verification", "facial expression", "face alignment"]},
+        {"name": "Document & text recognition (OCR)", "examples": ["LayoutLM", "Donut"], "keywords": ["ocr", "text recognition", "document understanding", "scene text", "document image"]},
+        {"name": "Visual anomaly & defect detection", "examples": ["PatchCore"], "keywords": ["anomaly detection", "defect detection", "industrial inspection", "anomaly localization"]}
+      ]},
+      {"name": "Image generation & editing", "children": [
+        {"name": "Text-to-image generation", "examples": ["Latent Diffusion", "Imagen", "DiT"], "keywords": ["text-to-image"]},
+        {"name": "Image editing", "examples": ["Prompt-to-Prompt", "InstructPix2Pix"], "keywords": ["image editing", "image manipulation", "text-guided editing", "text-driven editing"]},
+        {"name": "Personalized & subject-driven generation", "examples": ["DreamBooth", "Textual Inversion", "IP-Adapter"], "keywords": ["subject-driven", "personalized text-to-image", "personalization", "customized generation", "identity-preserving"]},
+        {"name": "Inpainting & outpainting", "examples": ["LaMa", "RePaint"], "keywords": ["inpainting", "outpainting"]},
+        {"name": "Style transfer & image translation", "examples": ["pix2pix", "CycleGAN"], "keywords": ["style transfer", "image-to-image translation", "image translation"]}
+      ]},
+      {"name": "Image restoration & compression", "children": [
+        {"name": "Super-resolution", "examples": ["SRCNN", "SwinIR", "Real-ESRGAN"], "keywords": ["super-resolution", "super resolution"]},
+        {"name": "Denoising, deblurring & enhancement", "examples": ["DnCNN", "Restormer", "Retinexformer"], "keywords": ["image denoising", "deblurring", "deraining", "dehazing", "low-light", "image enhancement", "image restoration"]},
+        {"name": "Image & video compression", "examples": ["Hyperprior (Ballé)"], "keywords": ["image compression", "video compression", "neural compression", "learned compression", "codec"]}
+      ]},
+      {"name": "Video", "children": [
+        {"name": "Video generation", "examples": ["Video Diffusion Models", "Stable Video Diffusion", "CogVideoX"], "keywords": ["text-to-video", "video generation", "video diffusion", "image-to-video"]},
+        {"name": "Long video generation", "examples": ["Phenaki", "StreamingT2V"], "keywords": ["long video generation", "long-video generation", "minute-long"]},
+        {"name": "Video editing", "examples": ["Tune-A-Video", "TokenFlow"], "keywords": ["video editing"]},
+        {"name": "Human & talking-head video", "examples": ["SadTalker", "Animate Anyone"], "keywords": ["talking head", "talking face", "human animation", "human image animation", "lip sync", "portrait animation"]},
+        {"name": "Action recognition & video understanding", "examples": ["I3D", "SlowFast", "VideoMAE"], "keywords": ["action recognition", "video understanding", "video classification", "temporal action localization", "temporal action detection"]},
+        {"name": "Object tracking", "examples": ["SORT", "ByteTrack", "OSTrack"], "keywords": ["object tracking", "multi-object tracking", "multiple object tracking", "visual tracking"]}
+      ]},
+      {"name": "3D & 4D", "children": [
+        {"name": "3D reconstruction & novel view synthesis", "examples": ["NeRF", "3D Gaussian Splatting", "DUSt3R"], "keywords": ["3d reconstruction", "novel view synthesis", "neural radiance field", "nerf", "gaussian splatting", "surface reconstruction", "multi-view stereo"]},
+        {"name": "3D object generation", "examples": ["DreamFusion (SDS)", "Point-E", "LRM"], "keywords": ["text-to-3d", "image-to-3d", "3d generation", "3d shape generation", "3d asset generation", "mesh generation", "3d object generation"]},
+        {"name": "3D scene generation", "examples": ["ATISS"], "keywords": ["scene generation", "3d scene generation", "indoor scene synthesis", "scene synthesis"]},
+        {"name": "4D & dynamic content generation", "examples": ["MAV3D", "4DGen"], "keywords": ["4d generation", "text-to-4d", "dynamic 3d generation", "4d content", "4d gaussian"]},
+        {"name": "Avatars & digital humans", "examples": ["AvatarCLIP", "PIFu", "HumanNeRF"], "keywords": ["avatar", "digital human", "clothed human", "human reconstruction"]},
+        {"name": "Depth estimation", "examples": ["MiDaS", "Depth Anything", "Marigold"], "keywords": ["depth estimation", "monocular depth", "stereo matching"]},
+        {"name": "Point cloud understanding", "examples": ["PointNet++", "Point Transformer"], "keywords": ["point cloud", "lidar point", "3d semantic segmentation", "3d scene understanding"]}
+      ]}
+    ]},
+    {"code": "AUD", "name": "Speech & Audio",
+     "summary": "Applications that recognize, generate, or transform speech, music, and sound.",
+     "children": [
+      {"name": "Speech", "children": [
+        {"name": "Speech recognition", "examples": ["wav2vec 2.0", "Whisper"], "keywords": ["speech recognition", "asr"]},
+        {"name": "Text-to-speech & voice conversion", "examples": ["Tacotron 2", "VALL-E"], "keywords": ["text-to-speech", "speech synthesis", "voice conversion", "tts", "voice cloning"]},
+        {"name": "Speech enhancement & separation", "keywords": ["speech enhancement", "speech separation", "source separation", "noise suppression"]},
+        {"name": "Spoken language & speech LLMs", "keywords": ["spoken language", "speech language model", "spoken dialogue", "speech llm"]}
+      ]},
+      {"name": "Music & sound", "children": [
+        {"name": "Music generation", "examples": ["Jukebox", "MusicLM"], "keywords": ["music generation", "music synthesis", "symbolic music"]},
+        {"name": "Audio & sound generation", "examples": ["AudioLDM"], "keywords": ["audio generation", "text-to-audio", "sound generation", "sound synthesis"]},
+        {"name": "Audio event classification", "examples": ["PANNs", "AST"], "keywords": ["audio classification", "sound event", "audio tagging", "audio event"]}
+      ]}
+    ]},
+    {"code": "MM", "name": "Multimodal & Vision-Language",
+     "summary": "Applications that connect vision, language, and other modalities.",
+     "children": [
+      {"name": "Vision-language understanding", "children": [
+        {"name": "Visual question answering & assistants", "examples": ["Flamingo", "BLIP-2", "LLaVA"], "keywords": ["visual question answering", "vqa", "multimodal large language model", "mllm", "large vision-language model", "lvlm", "multimodal llm", "vision-language model"]},
+        {"name": "Image & video captioning", "keywords": ["image captioning", "video captioning", "dense captioning", "caption generation"]},
+        {"name": "Visual grounding & referring", "examples": ["MDETR", "Kosmos-2", "LISA"], "keywords": ["visual grounding", "referring expression", "phrase grounding", "referring segmentation"]},
+        {"name": "Video question answering & LLMs", "examples": ["Video-LLaVA", "VideoChat"], "keywords": ["video question answering", "video llm", "video large language model", "long video understanding", "video-language model"]}
+      ]},
+      {"name": "Cross-modal search", "children": [
+        {"name": "Image-text & video-text retrieval", "examples": ["CLIP", "ALIGN"], "keywords": ["cross-modal retrieval", "image-text retrieval", "text-video retrieval", "video-text retrieval", "image-text matching", "composed image retrieval"]},
+        {"name": "Audio-visual learning", "examples": ["AV-HuBERT", "ImageBind"], "keywords": ["audio-visual", "audiovisual", "sound source localization"]}
+      ]}
+    ]},
+    {"code": "AGT", "name": "AI Agents & Tools",
+     "summary": "Applications where models act on software, the web, or tools to complete tasks.",
+     "children": [
+      {"name": "Digital agents", "children": [
+        {"name": "Web & GUI agents", "examples": ["WebArena", "SeeAct"], "keywords": ["web agent", "gui agent", "web navigation", "computer use", "mobile agent", "os agent"]},
+        {"name": "Software-engineering agents", "examples": ["SWE-agent"], "keywords": ["software engineering agent", "coding agent", "repository-level", "issue resolution"]},
+        {"name": "Deep research & search agents", "examples": ["STORM", "Search-R1"], "keywords": ["deep research", "search agent", "agentic search", "research agent"]},
+        {"name": "Tool use & function calling", "examples": ["ReAct", "Toolformer"], "keywords": ["tool use", "tool learning", "function calling", "tool-augmented"]},
+        {"name": "Multi-agent systems", "examples": ["CAMEL", "AutoGen"], "keywords": ["multi-agent collaboration", "multi-agent debate", "multi-agent system", "multi-agent framework"]}
+      ]},
+      {"name": "AI for discovery & work", "children": [
+        {"name": "AI scientist & automated research", "examples": ["FunSearch"], "keywords": ["ai scientist", "automated research", "scientific discovery", "hypothesis generation", "research idea"]},
+        {"name": "Data science & spreadsheet agents", "keywords": ["data science agent", "table question answering", "tabular reasoning", "spreadsheet"]}
+      ]}
+    ]},
+    {"code": "ROB", "name": "Robotics & Autonomous Systems",
+     "summary": "Applications that sense and act in the physical world.",
+     "children": [
+      {"name": "Robot learning", "children": [
+        {"name": "Robot manipulation", "examples": ["RT-2", "OpenVLA", "Diffusion Policy"], "keywords": ["robot manipulation", "robotic manipulation", "vision-language-action", "grasping", "dexterous", "manipulation policy"]},
+        {"name": "Navigation", "examples": ["VLN-BERT", "Habitat"], "keywords": ["vision-and-language navigation", "embodied navigation", "object navigation", "visual navigation", "robot navigation"]},
+        {"name": "Legged & humanoid locomotion", "examples": ["RMA"], "keywords": ["locomotion", "legged robot", "humanoid", "quadruped"]},
+        {"name": "Drones & aerial robots", "keywords": ["drone", "uav", "aerial robot", "quadrotor"]}
+      ]},
+      {"name": "Autonomous driving", "children": [
+        {"name": "Driving perception (3D detection, BEV)", "examples": ["PointPillars", "BEVFormer", "CenterPoint"], "keywords": ["3d object detection", "bird's-eye-view", "bev", "lidar detection", "occupancy prediction"]},
+        {"name": "Motion forecasting", "examples": ["Wayformer"], "keywords": ["motion forecasting", "trajectory prediction", "trajectory forecasting"]},
+        {"name": "End-to-end driving & planning", "examples": ["TransFuser", "UniAD", "ChauffeurNet"], "keywords": ["autonomous driving", "end-to-end driving", "self-driving", "driving policy", "motion planning"]},
+        {"name": "Driving simulation & world models", "keywords": ["driving simulation", "driving world model", "driving scene generation", "traffic simulation"]}
+      ]}
+    ]},
+    {"code": "CTRL", "name": "Control & Decision-Making",
+     "summary": "Applications that make sequential decisions or optimize operations.",
+     "children": [
+      {"name": "Games & simulation", "children": [
+        {"name": "Board & card games", "examples": ["AlphaGo", "AlphaZero"], "keywords": ["board game", "chess", "poker", "go game", "card game"]},
+        {"name": "Video games & open worlds", "examples": ["DQN", "MuZero", "Voyager"], "keywords": ["atari", "video game", "minecraft", "starcraft", "game playing"]}
+      ]},
+      {"name": "Operations & systems control", "children": [
+        {"name": "Scheduling, routing & logistics", "examples": ["Pointer Networks", "Attention Model (TSP)"], "keywords": ["vehicle routing", "traveling salesman", "travelling salesman", "job shop", "job scheduling", "logistics"]},
+        {"name": "Energy & power systems", "keywords": ["power grid", "power system", "energy management", "battery", "smart grid"]},
+        {"name": "Traffic & transportation", "examples": ["DCRNN", "Graph WaveNet"], "keywords": ["traffic forecasting", "traffic signal", "traffic flow", "ride-hailing"]},
+        {"name": "Industrial & process control", "keywords": ["process control", "industrial control", "chip placement", "data center cooling"]}
+      ]},
+      {"name": "Markets & recommendation", "children": [
+        {"name": "Recommender systems", "examples": ["Matrix Factorization", "LightGCN", "SASRec"], "keywords": ["recommender system", "recommendation system", "collaborative filtering", "sequential recommendation", "click-through rate"]},
+        {"name": "Finance & trading", "keywords": ["stock", "financial", "portfolio", "trading", "credit risk"]},
+        {"name": "Auctions & mechanism design", "keywords": ["auction", "mechanism design", "pricing"]}
+      ]}
+    ]},
+    {"code": "SCI", "name": "AI for Science",
+     "summary": "Applications in biology, chemistry, materials, physics, and the Earth sciences.",
+     "children": [
+      {"name": "Proteins & nucleic acids", "children": [
+        {"name": "Protein structure prediction", "examples": ["AlphaFold 2", "ESMFold"], "keywords": ["protein structure prediction", "protein folding", "protein structure"]},
+        {"name": "Protein property & function prediction", "examples": ["ESM-2"], "keywords": ["protein property", "protein function", "fitness prediction", "mutation effect", "protein language model", "enzyme"]},
+        {"name": "Protein & antibody design", "examples": ["ProteinMPNN", "RFdiffusion"], "keywords": ["protein design", "antibody design", "peptide design", "inverse folding", "protein generation"]},
+        {"name": "RNA structure & design", "keywords": ["rna structure", "rna secondary structure", "rna design", "rna folding", "rna 3d", "rna foundation model", "rna language model", "rna inverse folding"]},
+        {"name": "Genomics & single-cell", "examples": ["DNABERT", "scVI", "scGPT"], "keywords": ["single-cell", "single cell", "genomic", "gene expression", "dna sequence", "rna-seq"]}
+      ]},
+      {"name": "Chemistry & drug discovery", "children": [
+        {"name": "Molecular property prediction", "examples": ["SchNet", "GemNet"], "keywords": ["molecular property prediction", "molecular representation", "admet", "toxicity prediction"]},
+        {"name": "Molecule generation & drug design", "examples": ["JT-VAE", "EDM (molecules)"], "keywords": ["molecule generation", "molecular generation", "drug design", "drug discovery", "structure-based drug design", "molecular design"]},
+        {"name": "Molecular docking & binding", "examples": ["DiffDock"], "keywords": ["molecular docking", "docking", "binding affinity", "protein-ligand"]},
+        {"name": "Reaction & retrosynthesis prediction", "examples": ["Molecular Transformer", "LocalRetro"], "keywords": ["retrosynthesis", "reaction prediction", "retrosynthetic", "reaction yield"]}
+      ]},
+      {"name": "Materials & atomistic simulation", "children": [
+        {"name": "Materials discovery & crystal generation", "examples": ["CGCNN", "CDVAE", "MatterGen"], "keywords": ["crystal", "materials discovery", "material generation", "materials design", "inorganic materials"]},
+        {"name": "Interatomic potentials & molecular dynamics", "examples": ["NequIP", "MACE", "M3GNet"], "keywords": ["interatomic potential", "force field", "molecular dynamics", "machine learning potential"]}
+      ]},
+      {"name": "Physics, Earth & space", "children": [
+        {"name": "Weather & climate forecasting", "examples": ["FourCastNet", "GraphCast", "Pangu-Weather"], "keywords": ["weather forecasting", "weather prediction", "climate", "precipitation", "nowcasting"]},
+        {"name": "PDE solving & fluid simulation", "examples": ["FNO", "PINNs", "MeshGraphNets"], "keywords": ["partial differential equation", "pde", "fluid", "navier-stokes", "turbulence", "neural operator"]},
+        {"name": "Remote sensing & Earth observation", "examples": ["SatMAE", "Prithvi"], "keywords": ["remote sensing", "satellite", "earth observation", "aerial image", "hyperspectral"]},
+        {"name": "Astronomy & particle physics", "keywords": ["astronomy", "astrophysics", "cosmology", "particle physics", "galaxy", "jet tagging"]}
+      ]}
+    ]},
+    {"code": "MED", "name": "Healthcare & Medicine",
+     "summary": "Applications in clinical care, medical imaging, and neuroscience.",
+     "children": [
+      {"name": "Medical imaging", "children": [
+        {"name": "Medical image segmentation", "examples": ["U-Net", "nnU-Net", "MedSAM"], "keywords": ["medical image segmentation", "organ segmentation", "tumor segmentation", "lesion segmentation"]},
+        {"name": "Radiology & diagnosis", "examples": ["CheXNet"], "keywords": ["radiology", "chest x-ray", "x-ray", "medical image classification", "diagnosis", "report generation"]},
+        {"name": "Pathology & microscopy", "examples": ["Cellpose", "StarDist"], "keywords": ["pathology", "whole slide image", "histopathology", "microscopy", "cell segmentation"]},
+        {"name": "MRI & CT reconstruction", "examples": ["Learned Primal-Dual"], "keywords": ["mri reconstruction", "ct reconstruction", "accelerated mri", "computed tomography", "sparse-view ct"]}
+      ]},
+      {"name": "Clinical & health data", "children": [
+        {"name": "Clinical prediction & EHR", "examples": ["BEHRT"], "keywords": ["electronic health record", "ehr", "clinical prediction", "patient", "mortality prediction"]},
+        {"name": "Medical QA & clinical LLMs", "examples": ["Med-PaLM"], "keywords": ["medical question answering", "clinical llm", "medical llm", "clinical notes", "medical vqa", "medical reasoning", "medical agent"]},
+        {"name": "Brain signals & neuroscience", "examples": ["EEGNet", "MindEye"], "keywords": ["eeg", "fmri", "brain decoding", "brain-computer interface", "neural recording", "neuroscience"]},
+        {"name": "Wearables & physiological signals", "keywords": ["ecg", "wearable", "physiological signal", "sleep staging", "human activity recognition"]}
+      ]}
+    ]},
+    {"code": "SOC", "name": "Security, Safety & Society",
+     "summary": "Applications that protect people, information, and institutions.",
+     "children": [
+      {"name": "Content integrity", "children": [
+        {"name": "Deepfake & AI-generated content detection", "examples": ["FaceForensics++", "DIRE"], "keywords": ["deepfake", "face forgery", "ai-generated image detection", "generated image detection", "machine-generated text detection", "forgery detection"]},
+        {"name": "Watermarking & provenance", "examples": ["LLM Green-list Watermark", "Tree-Ring"], "keywords": ["watermark", "watermarking", "provenance", "fingerprinting"]},
+        {"name": "Misinformation & content moderation", "examples": ["Llama Guard"], "keywords": ["misinformation", "fake news", "hate speech", "toxicity detection", "content moderation"]}
+      ]},
+      {"name": "Security & privacy", "children": [
+        {"name": "Cybersecurity", "keywords": ["cybersecurity", "malware", "intrusion detection", "vulnerability detection", "penetration testing"]},
+        {"name": "Privacy protection", "examples": ["DP-SGD"], "keywords": ["differential privacy", "differentially private", "privacy-preserving", "membership inference"]},
+        {"name": "LLM jailbreak & prompt-injection defense", "examples": ["GCG", "StruQ"], "keywords": ["jailbreak", "prompt injection", "red teaming", "red-teaming"]}
+      ]},
+      {"name": "Society & education", "children": [
+        {"name": "Fairness in deployed systems", "examples": ["Equalized Odds"], "keywords": ["fairness", "demographic parity", "social bias", "gender bias"]},
+        {"name": "Education & tutoring", "keywords": ["education", "educational", "tutoring", "learning analytics"]},
+        {"name": "Law, policy & social science", "keywords": ["legal", "legal reasoning", "public policy", "social science", "public health", "economics"]}
+      ]}
+    ]}
+  ]
+}

@@ -1,12 +1,17 @@
-/* AI Trends — Method Tree page. Vanilla JS, no deps.
-   Renders data/ontology.json as one hierarchical tree:
-     domain -> task family -> task
+/* AI Trends — Method Tree / Application Tree pages. Vanilla JS, no deps.
+   Renders one tree file (``<body data-tree>``: data/ontology.json by default,
+   data/applications.json on the Application Tree page) as one hierarchy:
+     domain -> task family -> task   (or theme -> area -> application)
    Each task lists its landmark methods grouped by year ("2015 — ResNet, …",
    linked to arXiv / the paper), plus a collapsible list of the top-cited
    matching papers from the tracked conferences, grouped by year. Below it:
    classification heuristics and tag facets. */
 
 const DATA = "data/";
+const TREE_FILE = document.body.dataset.tree || "ontology.json";
+const ROOT_LABEL = document.body.dataset.root || "AI methods";
+const TOP_UNIT = document.body.dataset.topUnit || "domains"; // what level-1 nodes are called
+const LEAF_UNIT = document.body.dataset.leafUnit || "tasks"; // what end nodes are called
 const $ = (sel, root = document) => root.querySelector(sel);
 const el = (tag, props = {}, children = []) => {
   const node = Object.assign(document.createElement(tag), props);
@@ -28,8 +33,8 @@ const scholar = (title) => `https://scholar.google.com/scholar?q=${encodeURIComp
 async function init() {
   initNavToggle();
   try {
-    const res = await fetch(DATA + "ontology.json");
-    if (!res.ok) throw new Error(`fetch ontology.json: ${res.status}`);
+    const res = await fetch(DATA + TREE_FILE);
+    if (!res.ok) throw new Error(`fetch ${TREE_FILE}: ${res.status}`);
     const onto = await res.json();
     state.domains = onto.domains;
     state.methods = onto.methods || {};
@@ -67,8 +72,8 @@ function renderView() {
   $("#tree-view").replaceChildren(
     el("div", { className: "otree" }, [
       el("div", { className: "otree__root" }, [
-        el("h1", { className: "otree__root-name", textContent: "AI methods" }),
-        el("span", { className: "count", textContent: `${state.domains.length} domains · ${state.domains.reduce((n, x) => n + leafCount(x), 0)} tasks` }),
+        el("h1", { className: "otree__root-name", textContent: ROOT_LABEL }),
+        el("span", { className: "count", textContent: `${state.domains.length} ${TOP_UNIT} · ${state.domains.reduce((n, x) => n + leafCount(x), 0)} ${LEAF_UNIT}` }),
       ]),
       el("ul", { className: "tree__list tree__list--top" },
         state.domains.map((d, i) => domainNode(d, i, i === state.selected))),
@@ -89,7 +94,7 @@ function domainNode(d, i, open) {
       el("summary", { className: "node__sum node__sum--domain" }, [
         el("span", { className: "node__code", textContent: d.code ? `${pad(i + 1)} · ${d.code}` : pad(i + 1) }),
         el("span", { className: "node__name" }, d.name),
-        countBadge(d, "tasks"),
+        countBadge(d, LEAF_UNIT),
       ]),
       d.summary ? el("p", { className: "node__summary", textContent: d.summary }) : null,
       el("ul", { className: "tree__list" }, kids(d).map((f) => familyNode(f, open))),
@@ -102,7 +107,7 @@ function familyNode(f, open) {
     el("details", { open }, [
       el("summary", { className: "node__sum" }, [
         el("span", { className: "node__name" }, f.name),
-        countBadge(f, "tasks"),
+        countBadge(f, LEAF_UNIT),
       ]),
       el("ul", { className: "tree__list" }, kids(f).map(taskNode)),
     ]),
@@ -117,7 +122,7 @@ function taskNode(t) {
         t.paper_count != null ? el("span", { className: "count", textContent: `${fmt(t.paper_count)} papers` }) : null,
       ]),
       landmarkRows(t.examples || []),
-      corpusBlock(t),
+      corpusBlock(t, !(t.examples || []).length),
     ]),
   ]);
 }
@@ -146,10 +151,11 @@ function landmarkRows(examples) {
   ]));
 }
 
-/* Collapsible "top papers in tracked conferences", newest year first. */
-function corpusBlock(t) {
+/* Collapsible "top papers in tracked conferences", newest year first;
+   open by default when the node has no landmark methods to show instead. */
+function corpusBlock(t, open = false) {
   if (!t.papers || !t.papers.length) return null;
-  return el("details", { className: "corpus" }, [
+  return el("details", { className: "corpus", open }, [
     el("summary", { className: "corpus__sum", textContent: `Top papers in tracked conferences (${fmt(t.paper_count)})` }),
     el("dl", { className: "years" }, t.papers.flatMap((g) => [
       el("dt", { className: "years__y", textContent: g.year }),
@@ -174,6 +180,7 @@ function joinNodes(nodes) {
 
 /* ---------- classification guide ---------- */
 function renderGuide() {
+  if (!$("#guide")) return; // only the Method Tree page has a guide section
   $("#guide-heuristics").replaceChildren(
     ...state.heuristics.map((h) => el("li", { textContent: h }))
   );

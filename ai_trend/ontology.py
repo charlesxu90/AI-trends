@@ -8,6 +8,9 @@ Single source of truth is ``config/ontology.json``::
      "facets"?: [{"name", "tags": [str, ...]}],   # cross-cutting tag groups
      "heuristics"?: [str, ...]}                   # how to pick a paper's node
 
+The application tree (``config/applications.json``: theme -> area -> application)
+uses the same schema and is loaded with ``load_ontology(DEFAULT_APPLICATIONS_PATH)``.
+
 Leaves may carry ``keywords`` (see :mod:`ai_trend.method_papers`) used to match
 corpus papers. Example methods are backed by ``config/method_refs.json``:
 ``{method: {"title", "year", "url"?}}`` -- the landmark paper, its year and link.
@@ -28,6 +31,8 @@ from pathlib import Path
 ONTOLOGY_FILENAME = "ontology.json"
 DEFAULT_ONTOLOGY_PATH = Path(__file__).resolve().parent.parent / "config" / ONTOLOGY_FILENAME
 DEFAULT_METHOD_REFS_PATH = DEFAULT_ONTOLOGY_PATH.with_name("method_refs.json")
+DEFAULT_APPLICATIONS_PATH = DEFAULT_ONTOLOGY_PATH.with_name("applications.json")
+APPLICATIONS_FILENAME = "applications.json"
 _ALLOWED_KEYS = {"code", "name", "summary", "examples", "keywords", "children"}
 _TOP_LEVEL_KEYS = {"version", "domains", "facets", "heuristics"}
 
@@ -152,9 +157,22 @@ def load_method_refs(path: Path | str = DEFAULT_METHOD_REFS_PATH) -> dict:
     return refs
 
 
-def write_ontology(out_dir: Path | str, ontology: dict) -> Path:
-    """Write the site copy of the (validated) ontology to ``<out_dir>/ontology.json``."""
-    out_path = Path(out_dir) / ONTOLOGY_FILENAME
+def used_refs(ontology: dict, refs: dict) -> dict:
+    """The subset of ``refs`` named by the tree's ``examples``."""
+    names: set[str] = set()
+
+    def walk(nodes: list[dict]) -> None:
+        for node in nodes:
+            names.update(node.get("examples", []))
+            walk(node.get("children", []))
+
+    walk(ontology["domains"])
+    return {name: ref for name, ref in refs.items() if name in names}
+
+
+def write_ontology(out_dir: Path | str, ontology: dict, filename: str = ONTOLOGY_FILENAME) -> Path:
+    """Write the site copy of a (validated) tree to ``<out_dir>/<filename>``."""
+    out_path = Path(out_dir) / filename
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(ontology, ensure_ascii=False), encoding="utf-8")
     return out_path
