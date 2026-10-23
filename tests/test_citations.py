@@ -416,3 +416,14 @@ def test_openalex_omits_api_key_when_env_unset(monkeypatch):
     sess = _CapSession(_Resp(200, {"results": []}))
     search_openalex_verified("P", sess, sleep=lambda *_: None)
     assert "api_key" not in (sess.last_params or {})
+
+
+def test_openalex_strips_wildcards_from_title_search():
+    from ai_trend.citations import search_openalex_verified
+
+    title = "Can LLMs Automate Causal Inference?"
+    sess = _CapSession(_Resp(200, {"results": [{"title": title, "cited_by_count": 4}]}))
+    r = search_openalex_verified(title, sess, sleep=lambda *_: None)
+    # OpenAlex 400s on '?'/'*' in title.search; the title is still verified verbatim
+    assert "?" not in sess.last_params["filter"] and "*" not in sess.last_params["filter"]
+    assert r["citationCount"] == 4
