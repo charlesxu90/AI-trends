@@ -162,10 +162,11 @@ def _openalex_request(
 ) -> list | None:
     """GET the OpenAlex ``results`` list for a title search, or None on failure.
 
-    Commas/colons/pipes break OpenAlex filter syntax, so they're blanked (the
-    search is fuzzy; the caller verifies the title anyway).
+    Commas/colons/pipes break OpenAlex filter syntax and ?/* are rejected as
+    wildcards (HTTP 400), so they're blanked (the search is fuzzy; the caller
+    verifies the title anyway).
     """
-    cleaned = re.sub(r"[,:|]+", " ", str(title)).strip()
+    cleaned = re.sub(r"[,:|?*]+", " ", str(title)).strip()
     params = {"filter": f"title.search:{cleaned}", "per-page": per_page}
     if mailto:
         params["mailto"] = mailto  # OpenAlex "polite pool" — higher, more reliable limits
